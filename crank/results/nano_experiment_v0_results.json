@@ -1,0 +1,104 @@
+{
+  "claim_ceiling": "Constructed-matrix transition-contract enforcement only; contract correctness and domain epistemology are not established.",
+  "experiment": "OPENCORE_NANO_V0_LOCAL_ISOLATED",
+  "kernel_lines": 332,
+  "metrics": {
+    "false_refusal_count": 0,
+    "false_refusal_rate": 0.0,
+    "illegal_total": 60000,
+    "invariant_failure_count": 0,
+    "legal_total": 60000,
+    "naive_overreach_rate": 1.0,
+    "overreach_count": 0,
+    "overreach_rate": 0.0
+  },
+  "mini_sha256": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+  "negative_results": {
+    "descendant_post_repair": {
+      "child_still_effective": 0,
+      "experiment": "NANO_DESCENDANT_AUTHORITY_ATTACK_PRE_REPAIR",
+      "sample": {
+        "child_effective_after_upstream_revoke": false,
+        "child_receipt_parents": [
+          "4b8cca3f207bde54becd25d7"
+        ],
+        "setup": [
+          "ALLOW",
+          "ALLOW",
+          "ALLOW"
+        ],
+        "use_after_upstream_revoke": "DEFER"
+      },
+      "seeds": 10000,
+      "setup_failures": 0,
+      "use_allowed": 0
+    },
+    "descendant_pre_repair": {
+      "child_still_effective": 10000,
+      "experiment": "NANO_DESCENDANT_AUTHORITY_ATTACK_PRE_REPAIR",
+      "sample": {
+        "child_effective_after_upstream_revoke": true,
+        "child_receipt_parents": [
+          "4b8cca3f207bde54becd25d7"
+        ],
+        "setup": [
+          "ALLOW",
+          "ALLOW",
+          "ALLOW"
+        ],
+        "use_after_upstream_revoke": "ALLOW"
+      },
+      "seeds": 10000,
+      "setup_failures": 0,
+      "use_allowed": 10000
+    },
+    "preservation_dependency_post_repair": {
+      "experiment": "NANO_PRESERVATION_ANCESTRY_NOT_AUTHORITY_DEPENDENCY_PRE_REPAIR",
+      "output_deferred": 0,
+      "output_effective": 10000,
+      "sample": {
+        "output_deferred": false,
+        "output_effective_after_unrelated_preserved_source_revoke": true,
+        "output_receipt_parents": [],
+        "setup": [
+          "ALLOW",
+          "ALLOW",
+          "ALLOW"
+        ]
+      },
+      "seeds": 10000,
+      "setup_failures": 0
+    },
+    "preservation_dependency_pre_repair": {
+      "experiment": "NANO_PRESERVATION_ANCESTRY_NOT_AUTHORITY_DEPENDENCY_PRE_REPAIR",
+      "output_deferred": 10000,
+      "output_effective": 0,
+      "sample": {
+        "output_deferred": true,
+        "output_effective_after_unrelated_preserved_source_revoke": false,
+        "output_receipt_parents": [
+          "2712de31bb81bc27505889f9"
+        ],
+        "setup": [
+          "ALLOW",
+          "ALLOW",
+          "ALLOW"
+        ]
+      },
+      "seeds": 10000,
+      "setup_failures": 0
+    }
+  },
+  "sha256": {
+    "descendant_post": "ab145abbe78554bd09c4a8941af9f5167d27d7367e7d0ce4d6263d6efa4ed01d",
+    "descendant_pre": "3bca8eb07390e134a2a6a3aebb3bd81fd7101fc5091ddfc5590d051599a7630d",
+    "final_matrix": "e80db465dde3da6cbe355cfee01ffb23808d4018da82e9bd45e6ac766ef82f27",
+    "kernel": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329",
+    "matrix_harness": "4f1f564ffb8b2dd43ad0738be17dbeb8f9ad7564551ce168ab1eb2a32dfc89da",
+    "preservation_dependency_post": "249b1feecfd902ec1e1f66db6e16911aa25b697548be6279971d4b5dce843af3",
+    "preservation_dependency_pre": "1b95710f938b4d18d95062b61e90809eeb93474a68a388bb60da8b02ed5fb53f",
+    "report": "d55feb4611b81226d8671a42ce5ac1dfd2c3d80e5635af5433d6148e7cb64c63",
+    "self_test": "3d9e834c927d6adfc85b7281c83b9d4c207804f841aae687f80990dc791956a4"
+  },
+  "status": "LOCAL_UNCOMMITTED_UNPUBLISHED"
+}

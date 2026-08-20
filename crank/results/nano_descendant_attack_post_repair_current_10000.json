@@ -1,0 +1,19 @@
+{
+  "child_still_effective": 0,
+  "experiment": "NANO_DESCENDANT_AUTHORITY_POST_REPAIR_REGRESSION",
+  "sample": {
+    "child_effective_after_upstream_revoke": false,
+    "child_receipt_parents": [
+      "4b8cca3f207bde54becd25d7"
+    ],
+    "setup": [
+      "ALLOW",
+      "ALLOW",
+      "ALLOW"
+    ],
+    "use_after_upstream_revoke": "DEFER"
+  },
+  "seeds": 10000,
+  "setup_failures": 0,
+  "use_allowed": 0
+}

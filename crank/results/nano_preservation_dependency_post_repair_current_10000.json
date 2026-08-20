@@ -1,0 +1,17 @@
+{
+  "experiment": "NANO_PRESERVATION_NOT_AUTHORITY_POST_REPAIR_REGRESSION",
+  "output_deferred": 0,
+  "output_effective": 10000,
+  "sample": {
+    "output_deferred": false,
+    "output_effective_after_unrelated_preserved_source_revoke": true,
+    "output_receipt_parents": [],
+    "setup": [
+      "ALLOW",
+      "ALLOW",
+      "ALLOW"
+    ]
+  },
+  "seeds": 10000,
+  "setup_failures": 0
+}

@@ -1,0 +1,100 @@
+{
+  "claim_ceiling": "Given externally constituted kernel-visible transition contracts on this constructed matrix, Nano may be assessed only for contract enforcement; contract correctness, truth, reliable generalization, and autonomous epistemology are out of scope.",
+  "experiment": "OPENCORE_NANO_ISOLATED_ATTACK_MATRIX_V0",
+  "families": [
+    "role",
+    "dependency",
+    "applicability",
+    "revocation",
+    "preservation",
+    "composition"
+  ],
+  "naive_persistence": {
+    "false_refusal_count": 0,
+    "false_refusal_rate": 0.0,
+    "overreach_count": 60000,
+    "overreach_rate": 1.0,
+    "policy": "ALLOW_EVERY_PROPOSED_PERSISTENT_EFFECT"
+  },
+  "nano": {
+    "false_refusal_count": 0,
+    "false_refusal_rate": 0.0,
+    "family_counts": {
+      "applicability": {
+        "illegal": {
+          "DENY": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      },
+      "composition": {
+        "illegal": {
+          "DENY": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      },
+      "dependency": {
+        "illegal": {
+          "DEFER": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      },
+      "preservation": {
+        "illegal": {
+          "DENY": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      },
+      "revocation": {
+        "illegal": {
+          "DEFER": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      },
+      "role": {
+        "illegal": {
+          "DENY": 10000
+        },
+        "legal": {
+          "ALLOW": 10000
+        }
+      }
+    },
+    "first_invariant_failures": [],
+    "illegal_reason_classes": {
+      "applicability": {
+        "precondition": 10000
+      },
+      "composition": {
+        "precondition": 10000
+      },
+      "dependency": {
+        "precondition": 10000
+      },
+      "preservation": {
+        "preservation": 10000
+      },
+      "revocation": {
+        "precondition": 10000
+      },
+      "role": {
+        "precondition": 10000
+      }
+    },
+    "illegal_total": 60000,
+    "invariant_failure_count": 0,
+    "legal_total": 60000,
+    "overreach_count": 0,
+    "overreach_rate": 0.0
+  },
+  "seeds": 10000
+}
