@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>OpenCore E001 Offline Seed Custodian</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, sans-serif;
+      line-height: 1.45;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 54rem;
+      padding: 2rem 1.25rem 4rem;
+    }
+    h1, h2 { line-height: 1.15; }
+    .banner, fieldset, .status {
+      border: 1px solid currentColor;
+      border-radius: .35rem;
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+    .banner { border-width: 2px; }
+    .warning { color: #b33a00; font-weight: 700; }
+    label { display: block; margin-top: .85rem; }
+    input[type="text"], input[type="password"] {
+      box-sizing: border-box;
+      display: block;
+      font: inherit;
+      margin-top: .25rem;
+      padding: .45rem;
+      width: 100%;
+    }
+    code { overflow-wrap: anywhere; }
+    button {
+      font: inherit;
+      margin: .5rem .5rem .5rem 0;
+      padding: .55rem .8rem;
+    }
+    button:disabled { opacity: .55; }
+    .status[data-error="true"] { border-color: #b00020; color: #b00020; }
+    .small { font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <h1>OpenCore E001 Offline Seed Custodian</h1>
+
+  <div class="banner">
+    <strong>FROZEN CANDIDATE CUSTODY APPLICATION / UNEXECUTED / UNVERIFIED</strong><br>
+    Generates no seed until the custodian explicitly presses the generation
+    button. Contains no seed, result, validity decision, or external authority.
+  </div>
+
+  <p class="warning">Run only from a verified local file on an externally
+    controlled offline custody machine. Do not run in the subject-development
+    workspace, Codex, CI, a synchronized profile, or a monitored browser.</p>
+
+  <p>This one-shot application creates exactly two downloadable artifacts: a
+    public register containing 64 commitments, and an AES-GCM encrypted reveal
+    bundle. It never displays, logs, copies, or downloads plaintext seeds. The
+    passphrase is not stored in either artifact.</p>
+
+  <h2>Frozen context</h2>
+  <dl>
+    <dt>K0</dt>
+    <dd><code id="k0"></code></dd>
+    <dt>Experiment 001 SHA-256</dt>
+    <dd><code id="experimentHash"></code></dd>
+    <dt>Seed protocol SHA-256</dt>
+    <dd><code id="protocolHash"></code></dd>
+    <dt>Execution-manifest schema SHA-256</dt>
+    <dd><code id="executionSchemaHash"></code></dd>
+  </dl>
+
+  <fieldset>
+    <legend>Ceremony inputs</legend>
+
+    <label for="apparatusHash">Complete preimplementation apparatus-manifest SHA-256</label>
+    <input id="apparatusHash" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="64" placeholder="64 lowercase hexadecimal characters">
+
+    <label for="custodianId">External custodian ID</label>
+    <input id="custodianId" type="text" autocomplete="off" spellcheck="false" maxlength="128" placeholder="ASCII ID">
+
+    <label for="custodianEpoch">Custodian epoch</label>
+    <input id="custodianEpoch" type="text" autocomplete="off" spellcheck="false" maxlength="64" placeholder="New value for every ceremony">
+
+    <label for="passphrase">Encrypted-bundle passphrase (minimum 20 characters)</label>
+    <input id="passphrase" type="password" autocomplete="new-password" spellcheck="false">
+
+    <label for="passphraseConfirm">Confirm passphrase</label>
+    <input id="passphraseConfirm" type="password" autocomplete="new-password" spellcheck="false">
+
+    <label>
+      <input id="attestation" type="checkbox">
+      I attest that this browser is offline and externally controlled, the
+      displayed hashes were independently verified, the passphrase has separate
+      protected custody, and no subject implementer can access this ceremony.
+    </label>
+  </fieldset>
+
+  <button id="generate" type="button" disabled>Generate and encrypt once</button>
+  <button id="downloadPublic" type="button" disabled>Download public commitments</button>
+  <button id="downloadEncrypted" type="button" disabled>Download encrypted reveal bundle</button>
+
+  <div id="status" class="status" role="status" aria-live="polite" data-error="false">
+    No ceremony has run. No seeds exist in this application state.
+  </div>
+
+  <p class="small">After downloading and verifying both files, close the
+    browser and protect the encrypted bundle and passphrase separately. Closing
+    or reloading is required for another ceremony. JavaScript and the host
+    operating system cannot prove perfect memory erasure.</p>
+
+  <script>
+  "use strict";
+  (() => {
+    const K0_COMMIT = "c21693a593770ce31f89eb9e24b29e01ff75d392";
+    const EXPERIMENT_ID = "OpenCore-E001";
+    const EXPERIMENT_SHA256 = "166712a549318f53426b22cb0f0d49b3e4125cc39ad0887f3c0c650c8b3c687b";
+    const PROTOCOL_VERSION = "opencore.e001.seed-commitment.v1";
+    const PROTOCOL_SHA256 = "77955b7d7c3473e449d63093f05bfd2989ee1304b740ed69da7320983bff00a6";
+    const EXECUTION_SCHEMA_SHA256 = "82c79135b7f9a092c480df9466f294b733b778037265f81d67a396501698e85f";
+    const DOMAIN = "OpenCore-E001-EvaluationSeedCommitment-v1";
+    const SEED_COUNT = 64;
+    const SEED_BYTES = 32;
+    const PBKDF2_ITERATIONS = 600000;
+    const EXPECTED_TEST_COMMITMENT = "02116812d760ae300a98a643fab6534eff3a3aa6ac5dfe5e22e26f057ab7f448";
+
+    const byId = (id) => document.getElementById(id);
+    const apparatusHashInput = byId("apparatusHash");
+    const custodianIdInput = byId("custodianId");
+    const custodianEpochInput = byId("custodianEpoch");
+    const passphraseInput = byId("passphrase");
+    const passphraseConfirmInput = byId("passphraseConfirm");
+    const attestationInput = byId("attestation");
+    const generateButton = byId("generate");
+    const publicButton = byId("downloadPublic");
+    const encryptedButton = byId("downloadEncrypted");
+    const statusBox = byId("status");
+
+    byId("k0").textContent = K0_COMMIT;
+    byId("experimentHash").textContent = EXPERIMENT_SHA256;
+    byId("protocolHash").textContent = PROTOCOL_SHA256;
+    byId("executionSchemaHash").textContent = EXECUTION_SCHEMA_SHA256;
+
+    let running = false;
+    let completed = false;
+    let terminalFailure = false;
+    let publicArtifact = null;
+    let encryptedArtifact = null;
+    let filenameSuffix = "";
+
+    function setStatus(message, isError = false) {
+      statusBox.textContent = message;
+      statusBox.dataset.error = isError ? "true" : "false";
+    }
+
+    function checkCrypto() {
+      if (location.protocol !== "file:") {
+        throw new Error("This application must be opened directly as a local file.");
+      }
+      if (!globalThis.crypto ||
+          typeof crypto.getRandomValues !== "function" ||
+          !crypto.subtle ||
+          typeof crypto.subtle.digest !== "function" ||
+          typeof crypto.subtle.importKey !== "function" ||
+          typeof crypto.subtle.deriveKey !== "function" ||
+          typeof crypto.subtle.encrypt !== "function") {
+        throw new Error("Required browser Web Crypto primitives are unavailable; no fallback is permitted.");
+      }
+    }
+
+    function bytesToHex(bytes) {
+      let result = "";
+      for (const value of bytes) result += value.toString(16).padStart(2, "0");
+      return result;
+    }
+
+    function hexToBytes(hex) {
+      if (!/^[0-9a-f]+$/.test(hex) || hex.length % 2 !== 0) {
+        throw new Error("Invalid lowercase hexadecimal input.");
+      }
+      const output = new Uint8Array(hex.length / 2);
+      for (let i = 0; i < output.length; i += 1) {
+        output[i] = Number.parseInt(hex.slice(i * 2, i * 2 + 2), 16);
+      }
+      return output;
+    }
+
+    function u32be(value) {
+      if (!Number.isInteger(value) || value < 0 || value > 0xffffffff) {
+        throw new Error("Value is not an unsigned 32-bit integer.");
+      }
+      return new Uint8Array([
+        (value >>> 24) & 0xff,
+        (value >>> 16) & 0xff,
+        (value >>> 8) & 0xff,
+        value & 0xff
+      ]);
+    }
+
+    function concatBytes(parts) {
+      const size = parts.reduce((sum, part) => sum + part.length, 0);
+      const output = new Uint8Array(size);
+      let offset = 0;
+      for (const part of parts) {
+        output.set(part, offset);
+        offset += part.length;
+      }
+      return output;
+    }
+
+    function lp(bytes) {
+      return concatBytes([u32be(bytes.length), bytes]);
+    }
+
+    async function sha256(bytes) {
+      return new Uint8Array(await crypto.subtle.digest("SHA-256", bytes));
+    }
+
+    function canonicalJson(value) {
+      if (value === null || typeof value === "boolean" || typeof value === "string") {
+        return JSON.stringify(value);
+      }
+      if (typeof value === "number") {
+        if (!Number.isSafeInteger(value)) throw new Error("OCJ-1 permits only safe integers here.");
+        return JSON.stringify(value);
+      }
+      if (Array.isArray(value)) {
+        return "[" + value.map(canonicalJson).join(",") + "]";
+      }
+      if (typeof value === "object") {
+        const keys = Object.keys(value).sort();
+        return "{" + keys.map((key) => JSON.stringify(key) + ":" + canonicalJson(value[key])).join(",") + "}";
+      }
+      throw new Error("Value is outside OCJ-1.");
+    }
+
+    function commitmentPreimage(context, index, seed) {
+      const utf8 = new TextEncoder();
+      return concatBytes([
+        lp(utf8.encode(DOMAIN)),
+        lp(hexToBytes(K0_COMMIT)),
+        lp(hexToBytes(EXPERIMENT_SHA256)),
+        lp(hexToBytes(PROTOCOL_SHA256)),
+        lp(hexToBytes(context.preimplementation_manifest_sha256)),
+        lp(hexToBytes(EXECUTION_SCHEMA_SHA256)),
+        lp(utf8.encode(context.custodian_id)),
+        lp(utf8.encode(context.custodian_epoch)),
+        u32be(index),
+        lp(seed)
+      ]);
+    }
+
+    async function commitmentHex(context, index, seed) {
+      const preimage = commitmentPreimage(context, index, seed);
+      try {
+        return bytesToHex(await sha256(preimage));
+      } finally {
+        preimage.fill(0);
+      }
+    }
+
+    async function verifyKnownAnswer() {
+      const context = {
+        preimplementation_manifest_sha256: "11".repeat(32),
+        custodian_id: "PUBLIC-TEST",
+        custodian_epoch: "v1"
+      };
+      const seed = new Uint8Array(32);
+      for (let i = 0; i < seed.length; i += 1) seed[i] = i;
+      const utf8 = new TextEncoder();
+      const preimage = concatBytes([
+        lp(utf8.encode(DOMAIN)),
+        lp(hexToBytes(K0_COMMIT)),
+        lp(hexToBytes(EXPERIMENT_SHA256)),
+        lp(hexToBytes("00".repeat(32))),
+        lp(hexToBytes(context.preimplementation_manifest_sha256)),
+        lp(hexToBytes("22".repeat(32))),
+        lp(utf8.encode(context.custodian_id)),
+        lp(utf8.encode(context.custodian_epoch)),
+        u32be(7),
+        lp(seed)
+      ]);
+      try {
+        const actual = bytesToHex(await sha256(preimage));
+        if (actual !== EXPECTED_TEST_COMMITMENT) {
+          throw new Error("Public commitment known-answer vector failed.");
+        }
+      } finally {
+        seed.fill(0);
+        preimage.fill(0);
+      }
+    }
+
+    function toBase64(bytes) {
+      let binary = "";
+      const chunk = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunk) {
+        binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+      }
+      return btoa(binary);
+    }
+
+    function validateInputs() {
+      const apparatusHash = apparatusHashInput.value.trim();
+      const custodianId = custodianIdInput.value.trim();
+      const custodianEpoch = custodianEpochInput.value.trim();
+      const passphrase = passphraseInput.value;
+      if (!/^[0-9a-f]{64}$/.test(apparatusHash) || /^0{64}$/.test(apparatusHash)) {
+        throw new Error("The apparatus-manifest digest must be a nonzero lowercase SHA-256 value.");
+      }
+      if (!/^[A-Za-z0-9._:@/-]{1,128}$/.test(custodianId)) {
+        throw new Error("The custodian ID violates the frozen ASCII grammar.");
+      }
+      if (!/^[A-Za-z0-9._:-]{1,64}$/.test(custodianEpoch)) {
+        throw new Error("The custodian epoch violates the frozen ASCII grammar.");
+      }
+      if (passphrase.length < 20) {
+        throw new Error("The encrypted-bundle passphrase must contain at least 20 characters.");
+      }
+      if (passphrase !== passphraseConfirmInput.value) {
+        throw new Error("The passphrase entries do not match.");
+      }
+      if (!attestationInput.checked) {
+        throw new Error("The offline external-custody attestation is required.");
+      }
+      return {
+        preimplementation_manifest_sha256: apparatusHash,
+        custodian_id: custodianId,
+        custodian_epoch: custodianEpoch,
+        passphrase
+      };
+    }
+
+    function saveArtifact(text, filename) {
+      const blob = new Blob([text], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      link.hidden = true;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    async function runCeremony() {
+      if (running || completed || terminalFailure) return;
+      running = true;
+      generateButton.disabled = true;
+      publicButton.disabled = true;
+      encryptedButton.disabled = true;
+      publicArtifact = null;
+      encryptedArtifact = null;
+      const seeds = [];
+      let revealBytes = null;
+      let aadBytes = null;
+      let ciphertextBytes = null;
+      let samplingStarted = false;
+
+      try {
+        checkCrypto();
+        await verifyKnownAnswer();
+        const input = validateInputs();
+        setStatus("Generating 64 independent seed values and encrypting the one reveal bundle. Do not close this page.");
+
+        const seenFingerprints = new Set();
+        samplingStarted = true;
+        for (let index = 0; index < SEED_COUNT; index += 1) {
+          const seed = new Uint8Array(SEED_BYTES);
+          crypto.getRandomValues(seed);
+          const fingerprint = bytesToHex(await sha256(seed));
+          if (seenFingerprints.has(fingerprint)) {
+            seed.fill(0);
+            throw new Error("Duplicate seed detected; the entire unpublished ceremony has been aborted.");
+          }
+          seenFingerprints.add(fingerprint);
+          seeds.push(seed);
+        }
+
+        const context = {
+          preimplementation_manifest_sha256: input.preimplementation_manifest_sha256,
+          custodian_id: input.custodian_id,
+          custodian_epoch: input.custodian_epoch
+        };
+        const commitments = [];
+        for (let index = 0; index < SEED_COUNT; index += 1) {
+          commitments.push({
+            index,
+            sha256: await commitmentHex(context, index, seeds[index])
+          });
+        }
+
+        const registerBody = {
+          authority: "NONE_OVER_K0_CEA_FCD_OCC_CCA_CARS_ISSUE_44_ARC3",
+          commitments,
+          custodian: {
+            epoch: input.custodian_epoch,
+            id: input.custodian_id
+          },
+          execution_manifest_schema_sha256: EXECUTION_SCHEMA_SHA256,
+          experiment_id: EXPERIMENT_ID,
+          experiment_sha256: EXPERIMENT_SHA256,
+          k0_commit: K0_COMMIT,
+          preimplementation_manifest_sha256: input.preimplementation_manifest_sha256,
+          protocol_sha256: PROTOCOL_SHA256,
+          protocol_version: PROTOCOL_VERSION,
+          results: "NONE",
+          schema: "opencore.e001.seed-commitment-register-body.v1",
+          seed_bytes: SEED_BYTES,
+          seed_count: SEED_COUNT,
+          seed_values_present: false,
+          status: "PUBLISHED_COMMITMENTS_SEEDS_SEALED"
+        };
+        const registerCanonical = canonicalJson(registerBody);
+        const registerBodyHash = bytesToHex(await sha256(new TextEncoder().encode(registerCanonical)));
+        const registerEnvelope = {
+          body: registerBody,
+          body_sha256: registerBodyHash,
+          schema: "opencore.e001.seed-commitment-register-envelope.v1"
+        };
+
+        const revealBody = {
+          commitments,
+          custodian: {
+            epoch: input.custodian_epoch,
+            id: input.custodian_id
+          },
+          execution_manifest_schema_sha256: EXECUTION_SCHEMA_SHA256,
+          experiment_id: EXPERIMENT_ID,
+          experiment_sha256: EXPERIMENT_SHA256,
+          k0_commit: K0_COMMIT,
+          preimplementation_manifest_sha256: input.preimplementation_manifest_sha256,
+          protocol_sha256: PROTOCOL_SHA256,
+          protocol_version: PROTOCOL_VERSION,
+          public_register_body_sha256: registerBodyHash,
+          schema: "opencore.e001.seed-reveal-body.v1",
+          seeds: seeds.map((seed, index) => ({ index, seed_hex: bytesToHex(seed) })),
+          status: "SEALED_EVALUATION_SEEDS"
+        };
+        let revealCanonical = canonicalJson(revealBody);
+        revealBytes = new TextEncoder().encode(revealCanonical);
+        const revealBodyHash = bytesToHex(await sha256(revealBytes));
+        revealCanonical = "";
+        revealBody.seeds = [];
+
+        const aadBody = {
+          custodian_epoch: input.custodian_epoch,
+          custodian_id: input.custodian_id,
+          execution_manifest_schema_sha256: EXECUTION_SCHEMA_SHA256,
+          experiment_sha256: EXPERIMENT_SHA256,
+          k0_commit: K0_COMMIT,
+          preimplementation_manifest_sha256: input.preimplementation_manifest_sha256,
+          protocol_sha256: PROTOCOL_SHA256,
+          public_register_body_sha256: registerBodyHash,
+          reveal_body_sha256: revealBodyHash,
+          schema: "opencore.e001.seed-reveal-aad.v1"
+        };
+        aadBytes = new TextEncoder().encode(canonicalJson(aadBody));
+
+        const salt = new Uint8Array(16);
+        const iv = new Uint8Array(12);
+        crypto.getRandomValues(salt);
+        crypto.getRandomValues(iv);
+        const passphraseBytes = new TextEncoder().encode(input.passphrase);
+        passphraseInput.value = "";
+        passphraseConfirmInput.value = "";
+        const keyMaterial = await crypto.subtle.importKey(
+          "raw",
+          passphraseBytes,
+          "PBKDF2",
+          false,
+          ["deriveKey"]
+        );
+        passphraseBytes.fill(0);
+        input.passphrase = "";
+        const key = await crypto.subtle.deriveKey(
+          {
+            name: "PBKDF2",
+            hash: "SHA-256",
+            salt,
+            iterations: PBKDF2_ITERATIONS
+          },
+          keyMaterial,
+          { name: "AES-GCM", length: 256 },
+          false,
+          ["encrypt"]
+        );
+        ciphertextBytes = new Uint8Array(await crypto.subtle.encrypt(
+          {
+            name: "AES-GCM",
+            iv,
+            additionalData: aadBytes,
+            tagLength: 128
+          },
+          key,
+          revealBytes
+        ));
+        if (ciphertextBytes.length !== revealBytes.length + 16) {
+          throw new Error("AES-GCM output length is inconsistent with a 128-bit tag.");
+        }
+
+        const encryptedEnvelope = {
+          aad: aadBody,
+          cipher: {
+            ciphertext_and_tag_base64: toBase64(ciphertextBytes),
+            iv_base64: toBase64(iv),
+            name: "AES-GCM",
+            tag_bits: 128
+          },
+          kdf: {
+            hash: "SHA-256",
+            iterations: PBKDF2_ITERATIONS,
+            name: "PBKDF2",
+            salt_base64: toBase64(salt)
+          },
+          plaintext_encoding: "UTF8_OCJ-1",
+          reveal_body_sha256: revealBodyHash,
+          schema: "opencore.e001.encrypted-seed-reveal-envelope.v1",
+          seed_values_present_outside_ciphertext: false,
+          status: "ENCRYPTED_REVEAL_BUNDLE"
+        };
+
+        publicArtifact = JSON.stringify(registerEnvelope, null, 2) + "\n";
+        encryptedArtifact = JSON.stringify(encryptedEnvelope, null, 2) + "\n";
+        filenameSuffix = registerBodyHash.slice(0, 16);
+        completed = true;
+        publicButton.disabled = true;
+        encryptedButton.disabled = false;
+        apparatusHashInput.disabled = true;
+        custodianIdInput.disabled = true;
+        custodianEpochInput.disabled = true;
+        attestationInput.disabled = true;
+        setStatus("Ceremony completed in memory. Download and secure the encrypted reveal bundle first; the public-register download will then unlock. Plaintext seeds were not rendered or placed in a download.");
+      } catch (error) {
+        publicArtifact = null;
+        encryptedArtifact = null;
+        publicButton.disabled = true;
+        encryptedButton.disabled = true;
+        passphraseInput.value = "";
+        passphraseConfirmInput.value = "";
+        if (samplingStarted) {
+          terminalFailure = true;
+          apparatusHashInput.disabled = true;
+          custodianIdInput.disabled = true;
+          custodianEpochInput.disabled = true;
+          attestationInput.disabled = true;
+          setStatus("Ceremony aborted after sampling began; no artifact is downloadable. Reload on a clean ceremony environment and use a new custodian epoch. Cause: " + String(error && error.message ? error.message : "unknown failure"), true);
+        } else {
+          setStatus("No seed was sampled and no artifact is downloadable: " + String(error && error.message ? error.message : "unknown failure"), true);
+        }
+      } finally {
+        for (const seed of seeds) seed.fill(0);
+        if (revealBytes) revealBytes.fill(0);
+        if (aadBytes) aadBytes.fill(0);
+        if (ciphertextBytes) ciphertextBytes.fill(0);
+        running = false;
+        if (!completed && !terminalFailure) generateButton.disabled = !attestationInput.checked;
+      }
+    }
+
+    attestationInput.addEventListener("change", () => {
+      if (!running && !completed && !terminalFailure) generateButton.disabled = !attestationInput.checked;
+    });
+    generateButton.addEventListener("click", runCeremony);
+    publicButton.addEventListener("click", () => {
+      if (completed && publicArtifact !== null) {
+        saveArtifact(publicArtifact, "E001_public_seed_commitments_" + filenameSuffix + ".json");
+      }
+    });
+    encryptedButton.addEventListener("click", () => {
+      if (completed && encryptedArtifact !== null) {
+        saveArtifact(encryptedArtifact, "E001_encrypted_seed_reveal_" + filenameSuffix + ".json");
+        publicButton.disabled = false;
+        setStatus("Encrypted reveal download initiated. Verify and secure it, then download the public commitments. The application cannot confirm that the browser completed the write.");
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

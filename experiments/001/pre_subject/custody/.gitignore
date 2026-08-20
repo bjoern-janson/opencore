@@ -1,0 +1,6 @@
+# Custody outputs must remain outside the repository before their declared gate.
+E001_encrypted_seed_reveal_*.json
+E001_seed_reveal_*.json
+*passphrase*
+*.key
+*.pem

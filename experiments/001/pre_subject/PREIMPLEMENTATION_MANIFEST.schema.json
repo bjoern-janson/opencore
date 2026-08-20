@@ -1,0 +1,421 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opencore:e001:schema:preimplementation-manifest:v1",
+  "title": "OpenCore E001 Preimplementation Apparatus Manifest",
+  "description": "Schema for a complete, immutable, pre-subject apparatus manifest. Schema conformance is not apparatus validity or an experiment result.",
+  "$comment": "FROZEN CANDIDATE SCHEMA / UNEXECUTED / UNVERIFIED / NO RAW SEEDS / NO RESULTS / NO EXTERNAL AUTHORITY MOVEMENT",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "manifest_id",
+    "status",
+    "subject_implementation_status",
+    "seed_register_status",
+    "results",
+    "terminal_status",
+    "authority",
+    "lineage",
+    "canonicalization",
+    "protocol_artifacts",
+    "apparatus_components",
+    "apparatus_closure",
+    "seed_custody",
+    "trust_boundary",
+    "freeze_assertions",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "opencore.e001.preimplementation-manifest.v1"
+    },
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "status": {
+      "const": "FROZEN_PROSPECTIVE_PRE_SUBJECT_APPARATUS"
+    },
+    "subject_implementation_status": {
+      "const": "NOT_STARTED"
+    },
+    "seed_register_status": {
+      "const": "NOT_GENERATED_BY_THIS_MANIFEST"
+    },
+    "results": {
+      "const": "NONE"
+    },
+    "terminal_status": {
+      "const": "UNASSIGNED"
+    },
+    "authority": {
+      "const": "NONE_OVER_K0_CEA_FCD_OCC_CCA_CARS_ISSUE_44_ARC3"
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "k0_commit",
+        "experiment_id",
+        "experiment_path",
+        "experiment_sha256",
+        "amendment_policy"
+      ],
+      "properties": {
+        "k0_commit": {
+          "const": "c21693a593770ce31f89eb9e24b29e01ff75d392"
+        },
+        "experiment_id": {
+          "const": "OpenCore-E001"
+        },
+        "experiment_path": {
+          "const": "EXPERIMENT_001.md"
+        },
+        "experiment_sha256": {
+          "const": "166712a549318f53426b22cb0f0d49b3e4125cc39ad0887f3c0c650c8b3c687b"
+        },
+        "amendment_policy": {
+          "const": "SUCCESSOR_ONLY_NO_IN_PLACE_MUTATION"
+        }
+      }
+    },
+    "canonicalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "json_profile",
+        "manifest_digest"
+      ],
+      "properties": {
+        "json_profile": {
+          "const": "OCJ-1"
+        },
+        "manifest_digest": {
+          "const": "SHA-256_OF_UTF8_OCJ-1_MANIFEST_BODY"
+        }
+      }
+    },
+    "protocol_artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed_commitment_protocol",
+        "seed_custody_application",
+        "preimplementation_manifest_schema",
+        "execution_manifest_schema"
+      ],
+      "properties": {
+        "seed_commitment_protocol": {
+          "$ref": "#/$defs/artifact"
+        },
+        "seed_custody_application": {
+          "$ref": "#/$defs/artifact"
+        },
+        "preimplementation_manifest_schema": {
+          "$ref": "#/$defs/artifact"
+        },
+        "execution_manifest_schema": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "apparatus_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_utility",
+        "world_generator",
+        "hypothesis_library",
+        "surface_codec",
+        "fixed_proposer",
+        "archive_query",
+        "archive_reducer",
+        "archive_record_schema",
+        "generic_index",
+        "reference_meter_interpreter",
+        "apparatus_self_test"
+      ],
+      "properties": {
+        "canonical_utility": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "world_generator": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "hypothesis_library": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "surface_codec": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "fixed_proposer": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "archive_query": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "archive_reducer": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "archive_record_schema": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "generic_index": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "reference_meter_interpreter": {
+          "$ref": "#/$defs/sourceComponent"
+        },
+        "apparatus_self_test": {
+          "$ref": "#/$defs/sourceComponent"
+        }
+      }
+    },
+    "apparatus_closure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dependency_lock",
+        "apparatus_interface_contract"
+      ],
+      "properties": {
+        "dependency_lock": {
+          "$ref": "#/$defs/artifact"
+        },
+        "apparatus_interface_contract": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "seed_custody": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "custodian_id",
+        "custodian_epoch",
+        "seed_count",
+        "seed_bytes",
+        "generation_primitive",
+        "ceremony_environment",
+        "plaintext_repository_policy",
+        "subject_access_policy",
+        "encrypted_bundle_policy",
+        "passphrase_separation_policy",
+        "reveal_gate",
+        "loss_policy"
+      ],
+      "properties": {
+        "custodian_id": {
+          "$ref": "#/$defs/custodianId"
+        },
+        "custodian_epoch": {
+          "$ref": "#/$defs/custodianEpoch"
+        },
+        "seed_count": {
+          "const": 64
+        },
+        "seed_bytes": {
+          "const": 32
+        },
+        "generation_primitive": {
+          "const": "64_SEPARATE_CALLS_TO_BROWSER_CRYPTO_GETRANDOMVALUES_32_BYTES"
+        },
+        "ceremony_environment": {
+          "const": "EXTERNAL_OFFLINE_CUSTODIAN_CONTROLLED"
+        },
+        "plaintext_repository_policy": {
+          "const": "FORBIDDEN"
+        },
+        "subject_access_policy": {
+          "const": "NO_ACCESS_BEFORE_REVEAL_GATE"
+        },
+        "encrypted_bundle_policy": {
+          "const": "AES_256_GCM_PBKDF2_SHA256_600000"
+        },
+        "passphrase_separation_policy": {
+          "const": "SEPARATE_PROTECTED_CUSTODY"
+        },
+        "reveal_gate": {
+          "const": "AFTER_PUBLIC_FINAL_SUBJECT_HASHES_AND_POPULATED_EXECUTION_MANIFEST_ANCHOR"
+        },
+        "loss_policy": {
+          "const": "INVALID_UNDERCONSTITUTED_NO_REGENERATION"
+        }
+      }
+    },
+    "trust_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed_custodian_external_to_subject",
+        "incumbent_cannot_access_seed_values",
+        "incumbent_cannot_redefine_reference_contract",
+        "warrant_authority_persistence_separated",
+        "persistence_verifier_is_sole_receipt_issuer",
+        "decisive_challenge_external",
+        "terminal_adjudication_external",
+        "logical_separation_not_hostile_process_security",
+        "role_plan"
+      ],
+      "properties": {
+        "seed_custodian_external_to_subject": {
+          "const": true
+        },
+        "incumbent_cannot_access_seed_values": {
+          "const": true
+        },
+        "incumbent_cannot_redefine_reference_contract": {
+          "const": true
+        },
+        "warrant_authority_persistence_separated": {
+          "const": true
+        },
+        "persistence_verifier_is_sole_receipt_issuer": {
+          "const": true
+        },
+        "decisive_challenge_external": {
+          "const": true
+        },
+        "terminal_adjudication_external": {
+          "const": true
+        },
+        "logical_separation_not_hostile_process_security": {
+          "const": true
+        },
+        "role_plan": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "freeze_assertions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "all_required_apparatus_hashes_populated",
+        "no_placeholder_hashes",
+        "no_subject_arm_profiled",
+        "no_evaluation_seed_generated_by_manifest",
+        "no_evaluation_seed_value_present",
+        "no_experiment_execution",
+        "no_validity_gate_decided",
+        "no_result_recorded"
+      ],
+      "properties": {
+        "all_required_apparatus_hashes_populated": {
+          "const": true
+        },
+        "no_placeholder_hashes": {
+          "const": true
+        },
+        "no_subject_arm_profiled": {
+          "const": true
+        },
+        "no_evaluation_seed_generated_by_manifest": {
+          "const": true
+        },
+        "no_evaluation_seed_value_present": {
+          "const": true
+        },
+        "no_experiment_execution": {
+          "const": true
+        },
+        "no_validity_gate_decided": {
+          "const": true
+        },
+        "no_result_recorded": {
+          "const": true
+        }
+      }
+    },
+    "claim_ceiling": {
+      "const": "HASHED_PROSPECTIVE_APPARATUS_INVENTORY_ONLY_NOT_VALIDITY_READINESS_WITNESS_RESULT_OR_AUTHORITY"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "not": {
+        "const": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "custodianId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:@/-]{1,128}$"
+    },
+    "custodianEpoch": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:-]{1,64}$"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "repository_relative_path",
+        "media_type",
+        "hashing_scope",
+        "content_sha256"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "repository_relative_path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)(?:\\.\\.|TBD|TODO|PLACEHOLDER)(?:/|$))[A-Za-z0-9._/-]+$"
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9.+-]+/[a-zA-Z0-9.+-]+$"
+        },
+        "hashing_scope": {
+          "enum": [
+            "EXACT_FILE_BYTES",
+            "UTF8_OCJ-1_CANONICAL_JSON",
+            "CANONICAL_TREE_MANIFEST"
+          ]
+        },
+        "content_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "sourceComponent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "repository_relative_path",
+        "media_type",
+        "hashing_scope",
+        "content_sha256"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "repository_relative_path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)(?:\\.\\.|TBD|TODO|PLACEHOLDER)(?:/|$))[A-Za-z0-9._/-]+$"
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9.+-]+/[a-zA-Z0-9.+-]+$"
+        },
+        "hashing_scope": {
+          "enum": [
+            "EXACT_FILE_BYTES",
+            "UTF8_OCJ-1_CANONICAL_JSON",
+            "CANONICAL_TREE_MANIFEST"
+          ]
+        },
+        "content_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}
