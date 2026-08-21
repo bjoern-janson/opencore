@@ -1,0 +1,964 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opencore:e001:schema:execution-manifest:v1",
+  "title": "OpenCore E001 Final Prospective Execution Manifest",
+  "description": "Schema for the immutable manifest instance frozen after subject implementation and development qualification but before evaluation-seed reveal. Conformance is not a validity decision or result.",
+  "$comment": "FROZEN CANDIDATE SCHEMA / NO MANIFEST INSTANCE / NO REVEAL / NO EXECUTION / NO RESULTS / NO EXTERNAL AUTHORITY MOVEMENT",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "manifest_id",
+    "status",
+    "evaluation_seed_status",
+    "execution_status",
+    "results",
+    "terminal_status",
+    "authority",
+    "lineage",
+    "seed_control",
+    "implementation_freeze",
+    "implementation_components",
+    "reference_contract",
+    "fault_and_measurement_apparatus",
+    "development_qualification",
+    "evaluation_campaign",
+    "post_freeze_record_schemas",
+    "freeze_assertions",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "opencore.e001.execution-manifest.v1"
+    },
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "status": {
+      "const": "FROZEN_PROSPECTIVE_EXECUTION_MANIFEST"
+    },
+    "evaluation_seed_status": {
+      "const": "SEALED_AT_FREEZE"
+    },
+    "execution_status": {
+      "const": "NOT_STARTED"
+    },
+    "results": {
+      "const": "NONE"
+    },
+    "terminal_status": {
+      "const": "UNASSIGNED"
+    },
+    "authority": {
+      "const": "NONE_OVER_K0_CEA_FCD_OCC_CCA_CARS_ISSUE_44_ARC3"
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "k0_commit",
+        "experiment_id",
+        "experiment_sha256",
+        "seed_commitment_protocol_sha256",
+        "preimplementation_manifest_sha256",
+        "preimplementation_anchor_commit",
+        "seed_commitment_register_body_sha256",
+        "seed_commitment_register_file_sha256",
+        "execution_manifest_schema_sha256",
+        "amendment_policy",
+        "publication_anchor_policy"
+      ],
+      "properties": {
+        "k0_commit": {
+          "const": "c21693a593770ce31f89eb9e24b29e01ff75d392"
+        },
+        "experiment_id": {
+          "const": "OpenCore-E001"
+        },
+        "experiment_sha256": {
+          "const": "166712a549318f53426b22cb0f0d49b3e4125cc39ad0887f3c0c650c8b3c687b"
+        },
+        "seed_commitment_protocol_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "preimplementation_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "preimplementation_anchor_commit": {
+          "$ref": "#/$defs/gitCommit"
+        },
+        "seed_commitment_register_body_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "seed_commitment_register_file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "execution_manifest_schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "amendment_policy": {
+          "const": "SUCCESSOR_EXPERIMENT_ONLY_NO_IN_PLACE_MUTATION"
+        },
+        "publication_anchor_policy": {
+          "const": "CONTAINING_COMMIT_RECORDED_ONLY_BY_DESCENDANT_OR_EXTERNAL_PUBLICATION"
+        }
+      }
+    },
+    "seed_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evaluation_seed_count",
+        "evaluation_seed_bytes",
+        "evaluation_seed_order",
+        "public_register_body_sha256",
+        "public_register_file_sha256",
+        "encrypted_reveal_bundle_file_sha256",
+        "decryption_material_present",
+        "evaluation_seed_values_present",
+        "reveal_gate",
+        "reveal_procedure",
+        "reveal_record_schema",
+        "development_seed_derivation",
+        "development_seed_order",
+        "replacement_policy"
+      ],
+      "properties": {
+        "evaluation_seed_count": {
+          "const": 64
+        },
+        "evaluation_seed_bytes": {
+          "const": 32
+        },
+        "evaluation_seed_order": {
+          "const": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        },
+        "public_register_body_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "public_register_file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "encrypted_reveal_bundle_file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "decryption_material_present": {
+          "const": false
+        },
+        "evaluation_seed_values_present": {
+          "const": false
+        },
+        "reveal_gate": {
+          "const": "AFTER_PUBLIC_FINAL_SUBJECT_HASHES_AND_THIS_MANIFEST_ANCHOR"
+        },
+        "reveal_procedure": {
+          "$ref": "#/$defs/artifact"
+        },
+        "reveal_record_schema": {
+          "$ref": "#/$defs/artifact"
+        },
+        "development_seed_derivation": {
+          "const": "SHA256(OpenCore-K0-E001-development||uint32_be(i))_FOR_I_0_THROUGH_31"
+        },
+        "development_seed_order": {
+          "const": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ]
+        },
+        "replacement_policy": {
+          "const": "NO_REMOVAL_REPLACEMENT_REORDER_OR_REGENERATION"
+        }
+      }
+    },
+    "implementation_freeze": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_repository_commit",
+        "source_tree",
+        "runtime_environment",
+        "clean_worktree",
+        "all_component_hashes_final",
+        "freeze_precedes_seed_reveal"
+      ],
+      "properties": {
+        "source_repository_commit": {
+          "$ref": "#/$defs/gitCommit"
+        },
+        "source_tree": {
+          "$ref": "#/$defs/artifact"
+        },
+        "runtime_environment": {
+          "$ref": "#/$defs/artifact"
+        },
+        "clean_worktree": {
+          "const": true
+        },
+        "all_component_hashes_final": {
+          "const": true
+        },
+        "freeze_precedes_seed_reveal": {
+          "const": true
+        }
+      }
+    },
+    "implementation_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shared",
+        "arm_specific",
+        "dependency_lock",
+        "implementation_interface_contract",
+        "byte_identity_assertion",
+        "allowed_difference_assertion"
+      ],
+      "properties": {
+        "shared": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kernel",
+            "proposer",
+            "adapter",
+            "generic_composition_operator",
+            "evaluator",
+            "authority_minter",
+            "authority_verifier",
+            "clock_resource_meter",
+            "state_store",
+            "persistence_verifier",
+            "codec",
+            "world_oracle",
+            "observation_recorder",
+            "outcome_oracle",
+            "attack_adjudicator"
+          ],
+          "properties": {
+            "kernel": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "proposer": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "adapter": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "generic_composition_operator": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "evaluator": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "authority_minter": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "authority_verifier": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "clock_resource_meter": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "state_store": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "persistence_verifier": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "codec": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "world_oracle": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "observation_recorder": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "outcome_oracle": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "attack_adjudicator": {
+              "$ref": "#/$defs/runtimeComponent"
+            }
+          }
+        },
+        "arm_specific": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "open_state_strategy",
+            "open_route_index",
+            "archive_replay_state_strategy",
+            "archive_generic_index",
+            "pointer_only_state_strategy"
+          ],
+          "properties": {
+            "open_state_strategy": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "open_route_index": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "archive_replay_state_strategy": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "archive_generic_index": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "pointer_only_state_strategy": {
+              "$ref": "#/$defs/runtimeComponent"
+            }
+          }
+        },
+        "dependency_lock": {
+          "$ref": "#/$defs/artifact"
+        },
+        "implementation_interface_contract": {
+          "$ref": "#/$defs/artifact"
+        },
+        "byte_identity_assertion": {
+          "const": "KERNEL_PROPOSER_EVALUATOR_AUTHORITY_VERIFIER_AND_GENERIC_COMPOSITION_BYTE_IDENTICAL_ACROSS_SERIOUS_ARMS"
+        },
+        "allowed_difference_assertion": {
+          "const": "ONLY_DECLARED_STATE_STRATEGY_INDEX_AND_FROZEN_FAULT_COMPONENT_DIFFER"
+        }
+      }
+    },
+    "reference_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "P",
+        "h",
+        "B",
+        "Omega",
+        "Boundary_SE",
+        "protocol_epoch",
+        "world_oracle_id",
+        "world_epoch_schedule",
+        "observation_recorder_id",
+        "observation_epoch",
+        "evaluator_id",
+        "evaluator_epoch",
+        "authority_minter_id",
+        "authority_verifier_id",
+        "authority_epoch",
+        "clock_meter_id",
+        "meter_epoch",
+        "state_store_id",
+        "persistence_verifier_id",
+        "persistence_epoch",
+        "codec_id",
+        "codec_epoch",
+        "outcome_oracle_id",
+        "outcome_epoch",
+        "adjudicator_id",
+        "adjudicator_epoch",
+        "reference_contract_family_sha256",
+        "per_execution_derivation_sha256"
+      ],
+      "properties": {
+        "P": {
+          "$ref": "#/$defs/artifact"
+        },
+        "h": {
+          "const": 1024
+        },
+        "B": {
+          "$ref": "#/$defs/artifact"
+        },
+        "Omega": {
+          "$ref": "#/$defs/artifact"
+        },
+        "Boundary_SE": {
+          "$ref": "#/$defs/artifact"
+        },
+        "protocol_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "world_oracle_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "world_epoch_schedule": {
+          "$ref": "#/$defs/artifact"
+        },
+        "observation_recorder_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "observation_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "evaluator_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "evaluator_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "authority_minter_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "authority_verifier_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "authority_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "clock_meter_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "meter_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "state_store_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "persistence_verifier_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "persistence_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "codec_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "codec_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "outcome_oracle_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "outcome_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "adjudicator_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "adjudicator_epoch": {
+          "$ref": "#/$defs/epoch"
+        },
+        "reference_contract_family_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "per_execution_derivation_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "fault_and_measurement_apparatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_codecs",
+        "purge_recovery_procedure",
+        "measurement_instrumentation",
+        "fault_components"
+      ],
+      "properties": {
+        "canonical_codecs": {
+          "$ref": "#/$defs/artifact"
+        },
+        "purge_recovery_procedure": {
+          "$ref": "#/$defs/artifact"
+        },
+        "measurement_instrumentation": {
+          "$ref": "#/$defs/runtimeComponent"
+        },
+        "fault_components": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "FULL",
+            "POINTER_ONLY",
+            "-M_A",
+            "-R",
+            "-S",
+            "-A"
+          ],
+          "properties": {
+            "FULL": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "POINTER_ONLY": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "-M_A": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "-R": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "-S": {
+              "$ref": "#/$defs/runtimeComponent"
+            },
+            "-A": {
+              "$ref": "#/$defs/runtimeComponent"
+            }
+          }
+        }
+      }
+    },
+    "development_qualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "qualified_before_manifest_freeze",
+        "serious_arms",
+        "seed_indices",
+        "maximum_envelope",
+        "neutral_vector",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "const": "PASSED_BEFORE_EVALUATION_FREEZE"
+        },
+        "qualified_before_manifest_freeze": {
+          "const": true
+        },
+        "serious_arms": {
+          "const": [
+            "OPEN",
+            "ARCHIVE_REPLAY"
+          ]
+        },
+        "seed_indices": {
+          "const": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ]
+        },
+        "maximum_envelope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "canonical_bytes_accessed",
+            "reference_ops",
+            "reference_ticks",
+            "persistent_bytes",
+            "evaluator_calls_per_correction",
+            "semantic_commit_attempts"
+          ],
+          "properties": {
+            "canonical_bytes_accessed": {
+              "const": 8192
+            },
+            "reference_ops": {
+              "const": 1024
+            },
+            "reference_ticks": {
+              "const": 1024
+            },
+            "persistent_bytes": {
+              "const": 65536
+            },
+            "evaluator_calls_per_correction": {
+              "const": 4
+            },
+            "semantic_commit_attempts": {
+              "const": 2
+            }
+          }
+        },
+        "neutral_vector": {
+          "const": [
+            "M",
+            "C_corr",
+            "S",
+            "A"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "evaluation_campaign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "single_campaign",
+        "campaign_plan",
+        "arm_order",
+        "fault_profile_order",
+        "canonical_byte_envelopes",
+        "reference_op_envelopes",
+        "reference_ticks",
+        "persistent_bytes_per_arm",
+        "duplicate_executions_per_identical_input",
+        "duplicate_placement",
+        "additional_subject_execution_after_reveal",
+        "change_after_reveal_policy",
+        "campaign_start_gate"
+      ],
+      "properties": {
+        "single_campaign": {
+          "const": true
+        },
+        "campaign_plan": {
+          "$ref": "#/$defs/artifact"
+        },
+        "arm_order": {
+          "const": [
+            "OPEN",
+            "ARCHIVE_REPLAY",
+            "POINTER_ONLY"
+          ]
+        },
+        "fault_profile_order": {
+          "const": [
+            "FULL",
+            "ARCHIVE_REPLAY",
+            "POINTER_ONLY",
+            "-M_A",
+            "-R",
+            "-S",
+            "-A"
+          ]
+        },
+        "canonical_byte_envelopes": {
+          "const": [
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192
+          ]
+        },
+        "reference_op_envelopes": {
+          "const": [
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024
+          ]
+        },
+        "reference_ticks": {
+          "const": 1024
+        },
+        "persistent_bytes_per_arm": {
+          "const": 65536
+        },
+        "duplicate_executions_per_identical_input": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "duplicate_placement": {
+          "enum": [
+            "ADJACENT",
+            "INTERLEAVED_BY_FROZEN_PLAN"
+          ]
+        },
+        "additional_subject_execution_after_reveal": {
+          "const": false
+        },
+        "change_after_reveal_policy": {
+          "const": "ANY_CODE_THRESHOLD_METRIC_SEED_OR_PLAN_CHANGE_CREATES_SUCCESSOR_EXPERIMENT"
+        },
+        "campaign_start_gate": {
+          "const": "VERIFIED_REVEAL_RECORD_AND_PHASE_0_APPARATUS_CHECKS"
+        }
+      }
+    },
+    "post_freeze_record_schemas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed_reveal_record",
+        "execution_trace",
+        "validity_gate_decision",
+        "adjudication_record",
+        "result_record"
+      ],
+      "properties": {
+        "seed_reveal_record": {
+          "$ref": "#/$defs/artifact"
+        },
+        "execution_trace": {
+          "$ref": "#/$defs/artifact"
+        },
+        "validity_gate_decision": {
+          "$ref": "#/$defs/artifact"
+        },
+        "adjudication_record": {
+          "$ref": "#/$defs/artifact"
+        },
+        "result_record": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "freeze_assertions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "all_required_hashes_populated",
+        "no_placeholder_hashes",
+        "evaluation_seeds_still_sealed",
+        "no_evaluation_seed_value_present",
+        "no_decryption_material_present",
+        "no_evaluation_execution",
+        "no_trace_present",
+        "no_gate_decision_present",
+        "no_adjudication_present",
+        "no_result_present",
+        "future_records_are_separate_descendants"
+      ],
+      "properties": {
+        "all_required_hashes_populated": {
+          "const": true
+        },
+        "no_placeholder_hashes": {
+          "const": true
+        },
+        "evaluation_seeds_still_sealed": {
+          "const": true
+        },
+        "no_evaluation_seed_value_present": {
+          "const": true
+        },
+        "no_decryption_material_present": {
+          "const": true
+        },
+        "no_evaluation_execution": {
+          "const": true
+        },
+        "no_trace_present": {
+          "const": true
+        },
+        "no_gate_decision_present": {
+          "const": true
+        },
+        "no_adjudication_present": {
+          "const": true
+        },
+        "no_result_present": {
+          "const": true
+        },
+        "future_records_are_separate_descendants": {
+          "const": true
+        }
+      }
+    },
+    "claim_ceiling": {
+      "const": "FROZEN_EXECUTION_INTENT_ONLY_NOT_PHASE_0_VALIDITY_READINESS_WITNESS_RESULT_SURVIVAL_OR_UNIVERSALITY"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "not": {
+        "const": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "gitCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "not": {
+        "const": "0000000000000000000000000000000000000000"
+      }
+    },
+    "roleId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:@/-]{0,127}$"
+    },
+    "epoch": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,63}$"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "repository_relative_path",
+        "hashing_scope",
+        "content_sha256"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "repository_relative_path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)(?:\\.\\.|TBD|TODO|PLACEHOLDER)(?:/|$))[A-Za-z0-9._/-]+$"
+        },
+        "hashing_scope": {
+          "enum": [
+            "EXACT_FILE_BYTES",
+            "UTF8_OCJ-1_CANONICAL_JSON",
+            "CANONICAL_TREE_MANIFEST"
+          ]
+        },
+        "content_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "runtimeComponent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "component_id",
+        "source_artifact",
+        "build_artifact",
+        "configuration_artifact",
+        "role_id",
+        "role_epoch"
+      ],
+      "properties": {
+        "component_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "source_artifact": {
+          "$ref": "#/$defs/artifact"
+        },
+        "build_artifact": {
+          "$ref": "#/$defs/artifact"
+        },
+        "configuration_artifact": {
+          "$ref": "#/$defs/artifact"
+        },
+        "role_id": {
+          "$ref": "#/$defs/roleId"
+        },
+        "role_epoch": {
+          "$ref": "#/$defs/epoch"
+        }
+      }
+    }
+  }
+}

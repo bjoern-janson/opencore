@@ -1,0 +1,188 @@
+{
+  "schema_version": "opencore.e001.preimplementation-manifest.v1",
+  "manifest_id": "OpenCore-E001-pre-subject-apparatus-v1",
+  "status": "FROZEN_PROSPECTIVE_PRE_SUBJECT_APPARATUS",
+  "subject_implementation_status": "NOT_STARTED",
+  "seed_register_status": "NOT_GENERATED_BY_THIS_MANIFEST",
+  "results": "NONE",
+  "terminal_status": "UNASSIGNED",
+  "authority": "NONE_OVER_K0_CEA_FCD_OCC_CCA_CARS_ISSUE_44_ARC3",
+  "lineage": {
+    "k0_commit": "c21693a593770ce31f89eb9e24b29e01ff75d392",
+    "experiment_id": "OpenCore-E001",
+    "experiment_path": "EXPERIMENT_001.md",
+    "experiment_sha256": "166712a549318f53426b22cb0f0d49b3e4125cc39ad0887f3c0c650c8b3c687b",
+    "amendment_policy": "SUCCESSOR_ONLY_NO_IN_PLACE_MUTATION"
+  },
+  "canonicalization": {
+    "json_profile": "OCJ-1",
+    "manifest_digest": "SHA-256_OF_UTF8_OCJ-1_MANIFEST_BODY"
+  },
+  "protocol_artifacts": {
+    "seed_commitment_protocol": {
+      "artifact_id": "E001-seed-commitment-protocol-v1",
+      "repository_relative_path": "experiments/001/pre_subject/SEED_COMMITMENT_PROTOCOL.md",
+      "media_type": "text/markdown",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "77955b7d7c3473e449d63093f05bfd2989ee1304b740ed69da7320983bff00a6"
+    },
+    "seed_custody_application": {
+      "artifact_id": "E001-offline-seed-custodian-v1",
+      "repository_relative_path": "experiments/001/pre_subject/seed_custodian.html",
+      "media_type": "text/html",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "916fbe4fa0fe483cb89d799f458fbfe24c92a637003cd6874ecd90ba8e87eb39"
+    },
+    "preimplementation_manifest_schema": {
+      "artifact_id": "E001-preimplementation-manifest-schema-v1",
+      "repository_relative_path": "experiments/001/pre_subject/PREIMPLEMENTATION_MANIFEST.schema.json",
+      "media_type": "application/schema+json",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "775a5272ce56e157cd1834e134fe798c6515f24c7094294bfbee4756dbac8030"
+    },
+    "execution_manifest_schema": {
+      "artifact_id": "E001-execution-manifest-schema-v1",
+      "repository_relative_path": "experiments/001/pre_subject/EXECUTION_MANIFEST.schema.json",
+      "media_type": "application/schema+json",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "82c79135b7f9a092c480df9466f294b733b778037265f81d67a396501698e85f"
+    }
+  },
+  "apparatus_components": {
+    "canonical_utility": {
+      "artifact_id": "E001-canonical-utility-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/canonical.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "d6d530e221684d5fb73ea6f82d95f8f76ec72579fff3ab0d704da3df20ee8db0"
+    },
+    "world_generator": {
+      "artifact_id": "E001-world-generator-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/world_generator.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "c9fec097314286d52059a942d61f493e8744591baecbad1eef81119f44a19f51"
+    },
+    "hypothesis_library": {
+      "artifact_id": "E001-hypothesis-library-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/hypothesis_library.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "665062d20437fb29350ccff0f739ee647655d8daacffcb04f3e44886cd5b64c3"
+    },
+    "surface_codec": {
+      "artifact_id": "E001-surface-codec-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/surface_codec.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "82adaa2d866c30bab3a420f51aaa3487c948b864cf5b58371485eae9e3877b74"
+    },
+    "fixed_proposer": {
+      "artifact_id": "E001-fixed-proposer-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/proposer.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "08f964d3a1e6af50d475bc77e1f6ecc9958889e5efc635cabd9178bfb568857f"
+    },
+    "archive_query": {
+      "artifact_id": "E001-archive-query-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/archive_query.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "d748955692b04c424d4c600eb96bb78ed19bda656f770eecde9ecdb14daad158"
+    },
+    "archive_reducer": {
+      "artifact_id": "E001-archive-reducer-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/archive_reducer.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "b1a800fc01cfbe489537471d2bb12454bda03e408b73fae1e9ad33e1a2502a9a"
+    },
+    "archive_record_schema": {
+      "artifact_id": "E001-archive-record-schema-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/record_schema.json",
+      "media_type": "application/schema+json",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "f7c4cc2fcdb19b2abdf369f6f1c91a51518324b6e3f4ba7454d285d27cae3a7e"
+    },
+    "generic_index": {
+      "artifact_id": "E001-generic-index-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/generic_index.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "c7bd7cd6369e28b68a87588c36510d8d6a2a544ee5e24339c97dbd489c346e6f"
+    },
+    "reference_meter_interpreter": {
+      "artifact_id": "E001-reference-meter-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/reference_meter.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "3a11acb3d31e0af1eb7a2dad8b59e304920635a492fe3b4449f679ff131e7cbc"
+    },
+    "apparatus_self_test": {
+      "artifact_id": "E001-apparatus-self-test-v1",
+      "repository_relative_path": "experiments/001/pre_subject/apparatus/self_test.py",
+      "media_type": "text/x-python",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "15a25fa5d9c9a4f3bd8da4248419d5f57db974e052a3b595a32e0f6fa64bd9f8"
+    }
+  },
+  "apparatus_closure": {
+    "dependency_lock": {
+      "artifact_id": "E001-apparatus-dependencies-v1",
+      "repository_relative_path": "experiments/001/pre_subject/APPARATUS_DEPENDENCIES.json",
+      "media_type": "application/json",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "61f10a5ef4b8b487ca0c5fbe15944d3b1a0519e8fc4fc023d9e079bd0826d4a5"
+    },
+    "apparatus_interface_contract": {
+      "artifact_id": "E001-apparatus-interface-contract-v1",
+      "repository_relative_path": "experiments/001/pre_subject/APPARATUS_INTERFACES.md",
+      "media_type": "text/markdown",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "c3514b482e186e608a3fb002b7c4a9b2bc45bb51f2e976e87ec2555facd70293"
+    }
+  },
+  "seed_custody": {
+    "custodian_id": "opencore-e001-external-custodian",
+    "custodian_epoch": "ceremony-v1",
+    "seed_count": 64,
+    "seed_bytes": 32,
+    "generation_primitive": "64_SEPARATE_CALLS_TO_BROWSER_CRYPTO_GETRANDOMVALUES_32_BYTES",
+    "ceremony_environment": "EXTERNAL_OFFLINE_CUSTODIAN_CONTROLLED",
+    "plaintext_repository_policy": "FORBIDDEN",
+    "subject_access_policy": "NO_ACCESS_BEFORE_REVEAL_GATE",
+    "encrypted_bundle_policy": "AES_256_GCM_PBKDF2_SHA256_600000",
+    "passphrase_separation_policy": "SEPARATE_PROTECTED_CUSTODY",
+    "reveal_gate": "AFTER_PUBLIC_FINAL_SUBJECT_HASHES_AND_POPULATED_EXECUTION_MANIFEST_ANCHOR",
+    "loss_policy": "INVALID_UNDERCONSTITUTED_NO_REGENERATION"
+  },
+  "trust_boundary": {
+    "seed_custodian_external_to_subject": true,
+    "incumbent_cannot_access_seed_values": true,
+    "incumbent_cannot_redefine_reference_contract": true,
+    "warrant_authority_persistence_separated": true,
+    "persistence_verifier_is_sole_receipt_issuer": true,
+    "decisive_challenge_external": true,
+    "terminal_adjudication_external": true,
+    "logical_separation_not_hostile_process_security": true,
+    "role_plan": {
+      "artifact_id": "E001-role-and-custody-plan-v1",
+      "repository_relative_path": "experiments/001/pre_subject/ROLE_PLAN.md",
+      "media_type": "text/markdown",
+      "hashing_scope": "EXACT_FILE_BYTES",
+      "content_sha256": "26d91b00e4079c2c1d92930674e8a1509a91dee2e049e72f84d833c0b8d4208b"
+    }
+  },
+  "freeze_assertions": {
+    "all_required_apparatus_hashes_populated": true,
+    "no_placeholder_hashes": true,
+    "no_subject_arm_profiled": true,
+    "no_evaluation_seed_generated_by_manifest": true,
+    "no_evaluation_seed_value_present": true,
+    "no_experiment_execution": true,
+    "no_validity_gate_decided": true,
+    "no_result_recorded": true
+  },
+  "claim_ceiling": "HASHED_PROSPECTIVE_APPARATUS_INVENTORY_ONLY_NOT_VALIDITY_READINESS_WITNESS_RESULT_OR_AUTHORITY"
+}

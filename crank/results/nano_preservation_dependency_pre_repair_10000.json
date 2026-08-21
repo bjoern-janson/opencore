@@ -1,0 +1,19 @@
+{
+  "experiment": "NANO_PRESERVATION_ANCESTRY_NOT_AUTHORITY_DEPENDENCY_PRE_REPAIR",
+  "output_deferred": 10000,
+  "output_effective": 0,
+  "sample": {
+    "output_deferred": true,
+    "output_effective_after_unrelated_preserved_source_revoke": false,
+    "output_receipt_parents": [
+      "2712de31bb81bc27505889f9"
+    ],
+    "setup": [
+      "ALLOW",
+      "ALLOW",
+      "ALLOW"
+    ]
+  },
+  "seeds": 10000,
+  "setup_failures": 0
+}

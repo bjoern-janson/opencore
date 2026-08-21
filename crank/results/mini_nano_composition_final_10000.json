@@ -1,0 +1,154 @@
+{
+  "aggregate": {
+    "attack_attempts": 50000,
+    "legitimate_attempts": 60000,
+    "naive_attack_overreach": 50000,
+    "nano_attack_overreach": 0,
+    "nano_attack_overreach_rate": 0.0,
+    "nano_legitimate_allows": 60000,
+    "nano_legitimate_retention_rate": 1.0,
+    "native_mini_lifecycle_pass": 10000,
+    "native_mini_lifecycle_rate": 1.0
+  },
+  "claim_boundary": "constructed Mini+Nano composition assay only; external contracts supplied by harness; no claim of contract correctness, autonomous typing, dependency discovery, truth, or general reliable generalization",
+  "families": {
+    "acquisition_closure_composition": {
+      "attack_attempts": 10000,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 10000,
+      "naive_attack_overreach_rate": 1.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 0,
+      "nano_attack_denies": 10000,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    },
+    "authority_applicability": {
+      "attack_attempts": 10000,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 10000,
+      "naive_attack_overreach_rate": 1.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 0,
+      "nano_attack_denies": 10000,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    },
+    "dependency_laundering": {
+      "attack_attempts": 10000,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 10000,
+      "naive_attack_overreach_rate": 1.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 10000,
+      "nano_attack_denies": 0,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    },
+    "preservation_not_warrant_regression": {
+      "attack_attempts": 0,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 0,
+      "naive_attack_overreach_rate": 0.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 0,
+      "nano_attack_denies": 0,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    },
+    "role_laundering": {
+      "attack_attempts": 10000,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 10000,
+      "naive_attack_overreach_rate": 1.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 0,
+      "nano_attack_denies": 10000,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    },
+    "stale_descendant": {
+      "attack_attempts": 10000,
+      "legitimate_attempts": 10000,
+      "naive_attack_allows": 10000,
+      "naive_attack_overreach_rate": 1.0,
+      "naive_legitimate_allows": 10000,
+      "nano_attack_allows": 0,
+      "nano_attack_defers": 10000,
+      "nano_attack_denies": 0,
+      "nano_attack_overreach_rate": 0.0,
+      "nano_false_refusal_rate": 0.0,
+      "nano_legitimate_allows": 10000,
+      "nano_legitimate_defers": 0,
+      "nano_legitimate_denies": 0,
+      "nano_legitimate_retention_rate": 1.0
+    }
+  },
+  "first_seed_examples": {
+    "acquisition_closure_composition": {
+      "nano_attack_after_protocol_change": "DENY",
+      "nano_legal": "ALLOW",
+      "preview_before_protocol_change": "ALLOW",
+      "q": 9,
+      "selected_stream_clean": true
+    },
+    "authority_applicability": {
+      "crossing_output_matches": true,
+      "nano_attack": "DENY",
+      "nano_legal": "ALLOW",
+      "next_state_failure_guaranteed": true
+    },
+    "dependency_laundering": {
+      "nano_attack": "DEFER",
+      "nano_legal": "ALLOW",
+      "q": 9,
+      "repeated_source_clean": false
+    },
+    "preservation_not_warrant_regression": {
+      "mini_B_unchanged": true,
+      "nano_post_revocation_use": "ALLOW",
+      "nano_unrelated_output_retained": true
+    },
+    "role_laundering": {
+      "mini_illegal_committed": true,
+      "nano_attack": "DENY",
+      "nano_legal": "ALLOW",
+      "same_semantic_rule": true
+    },
+    "stale_descendant": {
+      "mini_revised": true,
+      "nano_attack": "DEFER",
+      "nano_legal_reauthorized": "ALLOW"
+    }
+  },
+  "mini_sha256": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+  "mini_unchanged": true,
+  "n": 10000,
+  "nano_sha256": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329",
+  "nano_v0_unchanged": true
+}

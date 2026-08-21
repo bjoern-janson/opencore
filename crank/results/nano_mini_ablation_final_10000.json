@@ -1,0 +1,542 @@
+{
+  "attack_allow_matrix_counts": {
+    "acquisition_closure_composition": {
+      "effect_ceiling_only": 10000,
+      "full_nano": 0,
+      "lineage_liveness_only": 10000,
+      "live_preconditions_only": 0,
+      "preconditions_plus_lineage": 0
+    },
+    "authority_applicability": {
+      "effect_ceiling_only": 10000,
+      "full_nano": 0,
+      "lineage_liveness_only": 10000,
+      "live_preconditions_only": 0,
+      "preconditions_plus_lineage": 0
+    },
+    "dependency_laundering": {
+      "effect_ceiling_only": 10000,
+      "full_nano": 0,
+      "lineage_liveness_only": 10000,
+      "live_preconditions_only": 0,
+      "preconditions_plus_lineage": 0
+    },
+    "role_laundering": {
+      "effect_ceiling_only": 10000,
+      "full_nano": 0,
+      "lineage_liveness_only": 10000,
+      "live_preconditions_only": 0,
+      "preconditions_plus_lineage": 0
+    },
+    "stale_descendant": {
+      "effect_ceiling_only": 10000,
+      "full_nano": 0,
+      "lineage_liveness_only": 0,
+      "live_preconditions_only": 10000,
+      "preconditions_plus_lineage": 0
+    }
+  },
+  "attack_disposition_matrix_counts": {
+    "acquisition_closure_composition": {
+      "effect_ceiling_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "full_nano": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "lineage_liveness_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "live_preconditions_only": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "preconditions_plus_lineage": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      }
+    },
+    "authority_applicability": {
+      "effect_ceiling_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "full_nano": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "lineage_liveness_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "live_preconditions_only": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "preconditions_plus_lineage": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      }
+    },
+    "dependency_laundering": {
+      "effect_ceiling_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "full_nano": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      },
+      "lineage_liveness_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "live_preconditions_only": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      },
+      "preconditions_plus_lineage": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      }
+    },
+    "role_laundering": {
+      "effect_ceiling_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "full_nano": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "lineage_liveness_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "live_preconditions_only": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      },
+      "preconditions_plus_lineage": {
+        "attack_allows": 0,
+        "attack_defers": 0,
+        "attack_denies": 10000
+      }
+    },
+    "stale_descendant": {
+      "effect_ceiling_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "full_nano": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      },
+      "lineage_liveness_only": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      },
+      "live_preconditions_only": {
+        "attack_allows": 10000,
+        "attack_defers": 0,
+        "attack_denies": 0
+      },
+      "preconditions_plus_lineage": {
+        "attack_allows": 0,
+        "attack_defers": 10000,
+        "attack_denies": 0
+      }
+    }
+  },
+  "claim_boundary": "On the frozen Mini x Nano composition suite, execution-time exact precondition checking over warrant-lineage-filtered current state is sufficient to reproduce full Nano V0 behavior. This does not establish that effect ceilings or preservation checking are globally redundant: the frozen composition suite contains no direct unlicensed-effect attack and its preservation case tests false authority propagation, not an attempted preservation violation.",
+  "experiment": "OPENCORE_NANO_MINI_SUBTRACTION_V0",
+  "frozen_case_source": "mini_nano_composition.py trial functions reused unchanged via persistence-boundary substitution",
+  "frozen_component_hashes": {
+    "mini.py": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+    "mini_nano_composition.py": "116d6e285855081126608a962ad5bb3990f634c63bf76a40c19f7ad18027e7a2",
+    "nano.py": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329"
+  },
+  "full_equivalence_on_frozen_suite": {
+    "preconditions_plus_lineage_matches_full_nano": true,
+    "scope": "all frozen composition families, matched legitimate paths, preservation-not-warrant regression, and native Mini lifecycle"
+  },
+  "n": 10000,
+  "naive": {
+    "attack_allows": 50000,
+    "attack_attempts": 50000,
+    "attack_overreach_rate": 1.0
+  },
+  "start_seed": 0,
+  "variants": {
+    "effect_ceiling_only": {
+      "aggregate": {
+        "attack_allows": 50000,
+        "attack_attempts": 50000,
+        "attack_overreach_rate": 1.0,
+        "legitimate_allows": 60000,
+        "legitimate_attempts": 60000,
+        "legitimate_retention_rate": 1.0,
+        "native_mini_lifecycle_pass": 10000,
+        "native_mini_lifecycle_rate": 1.0
+      },
+      "families": {
+        "acquisition_closure_composition": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "authority_applicability": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "dependency_laundering": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "preservation_not_warrant_regression": {
+          "attack_allows": 0,
+          "attack_attempts": 0,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "role_laundering": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "stale_descendant": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        }
+      },
+      "variant": "effect_ceiling_only"
+    },
+    "full_nano": {
+      "aggregate": {
+        "attack_allows": 0,
+        "attack_attempts": 50000,
+        "attack_overreach_rate": 0.0,
+        "legitimate_allows": 60000,
+        "legitimate_attempts": 60000,
+        "legitimate_retention_rate": 1.0,
+        "native_mini_lifecycle_pass": 10000,
+        "native_mini_lifecycle_rate": 1.0
+      },
+      "families": {
+        "acquisition_closure_composition": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "authority_applicability": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "dependency_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "preservation_not_warrant_regression": {
+          "attack_allows": 0,
+          "attack_attempts": 0,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "role_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "stale_descendant": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        }
+      },
+      "variant": "full_nano"
+    },
+    "lineage_liveness_only": {
+      "aggregate": {
+        "attack_allows": 40000,
+        "attack_attempts": 50000,
+        "attack_overreach_rate": 0.8,
+        "legitimate_allows": 60000,
+        "legitimate_attempts": 60000,
+        "legitimate_retention_rate": 1.0,
+        "native_mini_lifecycle_pass": 10000,
+        "native_mini_lifecycle_rate": 1.0
+      },
+      "families": {
+        "acquisition_closure_composition": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "authority_applicability": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "dependency_laundering": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "preservation_not_warrant_regression": {
+          "attack_allows": 0,
+          "attack_attempts": 0,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "role_laundering": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "stale_descendant": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        }
+      },
+      "variant": "lineage_liveness_only"
+    },
+    "live_preconditions_only": {
+      "aggregate": {
+        "attack_allows": 10000,
+        "attack_attempts": 50000,
+        "attack_overreach_rate": 0.2,
+        "legitimate_allows": 60000,
+        "legitimate_attempts": 60000,
+        "legitimate_retention_rate": 1.0,
+        "native_mini_lifecycle_pass": 10000,
+        "native_mini_lifecycle_rate": 1.0
+      },
+      "families": {
+        "acquisition_closure_composition": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "authority_applicability": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "dependency_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "preservation_not_warrant_regression": {
+          "attack_allows": 0,
+          "attack_attempts": 0,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "role_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "stale_descendant": {
+          "attack_allows": 10000,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        }
+      },
+      "variant": "live_preconditions_only"
+    },
+    "preconditions_plus_lineage": {
+      "aggregate": {
+        "attack_allows": 0,
+        "attack_attempts": 50000,
+        "attack_overreach_rate": 0.0,
+        "legitimate_allows": 60000,
+        "legitimate_attempts": 60000,
+        "legitimate_retention_rate": 1.0,
+        "native_mini_lifecycle_pass": 10000,
+        "native_mini_lifecycle_rate": 1.0
+      },
+      "families": {
+        "acquisition_closure_composition": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "authority_applicability": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "dependency_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "preservation_not_warrant_regression": {
+          "attack_allows": 0,
+          "attack_attempts": 0,
+          "attack_defers": 0,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "role_laundering": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 0,
+          "attack_denies": 10000,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        },
+        "stale_descendant": {
+          "attack_allows": 0,
+          "attack_attempts": 10000,
+          "attack_defers": 10000,
+          "attack_denies": 0,
+          "false_refusals": 0,
+          "legitimate_allows": 10000,
+          "legitimate_attempts": 10000
+        }
+      },
+      "variant": "preconditions_plus_lineage"
+    }
+  }
+}

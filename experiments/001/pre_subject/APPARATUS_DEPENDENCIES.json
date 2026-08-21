@@ -1,0 +1,74 @@
+{
+  "schema": "opencore.e001.apparatus-dependencies.v1",
+  "status": "FROZEN_SOURCE_DEPENDENCY_DECLARATION",
+  "claim_ceiling": "SOURCE_CLOSURE_ONLY_NOT_FINAL_RUNTIME_OR_REPRODUCIBILITY_WITNESS",
+  "language": {
+    "implementation": "Python",
+    "minimum_version": "3.11",
+    "final_execution_runtime": "NOT_YET_FROZEN",
+    "descriptive_test_runtime": "CPython 3.12.13"
+  },
+  "third_party_packages": [],
+  "standard_library_modules": [
+    "collections.abc",
+    "dataclasses",
+    "hashlib",
+    "json",
+    "pathlib",
+    "re",
+    "typing"
+  ],
+  "load_bearing_sources": [
+    "experiments/001/pre_subject/apparatus/canonical.py",
+    "experiments/001/pre_subject/apparatus/hypothesis_library.py",
+    "experiments/001/pre_subject/apparatus/world_generator.py",
+    "experiments/001/pre_subject/apparatus/surface_codec.py",
+    "experiments/001/pre_subject/apparatus/proposer.py",
+    "experiments/001/pre_subject/apparatus/archive_query.py",
+    "experiments/001/pre_subject/apparatus/archive_reducer.py",
+    "experiments/001/pre_subject/apparatus/record_schema.json",
+    "experiments/001/pre_subject/apparatus/generic_index.py",
+    "experiments/001/pre_subject/apparatus/reference_meter.py"
+  ],
+  "verification_source": "experiments/001/pre_subject/apparatus/self_test.py",
+  "internal_dependency_graph": {
+    "archive_query.py": [
+      "archive_reducer.py",
+      "canonical.py",
+      "generic_index.py"
+    ],
+    "archive_reducer.py": [
+      "canonical.py"
+    ],
+    "canonical.py": [],
+    "generic_index.py": [
+      "archive_reducer.py",
+      "canonical.py"
+    ],
+    "hypothesis_library.py": [
+      "canonical.py"
+    ],
+    "proposer.py": [
+      "hypothesis_library.py",
+      "reference_meter.py"
+    ],
+    "reference_meter.py": [
+      "archive_reducer.py",
+      "canonical.py",
+      "hypothesis_library.py"
+    ],
+    "self_test.py": [
+      "all apparatus Python modules",
+      "record_schema.json"
+    ],
+    "surface_codec.py": [
+      "canonical.py",
+      "hypothesis_library.py"
+    ],
+    "world_generator.py": [
+      "canonical.py",
+      "hypothesis_library.py",
+      "surface_codec.py"
+    ]
+  }
+}
