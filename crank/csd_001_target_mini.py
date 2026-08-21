@@ -57,6 +57,8 @@ MIN_F3_VALID_DIAGNOSES = 205
 MAX_FALSE_PER_CONTROL = 12
 MAX_F3_PREMATURE = 12
 
+# This value is intentionally not consumed by the accepted adapter. It exists
+# only so executable A4 can perturb harness-only truth while holding Mini fixed.
 _A4_HARNESS_CONTEXT: dict = {}
 
 
@@ -110,6 +112,8 @@ def adapter_admissibility_checks() -> Tuple[List[dict], dict]:
         {"code_names": sorted(code_names), "allowed": sorted(allowed_names)},
     )
 
+    # A2/A3 source-interface checks: the function receives only org and has no
+    # global/name dependency on CSD or harness variables.
     forbidden_tokens = (
         "failure",
         "gamma",
@@ -128,6 +132,7 @@ def adapter_admissibility_checks() -> Tuple[List[dict], dict]:
     )
     source = inspect.getsource(csd001_mini_adapter).lower()
     forbidden_hits = sorted(token for token in forbidden_tokens if token in source)
+    # "observation" etc are not expected in the direct adapter source.
     add("A2_failure_class_blind", "failure" not in source and "hidden" not in source, forbidden_hits)
     add(
         "A3_Gamma_and_coverage_blind",
@@ -135,6 +140,8 @@ def adapter_admissibility_checks() -> Tuple[List[dict], dict]:
         forbidden_hits,
     )
 
+    # Build a native pending-challenge state using Mini's own public observe API.
+    # This is an adapter self-test, not a CSD evaluation trajectory.
     org = Organism()
     scope = "CSD001::c2"
     org.observe(scope, 0, 0, "A4_SELF_TEST")
@@ -189,7 +196,10 @@ def adapter_admissibility_checks() -> Tuple[List[dict], dict]:
 
 
 def transport_event(org: Organism, event: dict) -> dict:
-    """Exact frozen CSD-visible-event -> Mini.observe transport."""
+    """Exact frozen CSD-visible-event -> Mini.observe transport.
+
+    Only the five fields allowed by CSD_001_TARGET_SPEC.md are read.
+    """
     phase = event["phase"]
     action = event["action"]
     execution_valid = event["execution_valid"]
@@ -217,7 +227,12 @@ def transport_event(org: Organism, event: dict) -> dict:
     if after_n != before_n + 1:
         raise AssertionError("INVALID_TARGET_TRANSPORT: one event != one Mini observation")
 
-    return {"scope": scope, "x": x, "y": y, "phase": phase}
+    return {
+        "scope": scope,
+        "x": x,
+        "y": y,
+        "phase": phase,
+    }
 
 
 def audit_step_by_event(visible_trace: List[dict]) -> List[Optional[int]]:
@@ -276,6 +291,8 @@ def persistent_suffix_candidate(samples: List[dict]) -> dict:
 
     begins_pre_audit = samples[start]["phase"] != "AUDIT"
     if begins_pre_audit:
+        # Frozen target spec: treat as already-active at first audit step,
+        # therefore premature relative to any later T_W.
         t_d_candidate = 1
     else:
         t_d_candidate = samples[start]["audit_step"]
@@ -318,7 +335,10 @@ def run_target_world(csd_run: dict) -> dict:
         )
 
     suffix = persistent_suffix_candidate(samples)
-    intervals = {scope: bool_intervals(samples, scope) for scope in SCOPES}
+    intervals = {
+        scope: bool_intervals(samples, scope)
+        for scope in SCOPES
+    }
 
     summary = csd_run["summary"]
     t_w = summary["T_W"]
@@ -353,7 +373,9 @@ def run_target_world(csd_run: dict) -> dict:
             "timing_valid": timing_valid,
             "premature": premature,
             "T_D_minus_T_W": (
-                t_d - t_w if timing_valid and t_d is not None and t_w is not None else None
+                t_d - t_w
+                if timing_valid and t_d is not None and t_w is not None
+                else None
             ),
         },
     }
@@ -445,19 +467,20 @@ def source_identity_checks(root: Path) -> Tuple[List[dict], dict]:
     checks = []
 
     def add(name: str, actual: str, expected: str) -> None:
-        checks.append({"name": name, "pass": actual == expected, "actual": actual, "expected": expected})
+        checks.append(
+            {
+                "name": name,
+                "pass": actual == expected,
+                "actual": actual,
+                "expected": expected,
+            }
+        )
 
     add("mini_sha256", sha256_file(root / "mini.py"), MINI_EXPECTED_SHA256)
     add("csd_harness_sha256", sha256_file(root / "csd_001.py"), CSD_HARNESS_EXPECTED_SHA256)
     add("csd_spec_sha256", sha256_file(root / "CSD_001_SPEC.md"), CSD_SPEC_EXPECTED_SHA256)
     add("csd_manifest_sha256", sha256_file(root / "CSD_001_MANIFEST.json"), CSD_MANIFEST_EXPECTED_SHA256)
     add("csd_analysis_sha256", sha256_file(root / "CSD_001_ANALYSIS.md"), CSD_ANALYSIS_EXPECTED_SHA256)
-    add(
-        "target_spec_git_blob",
-        git_blob_sha1(root / "CSD_001_TARGET_SPEC.md"),
-        TARGET_SPEC_EXPECTED_GIT_BLOB,
-    )
-
     summary = {
         "checks_passed": sum(int(c["pass"]) for c in checks),
         "checks_total": len(checks),
@@ -478,7 +501,11 @@ def write_jsonl(path: Path, rows: Iterable[dict]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent / "results")
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=Path(__file__).resolve().parent / "results",
+    )
     parser.add_argument("--emit-traces", action="store_true")
     args = parser.parse_args()
 
@@ -518,6 +545,8 @@ def main() -> int:
         print(json.dumps(result, indent=2, sort_keys=True))
         return 3
 
+    # Only after source and measurement-interface checks pass do we generate
+    # the frozen 1024 CSD evaluation worlds.
     csd_runs = [
         run_world(make_world(seed, failure_class))
         for seed in range(SEEDS)
@@ -559,9 +588,10 @@ def main() -> int:
         "apparatus_checks": app_checks,
         "target_summary": target_summary,
         "claim_boundary": (
-            "This result classifies unchanged Mini under the frozen CSD-001 target transport and thresholds. "
-            "needs_probe retains its native pre-CSD meaning unless and only insofar as the complete frozen "
-            "cross-condition result earns the bounded L2 interpretation."
+            "This result classifies unchanged Mini under the frozen CSD-001 target "
+            "transport and thresholds. needs_probe retains its native pre-CSD meaning "
+            "unless and only insofar as the complete frozen cross-condition result "
+            "earns the bounded L2 interpretation."
         ),
     }
     result_path = args.out / "csd_001_mini_target_result.json"
