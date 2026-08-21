@@ -2,23 +2,24 @@
 
 ## 1. Purpose
 
-The crank lineage is intentionally optimized for diagnostic throughput rather than polished architecture.
+The crank lineage is optimized for diagnostic throughput rather than polished architecture.
 
 The working loop is:
 
 ```text
 build
+-> freeze
 -> run
 -> observe
 -> break
 -> localize
--> minimally modify
+-> minimally revise when earned
 -> retest
 ```
 
 The hard rule is:
 
-> reckless hypotheses are acceptable; fabricated evidence is not.
+> **Reckless hypotheses are acceptable; fabricated, post-hoc, or authority-inflated evidence is not.**
 
 ## 2. Primitive growth by failure
 
@@ -26,21 +27,24 @@ The project does not begin by specifying a complete cognitive ontology.
 
 Instead:
 
-1. construct the smallest mechanism that can express the current question;
-2. attack it;
-3. classify the shallowest failure locus;
-4. make the minimal sufficient repair;
-5. preserve unaffected structure;
-6. retest on held-out or adversarial cases;
-7. keep the negative result as part of the scientific record.
+1. construct the smallest mechanism that expresses the current question;
+2. freeze the relevant design and prediction prospectively;
+3. attack it;
+4. classify the shallowest failure locus;
+5. generate competing explanations;
+6. discriminate them with independent evidence or intervention;
+7. make the minimal sufficient revision only when earned;
+8. preserve unaffected structure and negative results;
+9. retest on held-out or adversarial cases;
+10. stop escalation once the available evidence identifies the mechanism sufficiently.
 
-A concept is not promoted because it explains the current experiment elegantly.
+A concept is not promoted because it makes the current experiment elegant.
 
-It needs recurrence, behavioral consequence, and evidence that a smaller representation is insufficient.
+It needs recurrence, behavioral consequence, and evidence that a smaller explanation is insufficient.
 
 ## 3. Failure localization
 
-A useful diagnostic ladder is:
+A useful diagnostic ladder remains:
 
 ```text
 Observation
@@ -50,71 +54,164 @@ Representation
 Interface
 ```
 
-The repair should occur at the shallowest level consistent with the evidence.
+But later work adds an important cross-cutting distinction:
+
+```text
+representation / interface
+!=
+policy topology / exposure
+!=
+authority persistence
+```
+
+A failure should be repaired at the shallowest causal location consistent with the evidence.
 
 Examples:
 
-- a wrong affine candidate may be a model/inference failure;
-- arbitrary bijective coordinates can create a representation/computational-geometry failure;
-- aliased target states create an interface non-identifiability failure;
-- a closure contract applied under the wrong acquisition protocol is a composition/warrant failure;
-- a descendant remaining effective after warrant revocation is a persistence-authority failure.
+- wrong affine candidate -> inference/model failure;
+- arbitrary coordinate permutation -> representation/computational-geometry failure;
+- aliased target states -> interface non-identifiability;
+- stale descendant after warrant revocation -> persistence-authority failure;
+- guard promoted into continuing parent -> relation/contract representation failure;
+- physically available discriminator omitted by policy -> topology/exposure failure.
+
+Do not make Nano smarter because a challenge was never sampled.
 
 ## 4. Error is a signal, not a cause
 
-A failed prediction does not by itself tell us what mechanism failed.
+A failed prediction identifies failure of a prediction, not its cause.
 
 The procedure is:
 
 ```text
 generate competing explanations
--> discriminate them with independent evidence
+-> discriminate them
 -> revise minimally
--> preserve competing hypotheses when evidence is insufficient
+-> preserve alternatives if evidence is insufficient
 ```
 
-This is why several experiments deliberately distinguish:
+Examples of distinctions forced by the lineage:
 
 ```text
 model wrong
 representation wrong
 information missing
+future-relevant identity lost
 coverage inadequate
+policy route suppressed
 closure unauthorized
 applicability expired
 warrant ancestry stale
 ```
 
-## 5. Authority boundaries
+## 5. Authority acquisition rule
 
 A central discipline is:
 
-> evidence may increase authority only along the dimensions it can actually identify.
+> **Evidence may increase authority only along the dimensions it can actually identify.**
 
 Examples:
 
 - predictive success does not establish mechanism;
-- closure evidence under one adversary class does not establish global adequacy;
+- a safe quotient on one frozen future surface does not establish universal equivalence;
+- a 6-bit sufficient representation on one bounded future-interface family does not establish `memory = rank` generally;
 - an authentic license does not establish that its preconditions still hold;
-- a true self-prediction does not become a new empirical observation;
-- a future policy repair does not automatically reconcile historical descendants.
+- an informative observation does not automatically become corrective evidence;
+- a positive PCE-001 intervention does not establish autonomous challenge discovery.
 
-## 6. Negative results are first-class
+## 6. Prospective freeze discipline
 
-Nano V0 is the clearest example.
+A prospective freeze should identify before evaluation:
 
-The final 0/60,000 overreach and 0/60,000 false-refusal matrix is useful, but the pre-repair failures are more diagnostic:
+- manipulated variables;
+- fixed variables;
+- seeds / pairing rules;
+- validity conditions;
+- primary and secondary contrasts;
+- directional predictions or stopping logic;
+- claim ceiling;
+- result-classification rules where possible;
+- artifact identities / custody surface.
+
+If a post-run validity repair is needed, preserve the failed version and make the repair explicit rather than silently changing the assay.
+
+BLITZCRANK-001's RNG repair and FOREIGN-006/007 coverage/compatibility repairs are examples of preserving rather than erasing failed execution versions.
+
+## 7. Intervention outranks association when the mechanism is causal
+
+FOREIGN-007 and BLITZCRANK-001/002 established an association:
+
+```text
+persistent state
+-> lower corrective exposure
+```
+
+PCE-001 prospectively froze the causal hypothesis and directly manipulated challenge exposure.
+
+The methodological upgrade is:
+
+```text
+observed association
+-> direct intervention on suspected edge
+-> bounded causal authority if prediction survives
+```
+
+PCE-001's stopping rule was explicit:
+
+```text
+primary contrast fails to separate
+-> current endogenous-evidence-acquisition mechanism loses authority
+
+primary contrast separates in the frozen direction
+-> mechanism gains bounded authority on the tested dimensions
+```
+
+This is the desired pattern for future causal claims.
+
+## 8. Oracle-held variables must stay visible
+
+A harness may supply a distinction in order to isolate a lower rung.
+
+That is acceptable only if the supplied object remains explicit in the claim ceiling.
+
+PCE-001 held:
+
+```text
+D_t^oracle = D_t^Pi
+```
+
+externally fixed.
+
+Therefore the experiment tests:
+
+```text
+challenge preservation
+```
+
+not:
+
+```text
+challenge-set diagnosis
+challenge constitution
+```
+
+The research method should prefer explicit oracle-held variables over silently smuggling discovery into the organism.
+
+## 9. Negative results are first-class
+
+The highest-value results are often failed mechanisms or failed repairs:
 
 ```text
 lineage recorded != lineage causally governing authority
 preservation dependency != warrant dependency
+execution guard != continuing warrant
+first reopening != sustained reopening
+support != timely exposure
 ```
 
-Those failures forced a sharper implementation than the original design discussion supplied.
+A negative result earns authority when it eliminates a previously live explanation or repair family.
 
-The result record therefore preserves both failed and repaired behavior.
-
-## 7. Composition must be tested directly
+## 10. Composition must be tested directly
 
 A component witness does not certify a composition witness.
 
@@ -122,45 +219,137 @@ A component witness does not certify a composition witness.
 Witness(A) + Witness(B) !=> Witness(A o B)
 ```
 
-The M2 × M4 attack established this concretely: active evidence acquisition changed the conditions under which a closure contract was valid.
+Examples:
 
-A research program that tests only components can therefore miss failures in the arrows between them.
+- active acquisition can invalidate assumptions of a closure contract;
+- representation aliasing upstream can cause downstream authority errors even when Nano behaves according to its contract;
+- safe information retention can coexist with policy-level loss of access to that information;
+- a valid authority gate cannot repair evidence that never arrives.
 
-## 8. Freeze discipline
+The arrows between components are scientific objects.
+
+## 11. Correction-chain instrumentation
+
+The current shared decomposition is:
+
+```text
+C1  available
+C2  supported
+C3  selected
+C4  discriminating
+C5  recognized
+C6  authority-changing
+```
+
+with `C4a` environmental discrimination and `C4b` representation-preserved discrimination.
+
+Whenever possible, assays should log enough state to locate failure at one of these gates rather than report a single `corrected/not corrected` aggregate.
+
+PCE-001 explicitly records the full route so a surprising result can be localized without post-hoc prose.
+
+## 12. Time must be measured when topology is temporal
+
+BLITZCRANK-002 and PCE-001 show that:
+
+```text
+path exists
+!=
+path reopens
+!=
+path is sampled enough
+!=
+correction arrives before consequence
+```
+
+Useful temporal objects include:
+
+```text
+T_C  correction latency
+T_L  latency until stale leverage becomes consequential
+```
+
+Do not define a universal scalar corrigibility score until an experiment forces the required structure.
+
+## 13. Null and non-corrective controls
+
+A challenge intervention is not interesting merely because more information improves behavior.
+
+When possible, separate at least:
+
+```text
+N  noninformative / costly
+I  informative but non-corrective
+C  informative and correction-relevant
+```
+
+PCE-001 uses exactly this structure.
+
+This protects:
+
+```text
+information
+!=
+correction
+!=
+authority revision
+```
+
+## 14. Freeze means stop theorizing at the tested rung
 
 A freeze means:
 
 - preserve the earned claim;
 - preserve negative results;
-- do not silently promote the result into a broader architecture;
-- do not start the next experiment merely because it is obvious;
+- do not silently promote a local result into a broader architecture;
+- do not pre-solve the next rung;
 - reopen only when new evidence or an explicitly opened experiment justifies it.
 
-Conceptual freeze and Git publication are distinct events.
+After PCE-001:
 
-## 9. Formal OpenCore vs crank lineage
+```text
+L1  challenge preservation given D_t^oracle   supported on frozen family
+L2  challenge-set insufficiency diagnosis     open
+L3  challenge constitution                     open
+```
 
-The crank directory is an experimental branch lineage.
+The existence of L2 as a conceptual problem does not authorize a new L2 module.
 
-It does not bypass formal E001 gates.
+## 15. Formal OpenCore vs crank lineage
 
-In particular:
+The crank directory remains an experimental branch lineage.
+
+It does not bypass formal E001 gates:
 
 - crank results are not E001 evaluation evidence;
 - formal evaluation seeds are not generated here;
 - K0/E001 frozen documents remain separately authoritative;
 - publication of crank experiments does not amend the formal experiment contract.
 
-## 10. Current standard for a "breakthrough"
+## 16. Current standard for a breakthrough
 
 A useful breakthrough is not a new phrase.
 
 It is a new distinction that:
 
-- is forced by a concrete failure;
+- is forced by a concrete failure or intervention;
 - changes behavior or experimental design;
-- survives independent attacks;
+- survives independent controls;
 - narrows rather than inflates the claim surface;
-- and makes a previously vague mechanism falsifiable.
+- makes a previously vague mechanism falsifiable;
+- and changes future hypothesis weighting when the prediction succeeds or fails.
 
-Nano's conversion of "licensed transition" into a tiny kernel that could fail in precise ways is one example of that standard.
+PCE-001 qualifies because it transformed:
+
+```text
+persistent learning correlates with low challenge exposure
+```
+
+into:
+
+```text
+directly manipulating the exposure edge changes correction dynamics
+```
+
+on the frozen family.
+
+The next breakthrough, if any, should discriminate failure to use an adequate challenge set from failure because the challenge set itself is inadequate.
