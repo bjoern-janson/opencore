@@ -6,61 +6,108 @@
 
 ## Current one-sentence description
 
-**OpenCore is testing whether adaptive systems can accumulate useful persistent causal leverage without progressively suppressing, delaying, or destroying the routes through which external consequence can reduce that leverage.**
+**OpenCore is testing whether adaptive systems can accumulate useful persistent causal leverage without progressively suppressing, delaying, or destroying the routes through which external consequence can reduce that leverage—and, at the current frontier, whether an organism can endogenously withdraw authority from an evidence-acquisition procedure that has failed its own warranted efficacy expectations.**
 
-## Current mechanistic core
+## Current research freeze
+
+Canonical living boundary:
+
+[`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md)
 
 ```text
-E_t
--> Pi_t
--> pi_t
--> A_t
+S1/S2  bounded support in FOREIGN-004/005/006
+S3     causally supported by PCE-001 at D_t^oracle
+S4     open; CSD-Mini is a negative
+S5     untouched
+```
+
+Current L1/L2/L3 state:
+
+```text
+L1  challenge preservation given D_t^oracle                         [supported on frozen PCE family]
+L2  endogenous withdrawal of adequacy from current evidence method  [open]
+L3  construct a better challenge set / procedure                    [untouched]
+```
+
+The first CSD target result is:
+
+```text
+Mini core -> FAILURE_CAUSE_CONFLATION
+```
+
+and the post-negative pre-CSD archaeology found:
+
+```text
+NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
+```
+
+The strongest semantic near-match, Mini-006, remains inadmissible because its procedure-level transition is triggered by externally typed `POLICY_LEVEL_SURPRISE` rather than derived endogenously from raw consequence.
+
+No L2 mechanism, procedure-failure primitive, challenge generator, Nano V1, or L3 mechanism is earned.
+
+## Current causal architecture
+
+```text
+H_t
+-> Q_t
+-> S_t
+-> authority
+-> pi_t^measure
 -> O_{t+1}
 -> W_{t+1}
 -> E_{t+1}
 ```
 
-with:
+Two distinct foreclosure surfaces:
 
 ```text
-O_{t+1} = g(X_t, A_t, epsilon_{t+1})
+Q_t              distinction loss
+pi_t^measure     exposure loss to surviving distinctions
 ```
 
-The key distinction is:
+Their coupled pathology is described, within the current bounded synthesis, as:
 
 ```text
-exogenous outcome generation
+self-sealing epistemic compression
+```
+
+The unresolved L2 transition is:
+
+```text
+raw consequence
+-> violation of a native warranted procedural expectation
+-> causal withdrawal of authority from the current epistemic procedure
+```
+
+Key separation:
+
+```text
+object uncertainty
 !=
-exogenous outcome exposure
+procedure efficacy
+!=
+procedure authority
 ```
-
-The current mechanism name is **endogenous evidence acquisition**. The property under pressure is **non-collapsible corrective exposure**.
-
-## Current evidence boundary
-
-```text
-L1  challenge preservation given D_t^oracle   [supported by PCE-001 on frozen family]
-L2  diagnose that D_t^agent is insufficient  [open]
-L3  construct a better challenge set          [open]
-```
-
-PCE-001 does not test `D_t^agent = D_t^oracle`.
 
 ## Start here
 
 | Document | Purpose |
 | --- | --- |
 | [`../README.md`](../README.md) | Current repository-level status and evidence boundary |
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Current explanatory architecture map and explicit non-architecture boundaries |
-| [`docs/EXPERIMENTAL_LINEAGE.md`](docs/EXPERIMENTAL_LINEAGE.md) | Full crank sequence from Mini through PCE-001 |
-| [`docs/DEVELOPMENTAL_THEORY.md`](docs/DEVELOPMENTAL_THEORY.md) | Current causal hypothesis: exposure, recognition, and authority revision |
-| [`docs/TRANSITION_INVARIANT.md`](docs/TRANSITION_INVARIANT.md) | Candidate transition compression and where topology/exposure pressure escapes it |
+| [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical living research freeze after CSD-Mini and post-negative archaeology |
+| [`CSD_001.md`](CSD_001.md) | CSD-001 apparatus, target custody, and first Mini target negative |
+| [`CSD_001_TARGET_SELECTION.md`](CSD_001_TARGET_SELECTION.md) | Pre-CSD measurement/target-selection audit |
+| [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Post-negative semantics-only archaeology |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Explanatory architecture map and explicit non-architecture boundaries |
+| [`docs/EXPERIMENTAL_LINEAGE.md`](docs/EXPERIMENTAL_LINEAGE.md) | Historical crank sequence through PCE-001; frozen records supersede stale summary edges |
+| [`docs/DEVELOPMENTAL_THEORY.md`](docs/DEVELOPMENTAL_THEORY.md) | Earlier causal hypothesis record; not authority over the current freeze |
+| [`docs/TRANSITION_INVARIANT.md`](docs/TRANSITION_INVARIANT.md) | Candidate transition compression and topology/exposure pressure |
 | [`docs/RESEARCH_METHOD.md`](docs/RESEARCH_METHOD.md) | Prospective freeze, contradiction handling, intervention discipline, and claim ceilings |
-| [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) | Supported, candidate, open, and explicitly unearned claims |
+| [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) | Earlier living claim map; current boundary is superseded where necessary by `RESEARCH_FREEZE.md` and frozen CSD records |
 | [`QUOTIENT_PRESSURE_LINEAGE.md`](QUOTIENT_PRESSURE_LINEAGE.md) | Quotient pressure through FOREIGN-004 |
 | [`REOPENABILITY_LINEAGE.md`](REOPENABILITY_LINEAGE.md) | FOREIGN-005/006 informational reopenability and capacity record |
 | [`TOPOLOGICAL_REOPENABILITY_LINEAGE.md`](TOPOLOGICAL_REOPENABILITY_LINEAGE.md) | FOREIGN-007 and topological foreclosure lineage |
-| [`CORRECTIVE_EXPOSURE_LINEAGE.md`](CORRECTIVE_EXPOSURE_LINEAGE.md) | Blitzcrank → PCE-001 causal intervention synthesis and L1/L2/L3 boundary |
+| [`CORRECTIVE_EXPOSURE_LINEAGE.md`](CORRECTIVE_EXPOSURE_LINEAGE.md) | Blitzcrank -> PCE-001 causal intervention synthesis |
 | [`results/README.md`](results/README.md) | Result snapshot and artifact-custody index |
 
 ## Core organism / persistence split
@@ -73,7 +120,7 @@ Mini  -> adaptive proposer / interpreter
 Base  -> shared authority-filtered world
 ```
 
-But the current research object is broader than this stack. FOREIGN-007, Blitzcrank, and PCE-001 show that failure can occur upstream of Nano at representation, policy, and exposure layers.
+But the research object is broader than this stack. Representation, measurement policy, exposure, recognition, and authority can fail at different causal locations.
 
 Therefore:
 
@@ -81,13 +128,15 @@ Therefore:
 Nano protects authority acquisition
 !=
 Nano guarantees evidence exposure
+!=
+Nano supplies L2
 ```
 
-Nano remains frozen V0 and receives no PCE-001 modification.
+Nano remains frozen V0.
 
 ## Correction chain
 
-The current shared coordinate system is:
+The shared coordinate system remains:
 
 ```text
 C1  physically available
@@ -105,11 +154,11 @@ C4a  environmental discrimination
 C4b  representation-preserved discrimination
 ```
 
-This lets different experiments attack different causal locations rather than forcing every failure into the persistence kernel.
+Different experiments attack different causal locations rather than forcing every failure into the persistence kernel.
 
 ## Historical OpenCore-native sequence
 
-The earlier constructed line established, among other distinctions:
+The earlier constructed line established distinctions including:
 
 ```text
 prediction != observation
@@ -133,9 +182,7 @@ Primary records:
 - [`FOREIGN_001_MASTERMIND.md`](FOREIGN_001_MASTERMIND.md)
 - [`FOREIGN_002_RESTLESS_BANDIT.md`](FOREIGN_002_RESTLESS_BANDIT.md)
 
-## Quotient → reopenability → topology sequence
-
-The next pressure line moved from representation identity into future correction:
+## Quotient -> reopenability -> topology sequence
 
 ```text
 FOREIGN-003  unsafe future-relevant quotient
@@ -145,14 +192,14 @@ FOREIGN-006  compressed blind reopenability on bounded family
 FOREIGN-007  policy-induced topological foreclosure
 ```
 
-The sequence killed two naïve ideas simultaneously:
+The sequence rejects both:
 
 ```text
-all historical difference must be preserved      [false]
-current-safe forgetting is automatically harmless [false]
+all historical difference must be preserved
+current-safe forgetting is automatically harmless
 ```
 
-The resulting three-layer distinction is:
+and separates:
 
 ```text
 informational reopenability
@@ -162,29 +209,11 @@ topological reopenability
 authority reopenability
 ```
 
-## Blitzcrank — ordinary learned policy pressure
+## Blitzcrank -> PCE-001
 
-Blitzcrank is an external organism pressure line, not FOREIGN-008 and not an OpenCore architecture component.
+BLITZCRANK-001 showed that ordinary persistent learning can improve performance while contracting support for a later-informative probe.
 
-### BLITZCRANK-001
-
-Persistent memory improved long-horizon performance on all 256 paired seeds while suppressing a physically available probe from greedy policy support after that probe became informative.
-
-The forced-control result also established:
-
-```text
-informative action
-!=
-immediately corrective action
-```
-
-because forced target probing helped only a subset of states while the matched null probe was uniformly wasteful.
-
-### BLITZCRANK-002
-
-Ordinary consequence eventually restored probe support, but recovery was delayed and sometimes barely sustained.
-
-Earned distinction:
+BLITZCRANK-002 showed:
 
 ```text
 first reopening
@@ -192,57 +221,20 @@ first reopening
 sustained corrective exposure
 ```
 
-This introduced explicit temporal pressure on corrective topology.
-
-## PCE-001 — Protected Corrective Exposure
-
-PCE-001 is the current completed intervention assay.
-
-It prospectively froze:
+PCE-001 then intervened directly on challenge exposure with externally fixed:
 
 ```text
 D_t^oracle = D_t^Pi
 ```
 
-and manipulated challenge selection only.
-
-### Primary
-
-```text
-ARM_ENDOGENOUS x WORLD_CORRECTIVE
-vs
-ARM_HAZARD x WORLD_CORRECTIVE
-```
-
-Result:
+Primary result:
 
 ```text
 ENDOGENOUS finite T_C:   0 / 256
-HAZARD finite T_C:     195 / 256 = 76.171875%
-
-hazard faster: 195
-exact tie:      61
-hazard slower:   0
+HAZARD finite T_C:     195 / 256
 ```
 
-This directly localized, on the frozen family:
-
-```text
-persistent state
--> policy
--> challenge timing
--> corrective exposure
-```
-
-### Secondary
-
-```text
-ARM_SUPPORT x WORLD_CORRECTIVE
-vs
-ARM_FLOOR x WORLD_CORRECTIVE
-```
-
-Result:
+Secondary result:
 
 ```text
 SUPPORT finite T_C:  64 / 256
@@ -257,66 +249,50 @@ nonzero policy support
 timely corrective exposure
 ```
 
-### Controls
+PCE-001 establishes no universal exploration floor or challenge-selection architecture.
 
-PCE-001 used three prospectively separated world roles:
+## CSD-001
+
+CSD-001 prospectively separated:
 
 ```text
-WORLD_NULL         nondiscriminating + costly
-WORLD_INFORMATIVE  discriminating + recognized + non-corrective
-WORLD_CORRECTIVE   discriminating + correction-relevant
+F1   adequate set + poor execution
+F2   adequate set + bounded stochastic miss
+F3   inadequate set + complete certified exposure
+F3u  truly inadequate set + incomplete warrant
+```
+
+The apparatus validated before target selection.
+
+Mini was chosen because its native `needs_probe(scope)` state could be measured without computing its meaning.
+
+The target trial rejected the stronger L2 interpretation:
+
+```text
+F2 persistent c2 request: 204 / 256
+F3 valid timing:             0 / 256
+F3 premature:              256 / 256
 ```
 
 Thus:
 
 ```text
-information
+local unresolvedness
 !=
-correction
-!=
-persistent-leverage revision
+procedure inadequacy
 ```
 
-See [`PCE_001.md`](PCE_001.md) and [`CORRECTIVE_EXPOSURE_LINEAGE.md`](CORRECTIVE_EXPOSURE_LINEAGE.md).
+The subsequent pre-CSD archaeology identified no admissible successor target. Mini-006 contains procedure-level semantics but receives the procedure-failure classification externally.
 
-## Temporal exposure
+## Current bounded conclusion
 
-The current temporal objects are deliberately not collapsed into a single score:
+> **Within the audited OpenCore lineage, adaptive learning has produced persistent state, object-level uncertainty, reopening, policy adaptation, and changes in corrective exposure, but has not yet demonstrated endogenous authority over the adequacy of the procedure by which evidence is acquired.**
 
-```text
-q_t^Pi      instantaneous effective exposure probability
-lambda_t    challenge-exposure hazard
-T_C         correction latency
-T_L         latency until stale persistent leverage becomes consequential
-```
-
-PCE-001's endogenous corrective arm realized the important regime:
-
-```text
-T_C >> T_L
-```
-
-within the frozen horizon.
-
-Eventual path existence is therefore weaker than timely corrective exposure.
-
-## Current frontier
-
-The next question is **not** whether challenge exposure can be protected when the correct challenge set is already supplied. PCE-001 has now tested that rung.
-
-The open question is:
-
-> **Can an adaptive system detect that its current corrective-exposure topology is inadequate without being told which missing intervention would repair it?**
-
-This is L2: challenge-set insufficiency diagnosis.
-
-It must remain distinct from L3: challenge constitution.
-
-No L2 mechanism, meta-exploration scheduler, challenge generator, or new semantic primitive is currently earned.
+This is not an L2 impossibility result.
 
 ## Research posture
 
-The discipline is:
+The discipline remains:
 
 ```text
 build smallest discriminating assay
@@ -329,13 +305,15 @@ build smallest discriminating assay
 -> do not pre-solve the next rung
 ```
 
-A successful component does not certify its composition:
+Current stopping rule:
+
+> **No further conceptual refinement acquires scientific authority until new organism evidence or a prospectively frozen developmental experiment directly bears on the missing L2 transition.**
+
+In particular:
 
 ```text
-Valid(T1) + Valid(T2) !=> Valid(T2 o T1)
+do not manufacture procedure-level authority merely because existing substrates lack it
 ```
-
-And a positive intervention does not certify a general architecture.
 
 ## Formal lineage separation
 
@@ -356,4 +334,4 @@ nano.py
 8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329
 ```
 
-PCE-001 contains no Nano.
+PCE-001 and CSD-001 add no Nano modification.
