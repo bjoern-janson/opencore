@@ -2,186 +2,84 @@
 
 ## Status
 
-This is a map of the crank-science sequence. It is not the formal E001 execution record and does not amend K0.
+This is the living map of the crank-science sequence. It is not the formal E001 execution record and does not amend K0.
 
-The lineage deliberately preserves positive and negative results. A failure is retained when it identifies a causal distinction that later experiments depend on.
+The lineage deliberately preserves positive results, negative results, failed repairs, and claim ceilings. A failure remains part of the record when it identifies a distinction later experiments depend on.
 
-## 1. Mini 001 — learn, persist, reopen, revise
+## 1. Mini — acquisition, revision, closure, reopening
 
-Mini first demonstrated a tiny adaptive loop over affine rules in two scopes:
-
-```text
-experience -> unique candidate -> commit -> persist -> reload -> reuse
-                                      |
-                                counterevidence
-                                      v
-                                reopen / revise
-```
-
-A first 1,000-seed sweep exposed 79 failures because old and new affine rules can cross at one `x`. One post-change observation can therefore establish that an incumbent is wrong without identifying the replacement.
-
-Minimal repair: request another probe when the replacement remains underdetermined.
-
-Result after repair:
+Early Mini experiments established a small adaptive loop over finite affine hypotheses:
 
 ```text
-10,000 pass / 0 fail
+experience
+-> candidate
+-> commit
+-> persist
+-> reuse
+-> contradiction
+-> reopen
+-> revise
 ```
 
-Earned distinction:
+The first repair was forced by an underdetermination failure:
 
 ```text
-I know my incumbent is wrong != I know what replaces it
+I know the incumbent is wrong
+!=
+I know what replaces it
 ```
 
-## 2. Interface ladder / Mini 002 — representation vs missing information
-
-The interface ladder separated four conditions:
-
-```text
-transparent   10,000 / 10,000 pass
-opaque        10,000 / 10,000 pass
-permuted           0 / 10,000 pass
-aliased            0 / 10,000 pass
-```
-
-Interpretation:
-
-- stable opacity is harmless when identity is preserved;
-- arbitrary bijective coordinates can preserve information while breaking Mini's computational geometry;
-- aliasing can destroy target-relevant identifiability.
-
-Core distinction:
+Subsequent interface/closure attacks established, on their frozen families:
 
 ```text
 representation failure != missing-information failure
-```
-
-A finite-history attack then showed:
-
-```text
-no contradiction observed != no contradiction exists
-```
-
-## 3. Mini 003 — support is not closure permission
-
-Paired worlds were constructed with identical finite history but different hidden reality. The history did not identify whether the current representation was globally sufficient.
-
-Earned distinction:
-
-```text
 model support != closure permission
+closure permission != truth guarantee
+reopenability != panic
+optimize within a contract != authority to optimize the contract
 ```
 
-## 4. Mini 004 — contract-scoped budgeted closure
-
-Mini 004 introduced an external closure contract:
+M6 supplied one typed meta-adaptive witness:
 
 ```text
-p_min = 0.25
-delta = 0.10
-R(q) <= (1 - p_min)^q
+policy-level evidence
+-> future closure-policy change
 ```
 
-The first licensed challenge count is `q=9`.
+but did not establish arbitrary recursive self-improvement.
 
-Closure became:
+## 2. Composition attacks — lineage, acquisition, epistemic roles
 
-> contract-scoped permission to stop seeking a specified class of correction.
-
-It is not a truth guarantee or global adequacy claim.
-
-## 5. Mini 005 — reopening and contract non-appropriation
-
-A valid in-scope counterexample after closure should reopen the closure, while nuisance/out-of-scope events should not cause indiscriminate panic.
-
-Earned distinctions:
+Correctable-lineage, Cerebro, and SSI attacks established distinctions including:
 
 ```text
-reopenability != reactivity
-optimize policy within contract != optimize the contract itself
-```
-
-## 6. Mini 006 — evidence changes a future closure mechanism
-
-Externally typed policy-level evidence caused:
-
-```text
-counterexample
--> reopen current claim
--> K0 -> K1
--> future uncontracted scopes DEFER
-```
-
-Earned causal arrow:
-
-```text
-E* -> Delta K_closure -> Delta pi_future
-```
-
-Claim ceiling: one demonstrated meta-adaptive correction, not arbitrary recursive self-improvement.
-
-## 7. Correctable Lineage attack
-
-A hostile audit collapsed nominally distinct reports onto fewer upstream corrective paths.
-
-Core result:
-
-```text
-9 observations != 9 sources
-9 sources != 9 independent corrective paths
-9 independent paths != globally sufficient evidence
-```
-
-No lineage-graph primitive was promoted.
-
-## 8. Cerebro attack
-
-An M2-style active selector changed the acquisition distribution while M4's closure layer continued to treat clean reports as if they came from the original protocol.
-
-Core results:
-
-```text
+number of observations != number of independent corrective paths
 acquisition policy -> evidence opportunity -> warrant
 component validity != composition validity
-mechanism correction != standing reconciliation
-```
-
-## 9. SSI attack
-
-Prediction laundering and applicability laundering exposed:
-
-```text
 correct prediction != new observation
 authority != applicability
 ```
 
-A true datum can still occupy an unauthorized epistemic role.
+These experiments made transition roles, provenance, and composition first-class scientific targets.
 
-## 10. Reliable-generalization precursor R1
+## 3. R1 — active transfer discrimination
 
-Two opaque transfer hypotheses were exactly equivalent on initial history. Two of eight future contexts separated them.
+Two externally supplied opaque transfer hypotheses were equivalent on initial history and separated by only a subset of future contexts.
 
-With a one-probe budget:
+The supplied disagreement selector resolved the correct transfer structure much more reliably than passive/random controls.
 
-```text
-passive                     0.00% resolved
-random                     25.12% resolved
-transfer-discriminating   100.00% resolved
-```
+Earned statement:
 
-Narrow result:
+> Uncertainty over a supplied transfer structure can drive active discriminating evidence acquisition.
 
-> uncertainty over transfer structure can drive active evidence acquisition.
+Challenge constitution remained external.
 
-Candidate hypotheses and disagreement-selection machinery remained externally supplied.
-
-## 11. Nano V0 isolated kernel
+## 4. Nano V0 — persistence membrane
 
 Nano was frozen conceptually as:
 
 ```text
-transition typechecker + append-only journal
+transition typechecker + append-only in-process journal
 ```
 
 Two implementation failures forced:
@@ -191,8 +89,6 @@ lineage recorded != lineage causally governing authority
 preservation dependency != warrant dependency
 ```
 
-The final V0 separated historical lineage, warrant-parent liveness, and preservation obligation.
-
 Final isolated matrix:
 
 ```text
@@ -201,9 +97,11 @@ False refusal   0 / 60,000
 Invariant fails 0
 ```
 
-## 12. Mini × Nano Composition V0
+Nano does not establish truth or correctness of supplied contracts.
 
-Frozen wounded Mini and frozen Nano were composed without modifying either component.
+## 5. Mini × Nano — freedom to generate vs freedom to canonize
+
+Frozen wounded Mini and Nano V0 were composed without changing either component.
 
 ```text
 illegal attempts accepted by naive persistence  50,000 / 50,000
@@ -212,70 +110,43 @@ matched legitimate transitions accepted          60,000 / 60,000
 native Mini lifecycle control                     10,000 / 10,000
 ```
 
-This was the first result where the kernel changed persistent authority outcomes without changing the cognition that generated the proposal.
-
-## 13. Nano × Mini Ablation V0
-
-The exact frozen composition cases were rerun under reduced persistence boundaries.
-
-Aggregate illegal ALLOW counts:
+Earned separation:
 
 ```text
-naive                         50,000 / 50,000
+freedom to generate
+!=
+freedom to canonize
+```
+
+## 6. Nano × Mini ablation
+
+The exact frozen composition suite was rerun through reduced persistence boundaries.
+
+```text
+naive                         50,000 / 50,000 overreach
 effect ceiling only           50,000 / 50,000
 live preconditions only       10,000 / 50,000
-lineage/liveness only         40,000 / 50,000
-preconditions + lineage            0 / 50,000
+warrant liveness only         40,000 / 50,000
+preconditions + liveness           0 / 50,000
 full Nano                          0 / 50,000
 ```
 
-Every arm retained all matched legitimate transitions and tested Mini lifecycles.
-
-The wound families decomposed cleanly:
+Local decomposition:
 
 ```text
-current contract-state failures -> live preconditions
-stale descendant authority      -> warrant liveness
+current contract-state failure -> live precondition checks
+stale descendant authority     -> warrant-parent liveness
 ```
 
-The combined reduced arm reproduced full Nano on all five frozen attacks.
+No global Nano-minimality claim followed.
 
-Earned local result:
-
-```text
-current state is not enough;
-relevant current state is filtered by live warrant ancestry
-```
-
-Effect-ceiling and preservation necessity were not identified by this intervention family and therefore were not declared redundant.
-
-## 14. Base-001 — shared authority-filtered world
+## 7. Base-001 — shared authority-filtered world
 
 Twelve heterogeneous local projectors shared one Nano-backed effective world.
 
-A single global standing `G`:
+A global standing could reach all units, affect only designated relevant units, lose authority through one upstream warrant revocation, remove dependent effective consequences without destructive local cleanup, and preserve unrelated local learning.
 
-- reached all 12 units;
-- changed only 8 externally designated relevant units;
-- lost authority through one upstream warrant revocation;
-- caused all tested `G`-dependent local/global descendants to lose effective authority;
-- preserved all 12 unrelated local adaptations created after `G`;
-- required zero local cleanup writes/deletes.
-
-Across 10,000 worlds:
-
-```text
-Reach                    120,000 / 120,000
-RelevantResponse          80,000 / 80,000
-IrrelevantDisturbance          0 / 40,000
-RevocationRecovery        80,000 / 80,000
-NaiveRevocationRecovery        0 / 80,000
-CollateralLoss                 0 / 120,000
-```
-
-Base-001 also generated a natural effect-ceiling attack: a local use capability could not write a new global standing, while a separately licensed global-export edge could.
-
-Earned distinctions:
+Earned distinctions included:
 
 ```text
 after G != because of G
@@ -283,161 +154,425 @@ historical ancestry != warrant ancestry
 local derivation != global write authority
 ```
 
-## 15. Base-002 — global reopening
+## 8. Base-002 — reopening / replacement separation
 
-Base-002 tested:
-
-```text
-ADMIT(G) != REOPEN(G) != REPLACE(G, G')
-```
-
-### 15A. Target-bound positive path
-
-A counterexample-backed reopen capability withdrew `G`'s authority, propagated uncertainty through dependent local projections, preserved unrelated learning, and could not install `G'`.
-
-An authentic replacement license deferred before later evidence `E'` and allowed after `E'` was separately admitted.
-
-Earned constructed distinction:
+Base-002 established on its target-bound path:
 
 ```text
+ADMIT(G) != REOPEN(G) != REPLACE(G,G')
 refutation authority != replacement authority
 ```
 
-### 15B. Strict control — Nano V0 negative result
-
-A stricter reopen license additionally required `G_STATUS=EFFECTIVE` as an ordinary precondition.
-
-Nano allowed the transition but automatically promoted the old `G` receipt into the new `REOPENED` receipt's warrant ancestry. The same transition revoked `G`'s producer, so `REOPENED` immediately became ineffective in 10,000/10,000 strict controls.
+The strict control exposed a Nano V0 wound: an execution precondition was automatically promoted into continuing warrant ancestry, causing the reopen result to self-invalidate.
 
 Forced distinction:
 
 ```text
-execution guard != warrant dependency
+execution guard != continuing warrant dependency
 ```
 
-No repair was made. Typed guards, explicit warrant-parent declarations, and other representations remain open hypotheses.
+## 9. GW-001 — selective continuing ancestry
 
-## 16. GW-001 — guard / warrant repair discrimination
+GW-001 attacked Base-002B without modifying Nano.
 
-GW-001 attacked Base-002B's live wound without modifying Nano. Multiple plausible parent-selection repairs were compared on strict reopening, genuine-warrant controls, and a mixed-role transition.
+The decisive mixed-role witness required two facts for execution while only one should remain causally responsible for the result's continuing authority.
 
-The decisive witness required two facts for execution but only one to remain causally responsible for the result's continuing authority. Later revocation made the difference observable.
-
-Earned constructed distinction:
+Earned distinction:
 
 ```text
 CheckSet(T) != ParentSet(Result(T))
 ```
 
-or equivalently:
+A specific guard/warrant schema and Nano V1 remained unearned.
 
-```text
-what must be true to execute a transition
-!=
-what must remain authoritative for its result
-```
+## 10. FOREIGN-001 — representation vs interface pressure
 
-Same-key, revoked-source, and the stronger self-invalidating-conjunction special cases all failed at least one control. Selective continuing ancestry is supported on this constructed family. A specific guard/warrant schema and Nano V1 remain unearned.
+Reduced Mastermind supplied sufficient foreign evidence while frozen Mini had no affine hypothesis capable of representing the complete feedback mapping.
 
-## 17. FOREIGN-001 — Mastermind pressure
-
-The frozen stack was exposed to a reduced Mastermind family whose task semantics were not designed around OpenCore. A lossless boundary encoding was used; no Mastermind solver was inserted into Mini.
-
-Static arm:
+Static result:
 
 ```text
 foreign evidence sufficient
-+ Nano authority path available
-+ Mini representation unavailable
--> organism-level expressive blockage
++ authority path available
++ representation unavailable
+-> organism representation blockage
 ```
 
-Every complete Mastermind feedback function contained collisions between distinct guesses, while every frozen Mini affine hypothesis was injective on distinct inputs. None of the nine foreign functions was representable by Mini's 110 hypotheses.
-
-Dynamic arm:
+Dynamic result:
 
 ```text
-hidden mechanism change != identifiable mechanism change
+real hidden mechanism change
+!=
+identifiable mechanism change
 ```
 
-The codemaker changed its hidden code, yet the public trace remained compatible with at least one fixed code in every tested world. This is an apparatus/evidence limit, not license to infer hidden change.
+This separated representation failure from interface/observation non-identifiability.
 
-No Mini or Nano repair was made.
+## 11. FOREIGN-002 — reactive vs prospective attention
 
-## 18. FOREIGN-002 — restless-bandit attention pressure
+A deterministic restless-bandit family controlled FOREIGN-001's representation wound by keeping latent states inside Mini's hypothesis class.
 
-FOREIGN-002 changed the pressure source again. It used an 8-arm, 80-round deterministic restless-bandit family with one observable/playable arm per round. Every latent arm state was intentionally drawn from Mini's existing affine hypothesis class so FOREIGN-001's representation wound was controlled rather than repaired.
+Servicing Mini's contradiction-triggered probe requests improved some repair/reward measures but did not improve prospective discovery of still-hidden shifts over external coverage controls.
 
-Mini's existing contradiction-triggered `needs_probe` signal was serviced without adding an attention scheduler. Across 10,000 worlds it improved cumulative reward and detected-to-repaired completion relative to greedy exploitation, while sacrificing predicted immediate reward on most follow-up probes.
-
-But it detected fewer distinct hidden shifts than greedy, epsilon-greedy, or round-robin coverage controls.
-
-Narrow pressure result:
+Earned local distinction:
 
 ```text
-reactive corrective attention != prospective discovery attention
+reactive corrective attention
+!=
+prospective discovery attention
 ```
 
-The latter phrase is a candidate competence description, not an implemented component or earned repair.
+No attention scheduler was earned.
 
-## 19. Systems-level theory freeze
+## 12. OQ-001 / OQ-002 — identity aliasing
 
-The current conceptual compression is:
+OQ-001 showed that two acquisition histories can be identical under a coarse event carrier while having different future consequences.
+
+OQ-002 inserted that alias upstream of Nano. A standing derived under one history could be reused under the other because the apparatus identity had collapsed them.
+
+Narrow mechanism:
 
 ```text
-Reality
--> challenge / apparatus
--> consequence
--> organism interpretation
--> candidate transition
--> persistent authority
+premature apparatus quotient
+-> identity aliasing
+-> warrant aliasing
+-> wrong durable authority
 ```
 
-with:
+## 13. FOREIGN-003 — classical reproduction
+
+FOREIGN-003 reproduced the OQ-002 causal geometry without the quantum framing.
+
+Earned statement:
+
+> A future-relevant distinction collapsed into one persistence identity can produce wrong cross-history authority inheritance in an ordinary classical construction.
+
+## 14. FOREIGN-004 — safe quotient control
+
+FOREIGN-004 supplied the necessary negative control against `preserve all history`.
+
+Different histories converged to the same current operational state and remained equivalent over the frozen future query surface.
+
+Classification:
 
 ```text
-reality != measurement != interpretation != authority
+SAFE_QUOTIENT_ESTABLISHED
 ```
 
-The developmental hypothesis is:
-
-> **Intelligence develops by constructing increasingly useful ways for reality to correct what currently governs it.**
-
-A prospective developmental frontier requires:
+Earned distinction:
 
 ```text
-live alternatives
-+
-discriminable challenge
-+
-recoverable consequence
-+
-live authority-update path
+historical difference
+!=
+automatically persistence-relevant difference
 ```
 
-This is a hypothesis freeze, not an experimentally established general developmental loop.
+## 15. FOREIGN-005 — informational reopenability
 
-## 20. Current experimental status
-
-The current high-level ladder is descriptive, not a formal maturity scale:
+FOREIGN-005 compared two branches with the same safe current quotient:
 
 ```text
-M1   model revision
-M2   active epistemic intervention
-M3   support != closure permission
-M4   contract-scoped budgeted closure
-M5   authorized reopening
-M6   evidence revises a future closure mechanism
-R1   active discrimination of competing transfer hypotheses
-N0   semantically agnostic transition enforcement on frozen matrix
-C0   wounded Mini proposals behind Nano persistence boundary
-A0   subtractive Nano/Mini decomposition
-B1   shared authority-filtered 12-unit world
-B2A  global reopening without automatic replacement
-B2B  strict reopening exposes guard/warrant conflation
-GW1  checked-for-execution != retained-as-authority-parent
-F1   foreign Mastermind representation / interface pressure
-F2   foreign restless-bandit attention-allocation pressure
+reopenable branch   retains opaque source substrate
+destructive branch  discards it
 ```
 
-The next useful experiment should be selected because it can break or discriminate the current theory, not because it extends the ladder aesthetically.
+A later interface exposed a distinction absent from the current quotient. Only the reopenable branch could reconstruct it deterministically.
+
+Classification:
+
+```text
+REOPENABLE_QUOTIENT_ESTABLISHED
+```
+
+Earned distinction:
+
+```text
+safe effective compression
+!=
+irreversible information destruction
+```
+
+## 16. FOREIGN-006 — compressed blind reopenability
+
+FOREIGN-006 prospectively froze a 24-member future-interface family over 64-bit histories.
+
+The family had independent distinguishing rank 6.
+
+Frozen results:
+
+```text
+raw 64-bit representation     24 / 24 future interfaces exact
+blind 6-bit representation    24 / 24 exact
+undersized 5-bit representation 15 / 24 exact
+destructive representation     one state
+```
+
+Earned statement:
+
+```text
+reopenability can be compressed relative to a bounded future-interface class
+```
+
+No universal `memory = rank` theorem followed.
+
+## 17. FOREIGN-007 — policy-induced epistemic foreclosure
+
+FOREIGN-007 changed the category of the question.
+
+A quotient was safe over the complete current action surface. Later, a previously nondiscriminating probe became the unique discriminator while remaining physically available.
+
+The fine representation preserved unresolved alternatives and selected the probe. The coarse quotient simplified policy support and omitted it.
+
+Forced probing of the coarse branch recovered the distinction immediately under unchanged Nano.
+
+Classification:
+
+```text
+EPISTEMIC_FORECLOSURE_ESTABLISHED
+```
+
+Earned causal structure:
+
+```text
+representation
+-> policy support
+-> corrective exposure
+```
+
+and:
+
+```text
+absence of contradiction
+!=
+survival under physically available contradiction
+```
+
+## 18. BLITZCRANK-001 — learned policy contraction
+
+BLITZCRANK-001 moved the topology wound into an ordinary tabular learner with no Nano/OpenCore component inside the organism.
+
+Persistent memory improved cumulative return over reset in every paired seed while eliminating the later-informative target probe from exact greedy support.
+
+Forced target probing changed the observation in all tested seeds, but immediate reward improved only in a subset. The matched null probe was uniformly wasteful.
+
+Earned distinctions:
+
+```text
+useful persistent capability
+can coexist with
+informative-action support contraction
+```
+
+and:
+
+```text
+informative
+!=
+immediately corrective
+```
+
+## 19. BLITZCRANK-002 — temporal reopening
+
+BLITZCRANK-002 added ordinary post-shift consequence that made the old skip valuation costly without revealing hidden regime identity.
+
+Persistent ordinary learning remained beneficial overall and eventually restored probe support in every seed within the long horizon.
+
+But recovery latency was substantial and first reopening was often not sustained.
+
+Earned distinction:
+
+```text
+first reopening
+!=
+sustained corrective exposure
+```
+
+This made time an explicit part of corrective topology.
+
+## 20. PCE-001 — Protected Corrective Exposure
+
+PCE-001 prospectively froze the current causal hypothesis and intervened directly on challenge selection while holding the challenge set external:
+
+```text
+D_t^oracle = D_t^Pi
+```
+
+World roles:
+
+```text
+WORLD_NULL         costly + nondiscriminating
+WORLD_INFORMATIVE  discriminating + recognized + non-corrective
+WORLD_CORRECTIVE   discriminating + correction-relevant
+```
+
+Arms:
+
+```text
+ARM_ENDOGENOUS
+ARM_SUPPORT
+ARM_FLOOR
+ARM_HAZARD
+```
+
+### Primary causal contrast
+
+```text
+ARM_ENDOGENOUS x WORLD_CORRECTIVE
+vs
+ARM_HAZARD x WORLD_CORRECTIVE
+```
+
+Frozen result:
+
+```text
+ENDOGENOUS finite T_C:   0 / 256
+HAZARD finite T_C:     195 / 256 = 76.171875%
+
+hazard faster: 195 / 256
+exact tie:      61 / 256
+hazard slower:   0 / 256
+```
+
+The direct intervention therefore supported the prospectively predicted mechanism on the frozen family:
+
+```text
+persistent state
+-> policy
+-> challenge timing
+-> corrective exposure
+```
+
+### Secondary mechanism contrast
+
+```text
+ARM_SUPPORT x WORLD_CORRECTIVE
+vs
+ARM_FLOOR x WORLD_CORRECTIVE
+```
+
+Frozen result:
+
+```text
+SUPPORT finite T_C:  64 / 256
+FLOOR finite T_C:   205 / 256
+```
+
+Earned distinction:
+
+```text
+nonzero challenge support
+!=
+timely corrective exposure
+```
+
+PCE-001 also preserved:
+
+```text
+information
+!=
+correction
+!=
+persistent-leverage revision
+```
+
+through the three world controls.
+
+Classification:
+
+```text
+CAUSALLY_LOCALIZED_ENDOGENOUS_EVIDENCE_ACQUISITION_FAILURE
+```
+
+Claim ceiling:
+
+```text
+L1 challenge preservation given D_t^oracle
+```
+
+No autonomous challenge diagnosis or constitution was tested.
+
+## 21. Current mechanistic core
+
+The current analysis frame is:
+
+```text
+E_t
+-> Pi_t
+-> pi_t
+-> A_t
+-> O_{t+1}
+-> W_{t+1}
+-> E_{t+1}
+```
+
+with external response:
+
+```text
+O_{t+1} = g(X_t, A_t, epsilon_{t+1})
+```
+
+Current experimentally sharpened distinction:
+
+```text
+exogenous outcome generation
+!=
+exogenous outcome exposure
+```
+
+The mechanism name is:
+
+```text
+endogenous evidence acquisition
+```
+
+The target property is:
+
+```text
+non-collapsible corrective exposure
+```
+
+## 22. Current evidence ladder
+
+The next challenge-specific ladder is:
+
+```text
+L1  challenge preservation given D_t^oracle
+L2  diagnosis that D_t^agent is insufficient
+L3  construction of a better challenge set
+```
+
+PCE-001 supports L1 only under an externally supplied challenge set.
+
+The current open question is:
+
+> **Can an adaptive system detect that its current corrective-exposure topology is inadequate without being told which missing intervention would repair it?**
+
+L2 must remain distinct from L3.
+
+## 23. Current status map
+
+The descriptive ladder is now:
+
+```text
+M1-M6  early model/interface/closure/reopening sequence
+R1     active discrimination of supplied transfer alternatives
+N0     Nano V0 transition enforcement
+C0     Mini proposals behind Nano persistence boundary
+A0     Nano/Mini ablation
+B1     shared authority-filtered world
+B2     global reopening / guard-warrant wound
+GW1    selective continuing ancestry witness
+F1     representation/interface pressure
+F2     reactive vs prospective attention
+OQ1-2  apparatus identity / warrant aliasing
+F3     classical quotient failure
+F4     safe quotient control
+F5     informational reopenability
+F6     compressed blind reopenability
+F7     topological foreclosure
+BC1    ordinary learned policy contraction
+BC2    temporal reopening structure
+PCE1   direct intervention on corrective exposure
+```
+
+The next advancement should be selected because it discriminates L2 from L1 failure, not because it extends the ladder aesthetically.
