@@ -1,0 +1,203 @@
+{
+  "frozen": {
+    "af3_interface_commit": "c0f97eda2f1f482fd94d3a38bece18c7069b4a5c",
+    "fresh_af3_inference": false,
+    "nano_sha256": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329"
+  },
+  "object": "AF3_OC_001",
+  "primary": {
+    "after_reopen": {
+      "af3-public-1phv-chain-a:H|standing|A:1-8_CA": {
+        "status": "DEFERRED",
+        "value": "DERIVED_FROM_G"
+      },
+      "af3-public-1phv-chain-a:U|standing|independent": {
+        "status": "ACTIVE",
+        "value": "INDEPENDENT"
+      },
+      "af3-public-1phv-chain-a:external|evidence-role|A:1-8_CA": {
+        "status": "ACTIVE",
+        "value": "EXTERNAL_KABSCH_RMSD:0.187091A"
+      },
+      "af3-public-1phv-chain-a:refute|evidence-role|A:1-8_CA": {
+        "status": "ACTIVE",
+        "value": "CONTROLLED_REFUTES_G"
+      },
+      "af3-public-1phv-chain-a|epistemic-role|A:1-8_CA": {
+        "status": "ACTIVE",
+        "value": "REOPENED"
+      },
+      "af3-public-1phv-chain-a|model-confidence|prediction": {
+        "status": "ACTIVE",
+        "value": "AF3_CONFIDENCE:95.99"
+      }
+    },
+    "ancestry": {
+      "H_parent_is_validated_G": true,
+      "T3_parent_is_external_measurement": true
+    },
+    "dependency_withdrawal_match": true,
+    "measurement": {
+      "experimental_method": "X-RAY DIFFRACTION",
+      "kabsch_rmsd_angstrom": 0.1870908947871649,
+      "pdb_id": "1HPV",
+      "resolution_angstrom": 1.9,
+      "scope": "PDB 1HPV chain A residues 1-8 C-alpha"
+    },
+    "prospective_matrix_match": true,
+    "transitions": [
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "T1",
+        "parents": [],
+        "reasons": [],
+        "receipt": "5a2818202b532aa71b966626"
+      },
+      {
+        "decision": "DENY",
+        "expected": "DENY",
+        "label": "T2",
+        "parents": [],
+        "reasons": [
+          "effect:write_not_licensed:af3-public-1phv-chain-a|epistemic-role|A:1-8_CA"
+        ],
+        "receipt": "d2aa8284b60599b9378ba9ec"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "E1",
+        "parents": [],
+        "reasons": [],
+        "receipt": "2510bcd7cf97a4ce24ec8440"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "T3",
+        "parents": [
+          "2510bcd7cf97a4ce24ec8440"
+        ],
+        "reasons": [],
+        "receipt": "4bc42b1452d77e9fb36c9c51"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "H",
+        "parents": [
+          "4bc42b1452d77e9fb36c9c51"
+        ],
+        "reasons": [],
+        "receipt": "3c6294eb77112a99c91aab91"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "U",
+        "parents": [],
+        "reasons": [],
+        "receipt": "14658cd1c8fbb92ad05be5f5"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "E2",
+        "parents": [],
+        "reasons": [],
+        "receipt": "5559be4da9959ea2b691cc74"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "T4",
+        "parents": [
+          "5559be4da9959ea2b691cc74"
+        ],
+        "reasons": [],
+        "receipt": "41d615c9355eb613a1a20048"
+      },
+      {
+        "decision": "DENY",
+        "expected": "DENY",
+        "label": "T5a",
+        "parents": [
+          "5559be4da9959ea2b691cc74"
+        ],
+        "reasons": [
+          "effect:write_not_licensed:af3-public-1phv-chain-a:successor|epistemic-role|A:1-8_CA"
+        ],
+        "receipt": "34b11cc38a02e64b645742e8"
+      },
+      {
+        "decision": "DEFER",
+        "expected": "DEFER",
+        "label": "T5b",
+        "parents": [],
+        "reasons": [
+          "precondition:unestablished:af3-public-1phv-chain-a:successor:external|evidence-role|A:1-8_CA"
+        ],
+        "receipt": "9019d3991329172a5394f77e"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "E3",
+        "parents": [],
+        "reasons": [],
+        "receipt": "678ad83d311a311aad9eef85"
+      },
+      {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "label": "T5c",
+        "parents": [
+          "678ad83d311a311aad9eef85"
+        ],
+        "reasons": [],
+        "receipt": "18d2fb90a02df2605c6c1c96"
+      }
+    ]
+  },
+  "smoke": [
+    {
+      "T1": "ALLOW",
+      "T2_confidence_only": "DENY",
+      "T2_reasons": [
+        "effect:write_not_licensed:af3-public-1phv-chain-a|epistemic-role|declared"
+      ],
+      "confidence": {
+        "global_plddt": 95.99
+      },
+      "prediction_id": "af3-public-1phv-chain-a"
+    },
+    {
+      "T1": "ALLOW",
+      "T2_confidence_only": "DENY",
+      "T2_reasons": [
+        "effect:write_not_licensed:af3-public-pep-seed1-sample0|epistemic-role|declared"
+      ],
+      "confidence": {
+        "global_plddt": 65.0,
+        "ptm": 0.58,
+        "ranking_score": 0.58
+      },
+      "prediction_id": "af3-public-pep-seed1-sample0"
+    },
+    {
+      "T1": "ALLOW",
+      "T2_confidence_only": "DENY",
+      "T2_reasons": [
+        "effect:write_not_licensed:af3-public-prot-pep-top|epistemic-role|declared"
+      ],
+      "confidence": {
+        "iptm": 0.45,
+        "ptm": 0.25,
+        "ranking_score": 0.45
+      },
+      "prediction_id": "af3-public-prot-pep-top"
+    }
+  ],
+  "status": "EXECUTED_FROZEN_MEMBRANE_ASSAY_WITH_REAL_AF3_PAYLOADS"
+}
