@@ -1,5 +1,58 @@
 # Claim Boundaries and Current Status
 
+> **Status note:** This living claim map predates the completed CSD-001 Mini target trial and post-negative procedure-adequacy archaeology. For the current authority boundary, read [`../RESEARCH_FREEZE.md`](../RESEARCH_FREEZE.md) first. Frozen assay/spec/result artifacts remain authoritative over all summaries.
+
+## Current freeze summary
+
+```text
+S1/S2  supported only within the tested FOREIGN-004/005/006 families
+S3     causally supported by PCE-001 at externally constituted D_t^oracle
+S4     open; CSD-Mini is a negative
+S5     untouched
+```
+
+Current L2 separation:
+
+```text
+object uncertainty
+!=
+procedure efficacy
+!=
+procedure authority
+```
+
+Open transition:
+
+```text
+raw consequence
+-> violation of a native warranted procedural expectation
+-> causal withdrawal of authority from the current epistemic procedure
+```
+
+Mini target result:
+
+```text
+FAILURE_CAUSE_CONFLATION
+```
+
+Post-negative archaeology result:
+
+```text
+NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
+```
+
+The bounded current conclusion is:
+
+> **Within the audited OpenCore lineage, adaptive learning has produced persistent state, object-level uncertainty, reopening, policy adaptation, and changes in corrective exposure, but has not yet demonstrated endogenous authority over the adequacy of the procedure by which evidence is acquired.**
+
+This is not an impossibility theorem and does not authorize a new L2 mechanism.
+
+---
+
+## Historical claim map through PCE-001
+
+The sections below preserve the earlier living map as historical context. Where they say that the next conceptual update should come from an L2 discrimination, that discrimination has now been run on unchanged Mini and produced a negative. The current stopping rule is in `RESEARCH_FREEZE.md`.
+
 ## 1. Purpose
 
 OpenCore deliberately separates:
@@ -363,9 +416,9 @@ L1 = challenge preservation given D_t^oracle
 
 It does not test autonomous challenge-set diagnosis or constitution.
 
-## 3. Current mechanistic interpretation
+## 3. Current mechanistic interpretation at the PCE boundary
 
-The current canonical loop is:
+The earlier canonical loop was:
 
 ```text
 E_t
@@ -383,7 +436,7 @@ with:
 O_{t+1} = g(X_t, A_t, epsilon_{t+1})
 ```
 
-The experimentally sharpened distinction is:
+The experimentally sharpened distinction was:
 
 ```text
 exogenous outcome generation
@@ -391,7 +444,7 @@ exogenous outcome generation
 exogenous outcome exposure
 ```
 
-The current mechanism name is:
+The mechanism name is:
 
 ```text
 endogenous evidence acquisition
@@ -403,11 +456,9 @@ The target property is:
 non-collapsible corrective exposure
 ```
 
-This interpretation now has bounded causal support from PCE-001 on the frozen family. It is not a universal law.
+This interpretation has bounded causal support from PCE-001 on the frozen family. It is not a universal law.
 
-## 4. Current correction-chain decomposition
-
-The shared coordinate system is:
+## 4. Correction-chain decomposition
 
 ```text
 C1  physical availability
@@ -438,8 +489,6 @@ Candidate research object:
 > Useful persistent state should be allowed to gain causal leverage without consuming the causal routes by which external consequence can reduce that leverage.
 
 ### Informational / topological / authority reopenability
-
-Useful decomposition:
 
 ```text
 informational reopenability
@@ -486,9 +535,7 @@ authority-effective current state
 
 Its general architectural role remains a hypothesis.
 
-## 6. Current L1 / L2 / L3 boundary
-
-The challenge problem is now separated into:
+## 6. Historical L1 / L2 / L3 boundary at the PCE stop
 
 ```text
 L1  challenge preservation given D_t^oracle
@@ -498,11 +545,7 @@ L3  construction of a better challenge set
 
 PCE-001 supports L1 only under the oracle-supplied challenge set.
 
-The current open question is:
-
-> **Can an adaptive system detect that its current corrective-exposure topology is inadequate without being told which missing intervention would repair it?**
-
-No L2 mechanism is currently implemented or earned.
+CSD-001 has since instantiated and run an L2 discrimination on unchanged Mini. Read `CSD_001.md` and `RESEARCH_FREEZE.md` for the current state.
 
 ## 7. Explicitly not established
 
@@ -527,6 +570,8 @@ universal state-independent challenge hazard
 scalar corrigibility score
 universal memory/reopenability architecture
 universal memory = rank theorem
+L2 impossibility
+procedure-level authority mechanism
 Nano V1
 production-grade authority ledger
 crash-durable Nano journal replay
@@ -552,18 +597,12 @@ The formal seed-custody gate remains independent.
 
 ## 9. Current research posture
 
-The working rule is:
+The working rule remains:
 
 > Preserve access to interesting hypotheses without granting them authority they have not earned.
 
-After PCE-001, the explicit contradiction-handling rule is:
+The current freeze adds:
 
-```text
-failed prospective prediction
--> mechanism loses authority
+> **No further conceptual refinement acquires scientific authority until new organism evidence or a prospectively frozen developmental experiment directly bears on the missing L2 transition.**
 
-successful intervention
--> mechanism gains bounded authority only on identified dimensions
-```
-
-The next conceptual update should come from a frozen L2 discrimination, not from pre-solving L2 architecturally.
+See [`../RESEARCH_FREEZE.md`](../RESEARCH_FREEZE.md).
