@@ -1,9 +1,12 @@
 # OpenCore Reopenability Lineage — FOREIGN-005 / FOREIGN-006
 
 **Publication status:** append-only experimental lineage record  
-**Target branch:** `opencore/crank-mini-001`  
-**Architecture change:** none  
-**Nano change:** none
+**Historical target branch:** `opencore/crank-mini-001`  
+**Current continuation:** `TOPOLOGICAL_REOPENABILITY_LINEAGE.md` -> `CORRECTIVE_EXPOSURE_LINEAGE.md` on `opencore/pce-001`  
+**Architecture change in FOREIGN-005/006:** none  
+**Nano change in FOREIGN-005/006:** none
+
+> This file remains the detailed custody record for FOREIGN-005/006. Later topology, Blitzcrank, and PCE-001 results do not rewrite these frozen assay claims; they continue the lineage in the documents named above.
 
 Frozen Nano SHA-256 throughout both assays:
 
@@ -30,7 +33,6 @@ reopenability itself can be compressed relative to a bounded future interface cl
 No universal memory law, reopenability primitive, automatic compressor, automatic interface invention, Nano repair, or architectural change is claimed.
 
 ---
-
 
 ## Publication transport
 
