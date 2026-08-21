@@ -1,0 +1,633 @@
+{
+  "branches": {
+    "coarse_X": {
+      "A_profile_receipt": {
+        "after_state_digest": "bfb757513faa02cbe6d478788a3f41ce01563ce1175bc9e30741c701183c9530",
+        "before_state_digest": "eeb657c2f5d61b03c6c143613edd3b7a2f19361d0b982ec92470d5c124346adf",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "1e20a6ecd08a40d28b65832b",
+        "license_id": "admit-A-X",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 0,
+        "transition_digest": "ac17494475684213d2ab427f4bd091f1f76183bdbc6cce53af987ac9d1c8ed01",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:Z:0",
+              "scope": "X"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "B_profile_receipt": null,
+      "carrier_A": "event:Z:0",
+      "carrier_B": "event:Z:0",
+      "carriers_equal": true,
+      "contract_template": {
+        "effect": {
+          "dimension": "persistent-profile",
+          "object_id": "history:B:downstream",
+          "scope": "X",
+          "value": "HALF"
+        },
+        "operation": "persist-downstream-profile",
+        "precondition": {
+          "dimension": "probe-profile",
+          "expected": "HALF",
+          "key_binding": "CURRENT_EVENT_ID",
+          "scope": "X"
+        }
+      },
+      "contract_template_digest": "6afc32c9b47681d14aa60bfb0a25b9f13aa05a05ab2d98dba1909de7cbdd9439",
+      "correct_use_after_B": null,
+      "final_effective_state": {
+        "active": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:Z:0",
+              "scope": "X"
+            },
+            "value": "HALF"
+          },
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "X"
+            },
+            "value": "HALF"
+          }
+        ],
+        "deferred": []
+      },
+      "mode": "coarse",
+      "persisted_after_B": null,
+      "probe": "X",
+      "truth_A": "HALF",
+      "truth_B": "CERTAIN_PLUS",
+      "use_before_B": {
+        "oracle_correct": false,
+        "persisted_value": "HALF",
+        "receipt": {
+          "after_state_digest": "4277c610bfd2ca646cf89c96d5cd11e5acbc389099364b57a7409a140c2a853c",
+          "before_state_digest": "bfb757513faa02cbe6d478788a3f41ce01563ce1175bc9e30741c701183c9530",
+          "decision": "ALLOW",
+          "deletes": [],
+          "id": "9f955d7208fa22ab711cbcb4",
+          "license_id": "use-half-X",
+          "parent_receipts": [
+            "1e20a6ecd08a40d28b65832b"
+          ],
+          "reasons": [],
+          "revoked_licenses": [],
+          "sequence": 1,
+          "transition_digest": "4f1cef16e9eb312b44737f79a56201fda813297d1b27721d2b3f96ce3b14eb78",
+          "writes": [
+            {
+              "key": {
+                "dimension": "persistent-profile",
+                "object_id": "history:B:downstream",
+                "scope": "X"
+              },
+              "value": "HALF"
+            }
+          ]
+        }
+      },
+      "wrong_use_after_B": null
+    },
+    "coarse_Y": {
+      "A_profile_receipt": {
+        "after_state_digest": "60de6d43404402cc5fd16be186591591291b4c8894c267775985c6b904c0cc2a",
+        "before_state_digest": "eeb657c2f5d61b03c6c143613edd3b7a2f19361d0b982ec92470d5c124346adf",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "b88e370ca513ef8316dccade",
+        "license_id": "admit-A-Y",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 0,
+        "transition_digest": "45b82451234fba9d33bec9a4fae6e6a8dacf229bdae6adfd6c6f03048bdee8b0",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "B_profile_receipt": null,
+      "carrier_A": "event:Z:0",
+      "carrier_B": "event:Z:0",
+      "carriers_equal": true,
+      "contract_template": {
+        "effect": {
+          "dimension": "persistent-profile",
+          "object_id": "history:B:downstream",
+          "scope": "Y",
+          "value": "HALF"
+        },
+        "operation": "persist-downstream-profile",
+        "precondition": {
+          "dimension": "probe-profile",
+          "expected": "HALF",
+          "key_binding": "CURRENT_EVENT_ID",
+          "scope": "Y"
+        }
+      },
+      "contract_template_digest": "9f5966d70af406250537e614309c3a34b3b679c01e233d8fedb75939ef281d26",
+      "correct_use_after_B": null,
+      "final_effective_state": {
+        "active": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          },
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ],
+        "deferred": []
+      },
+      "mode": "coarse",
+      "persisted_after_B": null,
+      "probe": "Y",
+      "truth_A": "HALF",
+      "truth_B": "HALF",
+      "use_before_B": {
+        "oracle_correct": true,
+        "persisted_value": "HALF",
+        "receipt": {
+          "after_state_digest": "54ab84093bd002a42cc3a0426b9f2315101d7706173c098255152b4940d81867",
+          "before_state_digest": "60de6d43404402cc5fd16be186591591291b4c8894c267775985c6b904c0cc2a",
+          "decision": "ALLOW",
+          "deletes": [],
+          "id": "88a59a8ff969d376d1395e5d",
+          "license_id": "use-half-Y",
+          "parent_receipts": [
+            "b88e370ca513ef8316dccade"
+          ],
+          "reasons": [],
+          "revoked_licenses": [],
+          "sequence": 1,
+          "transition_digest": "4bc2cf36ac325edbee16ae0297004efc9a6d27d03bb6008d1df7d9d301fe0b97",
+          "writes": [
+            {
+              "key": {
+                "dimension": "persistent-profile",
+                "object_id": "history:B:downstream",
+                "scope": "Y"
+              },
+              "value": "HALF"
+            }
+          ]
+        }
+      },
+      "wrong_use_after_B": null
+    },
+    "complete_X": {
+      "A_profile_receipt": {
+        "after_state_digest": "4b8608a69d59ec522998014ccc65462ebf7688cfbaafc151d8ce3a05cd31177a",
+        "before_state_digest": "50c69ce964b3cb3e7489e42bdf05202afb264dde62393d640e457ebbcaf7b758",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "16d4d6da12a78a6e258d7e1f",
+        "license_id": "admit-A-X",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 0,
+        "transition_digest": "12cab4b81b9f916e05bd172ecf988f59d3671f8e31be6b3ff3fd6b1f7f1b1e01",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:A:Z:0",
+              "scope": "X"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "B_profile_receipt": {
+        "after_state_digest": "7ef081d11f16ac9af43a7b1e887c47cb7caaceeef49dfff56a8b68e5abb336bc",
+        "before_state_digest": "4b8608a69d59ec522998014ccc65462ebf7688cfbaafc151d8ce3a05cd31177a",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "aa5ee1cdf021a69b8f47ae38",
+        "license_id": "admit-B-X",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 2,
+        "transition_digest": "56fe1cdc492bf2daba11962a64ec191327c37e7021f99c715f756597d1b7955c",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:B:Z:0",
+              "scope": "X"
+            },
+            "value": "CERTAIN_PLUS"
+          }
+        ]
+      },
+      "carrier_A": "event:A:Z:0",
+      "carrier_B": "event:B:Z:0",
+      "carriers_equal": false,
+      "contract_template": {
+        "effect": {
+          "dimension": "persistent-profile",
+          "object_id": "history:B:downstream",
+          "scope": "X",
+          "value": "HALF"
+        },
+        "operation": "persist-downstream-profile",
+        "precondition": {
+          "dimension": "probe-profile",
+          "expected": "HALF",
+          "key_binding": "CURRENT_EVENT_ID",
+          "scope": "X"
+        }
+      },
+      "contract_template_digest": "6afc32c9b47681d14aa60bfb0a25b9f13aa05a05ab2d98dba1909de7cbdd9439",
+      "correct_use_after_B": {
+        "after_state_digest": "3b65511b97426348abc3cbf31cb12d57537dd4d93ba1b9a38c0d62151d093e71",
+        "before_state_digest": "7ef081d11f16ac9af43a7b1e887c47cb7caaceeef49dfff56a8b68e5abb336bc",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "623427ca533bd2b94299e46c",
+        "license_id": "use-truth-B-X",
+        "parent_receipts": [
+          "aa5ee1cdf021a69b8f47ae38"
+        ],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 4,
+        "transition_digest": "6300310ef4f6f476eb2a337d1c98ec9c4044d5d644e1be03589036d845f5787e",
+        "writes": [
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "X"
+            },
+            "value": "CERTAIN_PLUS"
+          }
+        ]
+      },
+      "final_effective_state": {
+        "active": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:A:Z:0",
+              "scope": "X"
+            },
+            "value": "HALF"
+          },
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:B:Z:0",
+              "scope": "X"
+            },
+            "value": "CERTAIN_PLUS"
+          },
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "X"
+            },
+            "value": "CERTAIN_PLUS"
+          }
+        ],
+        "deferred": []
+      },
+      "mode": "complete",
+      "persisted_after_B": "CERTAIN_PLUS",
+      "probe": "X",
+      "truth_A": "HALF",
+      "truth_B": "CERTAIN_PLUS",
+      "use_before_B": {
+        "oracle_correct": null,
+        "persisted_value": null,
+        "receipt": {
+          "after_state_digest": "4b8608a69d59ec522998014ccc65462ebf7688cfbaafc151d8ce3a05cd31177a",
+          "before_state_digest": "4b8608a69d59ec522998014ccc65462ebf7688cfbaafc151d8ce3a05cd31177a",
+          "decision": "DEFER",
+          "deletes": [],
+          "id": "65356f8afc59ffd72e50b381",
+          "license_id": "use-half-X",
+          "parent_receipts": [],
+          "reasons": [
+            "precondition:unestablished:event:B:Z:0|probe-profile|X"
+          ],
+          "revoked_licenses": [],
+          "sequence": 1,
+          "transition_digest": "4f1cef16e9eb312b44737f79a56201fda813297d1b27721d2b3f96ce3b14eb78",
+          "writes": [
+            {
+              "key": {
+                "dimension": "persistent-profile",
+                "object_id": "history:B:downstream",
+                "scope": "X"
+              },
+              "value": "HALF"
+            }
+          ]
+        }
+      },
+      "wrong_use_after_B": {
+        "after_state_digest": "7ef081d11f16ac9af43a7b1e887c47cb7caaceeef49dfff56a8b68e5abb336bc",
+        "before_state_digest": "7ef081d11f16ac9af43a7b1e887c47cb7caaceeef49dfff56a8b68e5abb336bc",
+        "decision": "DENY",
+        "deletes": [],
+        "id": "0e6bd0ef995cc7563694860e",
+        "license_id": "use-half-X",
+        "parent_receipts": [
+          "aa5ee1cdf021a69b8f47ae38"
+        ],
+        "reasons": [
+          "precondition:contradicted:event:B:Z:0|probe-profile|X"
+        ],
+        "revoked_licenses": [],
+        "sequence": 3,
+        "transition_digest": "4f1cef16e9eb312b44737f79a56201fda813297d1b27721d2b3f96ce3b14eb78",
+        "writes": [
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "X"
+            },
+            "value": "HALF"
+          }
+        ]
+      }
+    },
+    "complete_Y": {
+      "A_profile_receipt": {
+        "after_state_digest": "7277e9f1a7e115d3721fd924eba3f383d7a17cfb7549789b031a2806a26c7797",
+        "before_state_digest": "50c69ce964b3cb3e7489e42bdf05202afb264dde62393d640e457ebbcaf7b758",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "f161092002a55744b6fddf8a",
+        "license_id": "admit-A-Y",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 0,
+        "transition_digest": "a6cdf32cd95c4cc068be66249ef21056dd12a1dde451bba9ecbe8a6aa96af80c",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:A:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "B_profile_receipt": {
+        "after_state_digest": "739d88051dbb232cea73c1fb3202c7646b1c8a24e178fb2489961c3445d5ec3e",
+        "before_state_digest": "7277e9f1a7e115d3721fd924eba3f383d7a17cfb7549789b031a2806a26c7797",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "55831f054e51b0b3a6617cdc",
+        "license_id": "admit-B-Y",
+        "parent_receipts": [],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 2,
+        "transition_digest": "7888d7581349361dedb2f1060c0d4e30b3b4c61b663bc0d661ed4bb1eb23f665",
+        "writes": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:B:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "carrier_A": "event:A:Z:0",
+      "carrier_B": "event:B:Z:0",
+      "carriers_equal": false,
+      "contract_template": {
+        "effect": {
+          "dimension": "persistent-profile",
+          "object_id": "history:B:downstream",
+          "scope": "Y",
+          "value": "HALF"
+        },
+        "operation": "persist-downstream-profile",
+        "precondition": {
+          "dimension": "probe-profile",
+          "expected": "HALF",
+          "key_binding": "CURRENT_EVENT_ID",
+          "scope": "Y"
+        }
+      },
+      "contract_template_digest": "9f5966d70af406250537e614309c3a34b3b679c01e233d8fedb75939ef281d26",
+      "correct_use_after_B": {
+        "after_state_digest": "98db35e78284b6f46db18be6166cc130dae606b54f50724e87f6e96d3218fa82",
+        "before_state_digest": "4e946d1255afdee8338b74616b1efb158a15098ceee532f3f6cde989ff9886a2",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "1f6a5257ef8b3f3a337e4e35",
+        "license_id": "use-truth-B-Y",
+        "parent_receipts": [
+          "55831f054e51b0b3a6617cdc"
+        ],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 4,
+        "transition_digest": "4bc2cf36ac325edbee16ae0297004efc9a6d27d03bb6008d1df7d9d301fe0b97",
+        "writes": [
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ]
+      },
+      "final_effective_state": {
+        "active": [
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:A:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          },
+          {
+            "key": {
+              "dimension": "probe-profile",
+              "object_id": "event:B:Z:0",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          },
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ],
+        "deferred": []
+      },
+      "mode": "complete",
+      "persisted_after_B": "HALF",
+      "probe": "Y",
+      "truth_A": "HALF",
+      "truth_B": "HALF",
+      "use_before_B": {
+        "oracle_correct": null,
+        "persisted_value": null,
+        "receipt": {
+          "after_state_digest": "7277e9f1a7e115d3721fd924eba3f383d7a17cfb7549789b031a2806a26c7797",
+          "before_state_digest": "7277e9f1a7e115d3721fd924eba3f383d7a17cfb7549789b031a2806a26c7797",
+          "decision": "DEFER",
+          "deletes": [],
+          "id": "8c732e470c12b8e3d249cbcd",
+          "license_id": "use-half-Y",
+          "parent_receipts": [],
+          "reasons": [
+            "precondition:unestablished:event:B:Z:0|probe-profile|Y"
+          ],
+          "revoked_licenses": [],
+          "sequence": 1,
+          "transition_digest": "4bc2cf36ac325edbee16ae0297004efc9a6d27d03bb6008d1df7d9d301fe0b97",
+          "writes": [
+            {
+              "key": {
+                "dimension": "persistent-profile",
+                "object_id": "history:B:downstream",
+                "scope": "Y"
+              },
+              "value": "HALF"
+            }
+          ]
+        }
+      },
+      "wrong_use_after_B": {
+        "after_state_digest": "4e946d1255afdee8338b74616b1efb158a15098ceee532f3f6cde989ff9886a2",
+        "before_state_digest": "739d88051dbb232cea73c1fb3202c7646b1c8a24e178fb2489961c3445d5ec3e",
+        "decision": "ALLOW",
+        "deletes": [],
+        "id": "d3ee3ca1962e89d470c0db71",
+        "license_id": "use-half-Y",
+        "parent_receipts": [
+          "55831f054e51b0b3a6617cdc"
+        ],
+        "reasons": [],
+        "revoked_licenses": [],
+        "sequence": 3,
+        "transition_digest": "4bc2cf36ac325edbee16ae0297004efc9a6d27d03bb6008d1df7d9d301fe0b97",
+        "writes": [
+          {
+            "key": {
+              "dimension": "persistent-profile",
+              "object_id": "history:B:downstream",
+              "scope": "Y"
+            },
+            "value": "HALF"
+          }
+        ]
+      }
+    }
+  },
+  "carrier_regimes": {
+    "coarse": {
+      "A0": "event:Z:0",
+      "B0": "event:Z:0"
+    },
+    "complete": {
+      "A0": "event:A:Z:0",
+      "B0": "event:B:Z:0"
+    }
+  },
+  "checks": {
+    "coarse_X_aliases_histories": true,
+    "coarse_X_authority_parent_is_A_profile": true,
+    "coarse_X_oracle_marks_wrong": true,
+    "coarse_X_wrong_use_ALLOWED": true,
+    "coarse_X_wrong_value_persisted": true,
+    "coarse_Y_oracle_marks_correct": true,
+    "coarse_Y_use_ALLOWED": true,
+    "complete_X_before_B_DEFER": true,
+    "complete_X_correct_after_B_ALLOW": true,
+    "complete_X_correct_value_persisted": true,
+    "complete_X_distinguishes_histories": true,
+    "complete_X_wrong_after_B_DENY": true,
+    "complete_Y_after_B_same_use_ALLOW": true,
+    "complete_Y_before_B_DEFER": true,
+    "complete_Y_correct_value_persisted": true,
+    "nano_unchanged": true,
+    "same_X_downstream_transition_object": true,
+    "same_Y_downstream_transition_object": true
+  },
+  "diagnosis": "persistent-authority wound caused by premature apparatus quotienting upstream of unchanged Nano",
+  "earned_claim": "A quantum-mechanically consequence-relevant apparatus distinction, when erased before the persistence boundary, caused an A-derived standing to satisfy a B-history precondition and authorize a wrong durable X-profile. Preserving opaque apparatus identity prevented that transfer; the Y control remained harmless under the same aliasing.",
+  "experiment": "OQ-002",
+  "manipulated_variable": "apparatus event identity resolution only",
+  "nano": {
+    "modified": false,
+    "sha256_expected": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329",
+    "sha256_post": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329",
+    "sha256_pre": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329",
+    "source": "bjoern-janson/opencore:opencore/crank-mini-001/crank/nano.py"
+  },
+  "not_claimed": [
+    "Nano is defective",
+    "Nano requires quantum semantics",
+    "OpenCore requires a post_state field",
+    "instrument identity is a universal OpenCore primitive",
+    "quantum hardware result",
+    "QuantumNano or QuantumBase is earned"
+  ],
+  "oq001_prerequisite": {
+    "X_truth": {
+      "A": "HALF",
+      "B": "CERTAIN_PLUS"
+    },
+    "Y_truth": {
+      "A": "HALF",
+      "B": "HALF"
+    },
+    "result_class": "APPARATUS_EXPRESSIVE_WOUND_ESTABLISHED",
+    "result_file_sha256": "ce98421bf07751295e0c029807ce2514117a0c090c5b83c06fa1b26e6ac78a0a"
+  },
+  "prospective_result_class": "PERSISTENCE_WOUND_ESTABLISHED",
+  "title": "Coarse-carrier persistence pressure"
+}

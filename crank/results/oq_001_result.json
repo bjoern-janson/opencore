@@ -1,0 +1,118 @@
+{
+  "claim_ceiling": "The tested coarse event representation erased a distinction required to predict a later discriminating consequence. No quantum-specific OpenCore schema or persistence primitive is thereby earned.",
+  "coarse_carrier_attack": {
+    "best_minimax_coarse_prediction_X_plus": 0.75,
+    "irreducible_worst_case_TV_error_X": 0.2500000000000001,
+    "irreducible_worst_case_TV_error_Y_control": 0.0,
+    "same_key_has_two_X_plus_targets": [
+      0.4999999999999999,
+      0.9999999999999998
+    ]
+  },
+  "downstream": {
+    "X_discriminator": {
+      "P_A_plus_given_x0": 0.4999999999999999,
+      "P_B_plus_given_x0": 0.9999999999999998,
+      "pass": true,
+      "total_variation": 0.4999999999999999
+    },
+    "Y_negative_control": {
+      "P_A_plus_given_x0": 0.4999999999999999,
+      "P_B_plus_given_x0": 0.4999999999999999,
+      "pass": true,
+      "total_variation": 0.0
+    }
+  },
+  "execution": {
+    "hardware": false,
+    "mode": "exact statevector/Kraus simulation plus seeded Monte Carlo",
+    "numpy_version": "2.3.5",
+    "qiskit_used": false,
+    "seed": 20260821,
+    "shots_per_instrument_probe": 100000
+  },
+  "experiment": "OQ-001",
+  "first_event": {
+    "P_A_x0": 0.4999999999999999,
+    "P_B_x0": 0.49999999999999983,
+    "coarse_carrier_A": [
+      "Z",
+      0
+    ],
+    "coarse_carrier_B": [
+      "Z",
+      0
+    ],
+    "coarse_carriers_equal": true,
+    "conditioned_outcome": 0,
+    "initial_state": "|+><+|",
+    "post_state_A": "|0><0|",
+    "post_state_B": "|+><+|"
+  },
+  "instrument_validation": {
+    "A_complete": true,
+    "B_complete": true,
+    "POVM_effects_equal_for_both_outcomes": true,
+    "implication": "first-outcome distributions agree for every input density operator"
+  },
+  "not_claimed": [
+    "quantum hardware result",
+    "OpenCore improves quantum computation",
+    "Nano requires a post_state field",
+    "quantum-state provenance is a universal OpenCore primitive",
+    "persistence consequence has been tested"
+  ],
+  "prospective_result_class": "APPARATUS_EXPRESSIVE_WOUND_ESTABLISHED",
+  "result_sha256": "acf8c5b8ec3eea0bf8f23165c6191cbe7e01600e358d0f9fda89dce2e7c89b36",
+  "sampling_check": {
+    "X": {
+      "A": {
+        "counts": {
+          "x0_y+": 25014,
+          "x0_y-": 25032,
+          "x1_y+": 25273,
+          "x1_y-": 24681
+        },
+        "p_y_plus_given_x0": 0.499820165447788,
+        "shots": 100000,
+        "x0_trials": 50046
+      },
+      "B": {
+        "counts": {
+          "x0_y+": 49912,
+          "x0_y-": 0,
+          "x1_y+": 50088,
+          "x1_y-": 0
+        },
+        "p_y_plus_given_x0": 1.0,
+        "shots": 100000,
+        "x0_trials": 49912
+      }
+    },
+    "Y_control": {
+      "A": {
+        "counts": {
+          "x0_y+": 24901,
+          "x0_y-": 25093,
+          "x1_y+": 24848,
+          "x1_y-": 25158
+        },
+        "p_y_plus_given_x0": 0.4980797695723487,
+        "shots": 100000,
+        "x0_trials": 49994
+      },
+      "B": {
+        "counts": {
+          "x0_y+": 25020,
+          "x0_y-": 24918,
+          "x1_y+": 25076,
+          "x1_y-": 24986
+        },
+        "p_y_plus_given_x0": 0.5010212663702992,
+        "shots": 100000,
+        "x0_trials": 49938
+      }
+    }
+  },
+  "title": "Outcome-equivalent instrument divergence"
+}
