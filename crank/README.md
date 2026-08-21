@@ -34,6 +34,9 @@ The Nano/Mini/Base distinctions emerged experimentally rather than being imposed
 | [`NANO_MINI_ABLATION_V0.md`](NANO_MINI_ABLATION_V0.md) | Subtractive decomposition of the Mini × Nano protection result |
 | [`BASE_001_SHARED_WORLD.md`](BASE_001_SHARED_WORLD.md) | Shared authority-filtered world across 12 heterogeneous local units |
 | [`BASE_002_GLOBAL_REOPENING.md`](BASE_002_GLOBAL_REOPENING.md) | Global reopening, replacement separation, and the guard/warrant wound |
+| [`NANO_GUARD_WARRANT_DISCRIMINATION_V0.md`](NANO_GUARD_WARRANT_DISCRIMINATION_V0.md) | GW-001 repair-discrimination assay for Base-002B's live wound |
+| [`FOREIGN_001_MASTERMIND.md`](FOREIGN_001_MASTERMIND.md) | First foreign pressure specimen: Mastermind representation/interface localization |
+| [`FOREIGN_002_RESTLESS_BANDIT.md`](FOREIGN_002_RESTLESS_BANDIT.md) | Foreign scarce-attention specimen: restless-bandit allocation pressure |
 | [`results/`](results/) | Raw decisive result snapshots |
 
 ## Mini: the adaptive process
@@ -243,6 +246,29 @@ or:
 No Nano repair is made or implied by this publication.
 
 See [`BASE_002_GLOBAL_REOPENING.md`](BASE_002_GLOBAL_REOPENING.md).
+
+
+## GW-001 and foreign pressure specimens
+
+The next crank sequence deliberately stopped extending the OpenCore-native architecture and instead applied discriminating and foreign pressure.
+
+**GW-001** attacked Base-002B without modifying Nano. It established behaviorally that the facts required for transition execution need not be identical to the facts whose continuing authority should govern the result:
+
+```text
+CheckSet(T) != ParentSet(Result(T))
+```
+
+In the decisive mixed-role witness, two facts were both required for execution, but later revocation showed that only one should remain a continuing authority parent. Structural special-case repairs for same-key, revoked-source, and self-invalidating transitions all failed at least one control. Selective continuing ancestry is supported on the constructed family; a `Guard`/`WarrantPremise` schema and Nano V1 remain unearned.
+
+**FOREIGN-001** then exposed the frozen stack to reduced Mastermind rather than another OpenCore-native task. Static worlds supplied sufficient evidence and a live Nano authority path, but frozen Mini had no affine hypothesis capable of representing any complete Mastermind feedback function. Dynamic worlds separately showed that a real hidden mechanism change can remain observationally compatible with an unchanged explanation.
+
+**FOREIGN-002** changed pressure again to a small deterministic restless-bandit family while controlling FOREIGN-001's representation wound: every latent arm state was inside Mini's existing affine hypothesis class. Mini's existing `needs_probe` behavior usefully spent follow-up attention after contradiction and improved reward/repair completion, but it did not improve prospective discovery of still-hidden shifts. The candidate distinction is:
+
+```text
+reactive corrective attention != prospective discovery attention
+```
+
+No Mini repair, Nano repair, Base extension, attention scheduler, or universal foreign-task layer is earned by these specimens.
 
 ## Systems-level theory freeze
 

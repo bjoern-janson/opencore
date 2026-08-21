@@ -1,0 +1,300 @@
+{
+  "claim_ceiling": "On the constructed four-family assay, only the harness-selective parent policy matched all externally declared execution-vs-continuing-authority relationships. This identifies a functional need for selective authority ancestry beyond the tested same-key and same-transition-revocation heuristics; it does not establish a Nano schema.",
+  "counts": {
+    "DROP_ALL_PARENTS": {
+      "all_four_pass": 0,
+      "mixed_guard_warrant_pass": 0,
+      "revoked_source_warrant_pass": 0,
+      "same_key_warrant_pass": 0,
+      "strict_reopen_pass": 0
+    },
+    "EXPLICIT_SELECTIVE": {
+      "all_four_pass": 10000,
+      "mixed_guard_warrant_pass": 10000,
+      "revoked_source_warrant_pass": 10000,
+      "same_key_warrant_pass": 10000,
+      "strict_reopen_pass": 10000
+    },
+    "NANO_V0": {
+      "all_four_pass": 0,
+      "mixed_guard_warrant_pass": 0,
+      "revoked_source_warrant_pass": 10000,
+      "same_key_warrant_pass": 10000,
+      "strict_reopen_pass": 0
+    },
+    "REVOKED_SRC_EXEMPT": {
+      "all_four_pass": 0,
+      "mixed_guard_warrant_pass": 0,
+      "revoked_source_warrant_pass": 0,
+      "same_key_warrant_pass": 10000,
+      "strict_reopen_pass": 10000
+    },
+    "SAME_KEY_EXEMPT": {
+      "all_four_pass": 0,
+      "mixed_guard_warrant_pass": 0,
+      "revoked_source_warrant_pass": 10000,
+      "same_key_warrant_pass": 0,
+      "strict_reopen_pass": 10000
+    },
+    "SELF_INVALIDATING_EXEMPT": {
+      "all_four_pass": 0,
+      "mixed_guard_warrant_pass": 0,
+      "revoked_source_warrant_pass": 10000,
+      "same_key_warrant_pass": 10000,
+      "strict_reopen_pass": 10000
+    }
+  },
+  "experiment": "OPENCORE_GW_001_GUARD_WARRANT_DISCRIMINATION",
+  "first_failure": {
+    "DROP_ALL_PARENTS": {
+      "cases": {
+        "mixed_guard_warrant": {
+          "after_evidence_revoke_active": true,
+          "after_evidence_revoke_deferred": false,
+          "after_mode_revoke_active": true,
+          "after_mode_revoke_deferred": false,
+          "expected_pass": false,
+          "initial_active": true,
+          "parent_evidence": false,
+          "parent_mode": false,
+          "transition_allow": true
+        },
+        "revoked_source_warrant": {
+          "expected_pass": false,
+          "parent_source": false,
+          "result_active": true,
+          "result_deferred": false,
+          "transition_allow": true
+        },
+        "same_key_warrant": {
+          "after_old_warrant_revoke_active": true,
+          "after_old_warrant_revoke_deferred": false,
+          "before_revoke_active": true,
+          "expected_pass": false,
+          "parent_old_stage": false,
+          "upgrade_allow": true
+        },
+        "strict_reopen": {
+          "expected_pass": false,
+          "parent_counterexample": false,
+          "parent_old_g": false,
+          "reopened_active": true,
+          "reopened_deferred": false,
+          "transition_allow": true
+        }
+      },
+      "seed": 0
+    },
+    "EXPLICIT_SELECTIVE": null,
+    "NANO_V0": {
+      "cases": {
+        "mixed_guard_warrant": {
+          "after_evidence_revoke_active": false,
+          "after_evidence_revoke_deferred": true,
+          "after_mode_revoke_active": false,
+          "after_mode_revoke_deferred": true,
+          "expected_pass": false,
+          "initial_active": true,
+          "parent_evidence": true,
+          "parent_mode": true,
+          "transition_allow": true
+        },
+        "revoked_source_warrant": {
+          "expected_pass": true,
+          "parent_source": true,
+          "result_active": false,
+          "result_deferred": true,
+          "transition_allow": true
+        },
+        "same_key_warrant": {
+          "after_old_warrant_revoke_active": false,
+          "after_old_warrant_revoke_deferred": true,
+          "before_revoke_active": true,
+          "expected_pass": true,
+          "parent_old_stage": true,
+          "upgrade_allow": true
+        },
+        "strict_reopen": {
+          "expected_pass": false,
+          "parent_counterexample": true,
+          "parent_old_g": true,
+          "reopened_active": false,
+          "reopened_deferred": true,
+          "transition_allow": true
+        }
+      },
+      "seed": 0
+    },
+    "REVOKED_SRC_EXEMPT": {
+      "cases": {
+        "mixed_guard_warrant": {
+          "after_evidence_revoke_active": false,
+          "after_evidence_revoke_deferred": true,
+          "after_mode_revoke_active": false,
+          "after_mode_revoke_deferred": true,
+          "expected_pass": false,
+          "initial_active": true,
+          "parent_evidence": true,
+          "parent_mode": true,
+          "transition_allow": true
+        },
+        "revoked_source_warrant": {
+          "expected_pass": false,
+          "parent_source": false,
+          "result_active": true,
+          "result_deferred": false,
+          "transition_allow": true
+        },
+        "same_key_warrant": {
+          "after_old_warrant_revoke_active": false,
+          "after_old_warrant_revoke_deferred": true,
+          "before_revoke_active": true,
+          "expected_pass": true,
+          "parent_old_stage": true,
+          "upgrade_allow": true
+        },
+        "strict_reopen": {
+          "expected_pass": true,
+          "parent_counterexample": true,
+          "parent_old_g": false,
+          "reopened_active": true,
+          "reopened_deferred": false,
+          "transition_allow": true
+        }
+      },
+      "seed": 0
+    },
+    "SAME_KEY_EXEMPT": {
+      "cases": {
+        "mixed_guard_warrant": {
+          "after_evidence_revoke_active": false,
+          "after_evidence_revoke_deferred": true,
+          "after_mode_revoke_active": false,
+          "after_mode_revoke_deferred": true,
+          "expected_pass": false,
+          "initial_active": true,
+          "parent_evidence": true,
+          "parent_mode": true,
+          "transition_allow": true
+        },
+        "revoked_source_warrant": {
+          "expected_pass": true,
+          "parent_source": true,
+          "result_active": false,
+          "result_deferred": true,
+          "transition_allow": true
+        },
+        "same_key_warrant": {
+          "after_old_warrant_revoke_active": true,
+          "after_old_warrant_revoke_deferred": false,
+          "before_revoke_active": true,
+          "expected_pass": false,
+          "parent_old_stage": false,
+          "upgrade_allow": true
+        },
+        "strict_reopen": {
+          "expected_pass": true,
+          "parent_counterexample": true,
+          "parent_old_g": false,
+          "reopened_active": true,
+          "reopened_deferred": false,
+          "transition_allow": true
+        }
+      },
+      "seed": 0
+    },
+    "SELF_INVALIDATING_EXEMPT": {
+      "cases": {
+        "mixed_guard_warrant": {
+          "after_evidence_revoke_active": false,
+          "after_evidence_revoke_deferred": true,
+          "after_mode_revoke_active": false,
+          "after_mode_revoke_deferred": true,
+          "expected_pass": false,
+          "initial_active": true,
+          "parent_evidence": true,
+          "parent_mode": true,
+          "transition_allow": true
+        },
+        "revoked_source_warrant": {
+          "expected_pass": true,
+          "parent_source": true,
+          "result_active": false,
+          "result_deferred": true,
+          "transition_allow": true
+        },
+        "same_key_warrant": {
+          "after_old_warrant_revoke_active": false,
+          "after_old_warrant_revoke_deferred": true,
+          "before_revoke_active": true,
+          "expected_pass": true,
+          "parent_old_stage": true,
+          "upgrade_allow": true
+        },
+        "strict_reopen": {
+          "expected_pass": true,
+          "parent_counterexample": true,
+          "parent_old_g": false,
+          "reopened_active": true,
+          "reopened_deferred": false,
+          "transition_allow": true
+        }
+      },
+      "seed": 0
+    }
+  },
+  "policies": [
+    "NANO_V0",
+    "SAME_KEY_EXEMPT",
+    "REVOKED_SRC_EXEMPT",
+    "SELF_INVALIDATING_EXEMPT",
+    "EXPLICIT_SELECTIVE",
+    "DROP_ALL_PARENTS"
+  ],
+  "rates": {
+    "DROP_ALL_PARENTS": {
+      "all_four_pass": 0.0,
+      "mixed_guard_warrant_pass": 0.0,
+      "revoked_source_warrant_pass": 0.0,
+      "same_key_warrant_pass": 0.0,
+      "strict_reopen_pass": 0.0
+    },
+    "EXPLICIT_SELECTIVE": {
+      "all_four_pass": 1.0,
+      "mixed_guard_warrant_pass": 1.0,
+      "revoked_source_warrant_pass": 1.0,
+      "same_key_warrant_pass": 1.0,
+      "strict_reopen_pass": 1.0
+    },
+    "NANO_V0": {
+      "all_four_pass": 0.0,
+      "mixed_guard_warrant_pass": 0.0,
+      "revoked_source_warrant_pass": 1.0,
+      "same_key_warrant_pass": 1.0,
+      "strict_reopen_pass": 0.0
+    },
+    "REVOKED_SRC_EXEMPT": {
+      "all_four_pass": 0.0,
+      "mixed_guard_warrant_pass": 0.0,
+      "revoked_source_warrant_pass": 0.0,
+      "same_key_warrant_pass": 1.0,
+      "strict_reopen_pass": 1.0
+    },
+    "SAME_KEY_EXEMPT": {
+      "all_four_pass": 0.0,
+      "mixed_guard_warrant_pass": 0.0,
+      "revoked_source_warrant_pass": 1.0,
+      "same_key_warrant_pass": 0.0,
+      "strict_reopen_pass": 1.0
+    },
+    "SELF_INVALIDATING_EXEMPT": {
+      "all_four_pass": 0.0,
+      "mixed_guard_warrant_pass": 0.0,
+      "revoked_source_warrant_pass": 1.0,
+      "same_key_warrant_pass": 1.0,
+      "strict_reopen_pass": 1.0
+    }
+  },
+  "start_seed": 0,
+  "worlds": 10000
+}

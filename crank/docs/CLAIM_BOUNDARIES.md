@@ -136,6 +136,46 @@ execution guard != warrant dependency
 
 No repair representation is established.
 
+### GW-001 repair discrimination
+
+Supported on the constructed four-family discrimination assay:
+
+```text
+CheckSet(T) != ParentSet(Result(T))
+```
+
+A single transition can require multiple facts for execution while later revocation shows that only a selected subset should govern the result's continuing authority. Tested same-key, revoked-source, and self-invalidating special-case repairs were insufficient across the full control set.
+
+This supports selective continuing ancestry on the tested family. It does **not** establish a specific `Guard`/`WarrantPremise` representation or Nano V1.
+
+### FOREIGN-001
+
+Supported narrowly on the reduced Mastermind pressure family:
+
+- the diagnostic oracle could obtain sufficient evidence while frozen Mini had no globally consistent affine model;
+- all nine complete foreign feedback functions were outside Mini's 110-hypothesis family;
+- unchanged Nano admitted all licensed Mini persistence proposals and was not identified as the bottleneck;
+- in the dynamic arm, genuine hidden code changes remained observationally compatible with at least one fixed-code explanation.
+
+Thus the static blockage localized to organism representation, while the dynamic mechanism-shift question additionally exposed an apparatus/evidence limit.
+
+### FOREIGN-002
+
+Supported narrowly on the constructed deterministic restless-bandit pressure family:
+
+- every latent arm state was representable by frozen Mini;
+- unchanged Nano admitted all licensed persistence proposals;
+- servicing Mini's existing contradiction-triggered `needs_probe` requests improved reward, repair completion, and stale-model time relative to greedy exploitation;
+- the same policy discovered fewer distinct hidden shifts than external exploration/coverage controls.
+
+Candidate local distinction:
+
+```text
+reactive corrective attention != prospective discovery attention
+```
+
+The experiment does not establish a prospective-attention mechanism.
+
 ## 3. Candidate common interpretations
 
 These have explanatory support but are not established universal laws.
@@ -176,6 +216,20 @@ authority-effective current state
 A standing may remain historically present while no longer participating in current authority because its warrant ancestry is dead.
 
 This is supported mechanically in the tested family; its general architectural use remains a hypothesis.
+
+### Relational typing
+
+Repeated wounds suggest a candidate higher-order pattern: semantically distinct transition relations may fail when represented by one coarse edge. GW-001 strengthens this possibility, but does not establish it as a universal law or a required schema.
+
+### Prospective corrective attention
+
+FOREIGN-002 motivates the candidate competence:
+
+```text
+where should scarce reality contact be spent before contradiction is already observed?
+```
+
+This is not an earned module, scheduler, objective, or optimality criterion.
 
 ## 4. Systems-level hypothesis freeze
 
@@ -267,6 +321,10 @@ autonomous applicability discovery
 autonomous relevance discovery in Base
 autonomous guard/warrant typing
 autonomous challenge calibration
+prospective corrective-attention mechanism
+foreign-task-general Mini representation
+Guard/WarrantPremise schema
+Nano V1
 arbitrary interface invention
 reliable generalization generally
 universal FCD/OCC compliance

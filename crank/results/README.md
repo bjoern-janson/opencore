@@ -14,6 +14,9 @@ The JSON files are evidence for specific constructed assays. They are not univer
 | [`nano_mini_ablation_final_10000.json`](nano_mini_ablation_final_10000.json) | Final 10,000-seed subtractive persistence-boundary ablation |
 | [`base_001_shared_world_final_10000.json`](base_001_shared_world_final_10000.json) | Final 10,000-world Base-001 shared-world assay |
 | [`base_002_global_reopening_final_10000.json`](base_002_global_reopening_final_10000.json) | Final 10,000-world Base-002 global-reopening assay, including strict negative control |
+| [`nano_guard_warrant_discrimination_final_10000.json`](nano_guard_warrant_discrimination_final_10000.json) | Final 10,000-world GW-001 repair-discrimination assay |
+| [`foreign_001_mastermind_final_10000.json`](foreign_001_mastermind_final_10000.json) | Final 10,000-per-arm FOREIGN-001 Mastermind pressure assay |
+| [`foreign_002_restless_bandit_final_10000.json`](foreign_002_restless_bandit_final_10000.json) | Final 10,000-world FOREIGN-002 restless-bandit pressure assay |
 
 ## Preserved Nano negative results
 
@@ -27,6 +30,8 @@ These are intentionally retained because they forced or exposed distinctions in 
 | [`nano_preservation_dependency_post_repair_current_10000.json`](nano_preservation_dependency_post_repair_current_10000.json) | Current regression after separating preservation from warrant dependency |
 
 Base-002's guard/warrant negative result is preserved inside `base_002_global_reopening_final_10000.json` and [`../BASE_002_GLOBAL_REOPENING.md`](../BASE_002_GLOBAL_REOPENING.md). No Nano repair is published for that result.
+
+GW-001 preserves the subsequent discrimination result without publishing a Nano repair. FOREIGN-001 and FOREIGN-002 are foreign-pressure specimens: they localize organism representation/interface and attention-allocation pressure respectively, rather than extending the kernel.
 
 ## Publication discipline
 

@@ -1,0 +1,505 @@
+{
+  "arms": {
+    "dynamic": {
+      "authority_check_allow_rate": 1.0,
+      "authority_check_allows": 10000,
+      "base_abstain": 32054,
+      "base_correct": 2643,
+      "base_prediction_accuracy": 0.04561143133262002,
+      "base_predictions": 57946,
+      "base_wrong": 55303,
+      "dynamic_trace_has_static_explanation": 10000,
+      "expressive_block_after_sufficient_evidence": 10000,
+      "expressive_block_after_sufficient_evidence_rate": 1.0,
+      "hidden_secret_changes": 24236,
+      "mean_hidden_secret_changes": 2.4236,
+      "mean_oracle_unique_step": 2.8862,
+      "mini_commit_events": 23466,
+      "mini_ever_commit_rate": 0.8278,
+      "mini_ever_committed": 8278,
+      "mini_final_global_model_consistency_rate": 0.0,
+      "mini_final_global_model_consistent": 0,
+      "mini_final_has_model": 8278,
+      "mini_final_needs_probe": 7595,
+      "mini_final_needs_probe_rate": 0.7595,
+      "mini_reopen_events": 15188,
+      "nano_model_allow_rate": 1.0,
+      "nano_model_allows": 23466,
+      "nano_model_attempts": 23466,
+      "nano_model_defers": 0,
+      "nano_model_denies": 0,
+      "oracle_unique_rate": 1.0,
+      "oracle_unique_step_sum": 28862,
+      "oracle_unique_worlds": 10000,
+      "worlds": 10000,
+      "worlds_with_hidden_secret_change": 10000,
+      "worlds_with_hidden_secret_change_rate": 1.0
+    },
+    "static": {
+      "authority_check_allow_rate": 1.0,
+      "authority_check_allows": 10000,
+      "base_abstain": 36562,
+      "base_correct": 2603,
+      "base_prediction_accuracy": 0.048710655338897416,
+      "base_predictions": 53438,
+      "base_wrong": 50835,
+      "dynamic_trace_has_static_explanation": 10000,
+      "expressive_block_after_sufficient_evidence": 10000,
+      "expressive_block_after_sufficient_evidence_rate": 1.0,
+      "hidden_secret_changes": 0,
+      "mean_hidden_secret_changes": 0.0,
+      "mean_oracle_unique_step": 2.0976,
+      "mini_commit_events": 20746,
+      "mini_ever_commit_rate": 0.7634,
+      "mini_ever_committed": 7634,
+      "mini_final_global_model_consistency_rate": 0.0,
+      "mini_final_global_model_consistent": 0,
+      "mini_final_has_model": 7634,
+      "mini_final_needs_probe": 7048,
+      "mini_final_needs_probe_rate": 0.7048,
+      "mini_reopen_events": 13112,
+      "nano_model_allow_rate": 1.0,
+      "nano_model_allows": 20746,
+      "nano_model_attempts": 20746,
+      "nano_model_defers": 0,
+      "nano_model_denies": 0,
+      "oracle_unique_rate": 1.0,
+      "oracle_unique_step_sum": 20976,
+      "oracle_unique_worlds": 10000,
+      "worlds": 10000,
+      "worlds_with_hidden_secret_change": 0,
+      "worlds_with_hidden_secret_change_rate": 0.0
+    }
+  },
+  "classification": {
+    "dynamic": "same expressive block plus hidden mechanism non-identifiability: adaptive history remains exactly explainable by at least one static code",
+    "static": "EXPRESSIVE_BLOCK if oracle uniquely identifies foreign secret and Nano authority path is live while Mini has no globally consistent affine model"
+  },
+  "experiment": "FOREIGN-001 Mastermind pressure",
+  "first_worlds": {
+    "dynamic": {
+      "arm": "dynamic",
+      "authority_check": "ALLOW",
+      "base_abstain": 2,
+      "base_correct": 0,
+      "base_predictions": 7,
+      "base_wrong": 7,
+      "dynamic_trace_has_static_explanation": true,
+      "expressive_block_after_sufficient_evidence": true,
+      "hidden_secret_changes": 3,
+      "history": [
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            2,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            0
+          ],
+          "guess": [
+            2,
+            2
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            0
+          ],
+          "guess": [
+            2,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            0
+          ],
+          "guess": [
+            1,
+            2
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            0
+          ],
+          "guess": [
+            1,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            0,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            1,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            2,
+            0
+          ],
+          "guess": [
+            0,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            0,
+            2
+          ]
+        }
+      ],
+      "mini_commit_events": 1,
+      "mini_final_global_model_consistent": false,
+      "mini_final_has_model": true,
+      "mini_final_needs_probe": true,
+      "mini_final_rule": "4x+1 mod 11",
+      "mini_reopen_events": 0,
+      "nano_model_persist_decisions": [
+        "ALLOW"
+      ],
+      "oracle_final_candidates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "oracle_unique_step": 3,
+      "probe_order": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "seed": 0,
+      "static_explanations": [
+        [
+          0,
+          0
+        ]
+      ],
+      "trace": [
+        "EXPERIENCE MM: x=6 -> y=3 [foreign-dynamic-feedback]",
+        "EXPERIENCE MM: x=8 -> y=0 [foreign-dynamic-feedback]",
+        "CANDIDATE MM: 4x+1 mod 11",
+        "COMMIT MM v1: 4x+1 mod 11",
+        "EXPERIENCE MM: x=7 -> y=0 [foreign-dynamic-feedback]",
+        "CHALLENGE MM: incumbent v1 predicted 7, observed 0",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=5 -> y=0 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=4 -> y=0 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=1 -> y=3 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=3 -> y=3 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=0 -> y=4 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=2 -> y=3 [foreign-dynamic-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined"
+      ]
+    },
+    "static": {
+      "arm": "static",
+      "authority_check": "ALLOW",
+      "base_abstain": 2,
+      "base_correct": 0,
+      "base_predictions": 7,
+      "base_wrong": 7,
+      "dynamic_trace_has_static_explanation": true,
+      "expressive_block_after_sufficient_evidence": true,
+      "hidden_secret_changes": 0,
+      "history": [
+        {
+          "feedback": [
+            2,
+            0
+          ],
+          "guess": [
+            1,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            0,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            1
+          ],
+          "guess": [
+            2,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            1
+          ],
+          "guess": [
+            0,
+            2
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            2,
+            0
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            1,
+            2
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            2
+          ],
+          "guess": [
+            0,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            1,
+            0
+          ],
+          "guess": [
+            1,
+            1
+          ]
+        },
+        {
+          "feedback": [
+            0,
+            0
+          ],
+          "guess": [
+            2,
+            2
+          ]
+        }
+      ],
+      "mini_commit_events": 1,
+      "mini_final_global_model_consistent": false,
+      "mini_final_has_model": true,
+      "mini_final_needs_probe": true,
+      "mini_final_rule": "4x+3 mod 11",
+      "mini_reopen_events": 0,
+      "nano_model_persist_decisions": [
+        "ALLOW"
+      ],
+      "oracle_final_candidates": [
+        [
+          1,
+          0
+        ]
+      ],
+      "oracle_unique_step": 1,
+      "probe_order": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "seed": 0,
+      "static_explanations": [
+        [
+          1,
+          0
+        ]
+      ],
+      "trace": [
+        "EXPERIENCE MM: x=3 -> y=4 [foreign-static-feedback]",
+        "EXPERIENCE MM: x=0 -> y=3 [foreign-static-feedback]",
+        "CANDIDATE MM: 4x+3 mod 11",
+        "COMMIT MM v1: 4x+3 mod 11",
+        "EXPERIENCE MM: x=7 -> y=1 [foreign-static-feedback]",
+        "CHALLENGE MM: incumbent v1 predicted 9, observed 1",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=2 -> y=1 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=6 -> y=3 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=5 -> y=3 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=1 -> y=2 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=4 -> y=3 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined",
+        "EXPERIENCE MM: x=8 -> y=0 [foreign-static-feedback]",
+        "PROBE-REQUEST MM: challenge still underdetermined"
+      ]
+    }
+  },
+  "foreign_task": {
+    "adapter": "lossless guess index x=0..8; injective feedback class y=0..4",
+    "codes": 9,
+    "colors": 3,
+    "feedback_classes": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "guesses": 9,
+    "positions": 2
+  },
+  "frozen": {
+    "mini_sha256": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+    "nano_sha256": "8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329"
+  },
+  "representability": {
+    "all_foreign_functions_have_feedback_collisions": true,
+    "all_mini_rules_injective_on_x_0_to_8": true,
+    "codes": 9,
+    "codes_representable_by_mini": 0,
+    "feedback_classes": 5,
+    "matching_rules": {
+      "(0, 0)": [],
+      "(0, 1)": [],
+      "(0, 2)": [],
+      "(1, 0)": [],
+      "(1, 1)": [],
+      "(1, 2)": [],
+      "(2, 0)": [],
+      "(2, 1)": [],
+      "(2, 2)": []
+    },
+    "mini_hypotheses": 110
+  },
+  "start_seed": 0,
+  "worlds_per_arm": 10000
+}

@@ -317,7 +317,70 @@ execution guard != warrant dependency
 
 No repair was made. Typed guards, explicit warrant-parent declarations, and other representations remain open hypotheses.
 
-## 16. Systems-level theory freeze
+## 16. GW-001 — guard / warrant repair discrimination
+
+GW-001 attacked Base-002B's live wound without modifying Nano. Multiple plausible parent-selection repairs were compared on strict reopening, genuine-warrant controls, and a mixed-role transition.
+
+The decisive witness required two facts for execution but only one to remain causally responsible for the result's continuing authority. Later revocation made the difference observable.
+
+Earned constructed distinction:
+
+```text
+CheckSet(T) != ParentSet(Result(T))
+```
+
+or equivalently:
+
+```text
+what must be true to execute a transition
+!=
+what must remain authoritative for its result
+```
+
+Same-key, revoked-source, and the stronger self-invalidating-conjunction special cases all failed at least one control. Selective continuing ancestry is supported on this constructed family. A specific guard/warrant schema and Nano V1 remain unearned.
+
+## 17. FOREIGN-001 — Mastermind pressure
+
+The frozen stack was exposed to a reduced Mastermind family whose task semantics were not designed around OpenCore. A lossless boundary encoding was used; no Mastermind solver was inserted into Mini.
+
+Static arm:
+
+```text
+foreign evidence sufficient
++ Nano authority path available
++ Mini representation unavailable
+-> organism-level expressive blockage
+```
+
+Every complete Mastermind feedback function contained collisions between distinct guesses, while every frozen Mini affine hypothesis was injective on distinct inputs. None of the nine foreign functions was representable by Mini's 110 hypotheses.
+
+Dynamic arm:
+
+```text
+hidden mechanism change != identifiable mechanism change
+```
+
+The codemaker changed its hidden code, yet the public trace remained compatible with at least one fixed code in every tested world. This is an apparatus/evidence limit, not license to infer hidden change.
+
+No Mini or Nano repair was made.
+
+## 18. FOREIGN-002 — restless-bandit attention pressure
+
+FOREIGN-002 changed the pressure source again. It used an 8-arm, 80-round deterministic restless-bandit family with one observable/playable arm per round. Every latent arm state was intentionally drawn from Mini's existing affine hypothesis class so FOREIGN-001's representation wound was controlled rather than repaired.
+
+Mini's existing contradiction-triggered `needs_probe` signal was serviced without adding an attention scheduler. Across 10,000 worlds it improved cumulative reward and detected-to-repaired completion relative to greedy exploitation, while sacrificing predicted immediate reward on most follow-up probes.
+
+But it detected fewer distinct hidden shifts than greedy, epsilon-greedy, or round-robin coverage controls.
+
+Narrow pressure result:
+
+```text
+reactive corrective attention != prospective discovery attention
+```
+
+The latter phrase is a candidate competence description, not an implemented component or earned repair.
+
+## 19. Systems-level theory freeze
 
 The current conceptual compression is:
 
@@ -354,7 +417,7 @@ live authority-update path
 
 This is a hypothesis freeze, not an experimentally established general developmental loop.
 
-## 17. Current experimental status
+## 20. Current experimental status
 
 The current high-level ladder is descriptive, not a formal maturity scale:
 
@@ -372,6 +435,9 @@ A0   subtractive Nano/Mini decomposition
 B1   shared authority-filtered 12-unit world
 B2A  global reopening without automatic replacement
 B2B  strict reopening exposes guard/warrant conflation
+GW1  checked-for-execution != retained-as-authority-parent
+F1   foreign Mastermind representation / interface pressure
+F2   foreign restless-bandit attention-allocation pressure
 ```
 
 The next useful experiment should be selected because it can break or discriminate the current theory, not because it extends the ladder aesthetically.
