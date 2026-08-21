@@ -1,0 +1,32 @@
+{
+  "assay": "PCE-001",
+  "claim_ceiling": "Challenge preservation under a prospectively fixed corrective channel only; autonomous challenge discovery/constitution is not tested.",
+  "control_summary": {
+    "WORLD_INFORMATIVE": {
+      "ARM_ENDOGENOUS": {"C4a": 0, "C5": 0, "C6": 0, "mean_challenge_count": 0.0, "mean_post_target_return": 120.0, "mean_total_return": 426.74765624999975},
+      "ARM_FLOOR": {"C4a": 1542, "C5": 849, "C6": 0, "mean_challenge_count": 6.0234375, "mean_post_target_return": 118.7953125, "mean_total_return": 425.5429687499998},
+      "ARM_HAZARD": {"C4a": 1531, "C5": 835, "C6": 0, "mean_challenge_count": 5.98046875, "mean_post_target_return": 118.80390624999998, "mean_total_return": 425.55156249999976},
+      "ARM_SUPPORT": {"C4a": 153, "C5": 87, "C6": 0, "mean_challenge_count": 0.59765625, "mean_post_target_return": 119.88046874999999, "mean_total_return": 426.6281249999997}
+    },
+    "WORLD_NULL": {
+      "ARM_ENDOGENOUS": {"C4a": 0, "C5": 0, "C6": 0, "mean_challenge_count": 0.0, "mean_post_target_return": 120.0, "mean_total_return": 426.74765624999975},
+      "ARM_FLOOR": {"C4a": 0, "C5": 0, "C6": 0, "mean_challenge_count": 6.0234375, "mean_post_target_return": 118.7953125, "mean_total_return": 425.5429687499998},
+      "ARM_HAZARD": {"C4a": 0, "C5": 0, "C6": 0, "mean_challenge_count": 5.98046875, "mean_post_target_return": 118.80390624999998, "mean_total_return": 425.55156249999976},
+      "ARM_SUPPORT": {"C4a": 0, "C5": 0, "C6": 0, "mean_challenge_count": 0.59765625, "mean_post_target_return": 119.88046874999999, "mean_total_return": 426.6281249999997}
+    }
+  },
+  "corrective_summary": {
+    "ARM_ENDOGENOUS": {"base_support_reopen_fraction_mean": 0.0, "finite_T_C_mean": null, "finite_T_C_rate": 0.0, "finite_T_L_mean": 1.09765625, "finite_T_L_rate": 1.0, "initial_base_suppression_rate": 1.0, "mean_challenge_count": 0.0, "mean_post_target_return": 120.0, "mean_total_return": 426.74765624999975, "missed_positive_counterfactual_rate": 0.5527994791666667},
+    "ARM_FLOOR": {"base_support_reopen_fraction_mean": 0.5110026041666667, "finite_T_C_mean": 34.47317073170732, "finite_T_C_rate": 0.80078125, "finite_T_L_mean": 1.104, "finite_T_L_rate": 0.9765625, "initial_base_suppression_rate": 1.0, "mean_challenge_count": 62.4140625, "mean_post_target_return": 131.88593750000007, "mean_total_return": 438.633593749999, "missed_positive_counterfactual_rate": 0.7144213810880478},
+    "ARM_HAZARD": {"base_support_reopen_fraction_mean": 0.49065755208333334, "finite_T_C_mean": 33.8, "finite_T_C_rate": 0.76171875, "finite_T_L_mean": 1.1388888888888888, "finite_T_L_rate": 0.984375, "initial_base_suppression_rate": 1.0, "mean_challenge_count": 60.5390625, "mean_post_target_return": 131.45156250000008, "mean_total_return": 438.19921874999903, "missed_positive_counterfactual_rate": 0.7328866114833793},
+    "ARM_SUPPORT": {"base_support_reopen_fraction_mean": 0.19202473958333333, "finite_T_C_mean": 4.515625, "finite_T_C_rate": 0.25, "finite_T_L_mean": 1.1747967479674797, "finite_T_L_rate": 0.9609375, "initial_base_suppression_rate": 1.0, "mean_challenge_count": 23.125, "mean_post_target_return": 124.43906250000002, "mean_total_return": 431.18671874999944, "missed_positive_counterfactual_rate": 0.5781854838709677}
+  },
+  "freeze_commit": "b26cd933f38f96acb53d9590e3a5d2055b3c4382",
+  "full_result_json": {"bytes": 2725955, "gzip_bytes": 188208, "gzip_sha256": "cc8a17c40a2a4160c8dd4be1b4f59cb8529982c95b25b7baf66bf213dae108c6", "sha256": "da7b082aed18753f84e42bc6d7531424674d524204c0da065f21483db176a230"},
+  "overall_classification": "CAUSALLY_LOCALIZED_ENDOGENOUS_EVIDENCE_ACQUISITION_FAILURE",
+  "primary": {"classification": "SUPPORTS_DIRECTIONAL_SEPARATION", "finite_rate_left": 0.0, "finite_rate_right": 0.76171875, "finite_rate_right_minus_left": 0.76171875, "left": "ARM_ENDOGENOUS", "mean_paired_T_C_censored_left_minus_right": 66.421875, "median_paired_T_C_censored_left_minus_right": 84.0, "right": "ARM_HAZARD", "right_faster": 195, "right_slower": 0, "tie": 61, "world": "WORLD_CORRECTIVE"},
+  "secondary": {"classification": "SUPPORTS_DIRECTIONAL_SEPARATION", "finite_rate_left": 0.25, "finite_rate_right": 0.80078125, "finite_rate_right_minus_left": 0.55078125, "left": "ARM_SUPPORT", "mean_paired_T_C_censored_left_minus_right": 40.16796875, "median_paired_T_C_censored_left_minus_right": 30.5, "right": "ARM_FLOOR", "right_faster": 145, "right_slower": 29, "tie": 82, "world": "WORLD_CORRECTIVE"},
+  "source_hashes": {"harness_sha256": "9bda55ddf7b5d0b23556bdad42f0472c0f27e876d3fe9c598a11212435178851", "manifest_sha256": "d8bfdf37dedb9b56f355f080523bbb0be32b5bacc1b55db95fa40eca875d8ba8", "spec_sha256": "e07f4a3835650592020a56998b8fab2646af5faed4282f1f940d7b6c5c8a5cae"},
+  "trace": {"canonical_jsonl_uncompressed_sha256": "d9d263930fef627b059e18690af76ae2f0469d788760c0f328742d8617f6e816", "gzip_bytes": 8013226, "gzip_sha256": "7a03aedff6b50e1309baf08bd7f403d9668a55d0756962672618ba4650b56ebb", "ordering": "world, arm, seed, target_j", "records": 368640},
+  "validity": {"corrective_has_discriminating_events": true, "floor_guarantee": true, "hazard_key_state_independent_by_construction": true, "hazard_world_independent_audit": true, "identical_schedule_across_arms": true, "informative_never_authority_revision_proxy": true, "initial_endogenous_corrective_suppression_rate": 1.0, "initial_suppression_manipulation_pass": true, "nano_absent": true, "null_never_environmentally_discriminating": true, "physical_reveal_actions_fixed": true, "representation_preserves_signal_labels_by_construction": true, "support_schedule_positive_and_vanishing": true, "trace_required_fields": true, "valid": true}
+}
