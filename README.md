@@ -1,227 +1,377 @@
 # OpenCore
 
-> Experimental substrate for **bounded epistemic compounding**: durable capability without self-erasure of the causal paths required for correction.
+> Experimental substrate for **bounded epistemic compounding**: useful persistent state without self-erasure of the causal routes required for correction.
 
-OpenCore studies how externally grounded consequence can become persistent, reusable, and revisable adaptive structure without allowing persistence to become self-protecting authority.
+OpenCore studies how adaptive systems can accumulate persistent causal leverage while remaining exposed to externally grounded consequence capable of reducing that leverage.
 
-This branch is the active experimental lineage. The original K0 charter and kernel contract remain frozen historical artifacts and intentionally still describe the pre-code state from which the program began.
+This branch is the active experimental lineage. The original K0 charter, kernel contract, and E001 specification remain frozen historical artifacts and are not rewritten by crank results.
+
+## Current status
 
 | Field | Current status |
 | --- | --- |
-| Research object | Inspectable persistence / correction membrane for adaptive systems |
-| Phase | Empirical pressure-testing across constructed and foreign domains |
-| Trusted core | `crank/nano.py` — semantically agnostic transition typechecker + append-only journal |
-| Current experimental boundary | `FOREIGN-007`: `EPISTEMIC_FORECLOSURE_ESTABLISHED` |
-| Current systems hypothesis | Capability may compound only safely if sufficient corrective topology remains live |
-| Architecture status | No Nano V1, scheduler, reachability primitive, or new semantic primitive earned |
-| External systems | AVO is pinned as a **foreign organism specimen**, not a foreign assay or evidence for OpenCore |
+| Research object | Causal geometry of bounded epistemic compounding |
+| Phase | Empirical pressure-testing of representation, exposure, recognition, and authority revision |
+| Trusted persistence substrate | `crank/nano.py` — semantically agnostic transition typechecker + in-process append-only journal |
+| Current completed intervention assay | `PCE-001`: protected corrective exposure |
+| Current evidence boundary | **L1: challenge preservation given `D_t^oracle`** |
+| Next open rung | **L2: diagnose that `D_t^agent` is insufficient** |
+| Architecture status | No Nano V1, challenge generator, meta-exploration module, or corrigibility primitive earned |
+| Formal K0/E001 status | E001 remains separate and unexecuted by the crank lineage |
 
-## Current research question
+## Mechanistic core
+
+The current causal analysis frame is:
 
 ```text
-Can useful capability compound while preserving sufficient corrective topology
-for accumulated capability to remain externally corrigible?
+E_t
+-> Pi_t
+-> pi_t
+-> A_t
+-> O_{t+1}
+-> W_{t+1}
+-> E_{t+1}
+```
+
+with external world state `X_t` entering the observation channel:
+
+```text
+O_{t+1} = g(X_t, A_t, epsilon_{t+1})
+```
+
+where:
+
+- `E_t` — persistent epistemic state / accumulated leverage;
+- `Pi_t` — effective representation or interface;
+- `pi_t` — policy induced from that state;
+- `A_t` — selected intervention/action;
+- `O_{t+1}` — externally generated observation/consequence;
+- `W_{t+1}` — warrant/recognition judgment;
+- `E_{t+1}` — revised persistent state.
+
+The load-bearing distinction is:
+
+```text
+exogenous outcome generation
+!=
+exogenous outcome exposure
+```
+
+Holding world state and intervention fixed, persistent state need not control what reality returns. But persistent state can still alter which interventions occur and therefore which observations become reachable.
+
+The mechanism name used in the current lineage is:
+
+```text
+endogenous evidence acquisition
+```
+
+The property under pressure is:
+
+```text
+non-collapsible corrective exposure
 ```
 
 Compactly:
 
+> **External truth can remain independent while exposure to it becomes endogenous.**
+
+## Six-gate correction chain
+
+OpenCore now separates the path to correction into:
+
 ```text
-Can capability compound without consuming its own corrigibility?
+C1  physical availability
+C2  policy support
+C3  actual selection
+C4  discrimination
+C5  recognition
+C6  authority revision
 ```
 
-The current analysis frame is the causal loop:
+`C4` has an important internal split:
 
 ```text
-L_t
--> Pi_t
--> pi_t
--> R_t
--> E_{t+1}
--> Delta A_{t+1}
+C4a  the environment produces different consequences under live alternatives
+C4b  the current representation preserves that difference
 ```
 
-where, provisionally:
+A physically existing probe (`C1=1`) therefore says almost nothing by itself about corrigibility.
 
-- `L_t` — persistent / retained state;
-- `Pi_t` — current effective representation or partition;
-- `pi_t` — policy induced from that effective state;
-- `R_t` — reachable interventions / observations under that policy;
-- `E_{t+1}` — external consequence;
-- `Delta A_{t+1}` — resulting change in persistent authority.
-
-This tuple is an analysis frame, not an implemented cognitive architecture.
-
-## The current boundary
-
-The strongest systems-level invariant candidate is:
-
-> **Persistent state may gain causal leverage over future behavior, but must not thereby eliminate all live routes by which external consequence can reduce that leverage.**
-
-This remains a hypothesis, not a theorem.
-
-A crucial architectural separation is now explicit:
+The current lineage pressures different gates:
 
 ```text
-Nano protects authority acquisition
+OQ / FOREIGN-003        representation / identity aliasing around C4b
+FOREIGN-004             safe quotient control
+FOREIGN-005/006         informational reopenability
+FOREIGN-007             C2/C3 policy foreclosure
+BLITZCRANK-001/002      learned C2/C3 contraction and temporal reopening
+PCE-001                 direct intervention on the exposure edge
+Mini role attacks       C5 recognition / epistemic-role assignment
+Nano / Base             C6 persistent authority revision
+```
+
+## Discriminating intervention sets
+
+For live alternatives `h_i, h_j`, distinguish:
+
+```text
+D_t^X
+    physically discriminating interventions
+
+D_t^Pi
+    interventions whose discrimination survives the current representation
+```
+
+with, for an information-losing deterministic representation:
+
+```text
+D_t^Pi subseteq D_t^X
+```
+
+This separates two wounds:
+
+```text
+representational foreclosure:
+D_t^X != empty
+D_t^Pi = empty
+
+policy foreclosure:
+D_t^Pi != empty
+D_t^Pi intersect support(pi_t) = empty
+```
+
+## Experimental progression
+
+The current pressure sequence is:
+
+| Assay | Scoped result |
+| --- | --- |
+| [FOREIGN-003](crank/FOREIGN_003.md) | Future-relevant quotient collapse can create wrong cross-history authority inheritance. |
+| [FOREIGN-004](crank/FOREIGN_004.md) | Historical difference alone does not require separate persistence identity when the frozen future-consequence surface is equivalent. |
+| [FOREIGN-005](crank/FOREIGN_005.md) | Safe effective compression is not identical to irreversible destruction; later distinctions can be reconstructed from retained substrate. |
+| [FOREIGN-006](crank/FOREIGN_006.md) | On one bounded binary-linear family, exact blind reopenability compressed from 64 raw bits to 6 independent future-distinguishing dimensions. |
+| [FOREIGN-007](crank/FOREIGN_007.md) | A safe-now quotient can change policy support so a later corrective experiment remains physically available but is not selected. |
+| [BLITZCRANK-001](crank/BLITZCRANK_001.md) | Ordinary persistent learning can improve performance while suppressing an informative action from policy support. |
+| [BLITZCRANK-002](crank/BLITZCRANK_002.md) | Reopening is temporally structured: first support return is not sustained exposure, and recovery can be slow. |
+| [PCE-001](crank/PCE_001.md) | Directly intervening on corrective exposure changed correction dynamics in the prospectively predicted direction. |
+
+The empirical transition is now:
+
+```text
+constructed foreclosure
+-> learned foreclosure
+-> temporal reopening
+-> direct exposure-edge intervention
+```
+
+## PCE-001 — current intervention boundary
+
+PCE-001 prospectively froze a challenge set supplied by the harness:
+
+```text
+D_t^oracle = D_t^Pi
+```
+
+and manipulated only challenge selection.
+
+Primary contrast:
+
+```text
+ARM_ENDOGENOUS x WORLD_CORRECTIVE
+vs
+ARM_HAZARD x WORLD_CORRECTIVE
+```
+
+Frozen result:
+
+```text
+ENDOGENOUS finite T_C:   0 / 256
+HAZARD finite T_C:     195 / 256 = 76.171875%
+
+hazard faster: 195 / 256
+tie:            61 / 256
+hazard slower:    0 / 256
+```
+
+Secondary contrast:
+
+```text
+ARM_SUPPORT x WORLD_CORRECTIVE
+vs
+ARM_FLOOR x WORLD_CORRECTIVE
+```
+
+Frozen result:
+
+```text
+SUPPORT finite T_C:  64 / 256 = 25.000000%
+FLOOR finite T_C:   205 / 256 = 80.078125%
+```
+
+Thus, on the frozen family:
+
+```text
+nonzero support
 !=
-Nano guarantees evidence reachability
+timely corrective exposure
 ```
 
-A perfect final authority gate cannot repair an upstream system that never reaches the correcting observation.
-
-## Experimental ladder
-
-The foreign-pressure sequence now reads:
-
-| Assay | Result | What it established on its frozen family |
-| --- | --- | --- |
-| [FOREIGN-001](crank/FOREIGN_001_MASTERMIND.md) | representation insufficiency | Search inside the current representation is not the same as discovering a better representation. |
-| [FOREIGN-002](crank/FOREIGN_002_RESTLESS_BANDIT.md) | reactive vs prospective attention split | Reactive correction after contradiction is not prospective discovery before contradiction. |
-| [FOREIGN-003](crank/FOREIGN_003.md) | `CLASSICAL_REPRODUCTION_ESTABLISHED` | A future-relevant distinction collapsed into one persistence identity can produce wrong cross-history authority inheritance. |
-| [FOREIGN-004](crank/FOREIGN_004.md) | `SAFE_QUOTIENT_ESTABLISHED` | Some genuinely different histories can be safely quotiented when they are equivalent over the frozen future-consequence surface. |
-| [FOREIGN-005](crank/FOREIGN_005.md) | `REOPENABLE_QUOTIENT_ESTABLISHED` | Safe effective forgetting is not identical to irreversible information destruction. |
-| [FOREIGN-006](crank/FOREIGN_006.md) | `DISTINGUISHING_RANK_BOUNDARY_ESTABLISHED` | On one bounded binary linear family, exact blind reopenability compressed from 64 raw bits to the 6 independent future-distinguishing dimensions. |
-| [FOREIGN-007](crank/FOREIGN_007.md) | `EPISTEMIC_FORECLOSURE_ESTABLISHED` | A safe-now quotient changed later policy support so that a physically available corrective experiment was no longer selected. |
-
-The 003→007 sequence therefore separates:
+Matched `WORLD_NULL`, `WORLD_INFORMATIVE`, and `WORLD_CORRECTIVE` controls preserve the distinction:
 
 ```text
-unsafe quotient
-safe quotient
-informational reopenability
-compressed blind reopenability
-topological foreclosure
+informative
+!=
+corrective
+!=
+authority-changing
 ```
 
-For exact provenance, claim ceilings, execution repairs, hashes, and controls, read the individual frozen records rather than this summary.
+The full result, custody hashes, claim ceiling, and trace commitment are in [PCE_001.md](crank/PCE_001.md) and `crank/results/`.
 
-## Three reopenability layers
+## Current evidence ladder
 
-The current program distinguishes three questions:
+The next frontier is deliberately separated into three capabilities:
+
+```text
+L1  challenge preservation given D_t^oracle
+L2  diagnosis that D_t^agent is insufficient
+L3  construction of a better challenge set
+```
+
+PCE-001 supports **L1 only under an oracle-supplied challenge set**.
+
+It does not test:
+
+```text
+D_t^agent =? D_t^oracle
+```
+
+A system may perfectly preserve the challenge set it knows while still preserving the wrong challenge set.
+
+The next open scientific question is therefore:
+
+> **Can an adaptive system detect that its current corrective-exposure topology is inadequate without being told which missing intervention would repair it?**
+
+No L2 mechanism is currently implemented or pre-authorized.
+
+## Reopenability layers
+
+The current program distinguishes:
 
 ```text
 informational reopenability
     Can the distinction still be reconstructed?
 
 topological reopenability
-    Can the system still reach the experiment that reconstructs it?
+    Can the system still reach the intervention that reconstructs it?
 
 authority reopenability
-    Can the resulting distinction still alter persistent authority?
+    Can the resulting distinction still reduce or revise persistent authority?
 ```
 
-`FOREIGN-005/006` pressure the first. `FOREIGN-007` pressures the second. Nano sits at the gate for the third.
-
-This decomposition is useful precisely because the three can fail independently.
-
-## Nano
-
-[Nano](crank/nano.py) is intentionally boring.
-
-It is a transition typechecker plus append-only journal whose trusted surface sees typed standings, exact preconditions, effect grants, preservation obligations, and license state. Payload semantics remain opaque.
-
-Frozen Nano SHA-256 across the recent quotient / reopenability / foreclosure assays:
+PCE-001 adds an empirical temporal refinement to the middle layer:
 
 ```text
-8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329
+path exists
+!=
+path has support
+!=
+path receives sufficient exposure
+!=
+correction arrives before stale leverage matters
 ```
 
-Git blob on this branch:
+This motivates two clocks without collapsing them into a scalar corrigibility score:
 
 ```text
-d31dacaf893a58a8280c01704fe666a404c1f56c
+T_C  correction latency
+T_L  latency until stale persistent leverage becomes consequential
 ```
 
-Nano does not know whether a claim is true, whether an interface is sufficient, which probe should be selected, whether a world model is good, or whether a corrective path exists. Those are upstream empirical questions.
+A system can be eventually reopenable while remaining practically non-corrective when `T_C >> T_L`.
 
-## Parallel pressure lines
+## Nano boundary
 
-The repository also retains complementary pressure surfaces:
+[Nano](crank/nano.py) remains deliberately narrow:
 
-- [Base — shared authority-filtered world](crank/BASE_001_SHARED_WORLD.md)
-- [Base — global reopening pressure](crank/BASE_002_GLOBAL_REOPENING.md)
-- [AF3-OC-001](crank/AF3_OC_001.md) — a narrow membrane test over real immutable AlphaFold 3 output objects
-- OpenCore Quantum assays in `crank/` — apparatus identity / persistence pressure preceding the classical FOREIGN-003 reproduction
+```text
+transition typechecker + append-only in-process journal
+```
 
-These lines are not collapsed into the FOREIGN ladder; they supply separate attribution and transfer pressure.
+It constrains persistent effects under externally supplied contracts. It does not establish:
 
-## Reopenability lineage records
+- truth;
+- correctness of a license;
+- adequacy of a representation;
+- which experiment should run;
+- which distinction is missing;
+- whether a challenge set is sufficient;
+- whether a corrective path remains policy-reachable.
 
-- [REOPENABILITY_LINEAGE.md](crank/REOPENABILITY_LINEAGE.md) preserves the detailed FOREIGN-005 / FOREIGN-006 transport, hash, and capacity record.
-- [TOPOLOGICAL_REOPENABILITY_LINEAGE.md](crank/TOPOLOGICAL_REOPENABILITY_LINEAGE.md) records the FOREIGN-007 transition from retained information to retained corrective paths and the current stopping boundary.
+Therefore:
+
+```text
+Nano protects authority acquisition
+!=
+Nano guarantees evidence exposure
+```
+
+PCE-001 changes no Nano code and earns no Nano V1.
+
+## Living synthesis records
+
+- [QUOTIENT_PRESSURE_LINEAGE.md](crank/QUOTIENT_PRESSURE_LINEAGE.md) — quotient pressure through FOREIGN-004.
+- [REOPENABILITY_LINEAGE.md](crank/REOPENABILITY_LINEAGE.md) — FOREIGN-005/006 informational reopenability and capacity record.
+- [TOPOLOGICAL_REOPENABILITY_LINEAGE.md](crank/TOPOLOGICAL_REOPENABILITY_LINEAGE.md) — FOREIGN-007 through the learned-policy bridge.
+- [CORRECTIVE_EXPOSURE_LINEAGE.md](crank/CORRECTIVE_EXPOSURE_LINEAGE.md) — Blitzcrank → PCE-001 causal intervention synthesis and L1/L2/L3 boundary.
+
+Frozen assay/spec/result artifacts remain authoritative over living summaries.
 
 ## Historical K0 artifacts
 
-The following documents are historical prospective freezes and are intentionally **not rewritten to match current status**:
+The following are historical prospective freezes and intentionally remain unchanged:
 
 - [CHARTER.md](CHARTER.md)
 - [KERNEL_CONTRACT.md](KERNEL_CONTRACT.md)
 - [EXPERIMENT_001.md](EXPERIMENT_001.md)
 
-They say “implementation none / results none” because that was true at the K0 freeze. Their historical wording is part of the lineage. The current branch status is this README plus the descendant assay records.
+They describe the pre-code K0/E001 state because that was the state at freeze time. Crank execution does not complete or amend E001.
+
+## Claim ceiling
+
+The repository does **not** establish:
+
+- a universal corrigibility law;
+- a universal learner or theory of intelligence;
+- that every informative action should remain supported;
+- that exploration is universally beneficial;
+- a scalar corrigibility metric;
+- a universal memory-capacity/rank theorem;
+- autonomous challenge-set diagnosis;
+- autonomous challenge constitution;
+- automatic interface invention or repair;
+- correctness of externally constituted licenses or challenge sets;
+- Nano V1 or a production authority ledger;
+- a complete cognitive architecture.
+
+## Research rule
 
 The governing methodological rule remains:
 
 > **No new semantic primitive without a frozen counterexample, an unrepresentability argument, or a discriminating witness.**
 
-And, operationally:
+And after PCE-001, the stopping discipline is explicit:
 
 ```text
-when the abstraction gets beautiful, crank the abstraction
+failed prospective prediction
+-> mechanism loses authority
+
+successful intervention
+-> mechanism gains bounded authority only on the identified dimensions
 ```
 
-rather than building architecture from elegance alone.
+The current OpenCore question is:
 
-## External specimen: NVIDIA AVO
+> **How can persistent epistemic state gain useful causal leverage over behavior without gaining enough leverage over evidence acquisition to suppress, delay, or extinguish the exposure required to reduce that leverage?**
 
-NVIDIA's Agentic Variation Operators (AVO) is currently tracked only as a **foreign organism specimen**. NVIDIA describes a long-horizon agent system in which persistent memory, tools, feedback, supervision, recovery, and iterative search allow useful state to compound across extended work and across distinct task interfaces.
-
-Source:
-
-- [NVIDIA AVO on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)
-
-The public result does **not** isolate memory's contribution and does not establish an OpenCore claim. The relevant future foreign-pressure question is narrower:
-
-```text
-Does persistent state that improves long-horizon performance also change
-which genuinely corrective interventions remain policy-reachable?
-```
-
-Until a real system exposes enough of:
-
-```text
-L_t -> pi_t -> R_t
-```
-
-to support controlled intervention / forced-path tests, AVO remains:
-
-```text
-foreign organism specimen
-!=
-foreign assay
-```
-
-## Claim ceiling
-
-The current repository does **not** establish:
-
-- a universal learner or general theory of intelligence;
-- a universal corrigibility invariant;
-- that every diagnostic action must remain reachable;
-- a general law equating memory capacity with linear rank;
-- that explicit world models are necessary or unnecessary;
-- that AVO validates OpenCore;
-- an exploration, curiosity, supervisor, reachability, or reopening primitive;
-- automatic interface invention, quotient repair, or challenge discovery;
-- Nano V1 or any Nano modification;
-- a complete cognitive architecture.
-
-## Current stop rule
-
-No architecture expansion is currently earned.
-
-The next move must come from an actual pressure surface that exposes enough of the persistent-state → policy → reachability coupling to test whether capability gains coincide with loss of corrective access.
-
-Until then, the research target is frozen as:
-
-> **Bounded epistemic compounding: allow useful state to acquire durable causal leverage while preserving live routes by which external consequence can reduce that leverage.**
+The next conceptual update should come from a frozen L2 discrimination, not from pre-solving L2 architecturally.
