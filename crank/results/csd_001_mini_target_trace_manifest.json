@@ -1,0 +1,43 @@
+{
+  "F3_T_D_candidate_distribution": {
+    "6": 256
+  },
+  "artifact_role": "MINI_TARGET_RESULT_TRACE_COMMITMENT",
+  "assay": "CSD-001",
+  "checks": {
+    "adapter_A1_A4": "7/7 PASS",
+    "apparatus": "16/16 PASS",
+    "source_identity": "5/5 PASS"
+  },
+  "counts": {
+    "F1_persistent": 0,
+    "F2_persistent": 204,
+    "F3_persistent": 256,
+    "F3_premature": 256,
+    "F3_valid_timing": 0,
+    "F3u_persistent": 256
+  },
+  "mini_git_blob": "0837f8a0b75bb548f57d06e0b5c4eb5422559162",
+  "mini_sha256": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+  "provenance_note": "A pre-execution repository write temporarily truncated CSD_001_TARGET_SPEC.md; no Mini x CSD trajectory was run during that state. The exact frozen target-spec blob was restored before runner v2 freeze and before the first target evaluation.",
+  "result": {
+    "bytes": 63862,
+    "deterministic_gzip_bytes": 2789,
+    "deterministic_gzip_sha256": "26c928b4f0909d12648fe00b5039d60ee63264c60bd5347b5586486f6348ecab",
+    "generated_result_sha256": "5cdd1e5fb41907ff4cd3e0e0bbc6425216a7d90db73f7f7c8a8da11c08c805bb",
+    "repository_index_path": "crank/results/csd_001_mini_target_result_index.json"
+  },
+  "runner_freeze_commit": "65173d26480cc94bf4325d723d79c5f5f6989652",
+  "runner_git_blob": "65221fc794f8537532d7ffa1c73571969db319ed",
+  "runner_sha256": "1c59f5b46603592797918efb086b1b35b7b269c447df92e37e5f619185a47c9a",
+  "scientific_classification": "FAILURE_CAUSE_CONFLATION",
+  "target": "OPENCORE_MINI_CORE",
+  "target_spec_git_blob": "fd55b90e4068f7b75f01f2fbcea900c45dd8e153",
+  "trace": {
+    "deterministic_gzip_bytes": 106763,
+    "deterministic_gzip_sha256": "07a549e9022006530af99ded90670f52042b69034939c506a20640a5e6d77985",
+    "uncompressed_bytes": 8725772,
+    "uncompressed_sha256": "6ae6d98a8b37c70de3cd461720333714c82f4fd91ca50f57a84c37f42726950d",
+    "world_records": 1024
+  }
+}

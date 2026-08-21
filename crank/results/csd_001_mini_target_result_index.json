@@ -1,0 +1,55 @@
+{
+  "assay": "CSD-001",
+  "artifact_role": "MINI_TARGET_RESULT_INDEX",
+  "status": "TARGET_EVALUATED",
+  "scientific_classification": "FAILURE_CAUSE_CONFLATION",
+  "target": "OPENCORE_MINI_CORE",
+  "runner_freeze_commit": "65173d26480cc94bf4325d723d79c5f5f6989652",
+  "runner_git_blob": "65221fc794f8537532d7ffa1c73571969db319ed",
+  "runner_sha256": "1c59f5b46603592797918efb086b1b35b7b269c447df92e37e5f619185a47c9a",
+  "target_spec_git_blob": "fd55b90e4068f7b75f01f2fbcea900c45dd8e153",
+  "mini_git_blob": "0837f8a0b75bb548f57d06e0b5c4eb5422559162",
+  "mini_sha256": "fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55",
+  "checks": {
+    "source_identity": {"passed": 5, "total": 5},
+    "adapter_A1_A4": {"passed": 7, "total": 7},
+    "apparatus": {"passed": 16, "total": 16}
+  },
+  "counts": {
+    "F1_persistent": 0,
+    "F2_persistent": 204,
+    "F3_persistent": 256,
+    "F3u_persistent": 256,
+    "F3_valid_timing": 0,
+    "F3_premature": 256
+  },
+  "rates": {
+    "F1_persistent": 0.0,
+    "F2_persistent": 0.796875,
+    "F3_persistent": 1.0,
+    "F3u_persistent": 1.0,
+    "F3_valid_timing": 0.0,
+    "F3_premature": 1.0
+  },
+  "F3_T_D_candidate_distribution": {"6": 256},
+  "thresholds": {
+    "MIN_F3_VALID_DIAGNOSES": 205,
+    "MAX_FALSE_PER_CONTROL": 12,
+    "MAX_F3_PREMATURE": 12
+  },
+  "full_generated_result": {
+    "bytes": 63862,
+    "sha256": "5cdd1e5fb41907ff4cd3e0e0bbc6425216a7d90db73f7f7c8a8da11c08c805bb",
+    "deterministic_gzip_bytes": 2789,
+    "deterministic_gzip_sha256": "26c928b4f0909d12648fe00b5039d60ee63264c60bd5347b5586486f6348ecab"
+  },
+  "trace": {
+    "world_records": 1024,
+    "uncompressed_bytes": 8725772,
+    "uncompressed_sha256": "6ae6d98a8b37c70de3cd461720333714c82f4fd91ca50f57a84c37f42726950d",
+    "deterministic_gzip_bytes": 106763,
+    "deterministic_gzip_sha256": "07a549e9022006530af99ded90670f52042b69034939c506a20640a5e6d77985"
+  },
+  "mechanistic_localization": "Mini's native needs_probe(c2) tracks local replacement underdetermination and becomes active before CSD challenge-set insufficiency is warranted; it does not selectively diagnose exhaustion of the current challenge topology.",
+  "claim_boundary": "R3 measurability does not imply L2 capability. This negative result applies only to unchanged Mini under the frozen CSD-001 transport and thresholds."
+}
