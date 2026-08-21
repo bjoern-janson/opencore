@@ -1,39 +1,35 @@
-# Architecture: Organism, Substrate, and the "Tiny Computational World"
+# Architecture: Reality, Organism, Persistence Substrate, and Shared World
 
 ## Status
 
 This document is an explanatory map of the current crank lineage.
 
-- **Nano V0** has a constructed experimental result.
 - **Mini** has a sequence of constructed adaptive experiments.
-- **OpenCore Base** is still a mental model for a larger system, not an implemented or experimentally established architecture.
+- **Nano V0** has isolated and composition-level constructed results and remains frozen.
+- **Base-001** supplies the first constructed 12-unit shared-world witness.
+- **Base-002** supplies a partial positive global-reopening result plus a Nano V0 negative result.
+- The full developmental architecture remains a hypothesis, not a completed system.
 
-## 1. The organism/world split
+## 1. The current chain
 
-A conventional adaptive-system picture often compresses everything into:
-
-```text
-experience -> learning -> new model -> use
-```
-
-OpenCore's crank experiments repeatedly found that the dangerous step was often not the model itself but the transition that made some internal result persistent or authoritative.
-
-The current split is therefore:
+The strongest systems-level separation is:
 
 ```text
-            adaptive proposer
-                  |
-            warrant / license
-                  |
-             +----------+
-             |   Nano   |
-             +----------+
-                  |
-          persistent standing
+Reality
+-> challenge / apparatus
+-> consequence
+-> organism interpretation
+-> candidate transition
+-> persistent authority
 ```
 
-Mini is the adaptive process above the boundary.
-Nano is the small persistence substrate at the boundary.
+The load-bearing distinction is:
+
+```text
+reality != measurement != interpretation != authority
+```
+
+Reality is outside the computational system. An apparatus determines which consequences become observable. Mini-like processes interpret and propose. Nano constrains durable authority. Base is the currently effective shared computational world produced by admitted transitions.
 
 ## 2. OpenCore Mini
 
@@ -46,38 +42,26 @@ It can, in the current toy family:
 - persist commitments;
 - compose known commitments;
 - detect contradictions;
-- maintain incumbent lineage;
 - request additional evidence when a replacement is underdetermined;
 - revise one scope while preserving another;
 - participate in externally supplied closure/challenge protocols;
 - and, in M6, use externally typed policy-level evidence to alter a future closure mechanism.
 
-Mini asks questions such as:
+Mini is not a general learner and does not autonomously discover all distinctions used by later harnesses.
+
+A useful role compression is:
 
 ```text
-What rule fits?
-What should replace my incumbent?
-Do I need another probe?
-Which scope changed?
+Mini = adaptive organism / proposer / interpreter
 ```
-
-Mini is not a general learner and does not autonomously discover all of the distinctions used by later harnesses.
 
 ## 3. OpenCore Nano
 
-Nano is intentionally much smaller.
-
-Its V0 model is:
+Nano remains intentionally small:
 
 ```text
 OpenCore Nano = transition typechecker + append-only in-process journal
 ```
-
-Nano does not decide whether a payload is true, scientific, predictive, observational, causal, or useful.
-
-The payload is opaque.
-
-Nano can inspect only the transition-contract surface required to decide whether a persistent state change is licensed.
 
 Conceptually:
 
@@ -91,7 +75,7 @@ where:
 - `T` is a proposed state transition;
 - `L` is an externally constituted license.
 
-V0 checks:
+Nano V0 checks:
 
 ```text
 S_t satisfies Pre(L)
@@ -100,124 +84,178 @@ Preserve(L) is preserved by T
 warrant-parent receipts remain effective
 ```
 
-`DEFER` is not anthropomorphic uncertainty. It means a contract-required proposition is not currently established by kernel-visible standing.
+The payload is opaque. The transition-contract surface is inspectable.
 
-## 4. Opaque payload, inspectable control surface
+Nano does not decide truth, scientific validity, challenge quality, or the correctness of the license itself.
 
-The central Nano separation is:
+## 4. Authority-filtered current state
 
-```text
-semantic payload                opaque
-transition-contract surface     inspectable
-```
+The Mini × Nano ablation sharpened Nano's observed role on the frozen wound suite.
 
-A protocol may expose typed facts such as:
+Four attack families were blocked by live execution-time preconditions. The stale-descendant family was blocked only by warrant-lineage liveness. Their combination reproduced full Nano on all five frozen attacks.
 
-- object identity;
-- scope;
-- standing key/value;
-- operation type;
-- preconditions;
-- write/delete/revocation effects;
-- required preservation;
-- warrant-parent dependency.
-
-Nano compares these facts mechanically.
-
-It does not infer their domain semantics.
-
-## 5. Why this separation matters
-
-The first Mini × Nano composition assay demonstrated a causal separation:
+That motivates the local mechanistic compression:
 
 ```text
-Mini cognition unchanged
-Nano implementation unchanged
-same proposed transition
-only persistence boundary changes
+raw current state
+-> filter by live warrant ancestry
+-> evaluate current transition conditions
 ```
 
-On the constructed suite, naive persistence accepted 50,000/50,000 known illegal promotions while Nano accepted 0/50,000, and Nano retained 60,000/60,000 matched legitimate transitions.
+A standing can be physically present in the journal while absent from the authority-effective current state.
 
-This supports an "authority firewall" interpretation only in a narrow operational sense:
+This result is local to the frozen composition suite; it does not establish that effect ceilings or preservation enforcement are globally redundant.
 
-> Nano can block persistent effects that exceed supplied transition contracts without fixing the proposer that generated them.
+## 5. OpenCore Base
 
-It is **not** a firewall against false thoughts or bad plans.
-
-## 6. OpenCore Base
-
-"OpenCore Base" is currently a useful systems picture, not an earned experimental object.
-
-The idea is a broader environment in which multiple adaptive processes share a small persistent transition substrate:
+Base is no longer only a metaphor. Base-001 constructed a small witness:
 
 ```text
-perception -----\
-planning --------\
-science ----------> proposals -> shared Nano-like boundary -> durable state
-ARC/problem solving/
-other tools ------/
+                shared authority-effective world
+                           |
+        +------------------+------------------+
+        |                  |                  |
+      unit 0             unit 1             unit 2 ...
+      P0(S,h0)           P1(S,h1)           P2(S,h2)
+        |                  |                  |
+      local              local              local
+      state              state              state
 ```
 
-A compact mental model is:
+Twelve units shared one effective world while retaining heterogeneous externally supplied projections and private state.
+
+A global standing could:
+
+- be available to every unit;
+- affect only designated relevant units;
+- lose authority through one upstream warrant revocation;
+- make warrant-dependent descendants ineffective without local destructive cleanup;
+- leave unrelated post-event local learning effective;
+- and fail to acquire new global authority through a local unit unless a separate global-write capability existed.
+
+A useful Base compression is therefore:
 
 ```text
-Nano = world rules at the persistence boundary
-Mini = one organism operating inside those rules
-Base = the world + adaptive processes + interaction rules
+shared authority-filtered world
+-> heterogeneous local projections
 ```
 
-The point of the analogy is separation of powers, not literal physics.
+This is still a constructed toy world, not a general multi-agent architecture.
 
-## 7. Composition is first-class
+## 6. Warrant-mediated world plasticity
 
-A license can be authentic and still not authorize execution now.
+Base-001 motivates a different picture from broadcasting irreversible memory updates into every local process.
 
-Suppose:
+Let:
 
 ```text
-S0 satisfies Pre(L2)
+S_effective = authority-filtered shared world
+W_i         = P_i(S_effective, h_i)
 ```
 
-Then another valid transition changes the state:
+Then one warranted change to `S_effective` can alter many local projections without requiring identical direct writes into every unit.
+
+When an upstream warrant dies, dependent effective consequences can disappear from the current world while historical receipts remain and unrelated local adaptations survive.
+
+This motivates the architectural hypothesis:
 
 ```text
-S0 --T1--> S1
+warrant-mediated world plasticity
 ```
 
-Nano must re-evaluate:
+or, informally:
 
 ```text
-S1 satisfies Pre(L2) ?
+global learning without global destructive rewriting
 ```
 
-This gives the V0 operational distinction:
+Only the constructed Base-001 family is experimentally supported.
+
+## 7. Global reopening
+
+Base-002 separates:
 
 ```text
-license possession != current authorization
+ADMIT(G) != REOPEN(G) != REPLACE(G, G')
 ```
 
-and the broader composition warning:
+A target-bound counterexample-backed transition can withdraw `G`'s current authority and propagate uncertainty through dependent projections without acquiring authority to install `G'`.
+
+Later separately warranted evidence can install `G'`.
+
+The supported constructed sequence is:
 
 ```text
-Valid(T1) AND Valid(T2) !=> Valid(T2 o T1)
+G effective
+-> e*
+G reopened
+-> distributed uncertainty
+-> E'
+G' installed
 ```
 
-when the postcondition of one stage no longer satisfies the warrant precondition of the next.
+This is the Base-level analogue of Mini's earlier distinction:
 
-## 8. What stays outside Nano
+```text
+I know the incumbent is wrong != I know the replacement
+```
 
-V0 deliberately leaves these problems above or outside the kernel:
+## 8. Guard versus warrant dependency
+
+Base-002's strict control exposed a new Nano V0 wound.
+
+Nano V0 currently uses each satisfied precondition source both:
+
+1. to determine whether a transition may execute; and
+2. as a continuing warrant parent of the result.
+
+Strict reopening shows those roles can diverge:
+
+```text
+execution guard != warrant dependency
+```
+
+More formally:
+
+```text
+Guard(T) !=> WarrantParent(Result(T))
+```
+
+`G_STATUS=EFFECTIVE` can sensibly be required before reopening `G` while being exactly the wrong thing for `REOPENED(G)` to continue depending on after `G`'s old authority is revoked.
+
+No Nano representation change is frozen by this result.
+
+## 9. Agency versus authority
+
+A compact architecture-level intuition is:
+
+> **The organism chooses where to risk being wrong.**
+>
+> **The persistence world constrains what the resulting consequence is allowed to change.**
+
+This preserves:
+
+```text
+freedom to generate != freedom to canonize
+```
+
+The organism can choose bad challenges and make bad interpretations. Nano's role is not to make those choices wise; it constrains the persistent effects granted under supplied contracts.
+
+## 10. What remains outside Nano
+
+Nano V0 deliberately does not solve:
 
 - truth;
+- apparatus validity;
 - evidence-role discovery;
 - dependency discovery;
 - applicability discovery;
-- challenge design;
+- challenge selection;
 - transfer-boundary discovery;
 - hypothesis proposal;
 - planning;
-- loss/decision semantics;
-- correctness of external licenses.
+- correctness of external licenses;
+- autonomous relevance discovery in Base;
+- autonomous guard/warrant typing.
 
-That boundary is a feature of the experiment. A Nano success is useful only if Nano remains small enough that hidden cognition cannot do the work for it.
+That boundary remains part of the experiment.
