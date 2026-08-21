@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use OpenCore, please cite this repository."
+title: "OpenCore"
+type: software
+authors:
+  - family-names: "bjarki"
+repository-code: "https://github.com/bjoern-janson/opencore"
+url: "https://github.com/bjoern-janson/opencore"
+license: MIT
