@@ -1,0 +1,68 @@
+{
+  "assay": "CSD-001",
+  "base_lineage": "PCE-001",
+  "challenge_set": [
+    "c0",
+    "c1",
+    "c2"
+  ],
+  "claim_exclusions": [
+    "L2 mechanism implementation",
+    "challenge repair",
+    "challenge constitution",
+    "c_star discovery",
+    "D_agent equals D_oracle",
+    "Nano modification"
+  ],
+  "decisive_contrast": [
+    "F2",
+    "F3"
+  ],
+  "f2_signal_probability_before_bound": 0.25,
+  "f2_guaranteed_signal_by_c2_use": 8,
+  "f3u_valid_uses_per_challenge": 3,
+  "failure_classes": {
+    "F1": "adequate_set_poor_execution",
+    "F2": "adequate_set_bounded_stochastic_miss",
+    "F3": "inadequate_set",
+    "F3u": "inadequate_set_insufficient_warrant_prefix"
+  },
+  "gamma": {
+    "B_valid_uses_per_current_challenge": 8,
+    "constituted_independently_of_realized_failure_classes": true,
+    "type": "bounded_current_set_adequacy_envelope"
+  },
+  "initial_run_classifications": [
+    "APPARATUS_READY_FOR_TARGET_FREEZE",
+    "INVALID_APPARATUS"
+  ],
+  "layer": "L2",
+  "missing_discriminator": {
+    "available_to_target_before_score": false,
+    "forced_only_post_endpoint": true,
+    "name_harness_only": "c_star"
+  },
+  "pre_audit_failure_rounds": 12,
+  "pre_transition_calibration_rounds": 1,
+  "scientific_result_classes_reserved_for_future_target_evaluation": [
+    "CHALLENGE_SET_INSUFFICIENCY_DIAGNOSIS_ESTABLISHED",
+    "FAILURE_TO_DIAGNOSE",
+    "FAILURE_CAUSE_CONFLATION",
+    "DECORATIVE_DIAGNOSIS",
+    "INVALID"
+  ],
+  "secondary_controls": [
+    "F1",
+    "F3u"
+  ],
+  "seeds": 256,
+  "status": "FROZEN_PROSPECTIVE_L2_ASSAY_APPARATUS",
+  "target_mechanism": null,
+  "timing": [
+    "T_U",
+    "T_W",
+    "T_D",
+    "T_*"
+  ],
+  "audit_schedule": "round_robin_c0_c1_c2"
+}
