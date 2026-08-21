@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use the OpenCore crank experiments, please cite this experimental branch separately from the formal OpenCore repository."
+title: "OpenCore Crank Experimental Lineage"
+type: software
+authors:
+  - family-names: "bjarki"
+repository-code: "https://github.com/bjoern-janson/opencore/tree/opencore/crank-mini-001"
+url: "https://github.com/bjoern-janson/opencore/tree/opencore/crank-mini-001"
+license: MIT
