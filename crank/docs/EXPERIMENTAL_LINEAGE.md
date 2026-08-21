@@ -6,6 +6,8 @@ This is the living map of the crank-science sequence. It is not the formal E001 
 
 The lineage deliberately preserves positive results, negative results, failed repairs, and claim ceilings. A failure remains part of the record when it identifies a distinction later experiments depend on.
 
+**Current authority boundary:** [`../RESEARCH_FREEZE.md`](../RESEARCH_FREEZE.md).
+
 ## 1. Mini — acquisition, revision, closure, reopening
 
 Early Mini experiments established a small adaptive loop over finite affine hypotheses:
@@ -301,10 +303,10 @@ The family had independent distinguishing rank 6.
 Frozen results:
 
 ```text
-raw 64-bit representation     24 / 24 future interfaces exact
-blind 6-bit representation    24 / 24 exact
-undersized 5-bit representation 15 / 24 exact
-destructive representation     one state
+raw 64-bit representation        24 / 24 future interfaces exact
+blind 6-bit representation       24 / 24 exact
+undersized 5-bit representation  15 / 24 exact
+destructive representation        one state
 ```
 
 Earned statement:
@@ -414,47 +416,18 @@ ARM_FLOOR
 ARM_HAZARD
 ```
 
-### Primary causal contrast
-
-```text
-ARM_ENDOGENOUS x WORLD_CORRECTIVE
-vs
-ARM_HAZARD x WORLD_CORRECTIVE
-```
-
-Frozen result:
+Primary result:
 
 ```text
 ENDOGENOUS finite T_C:   0 / 256
 HAZARD finite T_C:     195 / 256 = 76.171875%
-
-hazard faster: 195 / 256
-exact tie:      61 / 256
-hazard slower:   0 / 256
 ```
 
-The direct intervention therefore supported the prospectively predicted mechanism on the frozen family:
+Secondary result:
 
 ```text
-persistent state
--> policy
--> challenge timing
--> corrective exposure
-```
-
-### Secondary mechanism contrast
-
-```text
-ARM_SUPPORT x WORLD_CORRECTIVE
-vs
-ARM_FLOOR x WORLD_CORRECTIVE
-```
-
-Frozen result:
-
-```text
-SUPPORT finite T_C:  64 / 256
-FLOOR finite T_C:   205 / 256
+SUPPORT finite T_C:  64 / 256 = 25.000000%
+FLOOR finite T_C:   205 / 256 = 80.078125%
 ```
 
 Earned distinction:
@@ -475,8 +448,6 @@ correction
 persistent-leverage revision
 ```
 
-through the three world controls.
-
 Classification:
 
 ```text
@@ -491,67 +462,283 @@ L1 challenge preservation given D_t^oracle
 
 No autonomous challenge diagnosis or constitution was tested.
 
-## 21. Current mechanistic core
+## 21. CSD-001 — Challenge-Set Sufficiency Diagnosis apparatus
 
-The current analysis frame is:
+CSD-001 prospectively froze an L2 discrimination surface without implementing an L2 mechanism.
+
+Current challenge set:
 
 ```text
-E_t
--> Pi_t
--> pi_t
--> A_t
+D_agent = {c0,c1,c2}
+Gamma: B = 8 valid certified uses per current challenge
+```
+
+Failure classes:
+
+```text
+F1   adequate set + poor prior execution
+F2   adequate set + bounded stochastic miss
+F3   inadequate set + complete certified exposure
+F3u  truly inadequate set + incomplete warrant
+```
+
+The decisive comparison is `F2 vs F3` under the same certified current-set schedule.
+
+Apparatus validation:
+
+```text
+16 / 16 PASS
+```
+
+F3 timing geometry:
+
+```text
+T_U = 24
+T_W = 24
+T_* = 25
+```
+
+The apparatus itself earned authority to run a target test; no L2 target capability was pre-authorized.
+
+## 22. CSD target selection — measurement admissibility
+
+A pre-CSD semantics-only audit required:
+
+```text
+Y_t = Adapter(S_t^org)
+```
+
+with no `Gamma`, failure-class identity, warrant time, oracle truth, or missing-discriminator input.
+
+The strongest executable guard was counterfactual invariance:
+
+```text
+same organism state
+-> same adapter output
+under harness-only changes
+```
+
+Unchanged Mini core was selected because `challenge_buffers / needs_probe(scope)` was a real endogenous state that could be measured without the adapter computing its meaning.
+
+This established only:
+
+```text
+R3 measurability
+```
+
+not L2 semantic sufficiency.
+
+## 23. CSD-001 Mini target — clean negative
+
+The Mini target trial ran prospectively under the frozen runner and measurement interface.
+
+Classification:
+
+```text
+FAILURE_CAUSE_CONFLATION
+```
+
+Decisive endpoint counts:
+
+```text
+F1 persistent c2 request:    0 / 256
+F2 persistent c2 request:  204 / 256
+F3 persistent c2 request:  256 / 256
+F3u persistent c2 request: 256 / 256
+F3 valid timing:             0 / 256
+F3 premature:              256 / 256
+```
+
+Every F3 seed had:
+
+```text
+T_D_candidate = 6
+T_W           = 24
+```
+
+The adequate F2 false positives and premature F3 timing reject the stronger interpretation:
+
+```text
+needs_probe(c2)
+=>
+challenge-set / procedure inadequacy
+```
+
+Earned distinction:
+
+```text
+local unresolvedness
+!=
+procedural inadequacy
+```
+
+and:
+
+```text
+R3 measurability
+!=
+L2 semantic sufficiency
+```
+
+The target-selection methodology survived: the adapter exposed a genuine Mini state; the experiment showed that state was the wrong epistemic object for L2.
+
+## 24. Procedure-adequacy archaeology — Mini-006 near-match
+
+Post-negative archaeology returned to the pre-CSD repository surface and searched only native semantics, not CSD target outcomes.
+
+Result:
+
+```text
+NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
+```
+
+Mini-006 was the strongest semantic near-match.
+
+It contains procedure-level state:
+
+```text
+ClosurePolicy.require_explicit_contract
+```
+
+that changes whether the closure procedure is applicable in a future scope.
+
+But the state transition receives an externally typed:
+
+```text
+PolicyEvent.kind = POLICY_LEVEL_SURPRISE
+```
+
+Therefore the procedure-level classification is supplied before the native state changes.
+
+Earned distinction:
+
+```text
+procedure-level semantic state
+!=
+endogenous procedure-level diagnosis
+```
+
+Mini-006 remains inadmissible as a CSD target because transporting raw CSD consequence into `POLICY_LEVEL_SURPRISE` would perform the L2 classification outside the organism.
+
+## 25. Current developmental ladder
+
+The current descriptive ladder is:
+
+```text
+S1  compress history into operational state
+S2  retain sufficient substrate for authorized reopening
+S3  preserve reachable exposure to defeating consequence
+S4  recognize endogenously that the current epistemic boundary/procedure is inadequate
+S5  construct a better boundary/procedure
+```
+
+Evidence boundary:
+
+```text
+S1/S2  supported only within the tested FOREIGN-004/005/006 families
+S3     causally supported by PCE-001 at externally constituted D_t^oracle
+S4     open; CSD-Mini is a negative
+S5     untouched
+```
+
+## 26. Current causal synthesis
+
+The living causal architecture is now:
+
+```text
+H_t
+-> Q_t
+-> S_t
+-> authority
+-> pi_t^measure
 -> O_{t+1}
 -> W_{t+1}
 -> E_{t+1}
 ```
 
-with external response:
+Two distinct foreclosure surfaces:
 
 ```text
-O_{t+1} = g(X_t, A_t, epsilon_{t+1})
+Q_t              distinction loss
+pi_t^measure     exposure loss to surviving distinctions
 ```
 
-Current experimentally sharpened distinction:
+Their coupled pathology is described as:
 
 ```text
-exogenous outcome generation
+self-sealing epistemic compression
+```
+
+within the bounded lineage synthesis:
+
+```text
+Q_t
+-> pi_t^measure
+-> reduced defeating evidence
+-> continued apparent warrant for Q_t
+```
+
+This is not a universal law.
+
+## 27. Current L2 frontier
+
+The key separation is:
+
+```text
+object uncertainty
 !=
-exogenous outcome exposure
+procedure efficacy
+!=
+procedure authority
 ```
 
-The mechanism name is:
+The unresolved transition is:
 
 ```text
-endogenous evidence acquisition
+raw consequence
+-> violation of a native warranted procedural expectation
+-> causal withdrawal of authority from the current epistemic procedure
 ```
 
-The target property is:
+The missing conjunction is:
 
 ```text
-non-collapsible corrective exposure
+native procedural expectation
++
+native raw performance evidence
++
+endogenous mismatch recognition
++
+causal authority withdrawal
 ```
 
-## 22. Current evidence ladder
+with no externally supplied procedure-failure classification.
 
-The next challenge-specific ladder is:
+Bounded archaeology conclusion:
+
+> **No admissible pre-CSD L2 target was identified in the audited repository surface.**
+
+This is not an impossibility theorem.
+
+## 28. Research freeze
+
+The strongest current bounded statement is:
+
+> **Within the audited OpenCore lineage, adaptive learning has produced persistent state, object-level uncertainty, reopening, policy adaptation, and changes in corrective exposure, but has not yet demonstrated endogenous authority over the adequacy of the procedure by which evidence is acquired.**
+
+Current stopping rule:
+
+> **No further conceptual refinement acquires scientific authority until new organism evidence or a prospectively frozen developmental experiment directly bears on the missing L2 transition.**
+
+In particular:
 
 ```text
-L1  challenge preservation given D_t^oracle
-L2  diagnosis that D_t^agent is insufficient
-L3  construction of a better challenge set
+do not manufacture procedure-level authority merely because existing substrates lack it
 ```
 
-PCE-001 supports L1 only under an externally supplied challenge set.
+See [`../RESEARCH_FREEZE.md`](../RESEARCH_FREEZE.md).
 
-The current open question is:
-
-> **Can an adaptive system detect that its current corrective-exposure topology is inadequate without being told which missing intervention would repair it?**
-
-L2 must remain distinct from L3.
-
-## 23. Current status map
-
-The descriptive ladder is now:
+## 29. Current status map
 
 ```text
 M1-M6  early model/interface/closure/reopening sequence
@@ -572,7 +759,11 @@ F6     compressed blind reopenability
 F7     topological foreclosure
 BC1    ordinary learned policy contraction
 BC2    temporal reopening structure
-PCE1   direct intervention on corrective exposure
+PCE1   direct intervention on corrective exposure / L1 oracle scope
+CSD1   validated L2 assay apparatus
+CSD-M  Mini target negative: FAILURE_CAUSE_CONFLATION
+ARCH   no admissible pre-CSD L2 successor identified in audited surface
+FREEZE current L2 research boundary
 ```
 
-The next advancement should be selected because it discriminates L2 from L1 failure, not because it extends the ladder aesthetically.
+No successor mechanism or target is authorized by this map.
