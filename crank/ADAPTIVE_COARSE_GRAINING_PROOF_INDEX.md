@@ -3,7 +3,7 @@
 **Status:** living theorem index  
 **Empirical authority:** none  
 **Architectural status:** no new permanent OpenCore primitive or control surface  
-**Current next theorem:** `T13.5`
+**Current proof frontier:** T13 proof-first boundary-expansion sequence closed at stated mathematical scope
 
 This file indexes the post-freeze mathematical results that grew out of the adaptive coarse-graining formulation. It is an index, not a replacement for the individual proof records.
 
@@ -339,7 +339,116 @@ C3 does not prove that repair cost equals repair time, that CWC holds, or that a
 
 ---
 
-## 6. Derived multi-task quotient observation
+## 6. T13.5 — Bounded-risk boundary-expansion synthesis
+
+**File:** `T13_5_BOUNDARY_EXPANSION_SUFFICIENCY.md`  
+**Status:** `PROVED_AT_STATED_SCOPE / SYNTHESIS THEOREM`
+
+Fix the T13.1 attainable adequate region
+
+\[
+\mathcal B
+=
+\mathcal R_\varepsilon^\star
+\neq\varnothing.
+\]
+
+Let `T_R` be the first time an adequate candidate is available and choose a deterministic checkpoint `n < H`.
+
+If, under each member `h` of the unresolved consequential pair,
+
+\[
+P_h(T_R>n\mid\mathcal F_\tau)\le\delta_R,
+\]
+
+and on successful repair by `n` the post-selection experiment is T13.3-valid and supports the already-frozen CWC adjudicator with conditional directed error at most `delta_A`, then
+
+\[
+\boxed{
+P_h(\text{boundary-expansion failure by }H\mid\mathcal F_\tau)
+\le
+\delta_R+(1-\delta_R)\delta_A.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+P_h(\text{adequate refinement + correct adjudication by }H\mid\mathcal F_\tau)
+\ge
+(1-\delta_R)(1-\delta_A).
+}
+\]
+
+If T13.2 supplies
+
+\[
+P_h(T_R>n\mid\mathcal F_\tau)\le e^{-c_n},
+\]
+
+then
+
+\[
+\boxed{
+P_h(\text{failure by }H\mid\mathcal F_\tau)
+\le
+e^{-c_n}+(1-e^{-c_n})\delta_A.
+}
+\]
+
+T13.5 targets an adequate **region**, not a unique refinement identity. Membership in that region is an analytic property relative to `P*`; it is not a self-authenticating observation available to the learner.
+
+The observable admission route remains:
+
+```text
+E_D
+-> selected refinement
+-> candidate-dependent post-repair policy
+-> selection-aware authorization evidence
+-> frozen CWC
+-> existing Gamma rule
+```
+
+T13.5 certifies bounded-risk statistical preconditions for `Gamma`; it does not compel authority, redefine `Gamma`, or grant authority outside the adjudicated distinction.
+
+Hard boundaries remain:
+
+```text
+adequate candidate reached
+!=
+identifiability restored
+
+selected discovery fit
+!=
+selection-aware validation
+
+selection-aware validity
+!=
+CWC
+
+CWC
+!=
+unscoped authority
+```
+
+If the repaired represented path laws remain identical, C2 blocks nontrivial CWC for `delta_A < 1/2`.
+
+The proof-first T13 sequence is therefore closed at its stated mathematical scope:
+
+```text
+T13.1  coverage / attainability                    PROVED
+T13.2  constructive reachability                  PROVED AT STATED SCOPES
+T13.3  selection-aware empirical re-entry         PROVED AT STATED SCOPES
+T13.4  selection-naive self-validation firewall   PROVED COUNTEREXAMPLE
+T13.5  bounded-risk boundary-expansion synthesis  PROVED AT STATED SCOPE
+```
+
+No representation-invention implementation or construction experiment is authorized by this closure.
+
+---
+
+## 7. Derived multi-task quotient observation
 
 No separate theorem file is currently required for this corollary of C1.
 
@@ -373,7 +482,7 @@ No monotone-refinement doctrine follows: if tasks cease to be consequential, leg
 
 ---
 
-## 7. Music-derived representation observations — not new primitives
+## 8. Music-derived representation observations — not new primitives
 
 The music probes suggested useful derived axes:
 
@@ -404,7 +513,7 @@ These are conceptual diagnostics only. `D` and `U(b)` are not OpenCore state var
 
 ---
 
-## 8. Current theorem chain
+## 9. Current theorem chain
 
 The current mathematical lineage is:
 
@@ -414,7 +523,9 @@ C4      equal current adequacy can hide unequal repair geometry
 T13.1   adequate refinement attainability
 T13.2   constructive reachability and timing
 T13.3   selection-aware empirical re-entry
+T13.4   self-validation firewall
 C3      deadline/risk composition of repair and CWC
+T13.5   bounded-risk boundary-expansion synthesis
 C2      impossibility if represented deadline path laws remain identical
 CWC     exact finite-horizon two-sided adjudication criterion
 Gamma   scoped authority only after warranted adjudication
@@ -448,14 +559,19 @@ The central invariant is:
 
 ---
 
-## 9. Next theorem
+## 10. Current proof boundary
 
-The next proof target is now only:
+The post-freeze adaptive coarse-graining theorem queue is closed at the intended proof-first scope:
 
-\[
-\boxed{
-\textbf{T13.5 — minimal sufficient boundary-expansion / re-entry theorem.}
-}
-\]
+```text
+C1 -> C2 -> C4 -> C3 -> T13.5   CLOSED AT STATED MATHEMATICAL SCOPE
+```
 
-T13.5 should compose already-earned gates only. No construction experiment or new architecture is authorized by this index.
+This is not an empirical closure and does not authorize a representation-invention system.
+
+The next legitimate work, if resumed, must be explicitly scoped as either:
+
+1. theorem refinement/counterexample against the frozen statements; or
+2. a separately authorized empirical implementation/validation program.
+
+No further conceptual layer is implied by the proof closure.
