@@ -1,0 +1,60 @@
+{
+  "status": "RUN_COMPLETE",
+  "protocol": "ARO-001_IMPLEMENTATION_FREEZE_V0_1",
+  "freeze_commit_before_run": "9c8dcf38a285a63705d0623ee5d43d40f64384c4",
+  "variant": "ARO-A",
+  "constants": {
+    "seeds": 256,
+    "training_episodes_per_seed": 4000,
+    "lambda": 0.15,
+    "alpha": 0.1,
+    "gamma": 1.0,
+    "epsilon_start": 0.2,
+    "epsilon_end": 0.01,
+    "H_recover": 1
+  },
+  "matched_nuisance_gate": {
+    "empty_information_loss_by_world": {
+      "W1_G": 0.5,
+      "W1_I": 0.5,
+      "W2_XOR": 0.5,
+      "W3_GATE": 0.5
+    },
+    "passes_exact_half": true
+  },
+  "baselines": {
+    "ORACLE_FULL": {"loss": 0.0, "cost": 1.4, "J": 0.21},
+    "ORACLE_ONESHOT": {"loss": 0.0, "cost": 1.475, "J": 0.22125},
+    "ALWAYS_RICH": {"loss": 0.0, "cost": 2.3, "J": 0.345},
+    "ALWAYS_G": {"loss": 0.3125, "cost": 1.0, "J": 0.4625},
+    "RANDOM": {"loss": 0.1791666666666667, "cost": 1.62, "J": 0.4221666666666667}
+  },
+  "learned": {
+    "oracle_equivalent_full_policy_seed_rate": 0.0,
+    "oracle_equivalent_full_policy_seed_count": 0,
+    "seed_count": 256,
+    "loss": {"mean": 0.0, "sd": 0.0, "min": 0.0, "p05": 0.0, "median": 0.0, "p95": 0.0, "max": 0.0},
+    "cost": {"mean": 1.475, "sd": 0.0, "min": 1.475, "p05": 1.475, "median": 1.475, "p95": 1.475, "max": 1.475},
+    "J": {"mean": 0.22125, "sd": 0.0, "min": 0.22125, "p05": 0.22125, "median": 0.22125, "p95": 0.22125, "max": 0.22125},
+    "regret_J": {"mean": 0.01125, "sd": 0.0, "min": 0.01125, "p05": 0.01125, "median": 0.01125, "p95": 0.01125, "max": 0.01125},
+    "first_operation_accuracy": {"mean": 0.75, "sd": 0.0, "min": 0.75, "p05": 0.75, "median": 0.75, "p95": 0.75, "max": 0.75},
+    "W3_branch_accuracy": {"mean": 0.62109375, "sd": 0.34655725170732976, "min": 0.0, "p05": 0.0, "median": 0.5, "p95": 1.0, "max": 1.0},
+    "P_Trecover_le_1": {"mean": 0.75, "sd": 0.0, "min": 0.75, "p05": 0.75, "median": 0.75, "p95": 0.75, "max": 0.75},
+    "final_first_policy_all_seeds": {
+      "W1_G": "SELECT_G",
+      "W1_I": "SELECT_I",
+      "W2_XOR": "COMPOSE_GI",
+      "W3_GATE": "COMPOSE_GIS"
+    }
+  },
+  "success_criteria": {
+    "S1_full_policy_seed_rate_ge_0_95": false,
+    "S2_mean_regret_J_le_0_02": true,
+    "S3_mean_loss_le_0_01": true,
+    "S4_mean_cost_le_1_425": false,
+    "S5_mean_W3_branch_accuracy_ge_0_95": false,
+    "S6_mean_recovery_probability_ge_0_95": false,
+    "S7_matched_nuisance_gate": true,
+    "ALL_FROZEN_CRITERIA_PASS": false
+  }
+}
