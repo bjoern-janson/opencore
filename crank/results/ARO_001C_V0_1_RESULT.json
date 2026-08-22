@@ -1,0 +1,31 @@
+{
+  "artifact_digest": "sha256:e8a2d1db60a05034973f35b56dc3697fe24e86f16355ebf1b62588e39a0e2d12",
+  "artifact_id": 9476271133,
+  "conditions": {
+    "0.60": {"DeltaV_hat_mean": -0.05737238911235992, "DeltaV_hat_sd": 0.1412439541344275, "DeltaV_true": -0.10000000000000003, "branch_full_seed_rate": 0.5625, "empty_loss": 0.5, "mean_cost": 1.27294921875, "mean_loss": 0.034033203124999994, "mean_regret_J": 0.014975585937500003, "probe_preference_seed_rate": 0.36328125},
+    "0.70": {"DeltaV_hat_mean": 0.021863324923694527, "DeltaV_hat_sd": 0.1269188473154862, "DeltaV_true": -0.050000000000000044, "branch_full_seed_rate": 0.68359375, "empty_loss": 0.5, "mean_cost": 1.3611328125, "mean_loss": 0.026611328124999997, "mean_regret_J": 0.014531250000000002, "probe_preference_seed_rate": 0.6015625},
+    "0.75": {"DeltaV_hat_mean": 0.050069733130109685, "DeltaV_hat_sd": 0.1183265158813856, "DeltaV_true": -0.024999999999999967, "branch_full_seed_rate": 0.6953125, "empty_loss": 0.5, "mean_cost": 1.3839843749999998, "mean_loss": 0.0220947265625, "mean_regret_J": 0.010317382812500008, "probe_preference_seed_rate": 0.6796875},
+    "0.80": {"DeltaV_hat_mean": 0.07631711831172938, "DeltaV_hat_sd": 0.10404545758088929, "DeltaV_true": 0.0, "branch_full_seed_rate": 0.7578125, "empty_loss": 0.5, "mean_cost": 1.3949218749999996, "mean_loss": 0.017236328125000002, "mean_regret_J": 0.003974609375000011, "probe_preference_seed_rate": 0.76953125},
+    "0.85": {"DeltaV_hat_mean": 0.07844720675833798, "DeltaV_hat_sd": 0.08911372485019614, "DeltaV_true": 0.024999999999999967, "branch_full_seed_rate": 0.796875, "empty_loss": 0.5, "mean_cost": 1.4120117187499999, "mean_loss": 0.011499023437499997, "mean_regret_J": 0.003925781250000003, "probe_preference_seed_rate": 0.77734375},
+    "0.90": {"DeltaV_hat_mean": 0.0818759679502021, "DeltaV_hat_sd": 0.07751106186458341, "DeltaV_true": 0.04500000000000004, "branch_full_seed_rate": 0.828125, "empty_loss": 0.5, "mean_cost": 1.4111328125, "mean_loss": 0.008349609375, "mean_regret_J": 0.003769531250000002, "probe_preference_seed_rate": 0.80078125}
+  },
+  "constants": {"alpha_Q": 0.1, "epsilon_end": 0.01, "epsilon_start": 0.2, "forced_probe_rate_conditional_W3": 0.25, "gamma": 1.0, "lambda": 0.15, "q_grid": [0.6, 0.7, 0.75, 0.8, 0.85, 0.9], "seeds_per_q": 256, "training_episodes_per_seed": 4000},
+  "curve_metrics": {
+    "branch_full_seed_rate": [0.5625, 0.68359375, 0.6953125, 0.7578125, 0.796875, 0.828125],
+    "mean_DeltaV_hat": [-0.05737238911235992, 0.021863324923694527, 0.050069733130109685, 0.07631711831172938, 0.07844720675833798, 0.0818759679502021],
+    "probe_preference_seed_rate": [0.36328125, 0.6015625, 0.6796875, 0.76953125, 0.77734375, 0.80078125],
+    "rho_Q": 1.0,
+    "rho_probe": 1.0,
+    "true_DeltaV": [-0.10000000000000003, -0.050000000000000044, -0.024999999999999967, 0.0, 0.024999999999999967, 0.04500000000000004]
+  },
+  "freeze_commit": "6e4adbb956ac5a4c0fc213cd511c0329046fef6e",
+  "gates": {
+    "matched_nuisance_empty_loss_exact_half_every_q": true,
+    "primary": {"PRIMARY_RANK_ORDERING_PASS": false, "R0_continuation_branch_rate_ge_0_95_every_q": false, "R1_true_DeltaV_vector_matches_freeze": true, "R2_rho_Q_ge_0_90": true, "R3_rho_probe_ge_0_90": true},
+    "secondary_calibration": {"C1_negative_mean_DeltaV_hat_below_zero": false, "C2_zero_mean_DeltaV_hat_abs_le_0_02": false, "C3_positive_mean_DeltaV_hat_above_zero": true, "C4_negative_probe_rates_below_0_50": false, "C5_positive_probe_rates_above_0_50": true, "C6_zero_probe_rate_between_0_20_and_0_80": true, "SECONDARY_CALIBRATION_PASS": false}
+  },
+  "identification_note": "Final evaluation is greedy. Probe behavior is therefore a thresholded readout of learned first-stage Q values, not an independently identified policy-conversion layer.",
+  "protocol": "ARO_001C_PROBE_VALUE_CALIBRATION_V0_1",
+  "status": "RUN_COMPLETE / ISOLATION_GATE_FAILED",
+  "workflow_run_id": 32574521609
+}
