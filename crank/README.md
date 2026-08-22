@@ -13,8 +13,10 @@
 | Document | Purpose |
 | --- | --- |
 | [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact empirical research boundary |
-| [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) | Current mathematical proof closure for anytime adjudication and sharp terminal path-law testing; supersedes the open-status entries for T12e.4b/e.5 in the earlier theorem frontier |
-| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the full theorem-development record and adds no empirical authority |
+| [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) | Mathematical Core v0.1 proof closure for anytime adjudication and sharp terminal path-law testing |
+| [`T13_1_COVERAGE_OBSTRUCTION.md`](T13_1_COVERAGE_OBSTRUCTION.md) | T13.1 proof: coverage infimum, attainable target regions, and closure-only obstruction |
+| [`T13_4_SELF_VALIDATION_FIREWALL.md`](T13_4_SELF_VALIDATION_FIREWALL.md) | T13.4 counterexample: adaptive discovery fit cannot be reused as selection-naive validation |
+| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the theorem-development record |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
 | [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
 | [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Frozen post-negative archaeology |
@@ -158,7 +160,7 @@ Post-negative archaeology:
 NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
 ```
 
-## Mathematical Core v0.1 — proof freeze
+## Mathematical Core v0.1 — closed-world proof freeze
 
 The mathematical layer remains explicitly quarantined from empirical authority:
 
@@ -186,7 +188,7 @@ Gamma  what identified evidence is allowed to change
 
 No fourth surface or new primitive was introduced by the proof closure.
 
-The frozen mathematical hierarchy is now:
+The frozen closed-world mathematical hierarchy is:
 
 ```text
 I*       potential discriminating information
@@ -211,7 +213,7 @@ L_n
 finite-horizon path-law adjudicability
 ```
 
-The strongest current theorem-level negative remains:
+The strongest closed-world theorem-level negative remains:
 
 ```text
 K_n(i->j) -> infinity
@@ -223,7 +225,7 @@ does not imply
 consistent discrimination
 ```
 
-The final theorem-status boundary is:
+The closed-world theorem-status boundary is:
 
 ```text
 T12a     PROVED
@@ -236,7 +238,6 @@ T12e.3   PROVED UNDER STATED CONDITIONS
 T12e.4a  PROVED UNDER EXPLICIT FREEDMAN CONDITIONS; terminal only
 T12e.4b  PROVED; Ville likelihood martingales give anytime wrong-attribution control
 T12e.5   PROVED WITH RISK-CRITERION CORRECTION
-T13      CLOSED
 ```
 
 ### T12e.4b result
@@ -275,7 +276,7 @@ beta_{1-delta}(P,Q) <= delta
 
 TV >= 1 - 2 delta is necessary for that two-sided criterion but is not sufficient in general.
 
-Thus the final methodological rule is:
+Thus the closed-world methodological rule is:
 
 ```text
 K_n                     information accounting
@@ -286,11 +287,67 @@ anytime-valid early commitment
                         timely corrigibility property
 ```
 
-The theorem-compatible invariant is now:
+The theorem-compatible invariant is:
 
 > **Every unresolved consequential distinction must retain a path-law testing regime that permits bounded-error attribution by its consequence-relevant deadline, while any earlier commitment remains anytime-valid at its claimed error level.**
 
 See [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) for the proofs and the exact scope correction to T12e.5.
+
+## T13 — boundary-expansion proof frontier
+
+T13 is now open only as a mathematical boundary-expansion program. No construction experiment or new permanent control surface is authorized.
+
+Current proof status:
+
+```text
+T13.1  coverage / attainability boundary              PROVED
+T13.2  constructive reachability                      NEXT
+T13.3  selection-aware empirical re-entry             OPEN
+T13.4  selection-naive self-validation firewall       PROVED COUNTEREXAMPLE
+T13.5  sufficient boundary-expansion / re-entry       OPEN
+```
+
+T13.1 establishes the exact tolerance boundary:
+
+```text
+epsilon < epsilon_R   -> R*_epsilon is empty
+epsilon > epsilon_R   -> R*_epsilon is nonempty
+epsilon = epsilon_R   -> nonempty iff the infimum is attained
+```
+
+Thus:
+
+```text
+empirical closure
+!=
+attainability at the boundary tolerance
+```
+
+T13.4 independently establishes:
+
+```text
+selected discovery fit
+!=
+selection-aware validation
+```
+
+The boundary-expansion chain therefore remains:
+
+```text
+coverage
+-> constructive reachability
+-> selection-aware validation
+-> fresh CWC
+-> scoped authority
+```
+
+The next proof target is T13.2. It must operate on an explicit nonempty target region
+
+```text
+R*_epsilon = {r : rho(P*,Q_r) <= epsilon}
+```
+
+rather than treating the scalar coverage infimum as if it were a constructible candidate.
 
 ## Research posture
 
