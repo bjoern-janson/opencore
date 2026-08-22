@@ -13,7 +13,8 @@
 | Document | Purpose |
 | --- | --- |
 | [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact empirical research boundary |
-| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Candidate mathematical core, proved/counterexample status, and open T12e proof frontier; adds no empirical authority |
+| [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) | Current mathematical proof closure for anytime adjudication and sharp terminal path-law testing; supersedes the open-status entries for T12e.4b/e.5 in the earlier theorem frontier |
+| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the full theorem-development record and adds no empirical authority |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
 | [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
 | [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Frozen post-negative archaeology |
@@ -157,9 +158,9 @@ Post-negative archaeology:
 NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
 ```
 
-## Mathematical core frontier
+## Mathematical Core v0.1 — proof freeze
 
-The mathematical layer is explicitly quarantined from empirical authority:
+The mathematical layer remains explicitly quarantined from empirical authority:
 
 ```text
 mathematical statement
@@ -169,13 +170,13 @@ proved theorem
 empirical result
 ```
 
-Adaptive state:
+Adaptive state remains:
 
 ```text
 S_t = (Pi_t, pi_t, Gamma_t, H_t)
 ```
 
-with three adaptive surfaces:
+with the same three adaptive surfaces:
 
 ```text
 Pi     what distinctions the system can represent
@@ -183,21 +184,20 @@ pi     which experiments / evidence it actually reaches
 Gamma  what identified evidence is allowed to change
 ```
 
-Current theorem-level invariant:
+No fourth surface or new primitive was introduced by the proof closure.
 
-> **Every unresolved consequential distinction must retain a high-probability route to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that evidence has not identified.**
-
-Frozen mathematical hierarchy:
+The frozen mathematical hierarchy is now:
 
 ```text
-I*          potential discriminating information
-K_n         expected path-space information under the endogenous policy
-G_n         predictable information on the realized adaptive action path
-L_n         realized likelihood evidence
-Sep_{t,H}   finite-horizon statistical path-law separation
+I*       potential discriminating information
+K_n      expected path-space information under the endogenous policy
+G_n      predictable information on the realized adaptive action path
+L_n      realized likelihood evidence
+ROC / testing tradeoff of the finite-horizon path laws
+         exact two-sided terminal adjudication property
 ```
 
-and:
+and therefore:
 
 ```text
 I*
@@ -208,10 +208,10 @@ G_n
 !=
 L_n
 !=
-Sep_{t,H}
+finite-horizon path-law adjudicability
 ```
 
-The strongest current theorem-level negative is:
+The strongest current theorem-level negative remains:
 
 ```text
 K_n(i->j) -> infinity
@@ -223,41 +223,74 @@ does not imply
 consistent discrimination
 ```
 
-The theorem-status boundary is:
+The final theorem-status boundary is:
 
 ```text
 T12a     PROVED
 T12b     CLASSICAL MACHINERY specialized to adaptive path laws
 T12c     PROVED EXISTENCE COUNTEREXAMPLE; not a robust policy theorem
-T12d     OPEN
+T12d     OPEN / DEFERRED
 T12e.1   PROVED
 T12e.2   PROVED COUNTEREXAMPLE
 T12e.3   PROVED UNDER STATED CONDITIONS
 T12e.4a  PROVED UNDER EXPLICIT FREEDMAN CONDITIONS; terminal only
-T12e.4b  OPEN; anytime finite-horizon adjudication
-T12e.5   OPEN; sharp TV/Hellinger/path-process characterization
+T12e.4b  PROVED; Ville likelihood martingales give anytime wrong-attribution control
+T12e.5   PROVED WITH RISK-CRITERION CORRECTION
+T13      CLOSED
 ```
 
-Methodological rule:
+### T12e.4b result
+
+For the conditional likelihood-ratio process, constant sequential boundaries give horizon-uniform wrong-attribution control by Ville's inequality:
 
 ```text
-K_n                information accounting
-L_n                realized evidence
-path-law separation adjudication property
-timely separation   corrigibility property
-```
-
-Terminal and anytime authority remain distinct:
-
-```text
-correct at the deadline
+safe early commitment
 !=
-safe to commit at every time before the deadline
+guaranteed decision by the deadline
 ```
 
-The active mathematical work is now restricted to `T12e.4b` and `T12e.5`. `T13` remains closed.
+A terminal fallback test supplies the missing deadline-completion property without weakening anytime validity.
 
-See [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md).
+### T12e.5 correction
+
+Total variation remains exact for **equal-prior average Bayes error**:
+
+```text
+R_avg* = (1 - TV(P,Q)) / 2
+```
+
+but the stronger requirement
+
+```text
+error under H_i <= delta
+and
+error under H_j <= delta
+```
+
+is characterized sharply by the Neyman-Pearson testing tradeoff:
+
+```text
+beta_{1-delta}(P,Q) <= delta
+```
+
+TV >= 1 - 2 delta is necessary for that two-sided criterion but is not sufficient in general.
+
+Thus the final methodological rule is:
+
+```text
+K_n                     information accounting
+L_n                     realized evidence
+path-law testing risk   adjudication property
+anytime-valid early commitment
++ bounded-error terminal fallback
+                        timely corrigibility property
+```
+
+The theorem-compatible invariant is now:
+
+> **Every unresolved consequential distinction must retain a path-law testing regime that permits bounded-error attribution by its consequence-relevant deadline, while any earlier commitment remains anytime-valid at its claimed error level.**
+
+See [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) for the proofs and the exact scope correction to T12e.5.
 
 ## Research posture
 
@@ -276,6 +309,6 @@ Current empirical rule:
 
 Current mathematical rule:
 
-> **Do not upgrade potential information, expected information, or realized likelihood into a corrigibility claim without finite-horizon path-law separation.**
+> **Do not expand the theory to solve a proof problem. Proof failure, counterexample, or a genuinely necessary assumption may revise a theorem; proof inconvenience may not.**
 
 No new architecture, trust variable, procedure-failure label, outer supervisor, or Nano version is authorized.
