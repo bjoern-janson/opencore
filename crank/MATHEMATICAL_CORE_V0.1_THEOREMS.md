@@ -1,6 +1,6 @@
 # Mathematical Core v0.1 — Theorem Frontier
 
-**Status:** `THEOREM_SEEKING_DRAFT`  
+**Status:** `PROOF_FRONTIER`  
 **Scope:** mathematical synthesis above the frozen OpenCore empirical lineage  
 **Empirical authority:** none added by this document  
 **New architectural primitive:** none  
@@ -15,6 +15,16 @@ The governing invariant is:
 > **Every unresolved consequential distinction must retain a high-probability path to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that the evidence has not identified.**
 
 The purpose of this file is theorem seeking: definitions, theorem statements, proofs/counterexamples where available, and explicit open boundaries. It does not upgrade any empirical OpenCore claim.
+
+The mathematical layer is explicitly quarantined from empirical authority:
+
+```text
+mathematical statement
+!=
+proved theorem
+!=
+empirical result
+```
 
 ---
 
@@ -120,7 +130,7 @@ The critical non-implications are:
 For hypothesis `H_i` and intervention `a`, let the physical observation kernel be
 
 \[
-P_i^a(dy)=P(dY=y\mid do(a),H_i).
+P_i^a(dy)=P(dY\in dy\mid do(a),H_i).
 \]
 
 The represented kernel is the pushforward
@@ -321,56 +331,97 @@ This preserves the physics lesson:
 
 ## 7. T12a — Adaptive Path Information Identity
 
+**Status:** `PROVED`.
+
 Let
 
 \[
-H_n=(A_1,Z_1,\ldots,A_n,Z_n).
+H_n=(A_1,Z_1,\ldots,A_n,Z_n),
+\qquad
+\mathcal F_{t-1}=\sigma(A_1,Z_1,\ldots,A_{t-1},Z_{t-1}).
 \]
 
-Under refinement `r_i`, suppose the adaptive path law is
+Assume:
+
+1. under every hypothesis, the action is selected from the same stochastic kernel
+   \[
+   \pi_t(da_t\mid h_{t-1});
+   \]
+2. for the forward `i -> j` identity, `Q_i^a << Q_j^a` for every action relevant under `P_i` and the policy;
+3. the likelihood-ratio integrals are interpreted in the extended sense when necessary.
+
+Under `H_i`, the adaptive path law is
 
 \[
 P_i^{\pi,n}(dh_n)
 =
 \prod_{t=1}^n
 \pi_t(da_t\mid h_{t-1})
-Q_i^{a_t}(dz_t),
+Q_i^{a_t}(dz_t).
 \]
 
-where the same represented-history policy kernel `pi_t` is used under every candidate and the required absolute-continuity conditions hold.
-
-Then
+Because the policy kernel is the same conditional on the represented history,
 
 \[
 \frac{dP_i^{\pi,n}}{dP_j^{\pi,n}}(H_n)
 =
 \prod_{t=1}^n
-\frac{dQ_i^{A_t}}{dQ_j^{A_t}}(Z_t),
+\frac{dQ_i^{A_t}}{dQ_j^{A_t}}(Z_t).
 \]
 
-because the action-policy factors cancel conditionally on the same represented history.
+Define
 
-Therefore
+\[
+\ell_t^{i\to j}
+=
+\log\frac{dQ_i^{A_t}}{dQ_j^{A_t}}(Z_t),
+\qquad
+\mathcal G_t=\sigma(\mathcal F_{t-1},A_t).
+\]
+
+Then
+
+\[
+g_t^{i\to j}
+:=
+\mathbb E_i[\ell_t^{i\to j}\mid\mathcal G_t]
+=
+D_{\mathrm{KL}}(Q_i^{A_t}\Vert Q_j^{A_t}).
+\]
+
+Let
+
+\[
+G_n^{i\to j}=\sum_{t=1}^n g_t^{i\to j},
+\qquad
+K_n^{i\to j}=\mathbb E_i[G_n^{i\to j}].
+\]
+
+Taking the expectation of the path log-likelihood ratio gives
 
 \[
 \boxed{
-D_{\mathrm{KL}}
-(P_i^{\pi,n}\Vert P_j^{\pi,n})
+K_n^{i\to j}
+=
+D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n})
 =
 \mathbb E_i
 \left[
 \sum_{t=1}^n
-D_{\mathrm{KL}}
-(Q_i^{A_t}\Vert Q_j^{A_t})
+D_{\mathrm{KL}}(Q_i^{A_t}\Vert Q_j^{A_t})
 \right].
 }
 \]
 
-This separates information potentially available from information actually acquired under endogenous selection.
+The reverse identity is a separate statement using `Q_j^a << Q_i^a`. If finite likelihood ratios in both directions are desired on all relevant experiments, one may impose mutual absolute continuity `Q_i^a ~ Q_j^a`.
+
+**Interpretation:** potential experiment information and path information actually acquired under endogenous selection are different objects.
 
 ---
 
-## 8. T12b — Refinement entropy lower bound
+## 8. T12b — Refinement Entropy Lower Bound
+
+**Status:** classical information-theoretic machinery specialized to the adaptive path law.
 
 Let
 
@@ -389,7 +440,18 @@ P_e
 \frac{I(J;H_n)+\log 2}{\log N}.
 \]
 
-A standard pairwise upper bound on mutual information combined with T12a yields an acquired-information quantity of the form
+Writing `P_bar=(1/N) sum_j P_j`, convexity of KL in its second argument gives
+
+\[
+I(J;H_n)
+=
+\frac1N\sum_i D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_{\rm bar}^{\pi,n})
+\le
+\frac{1}{N^2}\sum_{i,j}
+D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n}).
+\]
+
+Using T12a,
 
 \[
 I(J;H_n)
@@ -398,11 +460,10 @@ I(J;H_n)
 \sum_{i,j}
 \mathbb E_i
 \sum_{t=1}^n
-D_{\mathrm{KL}}
-(Q_i^{A_t}\Vert Q_j^{A_t}).
+D_{\mathrm{KL}}(Q_i^{A_t}\Vert Q_j^{A_t}).
 \]
 
-Define the average adaptive information rate
+Define
 
 \[
 \bar\kappa_n
@@ -411,8 +472,7 @@ Define the average adaptive information rate
 \sum_{i,j}
 \mathbb E_i
 \sum_{t=1}^n
-D_{\mathrm{KL}}
-(Q_i^{A_t}\Vert Q_j^{A_t}).
+D_{\mathrm{KL}}(Q_i^{A_t}\Vert Q_j^{A_t}).
 \]
 
 Then
@@ -426,7 +486,7 @@ P_e
 }
 \]
 
-Thus a necessary finite-horizon scaling relation is
+Thus a necessary finite-horizon scaling relation is schematically
 
 \[
 \boxed{
@@ -438,13 +498,13 @@ I_\pi^{(n)}(\mathcal R),
 
 with constants and the exact empirical packing/separation criterion fixed by the theorem instance.
 
-The distinctive coupling is that the refinement family can change the policy that determines `I_pi^(n)`.
+The distinctive coupling is not Fano itself. It is that the refinement family can change the endogenous policy that determines `I_pi^(n)`.
 
 ---
 
 ## 9. T12c — Endogenous Refinement Collapse
 
-**Status:** existence counterexample; not yet a robust policy theorem.
+**Status:** `PROVED_EXISTENCE_COUNTEREXAMPLE`; not a robust policy theorem.
 
 There exist nested finite refinement languages
 
@@ -462,7 +522,7 @@ a fixed true empirical process `P*`, and a single class-dependent experiment-sel
 
 while an unresolved pair has strictly less acquired discriminating information under the richer class, in the minimal construction collapsing to exactly zero.
 
-A concrete witness uses actions `{a,b}` and binary observations. For `0<delta<1/4`, define
+Take actions `{a,b}`, binary observations, and `0<delta<1/4`:
 
 | refinement | `Q^a(Z=1)` | `Q^b(Z=1)` |
 | --- | ---: | ---: |
@@ -471,14 +531,14 @@ A concrete witness uses actions `{a,b}` and binary observations. For `0<delta<1/
 | `r*` | `0.75` | `0.75+delta` |
 | `r2` | `0.25` | `0.75+delta` |
 
-Let reality be `P*=Q_r*`, let
+Let reality be `P*=Q_r*`, and let
 
 ```text
 R  = {r0,r1}
 R' = {r0,r1,r*,r2}
 ```
 
-and use the same optimistic class-dependent rule
+Use the same class-dependent rule
 
 \[
 \pi_{\mathcal C}
@@ -487,27 +547,36 @@ and use the same optimistic class-dependent rule
 \sup_{r\in\mathcal C}\mathbb E_r[Z\mid x].
 \]
 
-For `R`, the rule selects `a`, which distinguishes `r0` and `r1` with positive KL. For `R'`, the rule selects `b`, but
+For `R`, the rule selects `a`, which distinguishes `r0` from `r1` with positive KL. For `R'`, the rule selects `b`, but
 
 \[
 Q_{r^\star}^b=Q_{r_2}^b,
 \]
 
-so the relevant cumulative path information is exactly zero for every horizon.
+so
 
-At the same time, `R'` has exact empirical coverage of `P*` while `R` does not.
+\[
+\boxed{
+K_n(r^\star,r_2;\pi_{\mathcal R'})=0
+\quad\text{for every }n.
+}
+\]
+
+At the same time, `R'` contains the truth exactly while `R` has positive empirical coverage error under the max-action total-variation metric.
 
 Therefore:
 
 > **Improved representational coverage need not monotonically improve empirical learnability when the refinement language itself influences experiment selection.**
 
-This proves possibility, not prevalence. T12d asks whether related collapse or slowdown survives under materially broader policy classes.
+This proves possibility, not prevalence.
 
 ---
 
-## 10. T12d — Policy robustness frontier
+## 10. T12d — Policy Robustness Frontier
 
-Test endogenous refinement collapse under progressively more standard adaptive policies:
+**Status:** `OPEN`.
+
+Test endogenous refinement collapse or slowdown under progressively more standard adaptive policies:
 
 ```text
 P1  posterior-greedy task utility
@@ -526,7 +595,7 @@ Weak form:
 \text{collapse or slowdown occurs}.
 \]
 
-Stronger forms reverse the policy quantifier and should not be asserted without proof.
+Stronger forms reverse or move the policy quantifier and should not be asserted without proof.
 
 The outcome should distinguish:
 
@@ -539,65 +608,69 @@ timely           enough statistical separation within the relevant deadline
 
 ---
 
-## 11. T12e — From information availability to timely adjudication
+## 11. T12e — From Information Accounting to Timely Adjudication
 
-T12e is a sequential-testing theorem program. It separates:
+T12e is a sequential-testing theorem program. The frozen hierarchy is
 
 \[
 \boxed{
-\text{available information}
+I^\star
 \neq
-\text{mean acquired information}
+K_n
 \neq
-\text{pathwise predictable information}
+G_n
 \neq
-\text{realized evidence}
+L_n
 \neq
-\text{timely identification}.
+\mathsf{Sep}_{t,H}.
 }
 \]
 
+Interpretation:
+
+```text
+I*          potential discriminating information
+K_n         expected path-space information under the endogenous policy
+G_n         predictable information budget on the realized adaptive action path
+L_n         realized likelihood evidence
+Sep_{t,H}   finite-horizon statistical separability of the conditional path laws
+```
+
+No implication between adjacent objects is granted without explicit conditions.
+
 ### 11.1 Directed likelihood objects
 
-For testing `H_i` against `H_j`, let the action be chosen before the observation and define the pre-observation filtration
-
-\[
-\mathcal G_t=\sigma(\mathcal F_{t-1},A_t).
-\]
-
-Define the directed log-likelihood increment
+For testing `H_i` against `H_j`, define
 
 \[
 \ell_t^{i\to j}
 =
-\log
-\frac{dQ_i^{A_t}}{dQ_j^{A_t}}(Z_t).
+\log\frac{dQ_i^{A_t}}{dQ_j^{A_t}}(Z_t),
+\qquad
+\mathcal G_t=\sigma(\mathcal F_{t-1},A_t),
 \]
 
-Its predictable drift under `H_i` is
+and
 
 \[
-\boxed{
 g_t^{i\to j}
 =
 \mathbb E_i[\ell_t^{i\to j}\mid\mathcal G_t]
 =
 D_{\mathrm{KL}}(Q_i^{A_t}\Vert Q_j^{A_t}).
-}
 \]
 
-Define
+Let
 
 \[
-G_n^{i\to j}
-=
-\sum_{t=1}^n g_t^{i\to j},
+G_n^{i\to j}=\sum_{t=1}^n g_t^{i\to j},
 \]
 
 \[
 M_n^{i\to j}
 =
-\sum_{t=1}^n(\ell_t^{i\to j}-g_t^{i\to j}),
+\sum_{t=1}^n
+(\ell_t^{i\to j}-g_t^{i\to j}),
 \]
 
 and
@@ -610,61 +683,50 @@ G_n^{i\to j}+M_n^{i\to j}.
 }
 \]
 
-`G_n` can be random because adaptive actions are random. The deterministic directed path KL is
+Under the forward absolute-continuity and integrability conditions, `M_n^{i->j}` is a martingale under `P_i` with respect to the filtration after observation `Z_t` is incorporated.
+
+The deterministic expected path information is
 
 \[
 \boxed{
 K_n^{i\to j}
-:=
-D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n})
-=
-\mathbb E_i[G_n^{i\to j}].
+:=D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n})
+=\mathbb E_i[G_n^{i\to j}].
 }
 \]
 
-The reverse direction uses
+The reverse direction is separate:
 
 \[
 K_n^{j\to i}
-=
-D_{\mathrm{KL}}(P_j^{\pi,n}\Vert P_i^{\pi,n}),
+=D_{\mathrm{KL}}(P_j^{\pi,n}\Vert P_i^{\pi,n}),
 \]
 
-which need not equal the forward quantity.
+and need not equal the forward quantity.
 
-The hierarchy is therefore:
+---
 
-```text
-I*     information potentially available
-K_n    mean path information acquired under the endogenous policy
-G_n    predictable information budget on the realized action path
-L_n    realized likelihood evidence
-H_id   time until the evidence is statistically decisive
-```
+### T12e.1 — Necessary Directed Divergence
 
-### T12e.1 — Divergent directed path information is necessary
+**Status:** `PROVED`.
 
-Suppose binary tests have both errors tending to zero:
+Let `phi_n in {i,j}` be any sequence of binary tests and define
+
+\[
+\alpha_n=P_i(\phi_n=j),
+\qquad
+\beta_n=P_j(\phi_n=i).
+\]
+
+If
 
 \[
 \alpha_n\to0,
 \qquad
-\beta_n\to0.
+\beta_n\to0,
 \]
 
-Data processing of KL through the binary decision implies
-
-\[
-D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n})\to\infty
-\]
-
-and, reversing the roles,
-
-\[
-D_{\mathrm{KL}}(P_j^{\pi,n}\Vert P_i^{\pi,n})\to\infty.
-\]
-
-Hence by T12a:
+then
 
 \[
 \boxed{
@@ -674,67 +736,157 @@ K_n^{j\to i}\to\infty.
 }
 \]
 
-This is necessary, not sufficient.
+#### Proof
 
-### T12e.2 — Divergent mean information is not sufficient
+Map the path `H_n` to the binary decision `1{phi_n=i}`. Under `P_i` this decision has law `Bernoulli(1-alpha_n)`; under `P_j` it has law `Bernoulli(beta_n)`.
 
-A rare-event construction defeats the tempting converse.
-
-Take one experiment and independent binary observations. Under `H_i`, let
+By data processing,
 
 \[
-Z_t\sim\mathrm{Bernoulli}(p_t),
+D_{\mathrm{KL}}(P_i^{\pi,n}\Vert P_j^{\pi,n})
+\ge
+D_{\mathrm{KL}}
+\left(
+\mathrm{Bern}(1-\alpha_n)
+\Vert
+\mathrm{Bern}(\beta_n)
+\right).
+\]
+
+The right-hand side diverges when `alpha_n -> 0` and `beta_n -> 0`, because its leading term contains
+
+\[
+(1-\alpha_n)
+\log\frac{1-\alpha_n}{\beta_n}
+\to\infty.
+\]
+
+Therefore `K_n^{i->j} -> infinity` by T12a. Exchanging `i` and `j` gives the reverse conclusion. `QED`
+
+No pathwise conclusion about `G_n` follows from this theorem.
+
+---
+
+### T12e.2 — Two-Directed Expected Divergence Is Insufficient
+
+**Status:** `PROVED_COUNTEREXAMPLE`.
+
+There exist two hypothesis laws for which
+
+\[
+K_n^{i\to j}\to\infty
+\quad\text{and}\quad
+K_n^{j\to i}\to\infty,
+\]
+
+while no sequence of tests has both errors tending to zero.
+
+#### Construction
+
+Let
+
+\[
+p_t=2^{-t},
 \qquad
-p_t=2^{-t}.
+q_t=p_t\exp\left(-\frac{1}{tp_t}\right),
 \]
 
-Under `H_j`, let
+and let `Z_t in {0,+,-}` be independent across time.
+
+Under `H_i`,
 
 \[
-Z_t\sim\mathrm{Bernoulli}(q_t),
+P_i^t(+)=p_t,
 \qquad
-q_t=p_t\exp\left(-\frac{1}{tp_t}\right).
-\]
-
-Then
-
-\[
-p_t\log\frac{p_t}{q_t}=\frac1t,
-\]
-
-while the zero-outcome contribution is `O(p_t)`. Therefore
-
-\[
-K_n^{i\to j}\sim\log n\to\infty.
-\]
-
-But
-
-\[
-\sum_t p_t<\infty,
+P_i^t(-)=q_t,
 \qquad
-\sum_t q_t<\infty.
+P_i^t(0)=1-p_t-q_t.
 \]
 
-The infinite all-zero trajectory consequently has positive probability under both hypotheses. The infinite path measures are not mutually singular, so no sequence of tests can drive both errors to zero.
+Under `H_j`, swap `+` and `-`:
 
-Thus:
+\[
+P_j^t(+)=q_t,
+\qquad
+P_j^t(-)=p_t,
+\qquad
+P_j^t(0)=1-p_t-q_t.
+\]
+
+For one observation,
+
+\[
+\begin{aligned}
+D_{\mathrm{KL}}(P_i^t\Vert P_j^t)
+&=
+p_t\log\frac{p_t}{q_t}
++q_t\log\frac{q_t}{p_t}\\
+&=(p_t-q_t)\log\frac{p_t}{q_t}\\
+&=\frac{1-q_t/p_t}{t}.
+\end{aligned}
+\]
+
+Since
+
+\[
+q_t/p_t
+=\exp\left(-\frac{1}{tp_t}\right)
+\to0,
+\]
+
+we have
+
+\[
+D_{\mathrm{KL}}(P_i^t\Vert P_j^t)\sim\frac1t.
+\]
+
+By symmetry the reverse divergence is identical. Independence gives
 
 \[
 \boxed{
-K_n\to\infty
+K_n^{i\to j}\sim\log n,
+\qquad
+K_n^{j\to i}\sim\log n.
+}
+\]
+
+However,
+
+\[
+\sum_t(p_t+q_t)<\infty,
+\]
+
+so
+
+\[
+\prod_{t=1}^{\infty}(1-p_t-q_t)>0.
+\]
+
+Thus the all-zero infinite trajectory is a common atom with positive probability under both infinite product measures. The two infinite path laws are therefore not mutually singular.
+
+If tests with `alpha_n -> 0` and `beta_n -> 0` existed, their error sum would tend to zero, forcing the total variation distance of the finite-prefix laws to tend to one. The limiting infinite path laws would then be mutually singular, contradiction. `QED`
+
+Therefore
+
+\[
+\boxed{
+K_n^{i\to j}\to\infty
+\;\land\;
+K_n^{j\to i}\to\infty
 \not\Rightarrow
 \text{consistent discrimination}.
 }
 \]
 
-Expected path information can diverge because of increasingly rare, increasingly extreme evidence while typical histories remain ambiguous.
+**Interpretation:** even unlimited expected path information in both directions can be carried by increasingly rare, increasingly extreme evidence while typical histories remain ambiguous.
 
-### T12e.3 — Pathwise predictable divergence plus controlled fluctuations is sufficient
+---
 
-A clean sufficient condition is:
+### T12e.3 — Pathwise Divergence plus Relative-Noise Control
 
-under `H_i`,
+**Status:** `PROVED_UNDER_STATED_CONDITIONS`.
+
+Assume under `H_i`:
 
 \[
 G_n^{i\to j}\to\infty
@@ -746,132 +898,324 @@ and
 \[
 \frac{M_n^{i\to j}}{G_n^{i\to j}}
 \to0
-\quad P_i\text{-a.s.}.
+\quad P_i\text{-a.s.}
 \]
 
-Then
+Assume separately under `H_j`:
 
 \[
-\frac{L_n^{i\to j}}{G_n^{i\to j}}\to1,
+G_n^{j\to i}\to\infty
+\quad P_j\text{-a.s.},
 \]
 
-so
+and
+
+\[
+\frac{M_n^{j\to i}}{G_n^{j\to i}}
+\to0
+\quad P_j\text{-a.s.}
+\]
+
+Then the likelihood-ratio sign decision is strongly consistent.
+
+#### Proof
+
+Under `H_i`,
+
+\[
+\frac{L_n^{i\to j}}{G_n^{i\to j}}
+=
+1+
+\frac{M_n^{i\to j}}{G_n^{i\to j}}
+\to1
+\quad P_i\text{-a.s.},
+\]
+
+and `G_n^{i->j} -> infinity`, so
 
 \[
 L_n^{i\to j}\to+\infty
 \quad P_i\text{-a.s.}
 \]
 
-Require the corresponding reverse conditions under `H_j`; then the same log-likelihood ratio tends to `-infinity` under `H_j` and the likelihood-ratio decision is consistent.
-
-The theorem is elementary once the pathwise assumptions are supplied. The technical research question is to identify the weakest useful conditions implying
+Under `H_j`, the corresponding argument gives
 
 \[
-M_n/G_n\to0.
+L_n^{j\to i}\to+\infty
+\quad P_j\text{-a.s.}
 \]
 
-Martingale strong laws, conditional variance control, and likelihood-process methods are candidate machinery.
+When the two likelihood ratios are mutually well-defined,
 
-### T12e.4 — Finite-horizon timely adjudication
+\[
+L_n^{j\to i}=-L_n^{i\to j},
+\]
 
-For a consequence-relevant horizon `H`, define directed future predictable information
+so
+
+\[
+L_n^{i\to j}\to-\infty
+\quad P_j\text{-a.s.}
+\]
+
+Hence the decision
+
+\[
+\phi_n=
+\begin{cases}
+i,&L_n^{i\to j}\ge0,\\
+j,&L_n^{i\to j}<0
+\end{cases}
+\]
+
+is eventually correct almost surely under either hypothesis. In particular,
+
+\[
+P_i(\phi_n=j\ \text{i.o.})=0,
+\qquad
+P_j(\phi_n=i\ \text{i.o.})=0.
+\]
+
+Therefore both ordinary error probabilities tend to zero. `QED`
+
+The foundational theorem intentionally leaves `M_n/G_n -> 0` as an assumption. Bounded-increment, predictable-variance, sub-Gaussian, sub-exponential, or self-normalized conditions belong in separate corollaries.
+
+---
+
+### T12e.4a — Terminal Finite-Horizon Adjudication Sufficiency
+
+**Status:** `PROVED_UNDER_EXPLICIT_FREEDMAN_CONDITIONS`.
+
+This theorem concerns a **terminal** decision at `t+H`. It does not authorize commitment at arbitrary intermediate times.
+
+Fix a current time `t` and condition on the full current filtration `F_t`. If a particular model assumes that `S_t` is sufficient for the future conditional experiment law, `F_t` may then be replaced by `S_t` as a corollary.
+
+For the forward direction define
 
 \[
 G_{t,H}^{i\to j}
 =
 \sum_{k=1}^{H}
-D_{\mathrm{KL}}
-(Q_i^{A_{t+k}}\Vert Q_j^{A_{t+k}}),
+g_{t+k}^{i\to j},
 \]
 
-and analogously `G_{t,H}^{j->i}`.
+\[
+M_{t,H}^{i\to j}
+=
+\sum_{k=1}^{H}
+(\ell_{t+k}^{i\to j}-g_{t+k}^{i\to j}),
+\]
 
-A strong prospective condition under `H_i` is
+and
+
+\[
+L_{t,H}^{i\to j}
+=
+G_{t,H}^{i\to j}+M_{t,H}^{i\to j}.
+\]
+
+Assume under `H_i`, almost surely conditional on `F_t`:
+
+1. high-probability predictable information:
+   \[
+   P_i\left(
+   G_{t,H}^{i\to j}\ge\beta_i
+   \mid\mathcal F_t
+   \right)
+   \ge1-\xi_i;
+   \]
+2. centered increments
+   \[
+   X_{t+k}^{i\to j}
+   :=\ell_{t+k}^{i\to j}-g_{t+k}^{i\to j}
+   \]
+   satisfy `|X_{t+k}^{i->j}| <= b_i`;
+3. the predictable quadratic variation over the window satisfies
+   \[
+   V_{t,H}^{i\to j}
+   :=
+   \sum_{k=1}^{H}
+   \mathbb E_i\left[
+   (X_{t+k}^{i\to j})^2
+   \mid\mathcal G_{t+k}
+   \right]
+   \le v_i.
+   \]
+
+Consider the conditional window likelihood-ratio test with zero threshold:
+
+\[
+\widehat H_{t+H}
+=
+\begin{cases}
+i,&L_{t,H}^{i\to j}\ge0,\\
+j,&L_{t,H}^{i\to j}<0.
+\end{cases}
+\]
+
+Then
 
 \[
 \boxed{
-P_i
-\left(
-G_{t,H}^{i\to j}\ge\beta_i
-\mid\mathfrak S_t
-\right)
-\ge1-\xi_i.
+P_i(
+\widehat H_{t+H}=j
+\mid\mathcal F_t)
+\le
+\xi_i+
+\exp\left[
+-\frac{\beta_i^2}
+{2(v_i+b_i\beta_i/3)}
+\right].
 }
 \]
 
-The reverse direction requires its own `(beta_j,xi_j)` because KL is asymmetric.
+#### Proof
 
-Let the centered increments over the window satisfy a usable martingale concentration condition; for example, assume
+On the event `G_{t,H}^{i->j} >= beta_i`, a terminal error requires
 
 \[
-|\ell_{t+k}^{i\to j}-g_{t+k}^{i\to j}|\le b_i
+L_{t,H}^{i\to j}<0,
 \]
 
-and conditional variance process at most `v_i`. A Freedman-type lower-tail bound then gives the schematic error control
+hence
 
 \[
-P_i(\text{choose }j\text{ by }t+H)
+M_{t,H}^{i\to j}< -G_{t,H}^{i\to j}\le-\beta_i.
+\]
+
+Therefore, by a union bound,
+
+\[
+P_i(\widehat H_{t+H}=j\mid\mathcal F_t)
 \le
-\xi_i
+P_i(G_{t,H}^{i\to j}<\beta_i\mid\mathcal F_t)
 +
-\exp\left(
--\frac{\beta_i^2}{2(v_i+b_i\beta_i/3)}
-\right),
+P_i(M_{t,H}^{i\to j}\le-\beta_i\mid\mathcal F_t).
 \]
 
-with an analogous bound under `H_j`.
+The first term is at most `xi_i`. Applying the lower-tail form of Freedman's inequality to the bounded martingale differences gives
 
-The constants and minimal conditions are theorem work; the structural point is fixed:
+\[
+P_i(M_{t,H}^{i\to j}\le-\beta_i\mid\mathcal F_t)
+\le
+\exp\left[
+-\frac{\beta_i^2}
+{2(v_i+b_i\beta_i/3)}
+\right].
+\]
 
-```text
-high expected information alone is insufficient
-high-probability predictable information alone is insufficient without realization control
-high-probability predictable information + likelihood concentration gives a deadline-error guarantee
-```
+Combining the two terms proves the claim. `QED`
 
-### T12e.5 — Path-law separation is the target property
+The reverse direction is **not** hidden in symmetry. Assume separately under `H_j` corresponding constants `(beta_j,xi_j,b_j,v_j)` for `G_{t,H}^{j->i}` and its martingale differences. Then
 
-KL is sufficient machinery, not the final primitive.
+\[
+\boxed{
+P_j(
+\widehat H_{t+H}=i
+\mid\mathcal F_t)
+\le
+\xi_j+
+\exp\left[
+-\frac{\beta_j^2}
+{2(v_j+b_j\beta_j/3)}
+\right].
+}
+\]
 
-For equal-prior binary testing, define the finite-window conditional path-law separation
+If both directed upper bounds are at most `delta`, the pair is terminally `(H,delta)`-adjudicable from time `t` under these sufficient conditions.
+
+For nonzero prior log-odds or another terminal decision threshold, the proof carries through with the corresponding threshold shift; the zero-threshold statement is the clean equal-prior/window-likelihood form.
+
+---
+
+### T12e.4b — Anytime Finite-Horizon Adjudication
+
+**Status:** `OPEN`.
+
+A terminal guarantee does not control a procedure allowed to make an irrevocable attribution at an arbitrary intermediate time `t+1,...,t+H`.
+
+The relevant bad event is pathwise, for example
+
+\[
+\left\{
+\exists k\le H:
+L_{t,k}^{i\to j}\le c_k
+\right\},
+\]
+
+for a sequential decision boundary `c_k`.
+
+A single-terminal-time Freedman application is insufficient. Candidate machinery includes Ville-type likelihood bounds, test martingales, mixture martingales, maximal martingale inequalities, and confidence-sequence boundaries.
+
+The permanent distinction is
+
+\[
+\boxed{
+\text{correct at the deadline}
+\neq
+\text{safe to commit at every time before the deadline}.
+}
+\]
+
+---
+
+### T12e.5 — Sharp Path-Law Separation Characterization
+
+**Status:** `OPEN`.
+
+KL is accounting and sufficient machinery, not the final adjudication property.
+
+Condition on the current history `F_t` and let
+
+\[
+P_{i,t:H}^{\pi}
+\quad\text{and}\quad
+P_{j,t:H}^{\pi}
+\]
+
+be the two conditional future path laws over the next `H` adaptive action-observation steps.
+
+Define terminal finite-horizon separation by total variation:
 
 \[
 \boxed{
 \mathsf{Sep}_{t,H}(i,j)
 =
 \left\|
-P_i^{\pi,t:t+H}
+P_{i,t:H}^{\pi}
 -
-P_j^{\pi,t:t+H}
+P_{j,t:H}^{\pi}
 \right\|_{\mathrm{TV}}.
 }
 \]
 
-The optimal equal-prior binary error is
+For equal-prior binary testing of these two conditional path laws,
 
 \[
 P_e^\star
 =
-\frac12(1-\mathsf{Sep}_{t,H}).
+\frac12
+\left(1-\mathsf{Sep}_{t,H}(i,j)\right).
 \]
 
-Therefore the sharp target condition for error at most `delta` is
+Therefore the sharp terminal target for Bayes error at most `delta` is
 
 \[
 \boxed{
 \mathsf{Sep}_{t,H}(i,j)
-\ge
-1-2\delta.
+\ge1-2\delta.
 }
 \]
 
-Total variation / Hellinger path-process machinery is therefore the natural target for a sharp characterization. Predictable KL plus martingale concentration is a tractable sufficient route to that target.
+The open work is to characterize this separation sharply for adaptive filtered experiments, likely using total variation, Hellinger affinity/processes, likelihood processes, or equivalent sequential-statistical objects.
+
+Predictable KL plus concentration is one tractable sufficient route. It is not the target property itself.
 
 ---
 
-## 12. Current mathematical chain
+## 12. Current Mathematical Chain
 
-The current separation is:
+The frozen separation is
 
 \[
 \boxed{
@@ -883,57 +1227,80 @@ G_n
 \not\Rightarrow
 L_n
 \not\Rightarrow
-H_{\rm identify}<H_{\rm consequence}.
+\mathsf{Sep}_{t,H}.
 }
 \]
 
 In words:
 
 ```text
-available information
+potential discriminating information
 !=
-mean information acquired under the policy
+expected path-space information under the policy
 !=
-reliably available predictable information on the realized action path
+predictable information on the realized adaptive action path
 !=
 realized likelihood evidence
 !=
-timely identification
+finite-horizon statistical separation
 ```
 
-This is the mathematical version of the empirical distinctions accumulated across PCE/CSD/MAB-OS:
+The strongest negative currently proved in this chain is
 
-```text
-availability
-!=
-diagnostic information
-!=
-realized evidence
-!=
-warranted timely attribution
-```
+\[
+\boxed{
+K_n^{i\to j}\to\infty
+\;\land\;
+K_n^{j\to i}\to\infty
+\not\Rightarrow
+\text{consistent discrimination}.
+}
+\]
 
-No empirical result is upgraded by this analogy.
+This is the mathematical analogue of the empirical distinctions accumulated across PCE/CSD/MAB-OS, but it does not upgrade those empirical claims.
+
+The methodological rule is:
+
+\[
+\boxed{
+\begin{aligned}
+K_n &: \text{information accounting},\\
+L_n &: \text{realized evidence},\\
+\mathsf{Sep} &: \text{adjudication property},\\
+\mathsf{Sep}_{t,H}\text{ before the deadline} &: \text{corrigibility property}.
+\end{aligned}
+}
+\]
 
 ---
 
-## 13. Immediate proof program
+## 13. Theorem Status and Immediate Proof Frontier
 
-The next work is deliberately narrow:
+| Result | Status | Scope |
+| --- | --- | --- |
+| `T12a` | **PROVED** | adaptive path-KL identity under stated kernel/absolute-continuity conditions |
+| `T12b` | **CLASSICAL MACHINERY** | Fano/pairwise-KL lower bound specialized to adaptive path laws |
+| `T12c` | **PROVED EXISTENCE COUNTEREXAMPLE** | richer empirical coverage can induce lower identifying information under a class-dependent policy |
+| `T12d` | **OPEN** | robustness under natural policy classes |
+| `T12e.1` | **PROVED** | vanishing two-sided testing error requires both directed path KLs to diverge |
+| `T12e.2` | **PROVED COUNTEREXAMPLE** | both directed expected path KLs can diverge while consistent testing remains impossible |
+| `T12e.3` | **PROVED UNDER CONDITIONS** | pathwise predictable divergence plus relative-noise control gives strong consistency |
+| `T12e.4a` | **PROVED UNDER FREEDMAN CONDITIONS** | terminal finite-horizon sufficient error bound |
+| `T12e.4b` | **OPEN** | anytime finite-horizon adjudication |
+| `T12e.5` | **OPEN** | sharp TV/Hellinger/path-process characterization |
+
+The next proof effort is deliberately restricted to:
 
 ```text
-T12e.1  formal proof with exact filtration / absolute-continuity assumptions
-T12e.2  verify rare-event counterexample and both directed divergences
-T12e.3  prove useful martingale sufficient conditions for M_n/G_n -> 0
-T12e.4  derive rigorous finite-window error bounds and identify which assumptions are dispensable
-T12e.5  seek a sharper TV / Hellinger-process characterization
+T12e.4b  derive an anytime finite-horizon guarantee with explicit sequential boundaries
+T12e.5   identify the sharp path-law separation characterization
 ```
 
-Only after T12e is stable should T13 return to refinement construction / empirical re-entry.
+`T13` remains closed until these questions are resolved or produce a counterexample requiring revision.
 
 ---
 
-## 14. Claim ceiling and open boundary
+## 14. Claim Ceiling and Open Boundary
 
 This document does **not** establish:
 
@@ -942,14 +1309,15 @@ a universal theory of scientific discovery
 a universal creativity mechanism
 a fourth adaptive control surface
 a universal scalar objective
-that KL is the correct final notion of challengeability
+that KL is the final notion of challengeability
 that richer refinement classes generally self-seal
 that T12c survives natural policy classes
 that model-class inadequacy identifies representation failure
 that boundary pressure contains the successor representation
+that terminal correctness implies anytime-safe authority transfer
 ```
 
-The hardest open arrow remains:
+The hardest open construction arrow remains
 
 \[
 \boxed{
@@ -961,11 +1329,11 @@ The hardest open arrow remains:
 }
 \]
 
-The present theorem program only asks which assumptions make that search scientifically adjudicable after a candidate is proposed.
+That arrow is intentionally not being worked while T12e.4b/e.5 remain open.
 
 ---
 
-## 15. Frozen field-level description
+## 15. Frozen Field-Level Description
 
 > **Adaptive empirical model revision under endogenous measurement selection and evidence-constrained causal authority.**
 
@@ -981,6 +1349,8 @@ compress
 -> remain challengeable
 ```
 
-with the current theorem-level meaning of the last clause:
+The current theorem-compatible meaning of the last clause is:
 
-> **Every unresolved consequential distinction must retain a high-probability path to sufficient statistical separation before its consequence-relevant deadline.**
+> **Every unresolved consequential distinction must retain a high-probability route to sufficient statistical separation before its consequence-relevant deadline.**
+
+The conceptual phase is frozen. New authority at this layer now comes from proofs, counterexamples, or explicit failure of the stated assumptions.
