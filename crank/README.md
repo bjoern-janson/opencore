@@ -18,6 +18,8 @@
 | [`T13_2_CONSTRUCTIVE_REACHABILITY.md`](T13_2_CONSTRUCTIVE_REACHABILITY.md) | T13.2 proof: finite-horizon, eventual, and timely reachability of a fixed nonempty adequate refinement region |
 | [`T13_3_SELECTION_AWARE_REENTRY.md`](T13_3_SELECTION_AWARE_REENTRY.md) | T13.3 proof: selected-candidate conditional calibration, fresh/post-selection/sequential re-entry routes, and multiplicity inflation boundary |
 | [`T13_4_SELF_VALIDATION_FIREWALL.md`](T13_4_SELF_VALIDATION_FIREWALL.md) | T13.4 counterexample: adaptive discovery fit cannot be reused as selection-naive validation |
+| [`T13_5_BOUNDARY_EXPANSION_SUFFICIENCY.md`](T13_5_BOUNDARY_EXPANSION_SUFFICIENCY.md) | T13.5 synthesis: bounded-risk timely re-entry from attainable refinement through selection-aware CWC |
+| [`ADAPTIVE_COARSE_GRAINING_PROOF_INDEX.md`](ADAPTIVE_COARSE_GRAINING_PROOF_INDEX.md) | Living post-freeze proof index for C1/C2/C4/C3 and T13.5 closure |
 | [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the theorem-development record |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
 | [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
@@ -295,9 +297,9 @@ The theorem-compatible invariant is:
 
 See [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) for the proofs and the exact scope correction to T12e.5.
 
-## T13 — boundary-expansion proof frontier
+## T13 — boundary-expansion proof closure
 
-T13 is open only as a mathematical boundary-expansion program. No construction experiment or new permanent control surface is authorized.
+T13 is closed at the intended proof-first mathematical scope. No representation-invention implementation, construction experiment, or new permanent control surface is authorized by this closure.
 
 Current proof status:
 
@@ -306,7 +308,7 @@ T13.1  coverage / attainability boundary              PROVED
 T13.2  constructive reachability                      PROVED AT STATED SCOPES
 T13.3  selection-aware empirical re-entry             PROVED AT STATED SCOPES
 T13.4  selection-naive self-validation firewall       PROVED COUNTEREXAMPLE
-T13.5  sufficient boundary-expansion / re-entry       NEXT
+T13.5  bounded-risk boundary-expansion synthesis       PROVED AT STATED SCOPE
 ```
 
 T13.1 establishes the exact tolerance boundary:
@@ -401,17 +403,35 @@ selected discovery fit
 selection-aware validation
 ```
 
-The boundary-expansion chain is now:
+T13.5 composes the earned gates. For an attainable adequate region `B = R*_epsilon`, a repair checkpoint `n < H`, repair miss risk `delta_R`, and conditional selection-aware CWC error `delta_A`, it proves under each member of the unresolved pair:
 
 ```text
-coverage
--> constructive reachability
--> selection-aware valid evidence
--> fresh CWC
--> scoped authority
+P(boundary-expansion failure by H | F_tau)
+<= delta_R + (1-delta_R) delta_A
 ```
 
-The next proof target is T13.5 only: compose T13.1 attainability, T13.2 reachability, T13.3 selection-aware re-entry, and the already-frozen `CWC` certificate into the minimal sufficient boundary-expansion theorem.
+or equivalently:
+
+```text
+P(adequate refinement reached and correctly adjudicated by H | F_tau)
+>= (1-delta_R)(1-delta_A)
+```
+
+The target is a nonempty adequate region, not a unique refinement identity. Region membership is an analytic property relative to `P*`; it is not a learner-visible authorization certificate.
+
+The final boundary-expansion chain is:
+
+```text
+coverage / attainability
+-> timely constructive reachability
+-> selection-aware valid evidence
+-> fresh CWC
+-> existing scoped authority rule
+```
+
+The C2 obstruction remains active: if the repaired represented path laws remain identical through the deadline, nontrivial CWC is impossible. T13.4 remains the firewall against selection-naive self-validation.
+
+No authority follows merely from candidate generation or region entry.
 
 ## Research posture
 
