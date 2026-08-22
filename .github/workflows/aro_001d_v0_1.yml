@@ -1,0 +1,48 @@
+name: ARO-001d v0.1 frozen execution
+
+on:
+  pull_request:
+    paths:
+      - 'crank/ARO_001D_FIXED_CONTINUATION_VOI_FREEZE_V0_1.md'
+      - 'crank/aro_001/run_001d_v0_1.py'
+      - '.github/workflows/aro_001d_v0_1.yml'
+
+jobs:
+  run-frozen-assay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout frozen branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install frozen runtime dependency
+        run: pip install numpy
+
+      - name: Execute frozen ARO-001d assay
+        run: |
+          mkdir -p crank/results
+          python crank/aro_001/run_001d_v0_1.py > crank/results/ARO_001D_V0_1_RESULT.json
+
+      - name: Validate JSON output
+        run: |
+          python - <<'PY'
+          import json
+          p='crank/results/ARO_001D_V0_1_RESULT.json'
+          with open(p, 'r', encoding='utf-8') as f:
+              data=json.load(f)
+          assert data['status']=='RUN_COMPLETE'
+          assert data['protocol']=='ARO_001D_FIXED_CONTINUATION_VOI_V0_1'
+          print(json.dumps(data['curve_metrics'], indent=2, sort_keys=True))
+          print(json.dumps(data['gates'], indent=2, sort_keys=True))
+          PY
+
+      - name: Upload frozen result artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aro-001d-v0-1-result
+          path: crank/results/ARO_001D_V0_1_RESULT.json
+          if-no-files-found: error
