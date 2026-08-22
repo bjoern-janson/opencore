@@ -12,8 +12,8 @@
 
 | Document | Purpose |
 | --- | --- |
-| [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact research boundary |
-| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Candidate mathematical core and current T1-T12e theorem frontier; adds no empirical authority |
+| [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact empirical research boundary |
+| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Candidate mathematical core, proved/counterexample status, and open T12e proof frontier; adds no empirical authority |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
 | [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
 | [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Frozen post-negative archaeology |
@@ -38,7 +38,7 @@ PCE-001  show persistent state can constrict exposure
 MAB-OS   supply native method reliance
 ```
 
-The unresolved operator is:
+The unresolved empirical operator is:
 
 ```text
 observed failure
@@ -47,7 +47,7 @@ observed failure
 -> method reliance
 ```
 
-The active question is:
+The active empirical question is:
 
 > **When memory changes what a learner gets to observe, can it distinguish “my current answer is failing” from “my way of learning is failing”?**
 
@@ -97,7 +97,7 @@ diagnostic information
 warranted attribution
 ```
 
-The next gate is not another selector run. It is a new world-pair certification requiring:
+The next empirical gate is not another selector run. It is a new world-pair certification requiring:
 
 ```text
 G1  focal-method adequacy differs
@@ -159,7 +159,15 @@ NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
 
 ## Mathematical core frontier
 
-The current candidate mathematical core is deliberately separated from the frozen empirical lineage.
+The mathematical layer is explicitly quarantined from empirical authority:
+
+```text
+mathematical statement
+!=
+proved theorem
+!=
+empirical result
+```
 
 Adaptive state:
 
@@ -177,16 +185,16 @@ Gamma  what identified evidence is allowed to change
 
 Current theorem-level invariant:
 
-> **Every unresolved consequential distinction must retain a high-probability path to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that evidence has not identified.**
+> **Every unresolved consequential distinction must retain a high-probability route to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that evidence has not identified.**
 
-Current mathematical separation:
+Frozen mathematical hierarchy:
 
 ```text
-I*     available discriminating information
-K_n    mean path information acquired under the endogenous policy
-G_n    predictable information on the realized action path
-L_n    realized likelihood evidence
-H_id   identification latency
+I*          potential discriminating information
+K_n         expected path-space information under the endogenous policy
+G_n         predictable information on the realized adaptive action path
+L_n         realized likelihood evidence
+Sep_{t,H}   finite-horizon statistical path-law separation
 ```
 
 and:
@@ -200,10 +208,54 @@ G_n
 !=
 L_n
 !=
-timely identification
+Sep_{t,H}
 ```
 
-The active theorem program is T12e: prove the exact assumptions under which adaptive filtered experiments move from expected information to reliable finite-horizon path-law separation. KL is accounting/sufficient machinery; total variation / Hellinger path separation is the target property.
+The strongest current theorem-level negative is:
+
+```text
+K_n(i->j) -> infinity
+and
+K_n(j->i) -> infinity
+
+does not imply
+
+consistent discrimination
+```
+
+The theorem-status boundary is:
+
+```text
+T12a     PROVED
+T12b     CLASSICAL MACHINERY specialized to adaptive path laws
+T12c     PROVED EXISTENCE COUNTEREXAMPLE; not a robust policy theorem
+T12d     OPEN
+T12e.1   PROVED
+T12e.2   PROVED COUNTEREXAMPLE
+T12e.3   PROVED UNDER STATED CONDITIONS
+T12e.4a  PROVED UNDER EXPLICIT FREEDMAN CONDITIONS; terminal only
+T12e.4b  OPEN; anytime finite-horizon adjudication
+T12e.5   OPEN; sharp TV/Hellinger/path-process characterization
+```
+
+Methodological rule:
+
+```text
+K_n                information accounting
+L_n                realized evidence
+path-law separation adjudication property
+timely separation   corrigibility property
+```
+
+Terminal and anytime authority remain distinct:
+
+```text
+correct at the deadline
+!=
+safe to commit at every time before the deadline
+```
+
+The active mathematical work is now restricted to `T12e.4b` and `T12e.5`. `T13` remains closed.
 
 See [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md).
 
@@ -224,6 +276,6 @@ Current empirical rule:
 
 Current mathematical rule:
 
-> **Do not equate available information, expected acquired information, realized evidence, or timely adjudication.**
+> **Do not upgrade potential information, expected information, or realized likelihood into a corrigibility claim without finite-horizon path-law separation.**
 
 No new architecture, trust variable, procedure-failure label, outer supervisor, or Nano version is authorized.
