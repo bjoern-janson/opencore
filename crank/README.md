@@ -13,6 +13,7 @@
 | Document | Purpose |
 | --- | --- |
 | [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact research boundary |
+| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Candidate mathematical core and current T1-T12e theorem frontier; adds no empirical authority |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
 | [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
 | [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Frozen post-negative archaeology |
@@ -156,6 +157,56 @@ Post-negative archaeology:
 NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
 ```
 
+## Mathematical core frontier
+
+The current candidate mathematical core is deliberately separated from the frozen empirical lineage.
+
+Adaptive state:
+
+```text
+S_t = (Pi_t, pi_t, Gamma_t, H_t)
+```
+
+with three adaptive surfaces:
+
+```text
+Pi     what distinctions the system can represent
+pi     which experiments / evidence it actually reaches
+Gamma  what identified evidence is allowed to change
+```
+
+Current theorem-level invariant:
+
+> **Every unresolved consequential distinction must retain a high-probability path to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that evidence has not identified.**
+
+Current mathematical separation:
+
+```text
+I*     available discriminating information
+K_n    mean path information acquired under the endogenous policy
+G_n    predictable information on the realized action path
+L_n    realized likelihood evidence
+H_id   identification latency
+```
+
+and:
+
+```text
+I*
+!=
+K_n
+!=
+G_n
+!=
+L_n
+!=
+timely identification
+```
+
+The active theorem program is T12e: prove the exact assumptions under which adaptive filtered experiments move from expected information to reliable finite-horizon path-law separation. KL is accounting/sufficient machinery; total variation / Hellinger path separation is the target property.
+
+See [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md).
+
 ## Research posture
 
 ```text
@@ -167,8 +218,12 @@ smallest discriminating assay
 -> revise only what failed
 ```
 
-Current rule:
+Current empirical rule:
 
 > **A diagnostic intervention must make the competing hypotheses distinguishable through the evidence it actually delivers to the system.**
+
+Current mathematical rule:
+
+> **Do not equate available information, expected acquired information, realized evidence, or timely adjudication.**
 
 No new architecture, trust variable, procedure-failure label, outer supervisor, or Nano version is authorized.
