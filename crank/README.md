@@ -15,6 +15,7 @@
 | [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact empirical research boundary |
 | [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) | Mathematical Core v0.1 proof closure for anytime adjudication and sharp terminal path-law testing |
 | [`T13_1_COVERAGE_OBSTRUCTION.md`](T13_1_COVERAGE_OBSTRUCTION.md) | T13.1 proof: coverage infimum, attainable target regions, and closure-only obstruction |
+| [`T13_2_CONSTRUCTIVE_REACHABILITY.md`](T13_2_CONSTRUCTIVE_REACHABILITY.md) | T13.2 proof: finite-horizon, eventual, and timely reachability of a fixed nonempty adequate refinement region |
 | [`T13_4_SELF_VALIDATION_FIREWALL.md`](T13_4_SELF_VALIDATION_FIREWALL.md) | T13.4 counterexample: adaptive discovery fit cannot be reused as selection-naive validation |
 | [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the theorem-development record |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
@@ -295,14 +296,14 @@ See [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) for the proofs an
 
 ## T13 — boundary-expansion proof frontier
 
-T13 is now open only as a mathematical boundary-expansion program. No construction experiment or new permanent control surface is authorized.
+T13 is open only as a mathematical boundary-expansion program. No construction experiment or new permanent control surface is authorized.
 
 Current proof status:
 
 ```text
 T13.1  coverage / attainability boundary              PROVED
-T13.2  constructive reachability                      NEXT
-T13.3  selection-aware empirical re-entry             OPEN
+T13.2  constructive reachability                      PROVED AT STATED SCOPES
+T13.3  selection-aware empirical re-entry             NEXT
 T13.4  selection-naive self-validation firewall       PROVED COUNTEREXAMPLE
 T13.5  sufficient boundary-expansion / re-entry       OPEN
 ```
@@ -323,6 +324,42 @@ empirical closure
 attainability at the boundary tolerance
 ```
 
+T13.2 fixes a nonempty target region and defines first-hit time `T`. With
+
+```text
+q_k = P(r_k in R*_epsilon | F_{k-1})
+H_n = sum_{k<=n} 1_{T>k-1} q_k
+```
+
+the pre-hit hazard supermartingale yields:
+
+```text
+H_n >= c_n on {T>n}
+->
+P(T>n) <= exp(-c_n)
+```
+
+and the structural eventual-reachability result:
+
+```text
+T = infinity
+->
+H_infinity < infinity
+almost surely
+```
+
+Therefore divergent cumulative target mass along every pre-hit path is sufficient for almost-sure construction, with no conditional-independence assumption. The negative boundaries are:
+
+```text
+positive proposal support
+!=
+eventual constructive reachability
+
+eventual constructive reachability
+!=
+timely constructive reachability
+```
+
 T13.4 independently establishes:
 
 ```text
@@ -341,13 +378,7 @@ coverage
 -> scoped authority
 ```
 
-The next proof target is T13.2. It must operate on an explicit nonempty target region
-
-```text
-R*_epsilon = {r : rho(P*,Q_r) <= epsilon}
-```
-
-rather than treating the scalar coverage infimum as if it were a constructible candidate.
+The next proof target is T13.3: characterize authorization evidence whose calibration remains valid after conditioning on the adaptive selection mechanism that produced the candidate.
 
 ## Research posture
 
