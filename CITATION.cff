@@ -1,11 +1,9 @@
 cff-version: 1.2.0
-message: "If you use the OpenCore crank experiments, please cite this experimental branch separately from the formal OpenCore repository."
-title: "OpenCore Crank Experimental Lineage — PCE-001"
+message: "If you use OpenCore, please cite this repository."
+title: "OpenCore"
 type: software
 authors:
   - family-names: "bjarki"
-version: "PCE-001"
-date-released: 2026-08-21
-repository-code: "https://github.com/bjoern-janson/opencore/tree/opencore/pce-001"
-url: "https://github.com/bjoern-janson/opencore/tree/opencore/pce-001"
+repository-code: "https://github.com/bjoern-janson/opencore"
+url: "https://github.com/bjoern-janson/opencore"
 license: MIT
