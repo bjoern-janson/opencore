@@ -2,29 +2,38 @@
 
 ## Status
 
-**Candidate common explanatory structure. Not a theorem. Not a promoted OpenCore primitive.**
+**Candidate explanatory compression. Not a theorem. Not a promoted OpenCore primitive.**
 
-Multiple independently constructed crank failures can currently be compressed into two opposing transition defects.
+The older crank lineage could often be compressed into two opposing transition defects:
 
-## 1. The transition, not only the state
+```text
+premature quotient
+unauthorized refinement
+```
 
-Suppose an adaptive system moves from one epistemic state to another:
+FOREIGN-007, Blitzcrank, and PCE-001 now impose an important boundary on that compression: a system can preserve the relevant distinction and avoid unearned authority while still suppressing the policy route required to encounter corrective evidence.
+
+Therefore the two-sided transition invariant remains useful locally but is no longer treated as a candidate universal taxonomy of OpenCore failure.
+
+## 1. Transition correctness is distinct from state correctness
+
+Suppose an adaptive system moves:
 
 ```text
 X_i -> X_{i+1}
 ```
 
-The crank experiments suggest that state correctness and transition correctness are different questions.
-
 A datum can be true while the transition that promotes it is invalid.
 
 A model can be locally supported while the transition that closes challenge is unauthorized.
 
-A capability can be authentic while its preconditions no longer hold at execution.
+A capability can be authentic while its preconditions no longer hold.
+
+And, after the topology/exposure line, a persistent state can remain locally valid while its induced future policy suppresses the observations required to test whether that state should remain valid.
 
 ## 2. Premature quotient
 
-A transition merges states that future correction may still need to distinguish.
+A transition merges states that future correction still needs to distinguish.
 
 Conceptually:
 
@@ -34,15 +43,25 @@ but
 T(x) = T(y)
 ```
 
-Examples from the current lineage:
+Examples:
 
 - aliased observation interfaces;
 - over-generalizing one rule across contexts with different laws;
-- treating historical authorization as equivalent to current authorization;
-- allowing descendants to remain effective after a warrant ancestor loses authority;
-- discarding a distinction needed for later challenge or reconciliation.
+- apparatus identity that collapses future-distinct acquisition histories;
+- persistence identity that allows wrong cross-history warrant reuse;
+- destructive forgetting of substrate required for a later interface.
 
 The common failure is loss of correction-relevant resolution.
+
+FOREIGN-004 is the required negative control: some genuinely different histories can be safely quotiented over a frozen future-consequence surface.
+
+Therefore:
+
+```text
+historical difference
+!=
+automatic persistence distinction
+```
 
 ## 3. Unauthorized refinement
 
@@ -62,24 +81,105 @@ Examples:
 prediction -> observation authority
 correlated reports -> independent corrective paths
 closure authority -> applicability
-selected clean reports -> evidence with warrant of a different acquisition protocol
+selected reports -> evidence with warrant of an incompatible acquisition protocol
+refutation -> automatic replacement authority
 ```
 
-No false payload is required. The failure may be entirely in the role assigned downstream.
+No false payload is required. The failure may be entirely in the epistemic role or authority assigned downstream.
 
-## 4. Two-sided candidate rule
+## 4. The old two-sided candidate rule
 
-A compact candidate requirement is:
+The earlier compact candidate was:
 
 > **An adaptive transition should neither erase distinctions still required for correction nor manufacture epistemic authority not supplied by its warrant.**
 
-The Nano-facing operational form is deliberately weaker and more mechanical:
+This remains useful for many representation and authority wounds.
+
+Nano's weaker mechanical form remains:
 
 > **Don't write beyond your effect capability. Don't erase beyond your preservation capability.**
 
-Nano does not know which distinctions *should* matter. Those obligations are constituted externally in V0.
+Nano does not know which distinctions should matter.
 
-## 5. Why composition is the adversary
+## 5. New independent pressure: exposure foreclosure
+
+FOREIGN-007 establishes a different geometry.
+
+At the moment of failure:
+
+```text
+D_t^Pi != empty
+```
+
+so the relevant discrimination survives representation.
+
+The physically available challenge also remains present:
+
+```text
+D_t^Pi intersect A_available != empty
+```
+
+But policy support removes it:
+
+```text
+D_t^Pi intersect support(pi_t) = empty
+```
+
+No new false authority needs to be created. No additional quotient need occur at the moment of failure.
+
+The wound is:
+
+```text
+persistent / effective state
+-> policy
+-> corrective exposure suppressed
+```
+
+Blitzcrank shows this geometry can emerge through ordinary learned value.
+
+PCE-001 then directly intervenes on the exposure edge and changes correction dynamics in the prospectively predicted direction.
+
+Therefore:
+
+```text
+premature quotient / unauthorized refinement
+```
+
+is not currently sufficient to explain every important failure in the program.
+
+## 6. A broader current candidate family
+
+The current evidence suggests at least three distinguishable failure classes:
+
+```text
+1. resolution failure
+   correction-relevant distinction is destroyed or aliased
+
+2. authority-role failure
+   a distinction / role / authority is promoted beyond warrant
+
+3. exposure-topology failure
+   a surviving corrective distinction becomes unreachable or too weakly sampled
+```
+
+These classes can interact.
+
+For example:
+
+```text
+premature quotient
+-> simpler effective state
+-> policy contraction
+-> exposure foreclosure
+```
+
+as in FOREIGN-007.
+
+But PCE-001 shows the exposure edge deserves independent causal treatment rather than being defined away as merely another quotient.
+
+No universal three-part invariant is claimed.
+
+## 7. Composition remains an adversary
 
 Let:
 
@@ -88,77 +188,94 @@ T1: X -> Y
 T2: Y -> Z
 ```
 
-Both transitions may be locally valid.
-
-That does not establish:
+Both transitions may be locally valid without establishing:
 
 ```text
 Valid(T2 o T1)
 ```
 
-A particularly useful formulation is:
+Later lineage adds an even broader composition problem:
 
 ```text
-Post(T1) does not satisfy Pre(T2)
+valid persistent state
++
+valid policy update
++
+valid environment response
 ```
 
-The M2 × M4 acquisition/closure attack is the clearest example.
+still does not establish that the composed closed-loop trajectory preserves corrective exposure.
 
-The closure capability is authentic, but an intervening acquisition-policy transition changes the condition under which the closure certificate is licensed.
+Thus the arrows between components remain first-class scientific objects.
 
-Nano V0 therefore rechecks current preconditions at execution.
+## 8. Relation to reliable generalization
 
-## 6. Relation to reliable generalization
-
-A transfer relation can fail in both directions.
-
-### Over-merge
-
-Two contexts are treated as equivalent although different laws apply.
-
-This is a premature quotient.
-
-### Over-split
-
-Every novel context is treated as a distinct class without evidence that the distinction matters.
-
-This is an unauthorized refinement of the transfer partition.
-
-The desired object is therefore close to:
-
-> **the coarsest transfer relation currently warranted by evidence, while remaining open to correction.**
-
-This motivates the phrase:
+Transfer can fail through:
 
 ```text
-reliable generalization ~= warranted quotient construction
+over-merge
+    different laws treated as equivalent
+
+over-split
+    unsupported distinctions manufactured
+
+exposure foreclosure
+    a live transfer disagreement exists but the policy stops sampling contexts that would discriminate it
 ```
 
-but that remains a research target rather than an established result.
+A mature reliable-generalization theory would need to govern all three pressures.
 
-## 7. `DEFER` in this picture
+The current repository has not established such a theory.
 
-Across the crank experiments, `DEFER` repeatedly means that a requested collapse or promotion is not licensed yet.
+## 9. `DEFER` in this picture
 
-At the Nano layer specifically:
+At Nano:
 
 ```text
-DEFER = a required contract-visible proposition is not currently established
+DEFER = required contract-visible proposition not currently established
 ```
 
-At higher epistemic layers, a related behavior is:
+At higher epistemic layers, an analogous behavior may be:
 
-> preserve the unresolved distinction and seek discriminating evidence rather than forcing an unsupported merge or split.
+```text
+preserve unresolved distinction
+and seek discriminating consequence
+```
 
-This behavioral pattern may eventually deserve a more general abstraction. V0 does not promote one.
+But PCE-001 shows that merely declaring a challenge path conceptually live is not enough. The path must receive sufficient causal exposure.
 
-## 8. What would falsify or weaken this compression
+No general DEFER/exploration primitive is promoted.
 
-The candidate invariant should lose authority if independent failure classes repeatedly require explanations that do not reduce to either:
+## 10. Current causal chain
 
-- lost correction-relevant distinction; or
-- manufactured unearned distinction/authority.
+The current broader analysis frame is:
 
-Likewise, a smaller competing formulation should replace it if it predicts the same experimental failures with fewer assumptions.
+```text
+E_t
+-> Pi_t
+-> pi_t
+-> A_t
+-> O_{t+1}
+-> W_{t+1}
+-> E_{t+1}
+```
 
-The research program therefore should keep attacking from domains not designed around this vocabulary.
+Different failure families localize to different edges:
+
+```text
+Pi_t                 representation / quotient
+Pi_t -> pi_t         representation-policy coupling
+pi_t -> A_t          exposure selection
+O_t+1 -> W_t+1       recognition / epistemic role
+W_t+1 -> E_t+1       authority revision
+```
+
+This causal localization is currently more useful than forcing all failures into one invariant.
+
+## 11. What would restore or further weaken the old compression
+
+The premature-quotient / unauthorized-refinement pair should regain broader authority only if independent topology/exposure failures can be shown to reduce to those categories without loss of predictive or intervention value.
+
+It should lose further authority if new frozen assays identify additional failure mechanisms that remain independent after direct intervention.
+
+The project should therefore preserve the older compression as a useful historical hypothesis rather than rewriting PCE-001 into it after the fact.

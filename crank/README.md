@@ -1,360 +1,281 @@
 # OpenCore Crank
 
 > **Experimental lineage. Not the formal K0/E001 program.**
->
-> This directory is where OpenCore's deliberately breakable adaptive experiments live. The frozen formal branches and top-level K0/E001 documents are not amended by these crank experiments.
 
-## The idea in one sentence
+`crank/` contains OpenCore's deliberately breakable experiments and living synthesis. Frozen experimental artifacts remain authoritative and are not rewritten when the research framing improves.
 
-**OpenCore is testing whether a very small persistent computational world can let adaptive processes learn, revise, generalize, and self-correct without allowing every successful prediction, shortcut, or mistake to silently become durable authority.**
+## Current one-sentence description
 
-The current experimental split is:
-
-```text
-OpenCore Nano  -> tiny persistence substrate / transition checker
-OpenCore Mini  -> tiny adaptive organism / proposer
-OpenCore Base  -> shared authority-filtered world with heterogeneous local projections
-```
-
-The Nano/Mini/Base distinctions emerged experimentally rather than being imposed as a complete architecture in advance.
+**OpenCore asks whether a persistent learner whose memory also changes evidence exposure can correctly distinguish failure of its current answer from failure of the procedure that produced it.**
 
 ## Start here
 
 | Document | Purpose |
-|---|---|
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Nano, Mini, Base, and the organism/world split |
-| [`docs/EXPERIMENTAL_LINEAGE.md`](docs/EXPERIMENTAL_LINEAGE.md) | M1-M6, external attacks, R1, Nano, ablation, Base-001/002 |
-| [`docs/DEVELOPMENTAL_THEORY.md`](docs/DEVELOPMENTAL_THEORY.md) | Frozen systems-level hypothesis: corrective exposure and persistent authority |
-| [`docs/TRANSITION_INVARIANT.md`](docs/TRANSITION_INVARIANT.md) | Candidate common structure: premature quotient vs unauthorized refinement |
-| [`docs/RELIABLE_GENERALIZATION.md`](docs/RELIABLE_GENERALIZATION.md) | Warranted invariance / transfer-boundary program and R1 |
-| [`docs/RESEARCH_METHOD.md`](docs/RESEARCH_METHOD.md) | Crank-science discipline: build, attack, minimally repair, freeze |
-| [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) | What is supported, candidate, open, or explicitly not claimed |
-| [`NANO_V0.md`](NANO_V0.md) | Frozen Nano V0 scientific entry |
-| [`MINI_NANO_COMPOSITION_V0.md`](MINI_NANO_COMPOSITION_V0.md) | First constructed Mini × Nano composition result |
-| [`NANO_MINI_ABLATION_V0.md`](NANO_MINI_ABLATION_V0.md) | Subtractive decomposition of the Mini × Nano protection result |
-| [`BASE_001_SHARED_WORLD.md`](BASE_001_SHARED_WORLD.md) | Shared authority-filtered world across 12 heterogeneous local units |
-| [`BASE_002_GLOBAL_REOPENING.md`](BASE_002_GLOBAL_REOPENING.md) | Global reopening, replacement separation, and the guard/warrant wound |
-| [`NANO_GUARD_WARRANT_DISCRIMINATION_V0.md`](NANO_GUARD_WARRANT_DISCRIMINATION_V0.md) | GW-001 repair-discrimination assay for Base-002B's live wound |
-| [`FOREIGN_001_MASTERMIND.md`](FOREIGN_001_MASTERMIND.md) | First foreign pressure specimen: Mastermind representation/interface localization |
-| [`FOREIGN_002_RESTLESS_BANDIT.md`](FOREIGN_002_RESTLESS_BANDIT.md) | Foreign scarce-attention specimen: restless-bandit allocation pressure |
-| [`results/`](results/) | Raw decisive result snapshots |
+| --- | --- |
+| [`RESEARCH_FREEZE.md`](RESEARCH_FREEZE.md) | Canonical compact empirical research boundary |
+| [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Candidate mathematical core, proved/counterexample status, and open T12e proof frontier; adds no empirical authority |
+| [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
+| [`CSD_001.md`](CSD_001.md) | Frozen CSD apparatus and Mini target negative |
+| [`CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md`](CSD_001_PROCEDURE_ADEQUACY_ARCHAEOLOGY.md) | Frozen post-negative archaeology |
+| [`CORRECTIVE_EXPOSURE_LINEAGE.md`](CORRECTIVE_EXPOSURE_LINEAGE.md) | Blitzcrank -> PCE-001 causal exposure lineage |
+| [`docs/EXPERIMENTAL_LINEAGE.md`](docs/EXPERIMENTAL_LINEAGE.md) | Historical crank sequence |
+| [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) | Historical/living claim map; superseded where necessary by the current freeze |
+| [`results/README.md`](results/README.md) | Frozen result/artifact index |
 
-## Mini: the adaptive process
-
-[`mini.py`](mini.py) is intentionally tiny and wounded.
-
-It can learn simple affine rules, persist them, compose them, detect some contradictions, request further probes when a replacement is underdetermined, revise locally, and preserve unaffected commitments.
-
-The point of Mini is not to look generally intelligent. The point is to expose where apparently successful adaptive behavior still makes unjustified epistemic moves.
-
-A compressed trajectory is:
+## Canonical compact model
 
 ```text
-experience
-  -> candidate
-  -> commit
-  -> reuse
-  -> challenge
-  -> reopen
-  -> revise
-  -> alter some future closure behavior
+1. Preserve alternatives before authority.
+2. Preserve causal boundaries before attribution.
+3. Preserve independent, discriminating routes by which evidence can overturn confidence.
 ```
 
-Many critical distinctions in later experiments remain harness-supplied rather than autonomously discovered.
-
-## Nano: the persistence boundary
-
-[`nano.py`](nano.py) is not a learner.
-
-The frozen V0 mental model is:
+Witness roles:
 
 ```text
-OpenCore Nano = transition typechecker + append-only in-process journal
+AF3-OC   preserve the candidate/evidence surface
+PCE-001  show persistent state can constrict exposure
+MAB-OS   supply native method reliance
 ```
 
-Nano receives a current transition-visible state `S_t`, a proposed transition `T`, and an externally constituted license `L`:
+The unresolved empirical operator is:
 
 ```text
-(S_t, T, L) -> ALLOW | DENY | DEFER
+observed failure
+-> identifying evidence
+-> failure attribution
+-> method reliance
 ```
 
-Its V0 checks include:
+The active empirical question is:
+
+> **When memory changes what a learner gets to observe, can it distinguish “my current answer is failing” from “my way of learning is failing”?**
+
+## Current MAB-OS boundary
+
+The public foreign substrate is pinned for analysis at:
 
 ```text
-current state satisfies license preconditions
-requested effect stays inside license effect ceiling
-required preservation remains preserved
-warrant-parent authority remains live
+repo    BaratiLab/MAB-OS
+commit  f38df7e85d588969005e2f59f2366dfe6a5a9861
+blob    MABOS/MABOS.py
+        851d6cc7e5e3fafbca381ccf0b0734659cc840ef
+K       50
 ```
 
-The payload semantics remain opaque to Nano. The transition-contract surface is inspectable.
-
-The compact V0 rule is:
-
-> **Don't write beyond your effect capability. Don't erase beyond your preservation capability.**
-
-Nano does not establish that an external contract is epistemically correct.
-
-## Why transitions became central
-
-The crank sequence repeatedly found states that looked individually acceptable but transitions between them that were not.
-
-Examples:
+Current status:
 
 ```text
-correct prediction        -> observation authority        [invalid promotion]
-correlated reports        -> independent corrective paths [invalid promotion]
-closure authority         -> applicability                [invalid promotion]
-old authorization token   -> current authorization        [stale precondition]
-aliased states            -> one observed state           [lost distinction]
-revoked warrant ancestor  -> descendant still effective   [stale standing]
+SOURCE_ADMISSIBLE
+WORLD_INTERFACE_ADMISSIBLE
+NATIVE_WORLD_PAIR        earned at mechanism-level provenance
+DIAGNOSTIC_WORLD_PAIR    not earned
+2x2 exposure assay       negative
 ```
 
-This produced a candidate two-sided failure family:
+The first native-horizon pair established a world-level WOA adequacy difference while retaining a viable DE alternative. But the forced-DE intervention produced approximately the same native DE evidence in both worlds.
+
+Earned distinction:
 
 ```text
-premature quotient       = erase a distinction future correction still needs
-unauthorized refinement  = create a distinction/authority not warranted upstream
+counterfactually discriminating
+!=
+observationally discriminating
 ```
 
-This remains a candidate compression, not a proven universal law or kernel primitive.
+and the first-principles result:
 
-## Nano V0 isolated result
+> **You can restore an evidence channel without restoring identifiability.**
 
-On the frozen constructed six-family matrix:
+So:
 
 ```text
-Overreach       = 0 / 60,000
-False refusal   = 0 / 60,000
-Invariant fails = 0
+availability
+!=
+diagnostic information
+!=
+warranted attribution
 ```
 
-Naive persistence accepted every illegal transition in the same matrix.
-
-Two pre-repair failures are part of the result:
+The next empirical gate is not another selector run. It is a new world-pair certification requiring:
 
 ```text
-lineage recorded != lineage causally governing authority
-preservation dependency != warrant dependency
+G1  focal-method adequacy differs
+G2  learner-visible intervention evidence distinguishes the worlds
+G3  the alternative remains viable
 ```
 
-See [`NANO_V0.md`](NANO_V0.md) and [`nano_experiment_v0.md`](nano_experiment_v0.md).
+No selector `R_t`, `Q_t`, or native choice outcome may be used to construct that pair.
 
-## Mini × Nano Composition V0
+## OpenCore-native frozen results
 
-The first integration kept wounded Mini and Nano V0 byte-identical and changed only the persistence boundary.
+### PCE-001
 
-Across 10,000 seeds:
+On the frozen family:
 
 ```text
-illegal attempts accepted by naive persistence = 50,000 / 50,000
-illegal attempts accepted by Nano V0           =      0 / 50,000
-matched legitimate transitions accepted        = 60,000 / 60,000
-native Mini lifecycle control                   = 10,000 / 10,000
+ENDOGENOUS finite T_C:   0 / 256
+HAZARD finite T_C:     195 / 256
+
+SUPPORT finite T_C:     64 / 256
+FLOOR finite T_C:      205 / 256
 ```
 
-The narrow causal interpretation is:
-
-> **The same adaptive proposer can remain free to generate a bad epistemic proposal while a small external persistence boundary prevents that proposal from silently acquiring durable authority under the supplied transition contract.**
-
-See [`MINI_NANO_COMPOSITION_V0.md`](MINI_NANO_COMPOSITION_V0.md).
-
-## Nano × Mini ablation V0
-
-The next experiment was subtractive rather than additive. The exact frozen Mini × Nano wound cases were routed through reduced persistence boundaries.
-
-Final 10,000-seed overreach:
+Earned:
 
 ```text
-naive                         50,000 / 50,000
-EFFECT_CEILING_ONLY           50,000 / 50,000
-LIVE_PRECONDITIONS_ONLY       10,000 / 50,000
-LINEAGE_LIVENESS_ONLY         40,000 / 50,000
-PRECONDITIONS_PLUS_LINEAGE         0 / 50,000
-FULL_NANO                          0 / 50,000
+nonzero challenge support
+!=
+timely corrective exposure
 ```
 
-Every arm retained all 60,000 matched legitimate transitions and all 10,000 tested Mini lifecycles.
-
-On this frozen wound suite, full Nano's observed protection is reproduced by:
+### CSD-001 Mini target
 
 ```text
-execution-time live preconditions
-+
-causal warrant-dependency liveness
+FAILURE_CAUSE_CONFLATION
 ```
 
-Neither mechanism alone is sufficient. The suite does **not** establish effect-ceiling or preservation enforcement as globally redundant; those dimensions were not identified as necessary by this intervention family.
-
-See [`NANO_MINI_ABLATION_V0.md`](NANO_MINI_ABLATION_V0.md).
-
-## Base-001: shared authority-filtered world
-
-Base-001 constructed twelve heterogeneous local projectors over the unchanged Nano V0 substrate.
-
-A single warranted global standing `G` was available to all units, affected only externally designated relevant units, and later lost authority through one upstream warrant revocation.
-
-Across 10,000 worlds:
+Earned:
 
 ```text
-Reach                    120,000 / 120,000
-RelevantResponse          80,000 / 80,000
-IrrelevantDisturbance          0 / 40,000
-RevocationRecovery        80,000 / 80,000
-NaiveRevocationRecovery        0 / 80,000
-CollateralLoss                 0 / 120,000
+local unresolvedness
+!=
+procedure inadequacy
 ```
 
-No destructive local cleanup writes were required. Unrelated local adaptations created after `G` survived because temporal ancestry was not treated as warrant ancestry.
-
-Base-001 also supplied independently motivated pressure on Nano's effect ceiling: a local derived standing could not be promoted into global authority without a separately licensed global-write edge.
-
-See [`BASE_001_SHARED_WORLD.md`](BASE_001_SHARED_WORLD.md).
-
-## Base-002: global reopening and a new Nano wound
-
-Base-002 separated:
+and:
 
 ```text
-ADMIT(G) != REOPEN(G) != REPLACE(G, G')
+R3 measurability
+!=
+L2 semantic sufficiency
 ```
 
-### Positive path
-
-A target-bound counterexample-backed reopen capability could withdraw `G`'s authority, propagate constructed uncertainty through dependent local projections, preserve unrelated learning, and refuse to install `G'`. Later separately authorized evidence could install `G'`.
-
-Thus, on the constructed path:
+Post-negative archaeology:
 
 ```text
-refutation authority != replacement authority
+NO_ADMISSIBLE_PRE_CSD_L2_TARGET_FOUND
 ```
 
-### Negative strict control
+## Mathematical core frontier
 
-A stricter natural reopen contract additionally required `G_STATUS=EFFECTIVE` as a precondition. Nano V0 automatically promoted every precondition source into a continuing warrant parent. The new `REOPENED` standing therefore depended on the old `G` standing whose authority the same transition revoked and self-invalidated in 10,000/10,000 strict controls.
-
-The forced distinction is:
+The mathematical layer is explicitly quarantined from empirical authority:
 
 ```text
-execution guard != warrant dependency
+mathematical statement
+!=
+proved theorem
+!=
+empirical result
 ```
 
-or:
-
-> **A fact can be required for a transition to occur without being something the resulting authority should continue to depend on.**
-
-No Nano repair is made or implied by this publication.
-
-See [`BASE_002_GLOBAL_REOPENING.md`](BASE_002_GLOBAL_REOPENING.md).
-
-
-## GW-001 and foreign pressure specimens
-
-The next crank sequence deliberately stopped extending the OpenCore-native architecture and instead applied discriminating and foreign pressure.
-
-**GW-001** attacked Base-002B without modifying Nano. It established behaviorally that the facts required for transition execution need not be identical to the facts whose continuing authority should govern the result:
+Adaptive state:
 
 ```text
-CheckSet(T) != ParentSet(Result(T))
+S_t = (Pi_t, pi_t, Gamma_t, H_t)
 ```
 
-In the decisive mixed-role witness, two facts were both required for execution, but later revocation showed that only one should remain a continuing authority parent. Structural special-case repairs for same-key, revoked-source, and self-invalidating transitions all failed at least one control. Selective continuing ancestry is supported on the constructed family; a `Guard`/`WarrantPremise` schema and Nano V1 remain unearned.
-
-**FOREIGN-001** then exposed the frozen stack to reduced Mastermind rather than another OpenCore-native task. Static worlds supplied sufficient evidence and a live Nano authority path, but frozen Mini had no affine hypothesis capable of representing any complete Mastermind feedback function. Dynamic worlds separately showed that a real hidden mechanism change can remain observationally compatible with an unchanged explanation.
-
-**FOREIGN-002** changed pressure again to a small deterministic restless-bandit family while controlling FOREIGN-001's representation wound: every latent arm state was inside Mini's existing affine hypothesis class. Mini's existing `needs_probe` behavior usefully spent follow-up attention after contradiction and improved reward/repair completion, but it did not improve prospective discovery of still-hidden shifts. The candidate distinction is:
+with three adaptive surfaces:
 
 ```text
-reactive corrective attention != prospective discovery attention
+Pi     what distinctions the system can represent
+pi     which experiments / evidence it actually reaches
+Gamma  what identified evidence is allowed to change
 ```
 
-No Mini repair, Nano repair, Base extension, attention scheduler, or universal foreign-task layer is earned by these specimens.
+Current theorem-level invariant:
 
-## Systems-level theory freeze
+> **Every unresolved consequential distinction must retain a high-probability route to sufficient statistical separation before its consequence-relevant deadline, and no evidence-grounded causal update may depend on distinctions that evidence has not identified.**
 
-The current systems-level compression is deliberately frozen as a hypothesis:
+Frozen mathematical hierarchy:
 
 ```text
-Reality
--> challenge / apparatus
--> consequence
--> organism interpretation
--> candidate transition
--> persistent authority
+I*          potential discriminating information
+K_n         expected path-space information under the endogenous policy
+G_n         predictable information on the realized adaptive action path
+L_n         realized likelihood evidence
+Sep_{t,H}   finite-horizon statistical path-law separation
 ```
 
-with:
+and:
 
 ```text
-reality != measurement != interpretation != authority
+I*
+!=
+K_n
+!=
+G_n
+!=
+L_n
+!=
+Sep_{t,H}
 ```
 
-The developmental hypothesis is:
-
-> **Intelligence develops by constructing increasingly useful ways for reality to correct what currently governs it.**
-
-A prospective developmental frontier requires:
+The strongest current theorem-level negative is:
 
 ```text
-live alternatives
-+
-discriminable challenge
-+
-recoverable consequence
-+
-live authority-update path
+K_n(i->j) -> infinity
+and
+K_n(j->i) -> infinity
+
+does not imply
+
+consistent discrimination
 ```
 
-The corresponding agency/authority split is:
+The theorem-status boundary is:
 
-> **The organism chooses where to risk being wrong.**
->
-> **The persistence world constrains what the resulting consequence is allowed to change.**
+```text
+T12a     PROVED
+T12b     CLASSICAL MACHINERY specialized to adaptive path laws
+T12c     PROVED EXISTENCE COUNTEREXAMPLE; not a robust policy theorem
+T12d     OPEN
+T12e.1   PROVED
+T12e.2   PROVED COUNTEREXAMPLE
+T12e.3   PROVED UNDER STATED CONDITIONS
+T12e.4a  PROVED UNDER EXPLICIT FREEDMAN CONDITIONS; terminal only
+T12e.4b  OPEN; anytime finite-horizon adjudication
+T12e.5   OPEN; sharp TV/Hellinger/path-process characterization
+```
 
-This is not a demonstrated general developmental loop. See [`docs/DEVELOPMENTAL_THEORY.md`](docs/DEVELOPMENTAL_THEORY.md).
+Methodological rule:
+
+```text
+K_n                information accounting
+L_n                realized evidence
+path-law separation adjudication property
+timely separation   corrigibility property
+```
+
+Terminal and anytime authority remain distinct:
+
+```text
+correct at the deadline
+!=
+safe to commit at every time before the deadline
+```
+
+The active mathematical work is now restricted to `T12e.4b` and `T12e.5`. `T13` remains closed.
+
+See [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md).
 
 ## Research posture
 
-The discipline remains:
-
 ```text
-build tiny thing
--> run it
--> attack it
--> localize the shallowest failure
--> make the minimal repair only when earned
--> preserve negative results
--> retest
--> freeze only what the evidence earned
+smallest discriminating assay
+-> prospective freeze
+-> execute
+-> localize shallowest failure
+-> preserve the negative
+-> revise only what failed
 ```
 
-A successful component does not certify its composition:
+Current empirical rule:
 
-```text
-Valid(T1) + Valid(T2) !=> Valid(T2 o T1)
-```
+> **A diagnostic intervention must make the competing hypotheses distinguishable through the evidence it actually delivers to the system.**
 
-And a clean benchmark result does not grant authority outside the tested family.
+Current mathematical rule:
 
-The current theory stop is intentional. The next useful advancement should be empirical rather than further conceptual elaboration.
+> **Do not upgrade potential information, expected information, or realized likelihood into a corrigibility claim without finite-horizon path-law separation.**
 
-## Formal lineage separation
-
-The crank branch is deliberately separate from the formal OpenCore experiment lineage.
-
-Nothing in this directory modifies K0, completes E001, supplies E001 evaluation evidence, reveals E001 evaluation seeds, or grants authority over the formal program.
-
-## Frozen component hashes
-
-```text
-mini.py
-fd69206eff5443459a8eebed359a301443ae61e92e0e69eb7a1e6ca376ec5e55
-
-nano.py
-8d820d8f8d9021c5b969659a845aefd2a16e39c24834f0a78e4b491c294b0329
-
-mini_nano_composition.py
-116d6e285855081126608a962ad5bb3990f634c63bf76a40c19f7ad18027e7a2
-```
-
-Those identities remain load-bearing for the Nano V0, composition, ablation, and Base experiments that reuse them.
+No new architecture, trust variable, procedure-failure label, outer supervisor, or Nano version is authorized.

@@ -1,66 +1,104 @@
-# Architecture: Reality, Organism, Persistence Substrate, and Shared World
+# Architecture: Reality, Organism, Exposure, Persistence, and Shared World
 
 ## Status
 
-This document is an explanatory map of the current crank lineage.
+This is an explanatory map of the current crank lineage, not a declaration of a completed OpenCore architecture.
 
-- **Mini** has a sequence of constructed adaptive experiments.
-- **Nano V0** has isolated and composition-level constructed results and remains frozen.
-- **Base-001** supplies the first constructed 12-unit shared-world witness.
-- **Base-002** supplies a partial positive global-reopening result plus a Nano V0 negative result.
-- The full developmental architecture remains a hypothesis, not a completed system.
+Current experimentally supported components / specimens include:
 
-## 1. The current chain
+- **Mini** — constructed adaptive proposer/interpreter;
+- **Nano V0** — semantically agnostic transition checker + in-process append-only journal;
+- **Base** — constructed authority-filtered shared-world witnesses;
+- **FOREIGN/OQ** — representation, quotient, reopenability, and topology pressure families;
+- **Blitzcrank** — external ordinary learned organism under instrumentation;
+- **PCE-001** — direct intervention assay on corrective exposure.
 
-The strongest systems-level separation is:
+No new runtime component is earned by PCE-001.
+
+## 1. Current causal map
+
+The strongest current analysis frame is:
 
 ```text
-Reality
--> challenge / apparatus
--> consequence
--> organism interpretation
--> candidate transition
--> persistent authority
+X_t ----------------------+
+                           v
+E_t -> Pi_t -> pi_t -> A_t -> O_{t+1} -> W_{t+1} -> E_{t+1}
+```
+
+with:
+
+```text
+O_{t+1} = g(X_t, A_t, epsilon_{t+1})
 ```
 
 The load-bearing distinction is:
 
 ```text
-reality != measurement != interpretation != authority
+exogenous outcome generation
+!=
+exogenous outcome exposure
 ```
 
-Reality is outside the computational system. An apparatus determines which consequences become observable. Mini-like processes interpret and propose. Nano constrains durable authority. Base is the currently effective shared computational world produced by admitted transitions.
+A system can leave the world's response mechanism untouched while its persistent state changes which actions are selected and therefore which externally generated observations are encountered.
 
-## 2. OpenCore Mini
+This is the current mechanism called:
 
-Mini is deliberately domain-specific and cognitively active.
+```text
+endogenous evidence acquisition
+```
 
-It can, in the current toy family:
+## 2. The six correction gates
+
+The complete corrective route is decomposed as:
+
+```text
+C1  physically available intervention
+C2  policy-supported intervention
+C3  selected intervention
+C4  discriminating consequence
+C5  recognized evidence
+C6  persistent authority / leverage revision
+```
+
+with:
+
+```text
+C4a  environment distinguishes
+C4b  representation preserves the distinction
+```
+
+No single component owns all six gates.
+
+## 3. Mini
+
+Mini is deliberately domain-specific and wounded.
+
+It can, in its tested toy families:
 
 - observe examples;
 - infer finite affine hypotheses;
 - persist commitments;
-- compose known commitments;
+- compose scopes;
 - detect contradictions;
-- request additional evidence when a replacement is underdetermined;
-- revise one scope while preserving another;
+- request additional evidence when replacement is underdetermined;
+- revise locally while preserving unaffected commitments;
 - participate in externally supplied closure/challenge protocols;
-- and, in M6, use externally typed policy-level evidence to alter a future closure mechanism.
+- use externally typed policy-level evidence to alter a future closure mechanism in M6.
 
-Mini is not a general learner and does not autonomously discover all distinctions used by later harnesses.
+Mini does not autonomously discover all distinctions, challenge sets, epistemic roles, or warrants used by later harnesses.
 
-A useful role compression is:
+Useful role compression:
 
 ```text
-Mini = adaptive organism / proposer / interpreter
+Mini = adaptive proposer / interpreter
 ```
 
-## 3. OpenCore Nano
+## 4. Nano V0
 
 Nano remains intentionally small:
 
 ```text
-OpenCore Nano = transition typechecker + append-only in-process journal
+Nano = transition typechecker + append-only in-process journal
 ```
 
 Conceptually:
@@ -69,193 +107,239 @@ Conceptually:
 (S_t, T, L) -> ALLOW | DENY | DEFER
 ```
 
-where:
-
-- `S_t` is current transition-visible standing;
-- `T` is a proposed state transition;
-- `L` is an externally constituted license.
-
-Nano V0 checks:
+Nano checks supplied transition-visible conditions such as:
 
 ```text
-S_t satisfies Pre(L)
-Effect(T) is contained by Effect(L)
-Preserve(L) is preserved by T
-warrant-parent receipts remain effective
+current preconditions
+allowed writes/deletes
+required preservation
+warrant-parent liveness
 ```
 
-The payload is opaque. The transition-contract surface is inspectable.
+Payload semantics remain opaque.
 
-Nano does not decide truth, scientific validity, challenge quality, or the correctness of the license itself.
-
-## 4. Authority-filtered current state
-
-The Mini × Nano ablation sharpened Nano's observed role on the frozen wound suite.
-
-Four attack families were blocked by live execution-time preconditions. The stale-descendant family was blocked only by warrant-lineage liveness. Their combination reproduced full Nano on all five frozen attacks.
-
-That motivates the local mechanistic compression:
-
-```text
-raw current state
--> filter by live warrant ancestry
--> evaluate current transition conditions
-```
-
-A standing can be physically present in the journal while absent from the authority-effective current state.
-
-This result is local to the frozen composition suite; it does not establish that effect ceilings or preservation enforcement are globally redundant.
-
-## 5. OpenCore Base
-
-Base is no longer only a metaphor. Base-001 constructed a small witness:
-
-```text
-                shared authority-effective world
-                           |
-        +------------------+------------------+
-        |                  |                  |
-      unit 0             unit 1             unit 2 ...
-      P0(S,h0)           P1(S,h1)           P2(S,h2)
-        |                  |                  |
-      local              local              local
-      state              state              state
-```
-
-Twelve units shared one effective world while retaining heterogeneous externally supplied projections and private state.
-
-A global standing could:
-
-- be available to every unit;
-- affect only designated relevant units;
-- lose authority through one upstream warrant revocation;
-- make warrant-dependent descendants ineffective without local destructive cleanup;
-- leave unrelated post-event local learning effective;
-- and fail to acquire new global authority through a local unit unless a separate global-write capability existed.
-
-A useful Base compression is therefore:
-
-```text
-shared authority-filtered world
--> heterogeneous local projections
-```
-
-This is still a constructed toy world, not a general multi-agent architecture.
-
-## 6. Warrant-mediated world plasticity
-
-Base-001 motivates a different picture from broadcasting irreversible memory updates into every local process.
-
-Let:
-
-```text
-S_effective = authority-filtered shared world
-W_i         = P_i(S_effective, h_i)
-```
-
-Then one warranted change to `S_effective` can alter many local projections without requiring identical direct writes into every unit.
-
-When an upstream warrant dies, dependent effective consequences can disappear from the current world while historical receipts remain and unrelated local adaptations survive.
-
-This motivates the architectural hypothesis:
-
-```text
-warrant-mediated world plasticity
-```
-
-or, informally:
-
-```text
-global learning without global destructive rewriting
-```
-
-Only the constructed Base-001 family is experimentally supported.
-
-## 7. Global reopening
-
-Base-002 separates:
-
-```text
-ADMIT(G) != REOPEN(G) != REPLACE(G, G')
-```
-
-A target-bound counterexample-backed transition can withdraw `G`'s current authority and propagate uncertainty through dependent projections without acquiring authority to install `G'`.
-
-Later separately warranted evidence can install `G'`.
-
-The supported constructed sequence is:
-
-```text
-G effective
--> e*
-G reopened
--> distributed uncertainty
--> E'
-G' installed
-```
-
-This is the Base-level analogue of Mini's earlier distinction:
-
-```text
-I know the incumbent is wrong != I know the replacement
-```
-
-## 8. Guard versus warrant dependency
-
-Base-002's strict control exposed a new Nano V0 wound.
-
-Nano V0 currently uses each satisfied precondition source both:
-
-1. to determine whether a transition may execute; and
-2. as a continuing warrant parent of the result.
-
-Strict reopening shows those roles can diverge:
-
-```text
-execution guard != warrant dependency
-```
-
-More formally:
-
-```text
-Guard(T) !=> WarrantParent(Result(T))
-```
-
-`G_STATUS=EFFECTIVE` can sensibly be required before reopening `G` while being exactly the wrong thing for `REOPENED(G)` to continue depending on after `G`'s old authority is revoked.
-
-No Nano representation change is frozen by this result.
-
-## 9. Agency versus authority
-
-A compact architecture-level intuition is:
-
-> **The organism chooses where to risk being wrong.**
->
-> **The persistence world constrains what the resulting consequence is allowed to change.**
-
-This preserves:
-
-```text
-freedom to generate != freedom to canonize
-```
-
-The organism can choose bad challenges and make bad interpretations. Nano's role is not to make those choices wise; it constrains the persistent effects granted under supplied contracts.
-
-## 10. What remains outside Nano
-
-Nano V0 deliberately does not solve:
+Nano does not decide:
 
 - truth;
-- apparatus validity;
-- evidence-role discovery;
-- dependency discovery;
-- applicability discovery;
-- challenge selection;
-- transfer-boundary discovery;
-- hypothesis proposal;
-- planning;
-- correctness of external licenses;
-- autonomous relevance discovery in Base;
-- autonomous guard/warrant typing.
+- correctness of an external license;
+- representation adequacy;
+- challenge quality;
+- which experiment should run;
+- which distinction is missing;
+- whether a corrective path remains policy-reachable;
+- whether a challenge set is sufficient.
 
-That boundary remains part of the experiment.
+Therefore:
+
+```text
+Nano protects authority acquisition
+!=
+Nano guarantees evidence exposure
+```
+
+PCE-001 contains no Nano and changes no Nano code.
+
+## 5. Base
+
+Base-001/002 supplied constructed witnesses for a shared authority-effective world:
+
+```text
+S_effective
+-> heterogeneous local projections P_i(S_effective, h_i)
+```
+
+A warranted global standing can affect selected local projections, lose authority through an upstream warrant revocation, and make dependent consequences ineffective without destructive cleanup of unrelated local learning.
+
+This supports, on those families:
+
+```text
+raw persistent history
+!=
+authority-effective current world
+```
+
+and:
+
+```text
+refutation authority
+!=
+replacement authority
+```
+
+Base-002/GW-001 additionally force:
+
+```text
+execution guard
+!=
+continuing warrant parent
+```
+
+No Base result solves upstream evidence acquisition.
+
+## 6. Representation / quotient layer
+
+OQ and FOREIGN-003/004 establish that persistence identity itself can be too coarse or appropriately coarse depending on future consequence.
+
+Two important cases:
+
+```text
+future-relevant histories collapsed
+-> unsafe quotient
+
+historically different but future-equivalent histories collapsed
+-> safe quotient
+```
+
+Thus:
+
+```text
+preserve all history
+```
+
+is not the target.
+
+The target is preservation of distinctions or latent substrate sufficient for future correction under the relevant challenge family.
+
+## 7. Informational reopenability
+
+FOREIGN-005/006 separate effective current compression from the ability to reconstruct later distinctions.
+
+```text
+FOREIGN-005:
+safe current quotient + retained opaque substrate
+-> later distinction recoverable
+
+FOREIGN-006:
+bounded future-interface family
+-> exact blind reopenability compressed to its 6 independent distinguishing dimensions
+```
+
+This is an information/representation property, not a policy guarantee.
+
+## 8. Policy topology
+
+FOREIGN-007 establishes that information can remain physically recoverable while the policy route into the recovering experiment disappears.
+
+```text
+D_t^Pi != empty
+D_t^Pi intersect support(pi_t) = empty
+```
+
+The failure occurs before Nano:
+
+```text
+representation
+-> policy support
+-> corrective exposure
+```
+
+Blitzcrank then shows the same geometry can arise from ordinary learning rather than from a hand-coded policy mapping.
+
+## 9. Corrective exposure intervention
+
+PCE-001 prospectively freezes the corrective channel externally:
+
+```text
+D_t^oracle = D_t^Pi
+```
+
+and manipulates only challenge selection.
+
+The four arms distinguish:
+
+```text
+natural endogenous exposure
+nonzero topological support
+quantitative exposure floor
+state-independent challenge hazard
+```
+
+Primary result:
+
+```text
+ENDOGENOUS finite T_C:   0 / 256
+HAZARD finite T_C:     195 / 256
+```
+
+Secondary result:
+
+```text
+SUPPORT finite T_C:  64 / 256
+FLOOR finite T_C:   205 / 256
+```
+
+Thus, on the frozen family:
+
+```text
+persistent state
+-> policy
+-> challenge timing
+-> corrective exposure
+```
+
+is causally manipulable, and:
+
+```text
+support
+!=
+timely exposure
+```
+
+## 10. Architecture-level consequence
+
+The current program cannot be represented as `Nano plus smarter Mini`.
+
+There are at least four distinct layers:
+
+```text
+Developmental constitution
+    which distinctions / challenges / warrants should exist?
+
+Representation
+    which distinctions are currently effective or recoverable?
+
+Policy topology
+    which corrective interventions remain reachable and sampled?
+
+Persistence membrane
+    what recognized consequence may acquire or lose durable authority?
+```
+
+Causally, the constitution problem sits upstream of the rest.
+
+Nano sits downstream.
+
+A failure at an upstream layer should not automatically trigger a Nano change.
+
+## 11. Current L1 / L2 / L3 boundary
+
+Challenge capability is currently divided into:
+
+```text
+L1  preserve exposure to D_t^oracle
+L2  diagnose that D_t^agent is insufficient
+L3  construct a better D_t^agent
+```
+
+PCE-001 supports only L1 under an oracle-supplied challenge set.
+
+No component currently owns L2 or L3.
+
+That absence is intentional.
+
+## 12. What remains outside the implemented architecture
+
+Still unearned:
+
+- autonomous challenge-set insufficiency diagnosis;
+- autonomous challenge construction;
+- autonomous interface invention;
+- autonomous evidence-role constitution;
+- autonomous warrant constitution;
+- universal exploration schedule;
+- scalar corrigibility metric;
+- Nano V1;
+- production-grade authority durability/concurrency/security;
+- complete developmental architecture.
+
+The next architecture change, if any, should be forced by a frozen L2 failure rather than by the conceptual availability of L2 as a question.

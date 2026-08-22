@@ -1,0 +1,152 @@
+{
+  "apparatus_check_summary": {
+    "F2_boundary_count": 30,
+    "all_pass": true,
+    "checks_passed": 16,
+    "checks_total": 16
+  },
+  "apparatus_checks": [
+    {
+      "detail": {
+        "F1": 256,
+        "F2": 256,
+        "F3": 256,
+        "F3u": 256
+      },
+      "name": "seed_count_per_class",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "pre_transition_D_agent_adequate_all_classes",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F1_adequate_under_Gamma",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F2_adequate_under_Gamma",
+      "pass": true
+    },
+    {
+      "detail": {
+        "count": 30
+      },
+      "name": "F2_boundary_subset_exists",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F3_no_current_set_discriminator",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F3_complete_certified_exposure",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F3u_true_insufficiency_unresolved",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F3u_certificate_incomplete",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F3_warrant_after_complete_Gamma_certificate",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "post_endpoint_c_star_discriminates",
+      "pass": true
+    },
+    {
+      "detail": {
+        "leaks": []
+      },
+      "name": "no_harness_only_field_in_visible_payload",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "F2_F3_identical_certified_audit_schedule",
+      "pass": true
+    },
+    {
+      "detail": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F3u": true
+      },
+      "name": "generic_FAIL_available_all_classes",
+      "pass": true
+    },
+    {
+      "detail": {
+        "F1": 256,
+        "F2": 256,
+        "F3u": 256
+      },
+      "name": "generic_failure_shortcut_is_rejected_by_controls",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "missing_discriminator_disclosed_only_post_endpoint",
+      "pass": true
+    }
+  ],
+  "assay": "CSD-001",
+  "claim_ceiling": "This run validates only the frozen CSD-001 assay apparatus. No L2 target mechanism was implemented or evaluated.",
+  "descriptive": {
+    "F2_signal_use_distribution": {
+      "1": 52,
+      "2": 57,
+      "3": 35,
+      "4": 34,
+      "5": 16,
+      "6": 17,
+      "7": 15,
+      "8": 30
+    },
+    "F3_T_U_values": [
+      24
+    ],
+    "F3_T_W_values": [
+      24
+    ],
+    "F3u_T_U_values": [
+      null
+    ]
+  },
+  "parameters": {
+    "B": 8,
+    "D_agent": [
+      "c0",
+      "c1",
+      "c2"
+    ],
+    "F2_p_signal_before_bound": 0.25,
+    "F3u_uses_per_challenge": 3,
+    "pre_audit_failure_rounds": 12,
+    "seeds": 256
+  },
+  "scientific_target_evaluated": false,
+  "source_sha256": {
+    "CSD_001_ANALYSIS.md": "c7426bea36074a96a1567abf2cf1784f31ed265e2d59e1a95dc99e87f823da4d",
+    "CSD_001_MANIFEST.json": "cdbba807bd5587dfa21f892801661a97fb0be7103a3e7a748d2dbda087242f06",
+    "CSD_001_SPEC.md": "ee2b14de9e0ab8ee332d3198b676115ed58714c0f69a6af0b1c1ffd0999d3271",
+    "csd_001.py": "1899da7f1675d9b0fb691d973351ebe86aca3819e01182f108e7ee515f93a7c9"
+  },
+  "status": "APPARATUS_READY_FOR_TARGET_FREEZE",
+  "target_mechanism": null
+}

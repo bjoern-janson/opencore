@@ -1,0 +1,66 @@
+{
+  "assay": "PCE-001",
+  "status_before_execution": "FROZEN_PROSPECTIVE_INTERVENTION_ASSAY",
+  "lineage_base_branch": "opencore/crank-mini-001",
+  "lineage_base_commit": "34967623f95a5fdf21452c6b8b17342529c474ae",
+  "artifacts": {
+    "spec": "crank/PCE_001_SPEC.md",
+    "result_record": "crank/PCE_001.md",
+    "harness": "crank/pce_001.py",
+    "manifest": "crank/PCE_001_MANIFEST.json",
+    "analysis": "crank/PCE_001_ANALYSIS.md",
+    "result_json": "crank/results/pce_001_result.json",
+    "trace_gzip": "crank/results/pce_001_trace.jsonl.gz"
+  },
+  "organism": {
+    "family": "Blitzcrank tabular persistent learner",
+    "nano_present": false,
+    "autonomous_challenge_constitution": false,
+    "q_init": 1.1,
+    "probe_cost": 0.2,
+    "reveal_actions": ["skip", "probe"],
+    "decision_actions": ["safe", "left", "right"],
+    "contexts": ["train", "target"]
+  },
+  "evaluation": {
+    "seeds": 256,
+    "seed_range": [0, 255],
+    "episodes": 420,
+    "shift_episode": 180,
+    "post_shift_target_encounters": 120,
+    "worlds": ["WORLD_NULL", "WORLD_INFORMATIVE", "WORLD_CORRECTIVE"],
+    "arms": ["ARM_ENDOGENOUS", "ARM_SUPPORT", "ARM_FLOOR", "ARM_HAZARD"],
+    "candidate_challenge_action": "probe",
+    "floor_epsilon": 0.05,
+    "hazard_eta": 0.05,
+    "support_schedule": "1/(j+2)^2",
+    "corrective_delta_threshold": 0.1,
+    "t_c_censor_value": 121,
+    "primary_equivalence_margin_encounters": 5,
+    "primary_equivalence_margin_finite_rate": 0.05,
+    "initial_suppression_validity_floor": 0.95
+  },
+  "contrasts": {
+    "primary": [
+      ["ARM_ENDOGENOUS", "WORLD_CORRECTIVE"],
+      ["ARM_HAZARD", "WORLD_CORRECTIVE"]
+    ],
+    "secondary": [
+      ["ARM_SUPPORT", "WORLD_CORRECTIVE"],
+      ["ARM_FLOOR", "WORLD_CORRECTIVE"]
+    ]
+  },
+  "trace_required_fields": [
+    "E_t", "Pi_t", "pi_t", "D_t_oracle",
+    "C1", "C2", "C3", "C4a", "C4b", "C5", "C6",
+    "A_t", "O_t1", "W_t1", "E_t1"
+  ],
+  "rng": {
+    "hidden_schedule": "SHA256(seed|episode|schedule)",
+    "base_policy": "SHA256(seed|episode|base-policy)",
+    "protected_policy": "SHA256(seed|episode|protected-policy)",
+    "hazard": "SHA256(seed|episode|hazard)",
+    "mutable_cross_arm_rng": false
+  },
+  "claim_ceiling": "Challenge preservation under a prospectively fixed corrective channel; challenge-set discovery/constitution is not tested."
+}

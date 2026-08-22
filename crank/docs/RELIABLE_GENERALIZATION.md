@@ -2,9 +2,9 @@
 
 ## Status
 
-This is an active research target. Reliable generalization is **not solved** by the current Mini/Nano stack.
+Reliable generalization remains an active research target and is **not solved** by the current Mini/Nano/FOREIGN/Blitz/PCE lineage.
 
-The strongest current framing is:
+The earlier framing remains useful:
 
 ```text
 generalization performance != generalization authority
@@ -13,16 +13,17 @@ generalization performance != generalization authority
 and:
 
 ```text
-reliable generalization = discovery and governance of warranted invariance
+reliable generalization ~= discovery and governance of warranted invariance
 ```
 
-A complementary view is:
+But later quotient/topology/PCE results add a necessary condition:
 
 ```text
-reliable generalization = warranted quotient construction
+warranted invariance without corrective exposure
+can become self-confirming invariance
 ```
 
-These are candidate formulations, not universal definitions.
+Therefore a transfer relation is not adequately governed merely because it was once warranted and remains technically reopenable.
 
 ## 1. What ordinary generalization leaves implicit
 
@@ -34,19 +35,21 @@ H: X -> Y
 
 The OpenCore question is stricter:
 
-> **What evidence licenses transporting H from one context into another?**
+> **What evidence licenses transporting H from one context into another, and what future evidence remains causally capable of reducing that transport authority?**
 
 A prediction can succeed in a new context without establishing that the transformation connecting old and new contexts is target-irrelevant.
 
+And a transfer rule can remain apparently successful if its induced policy stops entering the contexts that would expose its failure.
+
 ## 2. Candidate transfer structure
 
-A useful conceptual object is:
+A useful conceptual object remains:
 
 ```text
 (H, ~_H)
 ```
 
-where `~_H` is a candidate relation over contexts:
+where:
 
 ```text
 a ~_H b
@@ -54,22 +57,21 @@ a ~_H b
 
 means that reusing `H` across `a` and `b` is currently supported.
 
-But the relation itself needs governance:
+But the relation needs at least:
 
 ```text
 transfer relation
 + warrant
-+ corrective access
++ corrective exposure
 + reopening conditions
++ authority-update path
 ```
 
-The representation of those terms is intentionally not frozen.
+The representation of those terms is not frozen as architecture.
 
 ## 3. Three transfer statuses
 
-A reliable system should not be forced into merge-or-split when the relation is not identified.
-
-Conceptually:
+A reliable system should not be forced into merge-or-split when the relation is not identified:
 
 ```text
 a ~_H b       transfer licensed
@@ -81,31 +83,18 @@ The unresolved state matters because:
 
 ```text
 zero false transfer by splitting every context != reliable generalization
+high transfer by merging everything          != reliable generalization
 ```
 
-and:
+FOREIGN-004 strengthens this point: some different histories really can be safely quotiented over a prospectively frozen future-consequence surface.
 
-```text
-high transfer by merging everything != reliable generalization
-```
+FOREIGN-003/OQ show the opposite: future-relevant distinctions can be collapsed too early.
 
-The target lies between paralysis and over-generalization.
+## 4. R1 — active discrimination of supplied transfer hypotheses
 
-## 4. R1: active discrimination of transfer hypotheses
+R1 constructed two opaque transfer hypotheses that were observationally equivalent on initial history and differed on only two of eight future contexts.
 
-The first direct precursor was deliberately small.
-
-Two opaque transfer hypotheses `T1` and `T2` were constructed such that the initial history was exactly observationally equivalent:
-
-```text
-T1(D_t) = T2(D_t)
-```
-
-There were eight opaque future contexts, with exactly two contexts where the candidates disagreed.
-
-The controller had a one-probe budget.
-
-Result over 10,000 constructed worlds:
+With a one-probe budget:
 
 ```text
 passive                    0.00% resolved
@@ -113,101 +102,174 @@ random                    25.12% resolved
 transfer-discriminating  100.00% resolved
 ```
 
-The random result matches the 2-of-8 geometry.
+Narrow earned statement:
 
-The transfer-aware controller selected a context where the live transfer hypotheses disagreed, observed one real consequence, and eliminated the wrong candidate in every tested world.
+> **Uncertainty over supplied transfer structure can drive active evidence acquisition.**
 
-Narrow earned result:
+R1 did not establish autonomous transfer-hypothesis invention or autonomous challenge constitution.
 
-> **Uncertainty over transfer structure can drive active evidence acquisition.**
+## 5. Quotient pressure changes the transfer target
 
-## 5. R1 claim ceiling
+The FOREIGN-003 → FOREIGN-006 sequence adds two constraints.
 
-R1 did **not** demonstrate:
-
-- autonomous transfer-hypothesis invention;
-- autonomous discovery of the disagreement-selection strategy;
-- nuisance-dimension compression;
-- arbitrary latent invariance discovery;
-- transfer closure authority;
-- reliable generalization generally.
-
-The finite candidate set and selection logic were harness-supplied.
-
-## 6. The next harder target
-
-The real mountain is not choosing between two supplied transfer candidates.
-
-It is constructing a useful transfer relation from experience.
-
-A successful stronger system would need to:
+First:
 
 ```text
-discover candidate invariances
--> seek contexts that discriminate them
--> license transport only over surviving structure
--> revoke/revise the boundary when reality breaks it
--> inherit the correction into future transfer decisions
+historical difference
+!=
+automatically required transfer distinction
 ```
 
-Crucially, the boundary should generalize to new surface presentations rather than memorize context IDs.
+Second:
 
-## 7. Controls inherited from earlier attacks
+```text
+current-safe equivalence
+!=
+safe irreversible destruction
+```
 
-A trustworthy transfer-boundary experiment has to survive the wounds already discovered elsewhere.
+A transfer boundary therefore needs to be neither maximally fine nor permanently destructive.
 
-### Correctable Lineage
+A useful target is closer to:
+
+> **the coarsest currently warranted transfer relation that preserves enough latent structure for future consequence-relevant distinctions to be recovered.**
+
+This remains a candidate formulation, not a theorem.
+
+## 6. Topology changes the transfer target again
+
+FOREIGN-007 shows that retaining the distinction is not enough.
+
+A representation can preserve a future discriminator while its induced policy omits the context/action that would expose it.
+
+Thus reliable transfer also depends on:
+
+```text
+D_t^Pi != empty
+```
+
+not being followed by:
+
+```text
+D_t^Pi intersect support(pi_t) = empty
+```
+
+The transfer rule can become self-confirming through its own sampling policy.
+
+## 7. PCE-001 adds causal support
+
+PCE-001 holds the corrective channel externally fixed and intervenes on exposure.
+
+Primary result on the frozen corrective world:
+
+```text
+ENDOGENOUS finite T_C:   0 / 256
+HAZARD finite T_C:     195 / 256
+```
+
+Secondary result:
+
+```text
+SUPPORT finite T_C:  64 / 256
+FLOOR finite T_C:   205 / 256
+```
+
+Therefore, on this family:
+
+```text
+nonzero support
+!=
+timely corrective exposure
+```
+
+and direct manipulation of exposure changes correction dynamics.
+
+For reliable generalization, the implication is narrow but important:
+
+> A transfer relation can be correctly represented and technically challengeable while still becoming practically self-confirming because the induced policy samples the discriminating contexts too weakly or not at all.
+
+## 8. Challenge hierarchy for generalization
+
+The current challenge-specific ladder is:
+
+```text
+L1  preserve exposure to an oracle-supplied discriminating challenge
+L2  diagnose that the current challenge set is insufficient
+L3  construct a better challenge set
+```
+
+PCE-001 supports only L1 on its frozen family.
+
+Reliable generalization ultimately requires more: the system must detect when the currently known transfer tests do not identify the boundary it is relying on.
+
+That is an L2 problem before it is an L3 construction problem.
+
+## 9. Current harder target
+
+The stronger target is no longer merely:
+
+```text
+construct a useful transfer relation from experience
+```
+
+It is:
+
+```text
+construct candidate invariances
+-> seek discriminating contexts
+-> license transport only over surviving structure
+-> preserve enough latent resolution for later tests
+-> preserve causal exposure to those tests
+-> diagnose when the known test set itself becomes inadequate
+-> revise transfer authority when consequence warrants it
+```
+
+No current assay demonstrates that complete sequence.
+
+## 10. Controls inherited from the broader lineage
+
+A reliable-generalization experiment should preserve distinctions already forced elsewhere:
 
 ```text
 many reports != many independent corrective paths
-```
-
-### Cerebro
-
-```text
-acquisition policy affects which evidence becomes available
-```
-
-### SSI
-
-```text
 prediction != observation
 authority != applicability
+execution guard != continuing warrant
+refutation != replacement
+informative != corrective
+path exists != timely exposure
 ```
 
-### Nano
+And it must explicitly separate:
 
 ```text
-license possession != current authorization
+adequate challenge set + failure to use it
 ```
 
-### Standing reconciliation
-
-If a transfer rule is later invalidated, descendants that inherited authority from that rule may require reconsideration.
-
-## 8. Why this is developmental
-
-The target is not only to make one good transfer decision.
-
-A stronger adaptive system should change how it tests future transfer boundaries after systematic failures.
-
-That gives a developmental loop:
+from:
 
 ```text
-candidate transfer
--> discriminating reality contact
--> licensed use
--> counterexample
--> boundary revision
--> changed future transfer policy
+challenge set itself inadequate
 ```
 
-This is the point at which reliable generalization begins to overlap with recursive correctability.
+## 11. Current position
 
-## 9. Current position
+The crank program has demonstrated:
 
-The crank program has demonstrated useful **authority discipline around transfer** and one active-discrimination precursor.
+- authority discipline around supplied transfer and persistence contracts;
+- one active-discrimination precursor over supplied transfer alternatives;
+- unsafe and safe quotient controls;
+- informational reopenability under bounded future-interface assumptions;
+- policy-level corrective-path foreclosure;
+- learned exposure contraction and temporal reopening;
+- direct causal intervention on an oracle-supplied corrective channel.
 
-It has not yet demonstrated autonomous discovery of the equivalence relation that determines where a learned rule is legitimately transportable.
+It has **not** demonstrated:
 
-That remains the central open problem.
+```text
+autonomous discovery of the correct transfer equivalence relation
+autonomous diagnosis that its transfer challenge set is insufficient
+autonomous construction of a better challenge set
+```
+
+The next frontier is therefore L2 diagnosis, not another assertion that more exploration solves transfer.
