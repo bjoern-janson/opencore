@@ -16,6 +16,7 @@
 | [`T12E_4B_5_PROOF_CLOSURE.md`](T12E_4B_5_PROOF_CLOSURE.md) | Mathematical Core v0.1 proof closure for anytime adjudication and sharp terminal path-law testing |
 | [`T13_1_COVERAGE_OBSTRUCTION.md`](T13_1_COVERAGE_OBSTRUCTION.md) | T13.1 proof: coverage infimum, attainable target regions, and closure-only obstruction |
 | [`T13_2_CONSTRUCTIVE_REACHABILITY.md`](T13_2_CONSTRUCTIVE_REACHABILITY.md) | T13.2 proof: finite-horizon, eventual, and timely reachability of a fixed nonempty adequate refinement region |
+| [`T13_3_SELECTION_AWARE_REENTRY.md`](T13_3_SELECTION_AWARE_REENTRY.md) | T13.3 proof: selected-candidate conditional calibration, fresh/post-selection/sequential re-entry routes, and multiplicity inflation boundary |
 | [`T13_4_SELF_VALIDATION_FIREWALL.md`](T13_4_SELF_VALIDATION_FIREWALL.md) | T13.4 counterexample: adaptive discovery fit cannot be reused as selection-naive validation |
 | [`MATHEMATICAL_CORE_V0.1_THEOREMS.md`](MATHEMATICAL_CORE_V0.1_THEOREMS.md) | Mathematical Core v0.1 theorem lineage through T12e.4a; retained as the theorem-development record |
 | [`MAB_OS_DIAGNOSTIC_EXPOSURE.md`](MAB_OS_DIAGNOSTIC_EXPOSURE.md) | Foreign MAB-OS source/world audit, native-horizon pair, negative exposure assay, and next gate |
@@ -303,9 +304,9 @@ Current proof status:
 ```text
 T13.1  coverage / attainability boundary              PROVED
 T13.2  constructive reachability                      PROVED AT STATED SCOPES
-T13.3  selection-aware empirical re-entry             NEXT
+T13.3  selection-aware empirical re-entry             PROVED AT STATED SCOPES
 T13.4  selection-naive self-validation firewall       PROVED COUNTEREXAMPLE
-T13.5  sufficient boundary-expansion / re-entry       OPEN
+T13.5  sufficient boundary-expansion / re-entry       NEXT
 ```
 
 T13.1 establishes the exact tolerance boundary:
@@ -360,6 +361,38 @@ eventual constructive reachability
 timely constructive reachability
 ```
 
+T13.3 proves the generic selection-aware re-entry implication:
+
+```text
+selected-candidate conditional calibration <= delta
+->
+marginal false-authorization probability <= delta
+```
+
+It admits three sufficient routes without changing `CWC`:
+
+```text
+R1  prospective/fresh evidence under a correctly calibrated candidate-indexed kernel
+R2  explicit post-selection inference under the actual conditional law after selection
+R3  sequentially valid evidence/test martingales under the candidate-dependent adaptive path law
+```
+
+A finite-class negative shows that `m` fixed-candidate tests of size `delta` can inflate under selection to selected-candidate false-authorization probability `min(1,m delta)` if the selection mechanism is ignored. Therefore:
+
+```text
+fixed-candidate calibration
+!=
+selected-candidate calibration
+```
+
+and separately:
+
+```text
+selection-aware validity
+!=
+CWC
+```
+
 T13.4 independently establishes:
 
 ```text
@@ -368,17 +401,17 @@ selected discovery fit
 selection-aware validation
 ```
 
-The boundary-expansion chain therefore remains:
+The boundary-expansion chain is now:
 
 ```text
 coverage
 -> constructive reachability
--> selection-aware validation
+-> selection-aware valid evidence
 -> fresh CWC
 -> scoped authority
 ```
 
-The next proof target is T13.3: characterize authorization evidence whose calibration remains valid after conditioning on the adaptive selection mechanism that produced the candidate.
+The next proof target is T13.5 only: compose T13.1 attainability, T13.2 reachability, T13.3 selection-aware re-entry, and the already-frozen `CWC` certificate into the minimal sufficient boundary-expansion theorem.
 
 ## Research posture
 
