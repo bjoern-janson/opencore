@@ -1,0 +1,182 @@
+{
+  "ALL_FROZEN_CRITERIA_PASS": false,
+  "baselines": {
+    "ORACLE_FULL": {
+      "J": 0.21,
+      "cost": 1.4,
+      "loss": 0.0
+    },
+    "ORACLE_ONESHOT": {
+      "J": 0.22125,
+      "cost": 1.475,
+      "loss": 0.0
+    }
+  },
+  "criteria": {
+    "E1_W3_branch_full_seed_rate_ge_0_95": true,
+    "E2_W3_probe_preferred_seed_rate_ge_0_95": false,
+    "E3_full_oracle_equivalent_seed_rate_ge_0_95": false,
+    "E4_mean_predictive_loss_le_0_01": true,
+    "E5_mean_cost_le_1_425": true,
+    "E6_mean_regret_J_le_0_02": true,
+    "E7_P_Trecover_le_1_ge_0_95": true,
+    "E8_matched_nuisance_gate": true
+  },
+  "diagnostic_classification": "D2_BRANCH_LEARNED_PROBE_NOT_VALUED",
+  "inherited_constants": {
+    "H_recover": 1,
+    "alpha_Q": 0.1,
+    "epsilon_end": 0.01,
+    "epsilon_start": 0.2,
+    "gamma": 1.0,
+    "lambda": 0.15,
+    "seeds": 256,
+    "training_episodes_per_seed": 4000
+  },
+  "learned": {
+    "J": {
+      "max": 0.235,
+      "mean": 0.2107568359375,
+      "median": 0.21,
+      "min": 0.21,
+      "p05": 0.21,
+      "p95": 0.22125,
+      "sd": 0.0030470275840700075
+    },
+    "P_Trecover_le_1": {
+      "max": 1.0,
+      "mean": 0.984375,
+      "median": 1.0,
+      "min": 0.75,
+      "p05": 0.75,
+      "p95": 1.0,
+      "sd": 0.06051536478449089
+    },
+    "W3_branch_accuracy": {
+      "max": 1.0,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "sd": 0.0
+    },
+    "W3_branch_full_seed_rate": 1.0,
+    "W3_probe_preferred_seed_rate": 0.9375,
+    "cost": {
+      "max": 1.475,
+      "mean": 1.4034179687499997,
+      "median": 1.4,
+      "min": 1.15,
+      "p05": 1.4,
+      "p95": 1.475,
+      "sd": 0.023707550661635737
+    },
+    "executed_probe_count": {
+      "max": 880.0,
+      "mean": 693.43359375,
+      "median": 694.5,
+      "min": 510.0,
+      "p05": 596.0,
+      "p95": 780.0,
+      "sd": 56.95114652234809
+    },
+    "first_operation_accuracy": {
+      "max": 1.0,
+      "mean": 0.984375,
+      "median": 1.0,
+      "min": 0.75,
+      "p05": 0.75,
+      "p95": 1.0,
+      "sd": 0.06051536478449089
+    },
+    "forced_probe_count": {
+      "max": 294.0,
+      "mean": 252.37109375,
+      "median": 252.0,
+      "min": 210.0,
+      "p05": 229.75,
+      "p95": 279.25,
+      "sd": 15.257906005697864
+    },
+    "loss": {
+      "max": 0.0625,
+      "mean": 0.000244140625,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "sd": 0.003898613140300613
+    },
+    "oracle_equivalent_full_policy_seed_rate": 0.9375,
+    "regret_J": {
+      "max": 0.024999999999999994,
+      "mean": 0.0007568359375000006,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.01125000000000001,
+      "sd": 0.0030470275840700084
+    },
+    "w3_training_count": {
+      "max": 1072.0,
+      "mean": 1004.32421875,
+      "median": 1006.0,
+      "min": 931.0,
+      "p05": 956.0,
+      "p95": 1048.0,
+      "sd": 27.9980530743148
+    }
+  },
+  "matched_nuisance_gate": {
+    "empty_information_loss_by_world": {
+      "W1_G": 0.5,
+      "W1_I": 0.5,
+      "W2_XOR": 0.5,
+      "W3_GATE": 0.5
+    },
+    "passes_exact_half": true
+  },
+  "protocol": "ARO_001B_EXPOSURE_CONTROLLED_FREEZE_V0_1",
+  "sample_greedy_policy_shapes_first_8_seeds": {
+    "0": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "1": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "2": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "3": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "4": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "5": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "6": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    },
+    "7": {
+      "branches": {"W3_GATE_S0": "SELECT_G", "W3_GATE_S1": "SELECT_I"},
+      "first": {"W1_G": "SELECT_G", "W1_I": "SELECT_I", "W2_XOR": "COMPOSE_GI", "W3_GATE": "PROBE_S"}
+    }
+  },
+  "single_intervention": {
+    "evaluation_forced": false,
+    "forced_probe_rate_conditional_W3": 0.25,
+    "second_stage_teacher_forced": false
+  },
+  "status": "RUN_COMPLETE",
+  "variant": "ARO-A"
+}
